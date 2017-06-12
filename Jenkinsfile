@@ -1,7 +1,8 @@
 def workId = "workspace\\EandBSolutions\\${env.BRANCH_NAME}"
 
-lock("Lock") {
+
     node{
+        lock("Lock") {
         ws(workId) {
             stage("Checkout"){
                 deleteDir()
