@@ -1,6 +1,6 @@
 def workId = "workspace\\EandBSolutions\\${env.BRANCH_NAME}"
 
-lock("$JOB_NAME") {
+lock("Lock") {
     node{
         ws(workId) {
             stage("Checkout"){
