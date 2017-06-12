@@ -1,7 +1,8 @@
 node{
-    stage("Call echo"){
-        echo "I am here"
-        echo "I am here as well" 
-        echo "I am here as well3" 
+    stage("Checkout"){
+        deleteDir()
+        echo "I am starting checking out"
+        checkout scm
+        echo "I am done checking out"
     }
 }
