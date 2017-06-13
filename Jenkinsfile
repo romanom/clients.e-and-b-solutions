@@ -1,5 +1,5 @@
 #!groovy
-@Library("ci_pipeline") _
+@Library("ci_pipelib") _
 
 def projectName = "EandBSolutions"
 
