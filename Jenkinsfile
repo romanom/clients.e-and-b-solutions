@@ -1,4 +1,6 @@
 #!groovy
 @Library("ci_pipeline") _
 
-dotNetBuildAndPublish()
+def projectName = "EandBSolutions"
+
+dotNetBuildAndPublish projectName: projectName
