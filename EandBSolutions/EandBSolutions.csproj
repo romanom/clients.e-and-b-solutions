@@ -68,6 +68,12 @@
   <ItemGroup>
     <Content Include="Images\AaronSislerProfile.PNG" />
     <Content Include="Images\HSTentEventHiRes.jpg" />
+    <Content Include="Images\Modals\EandBSolutions\EBSolutionsPort_Mini.JPG" />
+    <Content Include="Images\Modals\ValleyLoveOrganic\2016Metrics.JPG" />
+    <Content Include="Images\Modals\ValleyLoveOrganic\Current2017Metrics.JPG" />
+    <Content Include="Images\Modals\ValleyLoveOrganic\ValleyLoveOrganic_Large1.JPG" />
+    <Content Include="Images\Modals\ValleyLoveOrganic\ValleyLoveOrganic_Large2.JPG" />
+    <Content Include="Images\Modals\ValleyLoveOrganic\ValleyLoveOrganic_Mini.JPG" />
     <Content Include="packages.config" />
     <Content Include="CSS\AgencyCSS\Fonts\fonts\fontawesome-webfont.eot" />
     <Content Include="CSS\AgencyCSS\Fonts\fonts\fontawesome-webfont.ttf" />
@@ -117,9 +123,8 @@
     <Content Include="CSS\AgencyCSS\Fonts\fonts\fontawesome-webfont.svg" />
     <Content Include="CSS\bootstrap.min.css" />
     <Content Include="CSS\jumbotron.css" />
-    <Content Include="Images\EBSolutionsPort_Large1.JPG" />
-    <Content Include="Images\EBSolutionsPort_Large2.JPG" />
-    <Content Include="Images\EBSolutionsPort_Mini.JPG" />
+    <Content Include="Images\Modals\EandBSolutions\EBSolutionsPort_Large1.JPG" />
+    <Content Include="Images\Modals\EandBSolutions\EBSolutionsPort_Large2.JPG" />
     <Content Include="index.html" />
     <Content Include="Scripts\agency.js" />
     <Content Include="Scripts\bootstrap.js" />
