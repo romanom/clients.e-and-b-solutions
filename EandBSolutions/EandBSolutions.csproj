@@ -108,6 +108,11 @@
     <Content Include="CSS\AgencyCSS\Fonts\scss\_screen-reader.scss" />
     <Content Include="CSS\AgencyCSS\Fonts\scss\_stacked.scss" />
     <Content Include="CSS\AgencyCSS\Fonts\scss\_variables.scss" />
+    <Content Include="Themes\ModernTown\fonts\fontawesome-webfont.eot" />
+    <Content Include="Themes\ModernTown\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Themes\ModernTown\fonts\fontawesome-webfont.woff" />
+    <Content Include="Themes\ModernTown\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Themes\ModernTown\fonts\FontAwesome.otf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -126,12 +131,46 @@
     <Content Include="Images\Modals\EandBSolutions\EBSolutionsPort_Large1.JPG" />
     <Content Include="Images\Modals\EandBSolutions\EBSolutionsPort_Large2.JPG" />
     <Content Include="index.html" />
+    <Content Include="ChooseYourTheme.html" />
     <Content Include="Scripts\agency.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jqBootstrapValidation.js" />
     <Content Include="Scripts\jquery-3.1.0.min.js" />
     <Content Include="Scripts\jquery.easing.min.js" />
+    <Content Include="Images\Themes\ModernTown.jpg" />
+    <Content Include="Themes\ModernTown\css\animate.min.css" />
+    <Content Include="Themes\ModernTown\css\bootstrap.min.css" />
+    <Content Include="Themes\ModernTown\css\font-awesome.min.css" />
+    <Content Include="Themes\ModernTown\css\owl.carousel.css" />
+    <Content Include="Themes\ModernTown\css\owl.theme.css" />
+    <Content Include="Themes\ModernTown\css\style.css" />
+    <Content Include="Themes\ModernTown\fonts\fontawesome-webfont.svg" />
+    <Content Include="Themes\ModernTown\images\about-img-1.jpg" />
+    <Content Include="Themes\ModernTown\images\about-img-2.jpg" />
+    <Content Include="Themes\ModernTown\images\blog-img-1.jpg" />
+    <Content Include="Themes\ModernTown\images\blog-img-2.jpg" />
+    <Content Include="Themes\ModernTown\images\blog-img-3.jpg" />
+    <Content Include="Themes\ModernTown\images\blog-img-4.jpg" />
+    <Content Include="Themes\ModernTown\images\blog-img-5.jpg" />
+    <Content Include="Themes\ModernTown\images\blog-img-6.jpg" />
+    <Content Include="Themes\ModernTown\images\contact-bg.jpg" />
+    <Content Include="Themes\ModernTown\images\counter-bg.jpg" />
+    <Content Include="Themes\ModernTown\images\home-bg.jpg" />
+    <Content Include="Themes\ModernTown\images\testimonial-img-1.jpg" />
+    <Content Include="Themes\ModernTown\images\testimonial-img-2.jpg" />
+    <Content Include="Themes\ModernTown\images\testimonial-img-3.jpg" />
+    <Content Include="Themes\ModernTown\index.html" />
+    <Content Include="Themes\ModernTown\js\bootstrap.min.js" />
+    <Content Include="Themes\ModernTown\js\counter.js" />
+    <Content Include="Themes\ModernTown\js\custom.js" />
+    <Content Include="Themes\ModernTown\js\isotope.min.js" />
+    <Content Include="Themes\ModernTown\js\jquery.js" />
+    <Content Include="Themes\ModernTown\js\jquery.nav.js" />
+    <Content Include="Themes\ModernTown\js\jquery.parallax.js" />
+    <Content Include="Themes\ModernTown\js\owl.carousel.min.js" />
+    <Content Include="Themes\ModernTown\js\smoothscroll.js" />
+    <Content Include="Themes\ModernTown\js\wow.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
