@@ -959,3 +959,12 @@ div#contactUsSuccess, div#contactUsError {
     text-align: center;
     display: none;
 }
+
+span.fancy-text {
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    /*line-height: 20px;*/
+    margin-bottom: 25px;
+    /*margin-top: 25px;*/
+}

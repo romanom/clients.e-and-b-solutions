@@ -49,19 +49,29 @@
             </div>
             <div class="row">
                 <div id="contactUsForm" class="col-md-offset-4">
-                    Name:<br/>
-                    <input id="contactName" type="text" name="name"><br/>
-                    E-mail:<br/>
-                    <input id="contactEmail" type="email" name="email"><br/>
-                    Phone Number (optional):<br/>
-                    <input id="contactPhone" type="tel" name="phoneNumber"><br/>
-                    <span>Theme:<br/>
-                    <span id="themeType" name="themeType" size="50"></span><br/></span>
-                    Comments (optional):<br/>
-                    <textarea id="contactComment" name="comment" rows="4" cols="50"></textarea>
-                    <br/>
-                    <input type="button" onclick="collectInfoAndSendEmail();" value="Send">
-                    <input type="reset" onclick="resetContactInfo();" value="Reset">
+                    <span class="fancy-text">
+                        Name:<br />
+                        <input id="contactName" type="text" name="name"><br />
+                    </span>
+                    <span class="fancy-text">
+                        E-mail:<br />
+                        <input id="contactEmail" type="email" name="email"><br />
+                    </span>
+                    <span class="fancy-text">
+                        Phone Number (optional):<br />
+                        <input id="contactPhone" type="tel" name="phoneNumber"><br />
+                    </span>
+                    <span class="fancy-text">
+                        Theme:<br />
+                        <span id="themeType" name="themeType" size="50"></span><br />
+                    </span>
+                    <span class="fancy-text">
+                        Comments (optional):<br />
+                        <textarea id="contactComment" name="comment" rows="4" cols="50"></textarea>
+                        <br />
+                    </span>
+                    <input type="button" class="btn btn-xl" onclick="collectInfoAndSendEmail();" value="Send">
+                    <input type="reset" class="btn btn-xl" onclick="resetContactInfo();" value="Reset">
                 </div>
             </div>
         </div>
