@@ -39,10 +39,22 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    URL Parsing:
+                    Send an Email test:
                 </div>
                 <div id="contactusurl" class="col-md-6">
-                    <span>URL Text: it didn't work</span>
+                    Name:<br>
+                    <input id="contactName" type="text" name="name"><br>
+                    E-mail:<br>
+                    <input id="contactEmail" type="email" name="email"><br>
+                    Phone Number (optional):<br>
+                    <input id="contactPhone" type="tel" name="phoneNumber"><br>
+                    Theme:<br>
+                    <input id="themeType" type="text" name="themeType" size="50"><br>
+                    Comments (optional):<br>
+                    <textarea id="contactComment" name="comment" rows="4" cols="50"></textarea>
+                    <br>
+                    <input type="button" onclick="collectInfoAndSendEmail();" value="Send">
+                    <input type="reset" onclick="resetContactInfo();" value="Reset">
                 </div>
             </div>
         </div>
@@ -87,8 +99,18 @@
     <script>
         $(document).ready(function () {
             var param = window.name;
-            $('#contactusurl span').text("You have chosen the " + param + " theme.")
+            $('#themeType').val(param);
         });
+    </script>
+    <script>
+        function collectInfoAndSendEmail() {
+            $.ajax({
+                url: "https://formspree.io/asisler@ebsco.com",
+                method: "POST",
+                data: { email: "johnny@appleseed.com", name: "George, the Curious", message: "hello!" },
+                dataType: "json"
+            });
+        }
     </script>
 </body>
 </html>
