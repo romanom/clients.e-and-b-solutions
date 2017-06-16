@@ -39,22 +39,26 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    Send an Email test:
+                    <span id="ajaxMessage"></span>
                 </div>
                 <div id="contactusurl" class="col-md-6">
-                    Name:<br>
-                    <input id="contactName" type="text" name="name"><br>
-                    E-mail:<br>
-                    <input id="contactEmail" type="email" name="email"><br>
-                    Phone Number (optional):<br>
-                    <input id="contactPhone" type="tel" name="phoneNumber"><br>
-                    Theme:<br>
-                    <input id="themeType" type="text" name="themeType" size="50"><br>
-                    Comments (optional):<br>
-                    <textarea id="contactComment" name="comment" rows="4" cols="50"></textarea>
-                    <br>
-                    <input type="button" onclick="collectInfoAndSendEmail();" value="Send">
-                    <input type="reset" onclick="resetContactInfo();" value="Reset">
+                    <form action="https://formspree.io/aaron.sisler@eandbsolutions.com" method="POST">
+                        Send an Email test:<br />
+                        Name:<br />
+                        <input id="contactName" type="text" name="name"><br />
+                        E-mail:<br />
+                        <input id="contactEmail" type="email" name="email"><br />
+                        Phone Number (optional):<br />
+                        <input id="contactPhone" type="tel" name="phoneNumber"><br />
+                        Theme:<br />
+                        <input id="themeType" type="text" name="themeType" size="50"><br />
+                        Comments (optional):<br />
+                        <textarea id="contactComment" name="comment" rows="4" cols="50"></textarea>
+                        <br />
+                        <!--<input type="button" onclick="collectInfoAndSendEmail();" value="Send">-->
+                        <input type="submit" value="Send">
+                        <input type="reset" onclick="resetContactInfo();" value="Reset">
+                    </form>
                 </div>
             </div>
         </div>
@@ -100,16 +104,47 @@
         $(document).ready(function () {
             var param = window.name;
             $('#themeType').val(param);
+
+            $('#contactName').val("Aaron S");
+            $('#contactEmail').val("asisler@ebsco.com");
+            $('#contactPhone').val("9106030899");
+            $('#themeType').val("ModernTheme");
+            $('#contactComment').val("Rawr");
         });
     </script>
     <script>
         function collectInfoAndSendEmail() {
             $.ajax({
-                url: "https://formspree.io/asisler@ebsco.com",
+                url: "https://formspree.io/aaronsisler@eandbsolutions.com",
                 method: "POST",
-                data: { email: "johnny@appleseed.com", name: "George, the Curious", message: "hello!" },
+                data:
+                {
+                    name: $('#contactName').val(),
+                    email: $('#contactEmail').val(),
+                    phone: $('#contactPhone').val(),
+                    theme: $('#themeType').val(),
+                    comment: $('#contactComment').val()
+                },
                 dataType: "json"
-            });
+            })
+            //.done(function () { onSuccessfulEmailSend(); })
+            //.fail(function () { onFailureEmailSend() });
+        }
+
+        function onSuccessfulEmailSend() {
+            $('#ajaxMessage').text("Email has been sent");
+        }
+
+        function onFailureEmailSend() {
+            $('#ajaxMessage').text("Email sending has failed");
+        }
+
+        function resetContactInfo() {
+            $('#contactName').val("");
+            $('#contactEmail').val("");
+            $('#contactPhone').val("");
+            $('#themeType').val("");
+            $('#contactComment').val("");
         }
     </script>
 </body>
