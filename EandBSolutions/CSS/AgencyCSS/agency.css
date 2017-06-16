@@ -13,7 +13,6 @@ body {
 }
 
 .text-primary {
-    /*color: #fed136;*/
     color: #99ccff;
 }
 
@@ -70,8 +69,6 @@ h6 {
 
 .btn-primary {
     color: white;
-    /*background-color: #fed136;
-    border-color: #fed136;*/
     background-color: #99ccff;
     border-color: #99ccff;
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -85,8 +82,6 @@ h6 {
     .btn-primary.active,
     .open .dropdown-toggle.btn-primary {
         color: white;
-        /*background-color: #fec503;
-        border-color: #f6bf01;*/
         background-color: #99ccff;
         border-color: #99ccff;
     }
@@ -123,55 +118,55 @@ h6 {
 
 .btn-xl {
     color: white;
-        background-color: #99ccff;
-        border-color: #99ccff;
-        font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        text-transform: uppercase;
-        font-weight: 700;
-        border-radius: 3px;
-        font-size: 18px;
-        padding: 20px 40px;
-    }
-
-.btn-xl:hover,
-.btn-xl:focus,
-.btn-xl:active,
-.btn-xl.active,
-.open .dropdown-toggle.btn-xl {
-    color: white;
-    background-color: #3399ff;
-    border-color: #3399ff;
-}
-
-.btn-xl:active,
-.btn-xl.active,
-.open .dropdown-toggle.btn-xl {
-    background-image: none;
-}
-
-.btn-xl.disabled,
-.btn-xl[disabled],
-fieldset[disabled] .btn-xl,
-.btn-xl.disabled:hover,
-.btn-xl[disabled]:hover,
-fieldset[disabled] .btn-xl:hover,
-.btn-xl.disabled:focus,
-.btn-xl[disabled]:focus,
-fieldset[disabled] .btn-xl:focus,
-.btn-xl.disabled:active,
-.btn-xl[disabled]:active,
-fieldset[disabled] .btn-xl:active,
-.btn-xl.disabled.active,
-.btn-xl[disabled].active,
-fieldset[disabled] .btn-xl.active {
     background-color: #99ccff;
     border-color: #99ccff;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 3px;
+    font-size: 18px;
+    padding: 20px 40px;
 }
 
-.btn-xl .badge {
-    color: #99ccff;
-    background-color: white;
-}
+    .btn-xl:hover,
+    .btn-xl:focus,
+    .btn-xl:active,
+    .btn-xl.active,
+    .open .dropdown-toggle.btn-xl {
+        color: white;
+        background-color: #3399ff;
+        border-color: #3399ff;
+    }
+
+    .btn-xl:active,
+    .btn-xl.active,
+    .open .dropdown-toggle.btn-xl {
+        background-image: none;
+    }
+
+    .btn-xl.disabled,
+    .btn-xl[disabled],
+    fieldset[disabled] .btn-xl,
+    .btn-xl.disabled:hover,
+    .btn-xl[disabled]:hover,
+    fieldset[disabled] .btn-xl:hover,
+    .btn-xl.disabled:focus,
+    .btn-xl[disabled]:focus,
+    fieldset[disabled] .btn-xl:focus,
+    .btn-xl.disabled:active,
+    .btn-xl[disabled]:active,
+    fieldset[disabled] .btn-xl:active,
+    .btn-xl.disabled.active,
+    .btn-xl[disabled].active,
+    fieldset[disabled] .btn-xl.active {
+        background-color: #99ccff;
+        border-color: #99ccff;
+    }
+
+    .btn-xl .badge {
+        color: #99ccff;
+        background-color: white;
+    }
 
 .company-name {
     color: #ffffff;
@@ -562,57 +557,57 @@ section {
             border: 7px solid #3399ff;
             text-align: center;
         }
-                /*ul.social-buttons li a:hover,*/
-        div#bePartOf:hover,
-        div#bePartOf:focus,
-        div#bePartOf:active {
-            background-color: #3399ff;
-            border: 7px solid #99ccff;
-        }
 
-        .timeline > li .timeline-image h4 {
-            font-size: 10px;
-            margin-top: 12px;
-            line-height: 14px;
-        }
+div#bePartOf:hover,
+div#bePartOf:focus,
+div#bePartOf:active {
+    background-color: #3399ff;
+    border: 7px solid #99ccff;
+}
 
-        .timeline > li.timeline-inverted > .timeline-panel {
-            float: right;
-            text-align: left;
-            padding: 0 20px 0 100px;
-        }
+.timeline > li .timeline-image h4 {
+    font-size: 10px;
+    margin-top: 12px;
+    line-height: 14px;
+}
 
-            .timeline > li.timeline-inverted > .timeline-panel:before {
-                border-left-width: 0;
-                border-right-width: 15px;
-                left: -15px;
-                right: auto;
-            }
+.timeline > li.timeline-inverted > .timeline-panel {
+    float: right;
+    text-align: left;
+    padding: 0 20px 0 100px;
+}
 
-            .timeline > li.timeline-inverted > .timeline-panel:after {
-                border-left-width: 0;
-                border-right-width: 14px;
-                left: -14px;
-                right: auto;
-            }
-
-        .timeline > li:last-child {
-            margin-bottom: 0;
-        }
-
-    .timeline .timeline-heading h4 {
-        margin-top: 0;
-        color: inherit;
+    .timeline > li.timeline-inverted > .timeline-panel:before {
+        border-left-width: 0;
+        border-right-width: 15px;
+        left: -15px;
+        right: auto;
     }
 
-        .timeline .timeline-heading h4.subheading {
-            text-transform: none;
-        }
-
-    .timeline .timeline-body > p,
-    .timeline .timeline-body > ul {
-        margin-bottom: 0;
+    .timeline > li.timeline-inverted > .timeline-panel:after {
+        border-left-width: 0;
+        border-right-width: 14px;
+        left: -14px;
+        right: auto;
     }
+
+.timeline > li:last-child {
+    margin-bottom: 0;
+}
+
+.timeline .timeline-heading h4 {
+    margin-top: 0;
+    color: inherit;
+}
+
+    .timeline .timeline-heading h4.subheading {
+        text-transform: none;
+    }
+
+.timeline .timeline-body > p,
+.timeline .timeline-body > ul {
+    margin-bottom: 0;
+}
 
 @media (min-width: 768px) {
     .timeline:before {
@@ -940,13 +935,11 @@ ul.social-buttons {
 
 ::-moz-selection {
     text-shadow: none;
-    /*background: #fed136;*/
     background: #99ccff;
 }
 
 ::selection {
     text-shadow: none;
-    /*background: #fed136;*/
     background: #99ccff;
 }
 
@@ -959,6 +952,10 @@ img::-moz-selection {
 }
 
 body {
-    /*webkit-tap-highlight-color: #fed136;*/
     webkit-tap-highlight-color: #99ccff;
+}
+
+div#contactUsSuccess, div#contactUsError {
+    text-align: center;
+    display: none;
 }

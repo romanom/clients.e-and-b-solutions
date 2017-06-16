@@ -38,22 +38,28 @@
     <section id="contactus">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <span id="ajaxMessage"></span>
+                <div id="contactUsSuccess" class="col-md-12">
+                    <span>Thank you for reaching out.  We are excited to get back in touch with you.</span>
                 </div>
-                <div id="contactusurl" class="col-md-6">
-                    Send an Email test:<br />
-                    Name:<br />
-                    <input id="contactName" type="text" name="name"><br />
-                    E-mail:<br />
-                    <input id="contactEmail" type="email" name="email"><br />
-                    Phone Number (optional):<br />
-                    <input id="contactPhone" type="tel" name="phoneNumber"><br />
-                    Theme:<br />
-                    <input id="themeType" type="text" name="themeType" size="50"><br />
-                    Comments (optional):<br />
+            </div>
+            <div class="row">
+                <div id="contactUsError" class="col-md-12">
+                    <span>Something went wrong unfortunately.  Please try reloading the page.</span>
+                </div>
+            </div>
+            <div class="row">
+                <div id="contactUsForm" class="col-md-offset-4">
+                    Name:<br/>
+                    <input id="contactName" type="text" name="name"><br/>
+                    E-mail:<br/>
+                    <input id="contactEmail" type="email" name="email"><br/>
+                    Phone Number (optional):<br/>
+                    <input id="contactPhone" type="tel" name="phoneNumber"><br/>
+                    <span>Theme:<br/>
+                    <span id="themeType" name="themeType" size="50"></span><br/></span>
+                    Comments (optional):<br/>
                     <textarea id="contactComment" name="comment" rows="4" cols="50"></textarea>
-                    <br />
+                    <br/>
                     <input type="button" onclick="collectInfoAndSendEmail();" value="Send">
                     <input type="reset" onclick="resetContactInfo();" value="Reset">
                 </div>
@@ -100,13 +106,7 @@
     <script>
         $(document).ready(function () {
             var param = window.name;
-            $('#themeType').val(param);
-
-            $('#contactName').val("Aaron S");
-            $('#contactEmail').val("asisler@ebsco.com");
-            $('#contactPhone').val("9106030899");
-            $('#themeType').val("ModernTheme");
-            $('#contactComment').val("Rawr");
+            param ? $('#themeType').text(param) : $('#themeType').parent().hide();
         });
     </script>
     <script>
@@ -119,7 +119,7 @@
                     name: $('#contactName').val(),
                     email: $('#contactEmail').val(),
                     phone: $('#contactPhone').val(),
-                    theme: $('#themeType').val(),
+                    theme: $('#themeType').text() ? $('#themeType').text() : "No theme selected",
                     comment: $('#contactComment').val()
                 },
                 dataType: "json"
@@ -129,18 +129,19 @@
         }
 
         function onSuccessfulEmailSend() {
-            $('#ajaxMessage').text("Email has been sent");
+            $('#contactUsForm').hide();
+            $('#contactUsSuccess').show();
         }
 
         function onFailureEmailSend() {
-            $('#ajaxMessage').text("Email sending has failed");
+            $('#contactUsForm').hide();
+            $('#contactUsError').show();
         }
 
         function resetContactInfo() {
             $('#contactName').val("");
             $('#contactEmail').val("");
             $('#contactPhone').val("");
-            $('#themeType').val("");
             $('#contactComment').val("");
         }
     </script>
