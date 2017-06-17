@@ -38,40 +38,53 @@
     <section id="contactus">
         <div class="container">
             <div class="row">
-                <div id="contactUsSuccess" class="col-md-12">
-                    <span>Thank you for reaching out.  We are excited to get back in touch with you.</span>
+                <div id="contactUsOpener" class="col-md-12 contact-us">
+                    <span class="fancy-text">
+                        We promise that your email won't disappear into the nether.<br/>
+                        At E<span style="font-size: 0.75em;">&</span>B Solutions, 
+                        we provide the exceptional service we'd want to experience ourselves!
+                        <br/>
+                        <br/>
+                    </span>
                 </div>
             </div>
             <div class="row">
-                <div id="contactUsError" class="col-md-12">
-                    <span>Something went wrong unfortunately.  Please try reloading the page.</span>
+                <div id="contactUsSuccess" class="col-md-12 contact-us">
+                    <span class="fancy-text">Thank you for reaching out.  We are excited to get back in touch with you.</span>
                 </div>
             </div>
             <div class="row">
-                <div id="contactUsForm" class="col-md-offset-4">
-                    <span class="fancy-text">
-                        Name:<br />
-                        <input id="contactName" type="text" name="name"><br />
-                    </span>
-                    <span class="fancy-text">
-                        E-mail:<br />
-                        <input id="contactEmail" type="email" name="email"><br />
-                    </span>
-                    <span class="fancy-text">
-                        Phone Number (optional):<br />
-                        <input id="contactPhone" type="tel" name="phoneNumber"><br />
-                    </span>
-                    <span class="fancy-text">
-                        Theme:<br />
-                        <span id="themeType" name="themeType" size="50"></span><br />
-                    </span>
-                    <span class="fancy-text">
-                        Comments (optional):<br />
-                        <textarea id="contactComment" name="comment" rows="4" cols="50"></textarea>
-                        <br />
-                    </span>
-                    <input type="button" class="btn btn-xl" onclick="collectInfoAndSendEmail();" value="Send">
-                    <input type="reset" class="btn btn-xl" onclick="resetContactInfo();" value="Reset">
+                <div id="contactUsError" class="col-md-12 contact-us">
+                    <span class="fancy-text">Something went wrong unfortunately.  Please try reloading the page.</span>
+                </div>
+            </div>
+            <div class="row">
+                <div id="contactUsDiv" class="col-md-offset-4">
+                    <form id="contactUsForm">
+                        <span class="fancy-text">
+                            Name:<br />
+                            <input id="contactName" type="text" name="name"><br />
+                        </span>
+                        <span class="fancy-text">
+                            E-mail:<br />
+                            <input id="contactEmail" type="email" name="email"><br />
+                        </span>
+                        <span class="fancy-text">
+                            Phone Number (optional):<br />
+                            <input id="contactPhone" type="tel" name="phoneNumber" placeholder="No dashes, etc."><br />
+                        </span>
+                        <span class="fancy-text">
+                            Theme:<br />
+                            <span id="themeType" name="themeType" size="50"></span><br />
+                        </span>
+                        <span class="fancy-text">
+                            Comments (optional):<br />
+                            <textarea id="contactComment" name="comment" rows="4" cols="30" placeholder="What's on your mind?"></textarea>
+                            <br />
+                        </span>
+                        <input type="submit" class="btn btn-xl" value="Send It">
+                        <input type="reset" class="btn btn-xl" onclick="resetContactInfo();" value="Reset">
+                    </form>
                 </div>
             </div>
         </div>
@@ -104,11 +117,12 @@
     </footer>
     <!-- jQuery -->
     <script src="Scripts/jquery-3.1.0.min.js"></script>
+    <!-- jQuery Validation-->
+    <script src="Scripts/jquery.validate.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="Scripts/bootstrap.min.js"></script>
     <!-- Plugin JavaScript -->
     <script src="Scripts/jquery.easing.min.js"></script>
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>-->
     <!-- Contact Form JavaScript -->
     <script src="Scripts/jqBootstrapValidation.js"></script>
     <!-- Theme JavaScript -->
@@ -117,6 +131,30 @@
         $(document).ready(function () {
             var param = window.name;
             param ? $('#themeType').text(param) : $('#themeType').parent().hide();
+
+            $('#contactUsForm').validate({
+                // initialize plugin
+                // rules & options,
+                rules: {
+                    name: {
+                        required: true
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    phoneNumber: {
+                        required: false,
+                        digits: true,
+                        minlength: 10,
+                        maxlength: 10
+                    }
+                },
+                submitHandler: function (form) {
+                    collectInfoAndSendEmail()
+                    return false;  // blocks regular submit there is ajax
+                }
+            });
         });
     </script>
     <script>
@@ -139,12 +177,14 @@
         }
 
         function onSuccessfulEmailSend() {
-            $('#contactUsForm').hide();
+            $('#contactUsDiv').hide();
+            $('#contactUsOpener').hide();
             $('#contactUsSuccess').show();
         }
 
         function onFailureEmailSend() {
-            $('#contactUsForm').hide();
+            $('#contactUsDiv').hide();
+            $('#contactUsOpener').hide();
             $('#contactUsError').show();
         }
 
