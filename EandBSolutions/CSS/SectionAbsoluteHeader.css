@@ -1,0 +1,39 @@
+﻿/*
+    <link href="../../CSS/SectionAbsoluteHeader.css" rel="stylesheet" />
+    <section class="absolute-header">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="../../ChooseYourTheme.html" class="btn btn-xl">Back To Themes</a>
+                <a href="../../ContactUs.html" class="btn btn-xl">Choose This Theme</a>
+            </div>
+        </div>
+    </section>
+*/
+section.absolute-header {
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    margin: 25px 0px 25px 0px;
+}
+
+    section.absolute-header .btn-xl {
+        color: white;
+        background-color: #99ccff;
+        border-color: #99ccff;
+        font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        text-transform: uppercase;
+        font-weight: 700;
+        border-radius: 3px;
+        font-size: 18px;
+        padding: 20px 40px;
+    }
+
+        section.absolute-header .btn-xl:hover,
+        section.absolute-header .btn-xl:focus,
+        section.absolute-header .btn-xl:active,
+        section.absolute-header .btn-xl.active {
+            color: white;
+            background-color: #3399ff;
+            border-color: #3399ff;
+        }
