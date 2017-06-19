@@ -285,8 +285,8 @@ section.topper {
 }
 
     section.topper .intro-text {
-        padding-top: 75px;
-        padding-bottom: 25px;
+        padding-top: 25px;
+        padding-bottom: 75px;
     }
 
         section.topper .intro-text .intro-lead-in {
