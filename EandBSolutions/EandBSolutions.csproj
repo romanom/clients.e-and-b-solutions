@@ -67,7 +67,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ContactUs.html" />
+    <Content Include="CSS\SectionAbsoluteHeader.css" />
     <Content Include="Images\AaronSislerProfile.PNG" />
+    <Content Include="favicon.ico" />
     <Content Include="Images\HSTentEventHiRes.jpg" />
     <Content Include="Images\Modals\EandBSolutions\EBSolutionsPort_Mini.JPG" />
     <Content Include="Images\Modals\ValleyLoveOrganic\2016Metrics.JPG" />
@@ -190,7 +192,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>55847</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
