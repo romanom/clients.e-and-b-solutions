@@ -203,6 +203,7 @@ h6 {
         text-transform: uppercase;
         color: white;
         font-size: 12px;
+        height: 100px;
     }
 
         .navbar-custom .navbar-toggle:hover,
