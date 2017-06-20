@@ -135,7 +135,7 @@
     <script src="Scripts/agency.js"></script>
     <script>
         $(document).ready(function () {
-            var param = window.name;
+            var param = window.themeName;
             param ? $('#contactTheme').val("Theme: " + param) : $('#contactTheme').hide();
 
             $('#contactUsForm').validate({
@@ -173,7 +173,7 @@
                     name: $('#contactName').val(),
                     email: $('#contactEmail').val(),
                     phone: $('#contactPhone').val(),
-                    theme: $('#themeType').text() ? $('#themeType').text() : "No theme selected",
+                    theme: $('#contactTheme').val() ? $('#contactTheme').val() : "No theme selected",
                     comment: $('#contactComment').val()
                 },
                 dataType: "json"
