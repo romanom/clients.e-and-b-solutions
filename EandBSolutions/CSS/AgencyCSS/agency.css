@@ -997,6 +997,18 @@ span.fancy-text {
     height: auto;
 }
 
+#contactUsForm .form-control-span {
+    background: transparent;
+    /*border-color: black;*/
+    color: black;
+    border-radius: 0px;
+    box-shadow: none;
+    margin-bottom: 22px;
+    transition: all 0.4s ease-in-out;
+    padding: 10px;
+    height: auto;
+}
+
 #contactUsForm .form-control-btn {
     color: white;
     background-color: #99ccff;
