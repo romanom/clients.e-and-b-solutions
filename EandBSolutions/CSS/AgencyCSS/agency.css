@@ -1007,6 +1007,7 @@ span.fancy-text {
     border-radius: 3px;
     font-size: 12px;
     padding: 8px;
+    box-shadow: none;
 }
 
     #contactUsForm .form-control-btn:hover,
