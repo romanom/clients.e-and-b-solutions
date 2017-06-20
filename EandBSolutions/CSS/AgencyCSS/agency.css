@@ -979,3 +979,7 @@ span.fancy-text {
     display: block;
     margin-bottom: 10px;
 }
+
+div#contactUsDiv {
+    padding-left: 5px;
+}
