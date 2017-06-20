@@ -351,6 +351,10 @@ header {
         height: 175px;
     }
 
+    section#contactus {
+        padding-top: 25px;
+    }
+
         section.topper .intro-text .intro-lead-in {
             font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
             font-style: italic;
@@ -365,7 +369,7 @@ header {
             font-weight: 700;
             font-size: 75px;
             line-height: 75px;
-            margin-bottom: 50px;
+            margin-bottom: 25px;
         }
 
     header .intro-text {
