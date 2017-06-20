@@ -985,7 +985,7 @@ span.fancy-text {
     margin-bottom: 10px;
 }
 
-#contact .form-control, #contact .form-control-btn {
+#contact .form-control {
     background: transparent;
     border-color: #ffffff;
     color: #ffffff;
