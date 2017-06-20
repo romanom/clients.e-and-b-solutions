@@ -137,6 +137,9 @@
         $(document).ready(function () {
             var param = window.name;
             param ? $('#themeType').text(param) : $('#themeType').parent().hide();
+            if (param) {
+                $('#themeType').css("border-color", "white");
+            }
 
             $('#contactUsForm').validate({
                 // initialize plugin
