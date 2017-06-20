@@ -135,8 +135,7 @@
     <script src="Scripts/agency.js"></script>
     <script>
         $(document).ready(function () {
-            var param = window.themeName;
-            param ? $('#contactTheme').val("Theme: " + param) : $('#contactTheme').hide();
+            window.name.themeName ? $('#contactTheme').val("Theme: " + window.name.themeName) : $('#contactTheme').hide();
 
             $('#contactUsForm').validate({
                 // initialize plugin
