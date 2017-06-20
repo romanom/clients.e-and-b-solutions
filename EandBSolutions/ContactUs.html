@@ -136,7 +136,7 @@
     <script>
         $(document).ready(function () {
             var param = window.name;
-            param ? $('#contactTheme').text("Theme: " + param) : $('#contactTheme').hide();
+            param ? $('#contactTheme').val("Theme: " + param) : $('#contactTheme').hide();
 
             $('#contactUsForm').validate({
                 // initialize plugin
