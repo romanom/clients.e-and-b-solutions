@@ -985,7 +985,7 @@ span.fancy-text {
     margin-bottom: 10px;
 }
 
-#contact .form-control {
+#contactUsForm .form-control {
     background: transparent;
     border-color: #ffffff;
     color: #ffffff;
@@ -997,7 +997,7 @@ span.fancy-text {
     height: auto;
 }
 
-#contact .form-control-btn {
+#contactUsForm .form-control-btn {
     color: white;
     background-color: #99ccff;
     border-color: #99ccff;
@@ -1009,11 +1009,11 @@ span.fancy-text {
     padding: 20px 40px;
 }
 
-    #contact .form-control-btn:hover,
+    /*#contact .form-control-btn:hover,
     #contact .form-control-btn:focus,
     #contact .form-control-btn:active,
     #contact .form-control-btn:active {
         color: white;
         background-color: #3399ff;
         border-color: #3399ff;
-    }
+    }*/
