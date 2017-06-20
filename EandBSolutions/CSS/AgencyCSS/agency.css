@@ -987,7 +987,7 @@ span.fancy-text {
 
 #contactUsForm .form-control {
     background: transparent;
-    border-color: #ffffff;
+    border-color: black;
     color: #ffffff;
     border-radius: 0px;
     box-shadow: none;
@@ -997,7 +997,7 @@ span.fancy-text {
     height: auto;
 }
 
-/*#contactUsForm .form-control-btn {
+#contactUsForm .form-control-btn {
     color: white;
     background-color: #99ccff;
     border-color: #99ccff;
@@ -1007,13 +1007,13 @@ span.fancy-text {
     border-radius: 3px;
     font-size: 14px;
     padding: 10px;
-}*/
+}
 
-    /*#contact .form-control-btn:hover,
+    #contact .form-control-btn:hover,
     #contact .form-control-btn:focus,
     #contact .form-control-btn:active,
     #contact .form-control-btn:active {
         color: white;
         background-color: #3399ff;
         border-color: #3399ff;
-    }*/
+    }
