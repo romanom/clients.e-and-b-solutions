@@ -77,31 +77,19 @@
                 </div>
             </div>
             <div class="row">
-                <div id="contactUsDiv" class="col-md-offset-4">
+                <!-- Contact form section -->
+                <div class="col-md-6 col-sm-6">
                     <form id="contactUsForm">
-                        <span class="fancy-text">
-                            Name:<br />
-                            <input id="contactName" size="25" type="text" name="name"><br />
-                        </span>
-                        <span class="fancy-text">
-                            E-mail:<br />
-                            <input id="contactEmail" size="25" type="email" name="email"><br />
-                        </span>
-                        <span class="fancy-text">
-                            Phone Number (optional):<br />
-                            <input id="contactPhone" type="tel" size="25" name="phoneNumber" placeholder="No dashes, etc."><br />
-                        </span>
-                        <span class="fancy-text">
-                            Theme:<br />
-                            <span id="themeType" name="themeType" size="50"></span><br />
-                        </span>
-                        <span class="fancy-text">
-                            Comments (optional):<br />
-                            <textarea id="contactComment" name="comment" rows="4" cols="25" placeholder="What's on your mind?"></textarea>
-                            <br />
-                        </span>
-                        <input type="submit" class="btn btn-xl" value="Send It">
-                        <input type="reset" class="btn btn-xl" onclick="resetContactInfo();" value="Reset">
+                        <div class="col-md-12 col-sm-12">
+                            <input type="text" class="form-control" placeholder="Name" id="contactName">
+                            <input type="email" class="form-control" placeholder="Email" id="contactEmail">
+                            <input type="tel" class="form-control" placeholder="Phone" id="contactPhone">
+                            <textarea name="message" rows="8" class="form-control" id="contactComment" placeholder="What's on your mind?'" message="comment"></textarea>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <input type="submit" class="form-control" value="Send It">
+                            <input type="reset" class="form-control" value="Reset" onclick="resetContactInfo();">
+                        </div>
                     </form>
                 </div>
             </div>
@@ -152,7 +140,7 @@
 
             $('#contactUsForm').validate({
                 // initialize plugin
-                // rules & options,
+                // rules & options
                 rules: {
                     name: {
                         required: true
