@@ -1005,8 +1005,8 @@ span.fancy-text {
     text-transform: uppercase;
     font-weight: 700;
     border-radius: 3px;
-    font-size: 14px;
-    padding: 10px;
+    font-size: 12px;
+    padding: 8px;
 }
 
     #contact .form-control-btn:hover,
