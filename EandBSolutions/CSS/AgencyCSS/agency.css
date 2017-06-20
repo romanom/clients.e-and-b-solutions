@@ -1012,7 +1012,7 @@ span.fancy-text {
     #contact .form-control-btn:hover,
     #contact .form-control-btn:focus,
     #contact .form-control-btn:active,
-    #contact .form-control-btn.active {
+    #contact .form-control-btn:active {
         color: white;
         background-color: #3399ff;
         border-color: #3399ff;
