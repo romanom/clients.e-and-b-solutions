@@ -985,14 +985,35 @@ span.fancy-text {
     margin-bottom: 10px;
 }
 
-#contact .form-control {
-  background: transparent;
-  border-color: #ffffff;
-  color: #ffffff;
-  border-radius: 0px;
-  box-shadow: none;
-  margin-bottom: 22px;
-  transition: all 0.4s ease-in-out;
-  padding: 10px;
-  height: auto;
+#contact .form-control, #contact .form-control-btn {
+    background: transparent;
+    border-color: #ffffff;
+    color: #ffffff;
+    border-radius: 0px;
+    box-shadow: none;
+    margin-bottom: 22px;
+    transition: all 0.4s ease-in-out;
+    padding: 10px;
+    height: auto;
 }
+
+#contact .form-control-btn {
+    color: white;
+    background-color: #99ccff;
+    border-color: #99ccff;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 3px;
+    font-size: 18px;
+    padding: 20px 40px;
+}
+
+    #contact .form-control-btn:hover,
+    #contact .form-control-btn:focus,
+    #contact .form-control-btn:active,
+    #contact .form-control-btn.active {
+        color: white;
+        background-color: #3399ff;
+        border-color: #3399ff;
+    }
