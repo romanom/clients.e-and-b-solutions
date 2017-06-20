@@ -346,14 +346,15 @@ header {
             margin-bottom: 25px;
         }
 
+section#contactus {
+    padding-top: 25px;
+}
+
 @media (min-width: 768px) {
     section.topper {
         height: 175px;
     }
 
-    section#contactus {
-        padding-top: 25px;
-    }
 
         section.topper .intro-text .intro-lead-in {
             font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
