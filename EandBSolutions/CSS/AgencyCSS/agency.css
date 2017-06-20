@@ -1009,10 +1009,10 @@ span.fancy-text {
     padding: 8px;
 }
 
-    #contact .form-control-btn:hover,
-    #contact .form-control-btn:focus,
-    #contact .form-control-btn:active,
-    #contact .form-control-btn:active {
+    #contactUsForm .form-control-btn:hover,
+    #contactUsForm .form-control-btn:focus,
+    #contactUsForm .form-control-btn:active,
+    #contactUsForm .form-control-btn:active {
         color: white;
         background-color: #3399ff;
         border-color: #3399ff;
