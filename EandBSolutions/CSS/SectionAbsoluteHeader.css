@@ -17,7 +17,7 @@ section.absolute-header {
     margin: 25px 0px 25px 0px;
 }
 
-    section.absolute-header .btn-xl {
+    section.absolute-header .btn-lg {
         color: white;
         background-color: #99ccff;
         border-color: #99ccff;
@@ -25,15 +25,22 @@ section.absolute-header {
         text-transform: uppercase;
         font-weight: 700;
         border-radius: 3px;
-        font-size: 18px;
-        padding: 20px 40px;
+        font-size: 10px;
+        padding: 5px 10px;
     }
 
-        section.absolute-header .btn-xl:hover,
-        section.absolute-header .btn-xl:focus,
-        section.absolute-header .btn-xl:active,
-        section.absolute-header .btn-xl.active {
+        section.absolute-header .btn-lg:hover,
+        section.absolute-header .btn-lg:focus,
+        section.absolute-header .btn-lg:active,
+        section.absolute-header .btn-lg.active {
             color: white;
             background-color: #3399ff;
             border-color: #3399ff;
         }
+
+@media (min-width: 768px) {
+    section.absolute-header .btn-lg {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
