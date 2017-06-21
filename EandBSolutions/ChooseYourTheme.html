@@ -10,12 +10,16 @@
 
     <title>Choose Your Theme</title>
     <!-- Bootstrap Core CSS -->
-    <link href="CSS/bootstrap.min.css" rel="stylesheet" />
+    <link href="CSS/bootstrap.min.css" rel="stylesheet"/>
+    <!-- Slick Core CSS Keep (above Theme CSS)-->
+    <link href="CSS/Slick/slick.css" rel="stylesheet" />
+    <link href="CSS/Slick/slick-theme.css" rel="stylesheet" />
     <!-- Custom Fonts -->
     <link href="CSS/AgencyCSS/Fonts/css/font-awesome.min.css" rel="stylesheet" />
     <link href="CSS/AgencyCSS/custom_fonts.css" rel="stylesheet" />
     <!-- Theme CSS -->
     <link href="CSS/AgencyCSS/agency.css" rel="stylesheet" />
+
 </head>
 <body id="page-top" class="index">
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
@@ -50,22 +54,27 @@
         </div>
     </section>
     <!-- Portfolio Grid Section -->
-    <section id="portfolio" class="bg-light-gray">
+    <section>
         <div class="container">
             <div class="row">
-                <div class="col-md-12 portfolio-item">
-                    <div class="portfolio-caption">
-                        <h4>Modern Town</h4>
-                        <p class="text-muted">Living in Modern Town</p>
-                    </div>
-                    <a href="Themes/ModernTown/index.html" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
+                <div class="col-md-12">
+                    <div class="lazyCarousel">
+                        <div>
+                            <img data-lazy="http://placehold.it/350x300?text=1" />
                         </div>
-                        <img src="Images/Themes/ModernTown.jpg" class="img-responsive" alt="">
-                    </a>
+                        <div>
+                            <img data-lazy="http://placehold.it/350x300?text=2" />
+                        </div>
+                        <div>
+                            <img data-lazy="http://placehold.it/350x300?text=3" />
+                        </div>
+                        <div>
+                            <img data-lazy="http://placehold.it/350x300?text=4"/>
+                        </div>
+                        <div>
+                            <img data-lazy="http://placehold.it/350x300?text=5" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -102,14 +111,25 @@
     <script src="Scripts/bootstrap.min.js"></script>
     <!-- Plugin JavaScript -->
     <script src="Scripts/jquery.easing.min.js"></script>
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>-->
     <!-- Contact Form JavaScript -->
     <script src="Scripts/jqBootstrapValidation.js"></script>
     <!-- Theme JavaScript -->
     <script src="Scripts/agency.js"></script>
+    <script src="Scripts/slick.min.js"></script>
     <script>
         $(document).ready(function () {
             window.name = "No theme";
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".lazyCarousel").slick({
+                lazyLoad: 'ondemand',
+                dots: true,
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1
+            });
         });
     </script>
 </body>

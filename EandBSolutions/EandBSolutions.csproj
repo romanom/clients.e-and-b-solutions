@@ -68,8 +68,13 @@
   <ItemGroup>
     <Content Include="ContactUs.html" />
     <Content Include="CSS\SectionAbsoluteHeader.css" />
+    <Content Include="CSS\Slick\ajax-loader.gif" />
+    <Content Include="CSS\Slick\fonts\slick.svg" />
+    <Content Include="CSS\Slick\slick-theme.css" />
+    <Content Include="CSS\Slick\slick.css" />
     <Content Include="Images\AaronSislerProfile.PNG" />
     <Content Include="favicon.ico" />
+    <Content Include="Scripts\slick.min.js" />
     <Content Include="sitemap.txt" />
     <Content Include="Images\HSTentEventHiRes.jpg" />
     <Content Include="Images\Modals\EandBSolutions\EBSolutionsPort_Mini.JPG" />
@@ -118,6 +123,14 @@
     <Content Include="Themes\ModernTown\fonts\fontawesome-webfont.woff" />
     <Content Include="Themes\ModernTown\fonts\fontawesome-webfont.woff2" />
     <Content Include="Themes\ModernTown\fonts\FontAwesome.otf" />
+    <Content Include="CSS\Slick\fonts\slick.eot" />
+    <Content Include="CSS\Slick\fonts\slick.ttf" />
+    <Content Include="CSS\Slick\fonts\slick.woff" />
+    <Content Include="CSS\Slick\config.rb" />
+    <Content Include="CSS\Slick\slick-theme.less" />
+    <Content Include="CSS\Slick\slick-theme.scss" />
+    <Content Include="CSS\Slick\slick.less" />
+    <Content Include="CSS\Slick\slick.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

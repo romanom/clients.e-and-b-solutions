@@ -1018,3 +1018,25 @@ span.fancy-text {
         background-color: #3399ff;
         border-color: #3399ff;
     }
+
+* {
+    box-sizing: border-box;
+}
+
+.slider {
+    width: 50%;
+    margin: 100px auto;
+}
+
+.slick-slide {
+    margin: 0px 20px;
+}
+
+    .slick-slide img {
+        width: 100%;
+    }
+
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+}
