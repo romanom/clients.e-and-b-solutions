@@ -985,6 +985,36 @@ span.fancy-text {
     margin-bottom: 10px;
 }
 
-div#contactUsDiv .span {
-    padding-left: 5px;
+#contactUsForm .form-control {
+    background: transparent;
+    border-color: black;
+    color: black;
+    border-radius: 0px;
+    box-shadow: none;
+    margin-bottom: 22px;
+    transition: all 0.4s ease-in-out;
+    padding: 10px;
+    height: auto;
 }
+
+#contactUsForm .form-control-btn {
+    color: white;
+    background-color: #99ccff;
+    border-color: #99ccff;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 8px;
+    box-shadow: none;
+}
+
+    #contactUsForm .form-control-btn:hover,
+    #contactUsForm .form-control-btn:focus,
+    #contactUsForm .form-control-btn:active,
+    #contactUsForm .form-control-btn:active {
+        color: white;
+        background-color: #3399ff;
+        border-color: #3399ff;
+    }
