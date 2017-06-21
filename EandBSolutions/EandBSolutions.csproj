@@ -70,6 +70,7 @@
     <Content Include="CSS\SectionAbsoluteHeader.css" />
     <Content Include="Images\AaronSislerProfile.PNG" />
     <Content Include="favicon.ico" />
+    <Content Include="sitemap.txt" />
     <Content Include="Images\HSTentEventHiRes.jpg" />
     <Content Include="Images\Modals\EandBSolutions\EBSolutionsPort_Mini.JPG" />
     <Content Include="Images\Modals\ValleyLoveOrganic\2016Metrics.JPG" />
