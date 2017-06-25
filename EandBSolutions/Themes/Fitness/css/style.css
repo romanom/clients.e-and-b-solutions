@@ -398,7 +398,7 @@ a {
   height: 45px;
 }
 
-#newsletter input[type="submit"] {
+#newsletter input[type="button"] {
   background: #26253a;
   border: none;
   color: #ffffff;
@@ -410,7 +410,7 @@ a {
   transition: all 0.4s ease-in-out;
 }
 
-#newsletter input[type="submit"]:hover {
+#newsletter input[type="button"]:hover {
   background: #ffffff;
   color: #26253a;
 }
@@ -618,7 +618,7 @@ a {
   height: 45px;
 }
 
-#blog .blog-comment-form input[type="submit"] {
+#blog .blog-comment-form input[type="button"] {
   background: #eeeeee;
   color: #202020;
   font-weight: bold;
