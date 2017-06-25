@@ -466,7 +466,7 @@ video::-webkit-media-controls {
 
 /*
 =======================
------ FOURTH SLIDE ----
+----- FIFTH SLIDE ----
 =======================
 */
 
@@ -500,35 +500,6 @@ video::-webkit-media-controls {
 
 .fivth-content .left-info em {
   font-weight: 500;
-}
-
-.fivth-content .left-info .social-icons {
-  margin-top: 60px;
-}
-
-.fivth-content .left-info ul {
-  padding: 0;
-  margin: 0;
-}
-
-.fivth-content .left-info i {
-  margin-right: 10px;
-  color: #fff;
-  font-size: 15px;
-  width: 34px;
-  height: 34px;
-  background-color: #cdcdcd;
-  display: inline-block;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 34px;
-}
-
-.fivth-content .left-info i:hover {
-  background-color: #ffbb05;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  -webkit-transition: all 0.3s linear;
 }
 
 .fivth-content input {
@@ -736,12 +707,6 @@ footer a {
     margin-left: 30px;
     margin-bottom: 30px;
   }
-
-  .fivth-content .left-info .social-icons {
-    margin-top: 30px;
-    margin-bottom: 60px;
-  }
-
 }
 
 
