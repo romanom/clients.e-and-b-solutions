@@ -1,4 +1,3 @@
-
 CREDITS
 
 Fitness Theme
@@ -9,14 +8,10 @@ http://getbootstrap.com/
 
 Images
 http://unsplash.com/
-
 https://picjumbo.com/
-
-
 
 Animate CSS
 https://daneden.github.io/animate.css/
 
 OwlCarousel
-
 http://www.owlcarousel.owlgraphic.com/
