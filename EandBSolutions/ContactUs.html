@@ -78,7 +78,7 @@
             </div>
             <div class="row">
                 <!-- Contact form section -->
-                <div class="col-md-6 col-sm-6">
+                <div id="contactUsDiv" class="col-md-6 col-sm-6">
                     <form id="contactUsForm">
                         <div class="col-md-12 col-sm-12">
                             <input type="text" class="form-control" name="name" placeholder="Name" id="contactName">
@@ -156,7 +156,7 @@
                     }
                 },
                 submitHandler: function (form) {
-                    collectInfoAndSendEmail()
+                    collectInfoAndSendEmail();
                     return false;  // blocks regular submit given there is ajax
                 }
             });
