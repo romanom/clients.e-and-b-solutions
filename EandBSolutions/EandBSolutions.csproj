@@ -168,6 +168,10 @@
     <Content Include="Themes\Fitness\css\owl.theme.css" />
     <Content Include="Themes\Fitness\css\style.css" />
     <Content Include="Themes\Fitness\fonts\fontawesome-webfont.svg" />
+    <Content Include="Themes\Fitness\images\home-bg-slider-img2.jpg" />
+    <Content Include="Themes\Fitness\images\trainer-img1.jpg" />
+    <Content Include="Themes\Fitness\images\trainer-img2.jpg" />
+    <Content Include="Themes\Fitness\images\trainer-img3.jpg" />
     <Content Include="Themes\Fitness\images\blog-author.jpg" />
     <Content Include="Themes\Fitness\images\blog-header-bg.jpg" />
     <Content Include="Themes\Fitness\images\blog-thumb.jpg" />
@@ -177,13 +181,9 @@
     <Content Include="Themes\Fitness\images\comment1.jpg" />
     <Content Include="Themes\Fitness\images\comment2.jpg" />
     <Content Include="Themes\Fitness\images\home-bg-slider-img1.jpg" />
-    <Content Include="Themes\Fitness\images\home-bg-slider-img2.jpg" />
     <Content Include="Themes\Fitness\images\newsletter-bg.jpg" />
     <Content Include="Themes\Fitness\images\overview-img.jpg" />
     <Content Include="Themes\Fitness\images\price-bg.jpg" />
-    <Content Include="Themes\Fitness\images\trainer-img1.jpg" />
-    <Content Include="Themes\Fitness\images\trainer-img2.jpg" />
-    <Content Include="Themes\Fitness\images\trainer-img3.jpg" />
     <Content Include="Themes\Fitness\index.html" />
     <Content Include="Themes\Fitness\js\bootstrap.min.js" />
     <Content Include="Themes\Fitness\js\custom.js" />
@@ -381,6 +381,7 @@
     <Content Include="Themes\Landscaper\fonts\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Themes\Landscaper\fonts\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Themes\Landscaper\fonts\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Themes\ModernTown\images\about-img-1.jpg" />
     <Content Include="Themes\Neaty\css\bootstrap.min.css" />
     <Content Include="Themes\Neaty\css\magnific-popup.css" />
     <Content Include="Themes\Neaty\css\templatemo-style.css" />
@@ -458,7 +459,6 @@
     <Content Include="Themes\ModernTown\css\owl.theme.css" />
     <Content Include="Themes\ModernTown\css\style.css" />
     <Content Include="Themes\ModernTown\fonts\fontawesome-webfont.svg" />
-    <Content Include="Themes\ModernTown\images\about-img-1.jpg" />
     <Content Include="Themes\ModernTown\images\about-img-2.jpg" />
     <Content Include="Themes\ModernTown\images\blog-img-1.jpg" />
     <Content Include="Themes\ModernTown\images\blog-img-2.jpg" />
