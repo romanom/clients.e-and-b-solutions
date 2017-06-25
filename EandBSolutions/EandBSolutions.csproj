@@ -79,7 +79,6 @@
     <Content Include="Images\Themes\Landscaper.jpg" />
     <Content Include="Images\Themes\Medigo.jpg" />
     <Content Include="Images\Themes\Neaty.jpg" />
-    <Content Include="Images\Themes\Newline.jpg" />
     <Content Include="Scripts\slick.min.js" />
     <Content Include="sitemap.txt" />
     <Content Include="Images\HSTentEventHiRes.jpg" />
@@ -418,14 +417,6 @@
     <Content Include="Themes\Medigo\bootstrap\fonts\fontawesome-webfont.ttf" />
     <Content Include="Themes\Medigo\bootstrap\fonts\fontawesome-webfont.woff" />
     <Content Include="Themes\Medigo\bootstrap\fonts\FontAwesome.otf" />
-    <Content Include="Themes\Newline\fonts\fontawesome-webfont.eot" />
-    <Content Include="Themes\Newline\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Themes\Newline\fonts\fontawesome-webfont.woff" />
-    <Content Include="Themes\Newline\fonts\fontawesome-webfont.woff2" />
-    <Content Include="Themes\Newline\fonts\FontAwesome.otf" />
-    <Content Include="Themes\Newline\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Themes\Newline\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Themes\Newline\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -483,53 +474,6 @@
     <Content Include="Themes\ModernTown\js\owl.carousel.min.js" />
     <Content Include="Themes\ModernTown\js\smoothscroll.js" />
     <Content Include="Themes\ModernTown\js\wow.min.js" />
-    <Content Include="Themes\Newline\css\bootstrap-theme.css" />
-    <Content Include="Themes\Newline\css\bootstrap-theme.min.css" />
-    <Content Include="Themes\Newline\css\bootstrap.css" />
-    <Content Include="Themes\Newline\css\bootstrap.min.css" />
-    <Content Include="Themes\Newline\css\fontAwesome.css" />
-    <Content Include="Themes\Newline\css\templatemo-style.css" />
-    <Content Include="Themes\Newline\fonts\fontawesome-webfont.svg" />
-    <Content Include="Themes\Newline\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Themes\Newline\img\about-icon.png" />
-    <Content Include="Themes\Newline\img\close.png" />
-    <Content Include="Themes\Newline\img\contact-icon.png" />
-    <Content Include="Themes\Newline\img\featured-icon.png" />
-    <Content Include="Themes\Newline\img\home-icon.png" />
-    <Content Include="Themes\Newline\img\item-01.jpg" />
-    <Content Include="Themes\Newline\img\item-02.jpg" />
-    <Content Include="Themes\Newline\img\item-03.jpg" />
-    <Content Include="Themes\Newline\img\item-04.jpg" />
-    <Content Include="Themes\Newline\img\item-05.jpg" />
-    <Content Include="Themes\Newline\img\item-06.jpg" />
-    <Content Include="Themes\Newline\img\item-07.jpg" />
-    <Content Include="Themes\Newline\img\item-08.jpg" />
-    <Content Include="Themes\Newline\img\left-about-image.jpg" />
-    <Content Include="Themes\Newline\img\left-feature-image.png" />
-    <Content Include="Themes\Newline\img\loading.gif" />
-    <Content Include="Themes\Newline\img\logo.png" />
-    <Content Include="Themes\Newline\img\next.png" />
-    <Content Include="Themes\Newline\img\prev.png" />
-    <Content Include="Themes\Newline\img\project-item-01.jpg" />
-    <Content Include="Themes\Newline\img\project-item-02.jpg" />
-    <Content Include="Themes\Newline\img\project-item-03.jpg" />
-    <Content Include="Themes\Newline\img\project-item-04.jpg" />
-    <Content Include="Themes\Newline\img\project-item-05.jpg" />
-    <Content Include="Themes\Newline\img\project-item-06.jpg" />
-    <Content Include="Themes\Newline\img\project-item-07.jpg" />
-    <Content Include="Themes\Newline\img\project-item-08.jpg" />
-    <Content Include="Themes\Newline\img\projects-icon.png" />
-    <Content Include="Themes\Newline\img\prove-bg.png" />
-    <Content Include="Themes\Newline\img\right-about-image.jpg" />
-    <Content Include="Themes\Newline\index.html" />
-    <Content Include="Themes\Newline\js\main.js" />
-    <Content Include="Themes\Newline\js\plugins.js" />
-    <Content Include="Themes\Newline\js\vendor\bootstrap.js" />
-    <Content Include="Themes\Newline\js\vendor\bootstrap.min.js" />
-    <Content Include="Themes\Newline\js\vendor\jquery-1.11.2.min.js" />
-    <Content Include="Themes\Newline\js\vendor\modernizr-2.8.3-respond-1.4.2.min.js" />
-    <Content Include="Themes\Newline\js\vendor\npm.js" />
-    <Content Include="Themes\Newline\videos\video.mp4" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
