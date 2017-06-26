@@ -83,12 +83,12 @@
                         <div class="col-md-12 col-sm-12">
                             <input type="text" class="form-control" name="name" placeholder="Name" id="contactName">
                             <input type="email" class="form-control" name="email" placeholder="Email" id="contactEmail">
-                            <input type="tel" class="form-control" name="phoneNumber" placeholder="Phone (No dashes, etc.)" id="contactPhone">
-                            <input type="text" class="form-control" name="theme" id="contactTheme" readonly="readonly" style="border-color: white;" >
+                            <input type="tel" class="form-control" name="phoneNumber" placeholder="Phone (Digits only, no dashes, etc.)" id="contactPhone">
+                            <input type="text" class="form-control" name="theme" id="contactTheme" readonly="readonly" style="border-color: white;">
                             <textarea name="message" rows="8" class="form-control" id="contactComment" placeholder="What's on your mind?" message="comment"></textarea>
                         </div>
                         <div class="col-md-6 col-sm-6">
-                            <input type="submit" class="form-control-btn" value="Send It">&nbsp;<input type="reset" class="form-control-btn" value="Reset" onclick="resetContactInfo();">
+                            <input type="submit" class="form-control-btn" value="Send It">&nbsp;<input type="button" class="form-control-btn" value="Reset" onclick="resetContactInfo();">
                         </div>
                     </form>
                 </div>
@@ -98,25 +98,8 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-12">
                     <span class="copyright">Copyright &copy; E<span style="font-size: 0.75em;">&</span>B Solutions 2017</span>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
-                        <li>
-                            <a href="https://www.linkedin.com/company/e&b-solutions"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline quicklinks">
-                        <li>
-                            <a id="privacyPolicy" href="#privacyPolicy">Privacy Policy</a>
-                        </li>
-                        <li>
-                            <a id="termsOfUse" href="#termsOfUse">Terms of Use</a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -198,6 +181,7 @@
             $('#contactEmail').val("");
             $('#contactPhone').val("");
             $('#contactComment').val("");
+            $('#contactUsDiv label').hide();
         }
     </script>
 </body>

@@ -244,7 +244,7 @@ h6 {
 @media (min-width: 768px) {
     .navbar-custom {
         background-color: transparent;
-        padding: 25px 0px 0px 0px;
+        padding: 15px 0px 0px 0px;
         -webkit-transition: padding 0.3s;
         -moz-transition: padding 0.3s;
         transition: padding 0.3s;
@@ -266,7 +266,7 @@ h6 {
 @media (min-width: 768px) {
     .navbar-custom.affix {
         background-color: #222222;
-        padding: 25px 0px 0px 0px;
+        padding: 15px 0px 0px 0px;
     }
 
         .navbar-custom.affix .navbar-brand {
@@ -1018,3 +1018,25 @@ span.fancy-text {
         background-color: #3399ff;
         border-color: #3399ff;
     }
+
+* {
+    box-sizing: border-box;
+}
+
+.slider {
+    width: 50%;
+    margin: 100px auto;
+}
+
+.slick-slide {
+    margin: 0px 20px;
+}
+
+    .slick-slide img {
+        width: 100%;
+    }
+
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+}
