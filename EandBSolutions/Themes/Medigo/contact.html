@@ -41,7 +41,7 @@
         <ul class="main_menu">
             <li><a href="index.html">Home</a></li>
             <li>
-                <a href="#">Portfolio</a>
+                <a href="#none">Portfolio</a>
                 <ul>
                     <li><a href="portfolio.html">Portfolio Grid</a></li>
                     <li><a href="project-image.html">Project Image</a></li>
@@ -49,7 +49,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#">Blog</a>
+                <a href="#none">Blog</a>
                 <ul>
                     <li><a href="blog.html">Blog Standard</a></li>
                     <li><a href="blog-single.html">Blog Single</a></li>
@@ -213,7 +213,7 @@
                             </div>
                             <div class="content">
                                 <span>24 February 2084</span>
-                                <h4><a href="#">Standard Post Formating Medigo</a></h4>
+                                <h4><a href="#none">Standard Post Formating Medigo</a></h4>
                             </div>
                         </div> <!-- /.last-post -->
                         <div class="last-post clearfix">
@@ -285,26 +285,8 @@
     <script src="js/min/plugins.min.js"></script>
     <script src="js/min/medigo-custom.min.js"></script>
     <script>
-        function initialize() {
-            var mapOptions = {
-                zoom: 14,
-                center: new google.maps.LatLng(13.758468, 100.567481)
-            };
-
-            var map = new google.maps.Map(document.getElementById('map-canvas'),
-                mapOptions);
-        }
-
-        function loadScript() {
-            var script = document.createElement('script');
-            script.type = 'text/javascript';
-            //AIzaSyAxb7Mt5_6mPH-DP5m4zSlVE2khVqL2vN4
-            script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
-                'callback=initialize';
-            document.body.appendChild(script);
-        }
         function initMap() {
-            var uluru = { lat: -25.363, lng: 131.044 };
+            var uluru = { lat: 35.6513, lng: 78.8336 };
             var map = new google.maps.Map(document.getElementById('map-canvas'), {
                 zoom: 4,
                 center: uluru
