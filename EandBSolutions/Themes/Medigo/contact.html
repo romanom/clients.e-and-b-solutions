@@ -298,12 +298,25 @@
         function loadScript() {
             var script = document.createElement('script');
             script.type = 'text/javascript';
+            //AIzaSyAxb7Mt5_6mPH-DP5m4zSlVE2khVqL2vN4
             script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
                 'callback=initialize';
             document.body.appendChild(script);
         }
-
-        window.onload = loadScript;
+        function initMap() {
+            var uluru = { lat: -25.363, lng: 131.044 };
+            var map = new google.maps.Map(document.getElementById('map-canvas'), {
+                zoom: 4,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxb7Mt5_6mPH-DP5m4zSlVE2khVqL2vN4&callback=initMap">
     </script>
     <script>
         $(document).ready(function () {
