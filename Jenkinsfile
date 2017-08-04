@@ -1,6 +1,6 @@
 #!groovy
-@Library("ci_pipelib") _
+@Library("pipelib") _
 
 def projectName = "EandBSolutions"
 
-dotNetBuildAndPublish projectName: projectName
+linuxPublish projectName: projectName
