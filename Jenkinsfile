@@ -1,6 +1,6 @@
 #!groovy
 @Library("pipelib") _
 
-def projectName = "EandBSolutions"
+def projectName = "eandbsolutions"
 
 linuxPublish projectName: projectName
