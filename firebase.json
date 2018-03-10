@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "eandbsolutions",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
