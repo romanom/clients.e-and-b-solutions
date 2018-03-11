@@ -1,10 +1,21 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115509506-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-115509506-1');
+    </script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="website development,website hosting,hosting,technical consulting,Holly Springs,Fuquay Varina,Cary,Raleigh" />
+    <meta name="keywords" content="website development,website hosting,hosting,technical consulting,Holly Springs,Fuquay Varina,Cary,Raleigh"
+    />
     <meta name="robots" content="index,follow" />
     <meta name="description" content="Website design, development, and hosting company serving Holly Springs, Fuquay Varina, Cary, Raleigh, and surrounding areas.">
 
@@ -17,15 +28,18 @@
     <!-- Theme CSS -->
     <link href="CSS/AgencyCSS/agency.css" rel="stylesheet" />
 </head>
+
 <body id="page-top" class="index">
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                    <span class="sr-only">Toggle navigation</span> Menu
+                    <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="index.html">E<span style="font-size:0.75em;">&</span>B Solutions</a>
+                <a class="navbar-brand page-scroll" href="index.html">E
+                    <span style="font-size:0.75em;">&</span>B Solutions</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -59,8 +73,8 @@
                         <br />
                     </span>
                     <span class="fancy-text">
-                        At E<span style="font-size: 0.75em;">&</span>B Solutions,
-                        we provide the exceptional service we'd want to experience ourselves!
+                        At E
+                        <span style="font-size: 0.75em;">&</span>B Solutions, we provide the exceptional service we'd want to experience ourselves!
                         <br />
                         <br />
                     </span>
@@ -68,12 +82,12 @@
             </div>
             <div class="row">
                 <div id="contactUsSuccess" class="col-md-12 contact-us">
-                    <span class="fancy-text">Thank you for reaching out.  We are excited to get back in touch with you.</span>
+                    <span class="fancy-text">Thank you for reaching out. We are excited to get back in touch with you.</span>
                 </div>
             </div>
             <div class="row">
                 <div id="contactUsError" class="col-md-12 contact-us">
-                    <span class="fancy-text">Something went wrong unfortunately.  Please try reloading the page.</span>
+                    <span class="fancy-text">Something went wrong unfortunately. Please try reloading the page.</span>
                 </div>
             </div>
             <div class="row">
@@ -88,7 +102,8 @@
                             <textarea name="message" rows="8" class="form-control" id="contactComment" placeholder="What's on your mind?" message="comment"></textarea>
                         </div>
                         <div class="col-md-6 col-sm-6">
-                            <input type="submit" class="form-control-btn" value="Send It">&nbsp;<input type="button" class="form-control-btn" value="Reset" onclick="resetContactInfo();">
+                            <input type="submit" class="form-control-btn" value="Send It">&nbsp;
+                            <input type="button" class="form-control-btn" value="Reset" onclick="resetContactInfo();">
                         </div>
                     </form>
                 </div>
@@ -99,7 +114,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <span class="copyright">Copyright &copy; E<span style="font-size: 0.75em;">&</span>B Solutions 2017</span>
+                    <span class="copyright">Copyright &copy; E
+                        <span style="font-size: 0.75em;">&</span>B Solutions 2018</span>
                 </div>
             </div>
         </div>
@@ -151,17 +167,17 @@
                 url: "https://formspree.io/aaron.sisler@eandbsolutions.com",
                 method: "POST",
                 data:
-                {
-                    name: $('#contactName').val(),
-                    email: $('#contactEmail').val(),
-                    phone: $('#contactPhone').val(),
-                    theme: $('#contactTheme').val() ? $('#contactTheme').val() : "No theme selected",
-                    comment: $('#contactComment').val()
-                },
+                    {
+                        name: $('#contactName').val(),
+                        email: $('#contactEmail').val(),
+                        phone: $('#contactPhone').val(),
+                        theme: $('#contactTheme').val() ? $('#contactTheme').val() : "No theme selected",
+                        comment: $('#contactComment').val()
+                    },
                 dataType: "json"
             })
-            .done(function () { onSuccessfulEmailSend(); })
-            .fail(function () { onFailureEmailSend() });
+                .done(function () { onSuccessfulEmailSend(); })
+                .fail(function () { onFailureEmailSend() });
         }
 
         function onSuccessfulEmailSend() {
@@ -185,4 +201,5 @@
         }
     </script>
 </body>
+
 </html>
