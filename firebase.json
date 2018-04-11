@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "eandbsolutions",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
