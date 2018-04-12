@@ -1,7 +1,7 @@
 import React from 'react';
 
 const LandingPage = () => (
-    <div>
+    <div id="Landing_Page">
         This is the landing page
     </div>
 );
