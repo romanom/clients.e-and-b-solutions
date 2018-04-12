@@ -1,17 +1,33 @@
-html {
-    font-size: 62.5%;
+/*
+    Small screens - MOBILE
+    max-width 640px, small screens
+*/
+
+@media only screen {
+    html {
+        font-size: 62.5%;
+    }
+    body {
+        font-family: 'Arima Madurai', sans-serif;
+        left: 0;
+        overflow-x: hidden;
+        position: relative;
+        transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+    }
+    h3 {
+        text-align: center;
+    }
+    p {
+        text-align: center;
+    }
 }
 
-body {
-    background: $darkBlue;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: $mSize;
-}
-
-button {
-    cursor: pointer;
-}
-
-button:disabled {
-    cursor: default;
+@media only screen and (min-width: 64.063em) {
+    /* page level */
+    h3 {
+        text-align: inherit;
+    }
+    /* end page level */
 }
