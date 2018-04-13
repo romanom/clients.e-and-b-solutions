@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 import LandingPage from '../components/LandingPage'
 import ContactPage from '../components/ContactPage'
 import NotFoundPage from '../components/NotFoundPage'
 
-
-const AppRouter = () => (
+const AppRouter = (props) => (
     <BrowserRouter>
         <div>
             <Navbar />
@@ -15,6 +15,7 @@ const AppRouter = () => (
                 <Route path="/contact" component={ContactPage} />
                 <Route component={NotFoundPage} />
             </Switch>
+            <Footer />
         </div>
     </BrowserRouter>
 );
