@@ -1,10 +1,81 @@
-#landing_page header {
-    background-image: url('../images/header.jpg');
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center center;
-    background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
+#landing_page {
+    /*
+        Small screens - MOBILE
+        max-width 640px, small screens
+    */
+    @media only screen {
+        header {
+            background-image: url('../images/header.jpg');
+            background-size: cover;
+            display: flex;
+            flex-flow: column;
+            height: 50rem;
+            justify-content: space-evenly;
+            text-align: center;
+            width: 100%;
+        }
+        .intro_text {
+            color: white;
+            font-family: $robotoFont;
+            font-size: $xlarge;
+            font-weight: 700;
+            margin: 20rem 0 0;
+            padding: $medium;
+            text-transform: uppercase;
+        }
+        .link {
+            background-color: $blue;
+            border-radius: $xsmall;
+            color: white;
+            font-size: $midlarge;
+            font-weight: bolder;
+            padding: 0.5em 1.5em;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .link:hover {
+            background: darken($blue, 15);
+            color: white;
+            transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+        }
+    }
+    /* 
+        Medium screens - TABLET
+        min-width 641px, medium screens
+    */
+    @media only screen and (min-width: 40.063em) {
+        header {
+            height: 50rem;
+        }
+        .intro_text {
+            // font-size: $xxlarge;
+            margin: 20rem 0 0;
+        }
+    }
+    /* 
+        Large screens - DESKTOP
+        min-width 1025px, large screens
+    */
+    @media only screen and (min-width: 64.063em) {
+        header {
+            height: 70rem;
+        }
+        .intro_text {
+            margin: 30rem 0 0;
+            font-size: $xxlarge;
+        }
+        .link {
+            font-size: $large;
+        }
+    }
+    /* 
+        XLarge screens
+        min-width 1441px, xlarge screens
+    */
+    @media only screen and (min-width: 90.063em) {}
+    /*
+        XXLarge screens
+        min-width 1921px, xlarge screens
+    */
+    @media only screen and (min-width: 120.063em) {}
 }

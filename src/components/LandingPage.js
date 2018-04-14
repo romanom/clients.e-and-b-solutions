@@ -1,9 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const LandingPage = () => (
     <div id="landing_page">
         <header>
-            <h1>This is the landing page</h1>
+            <div className="intro_text">It's nice to meet you</div>
+            <div>
+                <Link to='/contact' className='link'>Let's Get Started</Link>
+            </div>
         </header>
     </div>
 );
