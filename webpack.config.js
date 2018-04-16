@@ -2,7 +2,8 @@ const path = require('path');
 
 module.exports = {
     devServer: {
-        contentBase: path.join(__dirname, 'public')
+        contentBase: path.join(__dirname, 'public'),
+        historyApiFallback: true
     },
     devtool: 'cheap-module-eval-source-map',
     entry: './src/app.js',

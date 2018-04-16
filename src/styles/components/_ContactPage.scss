@@ -1,0 +1,50 @@
+#contact_page {
+    /*
+        Small screens - MOBILE
+        max-width 640px, small screens
+    */
+    @media only screen {
+        .contact_form {
+            margin: $large 0;
+        }
+        header {
+            margin: $medium 0 $large;
+            padding: 0 $medium;
+        }
+        h3 {
+            font-size: $large;
+            margin: 0;
+            text-align: center;
+        }
+        p {
+            font-size: $midlarge;
+        }
+    }
+    /* 
+        Medium screens - TABLET
+        min-width 641px, medium screens
+    */
+    @media only screen and (min-width: 40.063em) {}
+    /* 
+        Large screens - DESKTOP
+        min-width 1025px, large screens
+    */
+    @media only screen and (min-width: 64.063em) {
+        header {
+            margin: $large 10%;
+        }
+        h3 {
+            font-size: $xlarge;
+        }
+    }
+    /* 
+        XLarge screens
+        min-width 1441px, xlarge screens
+    */
+    @media only screen and (min-width: 90.063em) {}
+    /*
+        XXLarge screens
+        min-width 1921px, xlarge screens
+    */
+    @media only screen and (min-width: 120.063em) {}
+}

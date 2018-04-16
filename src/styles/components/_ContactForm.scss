@@ -1,0 +1,78 @@
+#contact_form {
+    /*
+        Small screens - MOBILE
+        max-width 640px, small screens
+    */
+    @media only screen {
+        form {
+            display: flex;
+            flex-flow: column;
+            justify-content: space-evenly;
+            padding: 0 $medium;
+            text-align: center;
+        }
+        input,
+        textarea {
+            font-size: $medium;
+            line-height: $large;
+            margin: $xsmall 0;
+            padding: $xsmall;
+        }
+        input::placeholder,
+        textarea::placeholder {
+            font-weight: bold;
+        }
+        .error {
+            font-size: $medium;
+            margin: 0;
+        }
+        button {
+            background-color: $blue;
+            border-radius: $xsmall;
+            color: white;
+            font-size: $large;
+            margin: 0;
+            padding: $xsmall $small;
+            width: 100%;
+        }
+        button:hover {
+            background: darken($blue, 15);
+            transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+        }
+        button:disabled {
+            opacity: .5;
+        }
+    }
+    /* 
+        Medium screens - TABLET
+        min-width 641px, medium screens
+    */
+    @media only screen and (min-width: 40.063em) {}
+    /* 
+        Large screens - DESKTOP
+        min-width 1025px, large screens
+    */
+    @media only screen and (min-width: 64.063em) {
+        form {
+            margin: 0 auto;
+            max-width: 60rem;
+            max-width: 60%;
+        }
+        input,
+        textarea {
+            font-size: $medium;
+            line-height: $large;
+            padding: $xsmall;
+        }
+    }
+    /* 
+        XLarge screens
+        min-width 1441px, xlarge screens
+    */
+    @media only screen and (min-width: 90.063em) {}
+    /*
+        XXLarge screens
+        min-width 1921px, xlarge screens
+    */
+    @media only screen and (min-width: 120.063em) {}
+}
