@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ServicesSection from './ServicesSection';
 
 const LandingPage = () => (
     <div id="landing_page">
@@ -9,6 +10,7 @@ const LandingPage = () => (
                 <Link to='/contact' className='link'>Let's Get Started</Link>
             </div>
         </header>
+        <ServicesSection />
     </div>
 );
 

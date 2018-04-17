@@ -1,6 +1,6 @@
 import React from 'react';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import { faExclamation, faExclamationCircle, faSpinner } from '@fortawesome/fontawesome-free-solid'
+import { faExclamationCircle } from '@fortawesome/fontawesome-free-solid'
 import { sendEmail, isEmailValid } from '../tools/email';
 
 
