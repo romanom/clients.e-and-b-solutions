@@ -40,7 +40,7 @@ export default class Navbar extends React.Component {
                 </div>
                 <div id="mobile_nav_toggles">
                     <div id="brand">
-                        <Link to="#page_top" className="page_scroll">{this.state.companyName}</Link>
+                        <Link to="/">{this.state.companyName}</Link>
                     </div>
                     <div id="nav_mobile_toggle">
                         {!this.state.isNavOpen && <FontAwesomeIcon icon={faBars} size='3x' className="favicon" onClick={this.openSideMenu} />}
@@ -49,7 +49,7 @@ export default class Navbar extends React.Component {
                 </div>
                 <div id="desktop_menu">
                     <div id="brand">
-                        <Link to="#page_top" className="page_scroll">{this.state.companyName}</Link>
+                        <Link to="/">{this.state.companyName}</Link>
                     </div>
                     <div>
                         <ul>

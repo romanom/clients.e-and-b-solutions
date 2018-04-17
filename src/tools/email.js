@@ -1,7 +1,8 @@
+import { validate } from 'email-validator';
+
 const url = "http://formspree.io/aaron.sisler@eandbsolutions.com";
 
 export const sendEmail = (data, done, fail) => {
-    console.log(url);
     $.ajax({
         url,
         method: "POST",
@@ -10,4 +11,8 @@ export const sendEmail = (data, done, fail) => {
     })
         .done(done)
         .fail(fail);
+}
+
+export const isEmailValid = (emailAddress) => {
+    return validate(emailAddress);
 }

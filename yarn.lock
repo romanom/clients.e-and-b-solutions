@@ -1698,6 +1698,10 @@ elliptic@^6.0.0:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.0"
 
+email-validator@^2.0.3:
+  version "2.0.3"
+  resolved "https://eis.jfrog.io/eis/api/npm/npm/email-validator/-/email-validator-2.0.3.tgz#33e50d66f526b97cd72c17205aefaec79c8a2a1e"
+
 emojis-list@^2.0.0:
   version "2.1.0"
   resolved "https://eis.jfrog.io/eis/api/npm/npm/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"

@@ -33,6 +33,7 @@
             font-size: $large;
             margin: 0;
             padding: $xsmall $small;
+            text-decoration: none;
             width: 100%;
         }
         button:hover {
@@ -41,6 +42,10 @@
         }
         button:disabled {
             opacity: .5;
+        }
+        .email {
+            font-weight: bold;
+            padding: 0 $midlarge;
         }
     }
     /* 
