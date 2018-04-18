@@ -1,36 +1,34 @@
 import React from 'react';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import { faTablet, faCogs, faBriefcase } from '@fortawesome/fontawesome-free-solid'
+import { faTabletAlt, faCogs, faBriefcase } from '@fortawesome/fontawesome-free-solid'
 
 const ServicesSection = (props) => (
     <section id="services">
-        <div>
-            <h2>Services</h2>
+        <header>
+            <h2>How Can We Help</h2>
             <h3>Making Technology Easy</h3>
-        </div>
+        </header>
         <div className="services_row">
-            <div>
-                <FontAwesomeIcon icon={faTablet} size='lg' />
-                <h4>Web App and Website Design</h4>
+            <div className="service">
+                <FontAwesomeIcon className="icon" icon={faTabletAlt} size='8x' />
+                <h4>Web Apps and Websites</h4>
                 <p>
-                    Creating responsive and intuitive web tools, designed to work on any screen, that give the user a wonderful
-                    experience
+                    Creating easy to use web apps or sites, designed to work on any screen, that give the user a wonderful
+                    experience.
                 </p>
             </div>
-            <div>
-                <FontAwesomeIcon icon={faCogs} size='lg' />
+            <div className="service">
+                <FontAwesomeIcon className="icon" icon={faCogs} size='8x' />
                 <h4>Hosting and Support</h4>
                 <p>
-                    Providing cloud infrastructure and maintenance services for technology that may be needed for web app
-                    and website deployment
+                    Providing cloud hosting and support for your site so you can worry about other things.
                 </p>
             </div>
-            <div>
-                <FontAwesomeIcon icon={faBriefcase} size='lg' />
+            <div className="service">
+                <FontAwesomeIcon className="icon" icon={faBriefcase} size='8x' />
                 <h4>Technical Consulting</h4>
                 <p>
-                    Discovering what business needs are not being met by currently implemented technology and creating a
-                    strategy that will allow for controlled growth
+                    Let's see what we can do together to make things easier for you.
                 </p>
             </div>
         </div>

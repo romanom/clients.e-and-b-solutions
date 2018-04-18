@@ -1,0 +1,90 @@
+    /*
+        Small screens - MOBILE
+        max-width 640px, small screens
+    */
+
+    @media only screen {
+        #services {
+            margin: $small 0 $large;
+        }
+        #services>header {
+            margin: $large auto;
+            text-align: center;
+        }
+        #services>header>h2 {
+            font-size: $xlarge;
+            margin: 0 $small;
+        }
+        #services>header>h3 {
+            color: $darkGrey;
+            font-size: $midlarge;
+            font-weight: lighter;
+            margin: $xsmall $small;
+        }
+        #services>.services_row {
+            display: flex;
+            justify-content: space-around;
+            flex-flow: column;
+        }
+        #services>.services_row>.service {
+            display: flex;
+            flex-flow: column;
+            margin: $small 0;
+            padding: 0 $xlarge;
+            text-align: center;
+        }
+        #services>.services_row>.service>.icon {
+            margin: 0 auto;
+        }
+        #services>.services_row>.service>h4 {
+            font-size: $large;
+            margin: $medium 0;
+        }
+        #services>.services_row>.service>p {
+            font-size: $midlarge;
+            margin: $medium 0;
+        }
+    }
+
+    /* 
+        Medium screens - TABLET
+        min-width 641px, medium screens
+    */
+
+    @media only screen and (min-width: 40.063em) {
+        #services>.services_row>.service {
+            padding: 0 $xxlarge;
+        }
+    }
+
+    /* 
+        Large screens - DESKTOP
+        min-width 1025px, large screens
+    */
+
+    @media only screen and (min-width: 64.063em) {
+        #services>.services_row {
+            display: flex;
+            justify-content: space-around;
+            flex-flow: row;
+        }
+        #services>.services_row>.service {
+            width: 100%;
+            margin: $small $medium;
+            padding: 0 $midlarge;
+        }
+    }
+
+    /* 
+        XLarge screens
+        min-width 1441px, xlarge screens
+    */
+
+    @media only screen and (min-width: 90.063em) {}
+
+    /*
+        XXLarge screens
+        min-width 1921px, xlarge screens
+    */
+
+    @media only screen and (min-width: 120.063em) {}
