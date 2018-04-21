@@ -10,10 +10,8 @@ export default class ContactForm extends React.Component {
         this.handleInput = this.handleInput.bind(this);
         this.handleAddInput = this.handleAddInput.bind(this);
 
-        this.handleAddToContactInfo = this.handleAddToContactInfo.bind(this);
-        this.handleDeleteFromContactInfo = this.handleDeleteFromContactInfo.bind(this);
-        this.handleAddToError = this.handleAddToError.bind(this);
-        this.handleDeleteFromError = this.handleDeleteFromError.bind(this);
+        this.handleContactInfo = this.handleContactInfo.bind(this);
+        this.handleError = this.handleError.bind(this);
 
         this.handleEmailValidation = this.handleEmailValidation.bind(this);
         this.handleRequiredValidation = this.handleRequiredValidation.bind(this);
@@ -69,64 +67,60 @@ export default class ContactForm extends React.Component {
         }
     }
 
-    handleAddToContactInfo(inputName, inputValue) {
-        let newContactInfo = Object.assign({}, this.state.contactInfo);
-        newContactInfo[inputName] = inputValue;
+    handleContactInfo(inputName, inputValue = undefined) {
+        //Remove from Contact Info
+        if (!inputValue) {
+            const { [inputName]: undefined, ...contactInfo } = this.state.contactInfo;
+            return this.setState(() => ({
+                contactInfo
+            }));
+        }
+        //Add to Contact Info
         return this.setState(() => ({
-            contactInfo: newContactInfo
+            contactInfo: { ...this.state.contactInfo, [inputName]: inputValue }
         }));
     }
 
-    handleDeleteFromContactInfo(inputName) {
-        let newContactInfo = Object.assign({}, this.state.contactInfo);
-        delete newContactInfo[inputName];
+    handleError(inputName, inputValue = undefined) {
+        //Remove from Error
+        if (!inputValue) {
+            const { [inputName]: undefined, ...error } = this.state.error;
+            return this.setState(() => ({
+                error
+            }));
+        }
+        //Add to Error
         return this.setState(() => ({
-            contactInfo: newContactInfo
-        }));
-    }
-
-    handleAddToError(inputName, inputValue) {
-        let newError = Object.assign({}, this.state.error);
-        newError[inputName] = inputValue;
-        return this.setState(() => ({
-            error: newError
-        }));
-    }
-
-    handleDeleteFromError(inputName) {
-        let newError = Object.assign({}, this.state.error);
-        delete newError[inputName];
-        return this.setState(() => ({
-            error: newError
+            error: { ...this.state.error, [inputName]: inputValue }
         }));
     }
 
     handleEmailValidation(inputValue) {
         if (!isEmailValid(inputValue)) {
-            this.handleAddToError('email', 'Please enter a valid email address');
-            this.handleDeleteFromContactInfo('email');
+            this.handleError('email', 'Please enter a valid email address');
+            this.handleContactInfo('email');
             return;
         }
-        this.handleDeleteFromError('email');
-        this.handleAddToContactInfo('email', inputValue);
+        this.handleError('email');
+        this.handleContactInfo('email', inputValue);
     }
 
     handleRequiredValidation(inputName, inputValue) {
         if (!inputValue) {
-            this.handleAddToError(inputName, 'This is a required field');
-            this.handleDeleteFromContactInfo(inputName);
+            this.handleError(inputName, 'This is a required field');
+            this.handleContactInfo(inputName);
             return;
         }
-        this.handleDeleteFromError(inputName);
-        this.handleAddToContactInfo(inputName, inputValue);
+        this.handleError(inputName);
+        this.handleContactInfo(inputName, inputValue);
     }
 
     handleAddInput(inputName, inputValue) {
         if (!inputValue) {
-            this.handleDeleteFromContactInfo(inputName);
+            this.handleContactInfo(inputName);
             return;
         }
-        this.handleAddToContactInfo(inputName, inputValue);
+        this.handleContactInfo(inputName, inputValue);
     }
 
     handleResetForm(e) {

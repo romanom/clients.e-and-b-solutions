@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import LandingPage from '../components/LandingPage'
 import ContactPage from '../components/ContactPage'
+import AboutPage from '../components/AboutPage'
 import NotFoundPage from '../components/NotFoundPage'
 
 const AppRouter = (props) => (
@@ -13,6 +14,7 @@ const AppRouter = (props) => (
             <Switch>
                 <Route path="/" component={LandingPage} exact={true} />
                 <Route path="/contact" component={ContactPage} />
+                <Route path="/about" component={AboutPage} />
                 <Route component={NotFoundPage} />
             </Switch>
             <Footer />

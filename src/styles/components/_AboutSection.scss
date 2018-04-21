@@ -1,0 +1,54 @@
+/*
+        Small screens - MOBILE
+        max-width 640px, small screens
+    */
+
+@media only screen {
+    #about>header {
+        margin: $large auto;
+        text-align: center;
+    }
+    #about>header>h2 {
+        font-size: $xlarge;
+        margin: 0 $small;
+    }
+    #about>header>h3 {
+        color: $darkGrey;
+        font-size: $midlarge;
+        font-weight: lighter;
+        margin: $xsmall $small;
+    }
+    #about>div>p {
+        font-size: $medium;
+        margin: $midlarge 20%;
+        text-align: center;
+    }
+}
+
+/* 
+            Medium screens - TABLET
+            min-width 641px, medium screens
+        */
+
+@media only screen and (min-width: 40.063em) {}
+
+/* 
+            Large screens - DESKTOP
+            min-width 1025px, large screens
+        */
+
+@media only screen and (min-width: 64.063em) {}
+
+/* 
+            XLarge screens
+            min-width 1441px, xlarge screens
+        */
+
+@media only screen and (min-width: 90.063em) {}
+
+/*
+            XXLarge screens
+            min-width 1921px, xlarge screens
+        */
+
+@media only screen and (min-width: 120.063em) {}

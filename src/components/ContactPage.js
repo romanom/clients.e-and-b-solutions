@@ -7,7 +7,7 @@ const ContactPage = () => (
             <h3>Contact Us</h3>
             <p>
                 We promise that your email won't disappear into the nether.
-        </p>
+            </p>
             <p>
                 At E&B Solutions, we provide the exceptional service we'd want to experience ourselves!
         </p>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import { faLinkedin, faLinkedinIn } from '@fortawesome/fontawesome-free-brands'
 import team_member1 from '../images/team_member1.jpg'
