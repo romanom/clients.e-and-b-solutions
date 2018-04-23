@@ -8,7 +8,7 @@ const LandingPage = () => (
         <header>
             <div className="intro_text">It's nice to meet you</div>
             <div>
-                <Link to='/contact' className='link'>Let's Get Started</Link>
+                <Link to='/pricing' className='link'>Let's Get Started</Link>
             </div>
         </header>
         <ServicesSection />
