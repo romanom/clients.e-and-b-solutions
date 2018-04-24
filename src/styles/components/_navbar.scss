@@ -6,6 +6,7 @@
 @media only screen {
     /* nav */
     nav {
+        font-family: $mainFont;
         left: 0;
         position: sticky;
         top: 0;
@@ -21,8 +22,6 @@
     }
     #brand a {
         color: white;
-        font-family: $montserratFont;
-        font-size: $medium;
         font-size: $midlarge;
         font-weight: bold;
         letter-spacing: 0.1rem;

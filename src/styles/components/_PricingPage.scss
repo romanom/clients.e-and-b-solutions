@@ -5,23 +5,28 @@
 
 @media only screen {
     #pricing {
+        background: linear-gradient(45deg, darken($blue, 10) 10%, lighten($lightBlue, 10) 100%);
         padding: $small 0 $large;
     }
     #pricing>header {
+        color: white;
         margin: $large auto;
         text-align: center;
     }
     #pricing>header>h2 {
+        font-family: $mainFont;
         font-size: $xlarge;
         margin: 0 $small;
     }
     #pricing .pricing_row {
         display: flex;
         flex-flow: column;
+        font-family: $mainFont;
         justify-content: space-around;
         padding: 0 $small 0;
     }
     #pricing .pricing_package {
+        background: white;
         border: 1px solid #bbbbbb;
         border-radius: 1rem;
         display: flex;
@@ -33,7 +38,7 @@
     #pricing .pricing_package.most_popular {
         border-top-left-radius: 0;
         border-top-right-radius: 0;
-        box-shadow: 0 1rem 3rem 0 rgba(189, 195, 199, 0.6);
+        box-shadow: 0 0.5rem 3rem 0 white;
         margin: $xlarge 0 $small;
         padding: 0 $large $large;
         position: relative;
@@ -44,32 +49,33 @@
     }
     #pricing .price_header>h5 {
         color: $midGrey;
+        font-family: $secondaryFont;
         font-size: $midlarge;
         margin: 0;
     }
     #pricing .price_header>p {
         color: $midGrey;
+        font-family: $secondaryFont;
         font-size: $midlarge;
         margin: $large 0 $medium;
     }
-    #pricing .price_cost>p {
-        font-size: $medium;
-        margin: $medium 0 0;
-    }
     #pricing .price_cost>h2 {
+        font-family: $secondaryFont;
         font-size: $xlarge;
-        margin: 0;
+        margin: 0 0 $medium;
     }
     #pricing .price_content>p {
-        font-size: $medium;
+        font-family: $secondaryFont;
+        font-size: $midlarge;
         margin: $small 0;
     }
     #pricing .popular {
-        background: linear-gradient(45deg, $blue 45%, $lightBlue 100%);
+        background: $darkGrey;
         border-top-left-radius: 1rem;
         border-top-right-radius: 1rem;
         color: white;
         font-size: $midlarge;
+        font-weight: bold;
         left: 0;
         padding: $small 0;
         position: absolute;

@@ -9,17 +9,20 @@
         text-align: center;
     }
     #about>header>h2 {
+        font-family: $mainFont;
         font-size: $xlarge;
         margin: 0 $small;
     }
     #about>header>h3 {
         color: $darkGrey;
+        font-family: $secondaryFont;
         font-size: $midlarge;
         font-weight: lighter;
         margin: $xsmall $small;
     }
     #about>div>p {
-        font-size: $medium;
+        font-family: $secondaryFont;
+        font-size: $midlarge;
         margin: $midlarge 20%;
         text-align: center;
     }

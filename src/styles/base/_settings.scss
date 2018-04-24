@@ -14,22 +14,19 @@ $xlarge: 4.8rem;
 $xxlarge: 7.6rem;
 $navMenuWidth: 240px;
 $desktopBreakpoint: 45rem;
-//Font stuff
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-$montserratFont: "Montserrat",
-Helvetica,
-Arial,
-sans-serif;
-$robotoFont: "Roboto Slab",
-"Helvetica Neue",
-Helvetica,
-Arial,
-sans-serif;
-//Body
-//font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
-//H1-6
-//"Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-//Section Topper
-//Also italic
-//"Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+//Font Imports
+@import url('../fonts/AlteHaasGrotesk.scss');
+@import url('../fonts/AtlasGrotesk.scss');
+@import url('../fonts/Coolvetica.scss');
+@import url('../fonts/GroteskLight.scss');
+@import url('../fonts/OpenSans.scss');
+//Font Variables
+$alteFont: "Alte";
+$atlasFont: "AtlasGrotesk";
+$coolveticaFont: "Coolvetica";
+$groteskLightFont: "GroteskLight";
+$openSansFont: "OpenSans";
+//Site Fonts
+$mainFont: $openSansFont;
+$secondaryFont: $alteFont;
+$accentFont: $coolveticaFont;

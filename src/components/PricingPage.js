@@ -15,7 +15,6 @@ const PricingPage = (props) => (
                     </p>
                 </div>
                 <div className="price_cost">
-                    <p>Forever</p>
                     <h2>Free</h2>
                 </div>
                 <div className="price_content">
@@ -36,7 +35,6 @@ const PricingPage = (props) => (
                     </p>
                 </div>
                 <div className="price_cost">
-                    <p>Starting At:</p>
                     <h2>$150</h2>
                 </div>
                 <div className="price_content">
@@ -54,7 +52,6 @@ const PricingPage = (props) => (
                     </p>
                 </div>
                 <div className="price_cost">
-                    <p>Starting at:</p>
                     <h2>$250</h2>
                 </div>
                 <div className="price_content">

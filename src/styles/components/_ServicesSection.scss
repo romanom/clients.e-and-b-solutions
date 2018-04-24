@@ -12,11 +12,13 @@
             text-align: center;
         }
         #services>header>h2 {
+            font-family: $mainFont;
             font-size: $xlarge;
             margin: 0 $small;
         }
         #services>header>h3 {
             color: $darkGrey;
+            font-family: $secondaryFont;
             font-size: $midlarge;
             font-weight: lighter;
             margin: $xsmall $small;
@@ -37,10 +39,14 @@
             margin: 0 auto;
         }
         #services>.services_row>.service>h4 {
+            font-family: $mainFont;
             font-size: $large;
+            font-weight: bold;
             margin: $medium 0;
         }
         #services>.services_row>.service>p {
+            color: $midGrey;
+            font-family: $secondaryFont;
             font-size: $midlarge;
             margin: $medium 0;
         }
@@ -64,8 +70,6 @@
 
     @media only screen and (min-width: 64.063em) {
         #services>.services_row {
-            display: flex;
-            justify-content: space-around;
             flex-flow: row;
         }
         #services>.services_row>.service {

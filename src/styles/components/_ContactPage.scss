@@ -12,11 +12,13 @@
             padding: 0 $medium;
         }
         h3 {
+            font-family: $mainFont;
             font-size: $large;
             margin: 0;
             text-align: center;
         }
         p {
+            font-family: $secondaryFont;
             font-size: $midlarge;
         }
     }

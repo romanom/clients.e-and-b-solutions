@@ -13,11 +13,13 @@
             text-align: center;
         }
         #team>header>h2 {
+            font-family: $mainFont;
             font-size: $xlarge;
             margin: 0 $small;
         }
         #team>header>h3 {
             color: $darkGrey;
+            font-family: $secondaryFont;
             font-size: $midlarge;
             font-weight: lighter;
             margin: $xsmall $small;
@@ -40,15 +42,17 @@
             width: 80%;
         }
         #team>.team_row>.team_member>h4 {
+            font-family: $mainFont;
             font-size: $midlarge;
             margin: $small auto;
         }
         #team>.team_row>.team_member>p {
+            font-family: $secondaryFont;
             font-size: $medium;
             margin: 0 auto;
         }
         #team>.team_row>.team_member>a {
-            color: $blue;
+            color: $darkGrey;
             margin: $small auto;
             text-decoration: none;
         }
@@ -71,7 +75,6 @@
 
     @media only screen and (min-width: 64.063em) {
         #team .team_row {
-            display: flex;
             flex-direction: row;
             justify-content: space-between;
         }

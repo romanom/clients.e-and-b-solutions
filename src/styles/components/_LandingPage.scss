@@ -9,6 +9,7 @@
             background-size: cover;
             display: flex;
             flex-flow: column;
+            font-family: $mainFont;
             height: 50rem;
             justify-content: space-evenly;
             text-align: center;
@@ -16,7 +17,6 @@
         }
         #landing_page .intro_text {
             color: white;
-            font-family: $robotoFont;
             font-size: $xlarge;
             font-weight: 700;
             margin: 20rem 0 0;
