@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ServicesSection from './ServicesSection';
 import TeamSection from './TeamSection';
-// import PortfolioSection from './PortfolioSection';
 
 const LandingPage = () => (
     <div id="landing_page">

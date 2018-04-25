@@ -1,8 +1,5 @@
-/*
-        Small screens - MOBILE
-        max-width 640px, small screens
-    */
-
+//Small screens - MOBILE
+//max-width 640px, small screens
 @media only screen {
     footer {
         background-color: $darkGrey;
@@ -12,32 +9,27 @@
         padding: $xsmall;
         text-align: center;
     }
+    footer a {
+        color: white;
+        text-decoration: none;
+    }
+    footer a:hover {
+        color: $blue;
+    }
 }
 
-/* 
-        Medium screens - TABLET
-        min-width 641px, medium screens
-    */
-
+//Medium screens - TABLET
+//min-width 641px, medium screens
 @media only screen and (min-width: 40.063em) {}
 
-/* 
-        Large screens - DESKTOP
-        min-width 1025px, large screens
-    */
-
+//Large screens - DESKTOP
+//min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {}
 
-/* 
-        XLarge screens
-        min-width 1441px, xlarge screens
-    */
-
+//XLarge screens
+//min-width 1441px, xlarge screens
 @media only screen and (min-width: 90.063em) {}
 
-/*
-        XXLarge screens
-        min-width 1921px, xlarge screens
-    */
-
+//XXLarge screens
+//min-width 1921px, xlarge screens
 @media only screen and (min-width: 120.063em) {}
