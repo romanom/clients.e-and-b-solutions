@@ -1,11 +1,10 @@
 import React from 'react';
-// import AboutSection from './AboutSection'<AboutSection />;
+import AboutSection from './AboutSection';
 import PortfolioSection from './PortfolioSection';
 
 const AboutPage = () => (
     <div id='about_page'>
-        <PortfolioSection />
-        
+        <AboutSection />
     </div>
 );
 

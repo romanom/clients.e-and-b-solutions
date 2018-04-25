@@ -1,0 +1,58 @@
+    /*
+        Small screens - MOBILE
+        max-width 640px, small screens
+    */
+
+    @media only screen {
+        #portfolio .projects {
+            display: flex;
+            flex-flow: column;
+            justify-content: space-evenly;
+            list-style: none;
+            margin: 0 5%;
+        }
+        #portfolio .projects img {
+            height: 100%;
+            margin: $small 0;
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    /* 
+        Medium screens - TABLET
+        min-width 641px, medium screens
+    */
+
+    @media only screen and (min-width: 40.063em) {}
+
+    /* 
+        Large screens - DESKTOP
+        min-width 1025px, large screens
+    */
+
+    @media only screen and (min-width: 64.063em) {
+        #portfolio .projects {
+            flex-flow: row wrap;
+            margin: 0 10%;
+        }
+        #portfolio .projects img {
+            height: 100%;
+            margin: $small;
+            width: 45%;
+        }
+    }
+
+    /* 
+        XLarge screens
+        min-width 1441px, xlarge screens
+    */
+
+    @media only screen and (min-width: 90.063em) {}
+
+    /*
+        XXLarge screens
+        min-width 1921px, xlarge screens
+    */
+
+    @media only screen and (min-width: 120.063em) {}

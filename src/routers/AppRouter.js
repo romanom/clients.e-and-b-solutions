@@ -6,6 +6,7 @@ import LandingPage from '../components/LandingPage'
 import ContactPage from '../components/ContactPage'
 import AboutPage from '../components/AboutPage'
 import PricingPage from '../components/PricingPage'
+import PortfolioPage from '../components/PortfolioPage'
 import NotFoundPage from '../components/NotFoundPage'
 
 const AppRouter = (props) => (
@@ -17,6 +18,7 @@ const AppRouter = (props) => (
                 <Route path="/contact" component={ContactPage} />
                 <Route path="/about" component={AboutPage} />
                 <Route path="/pricing" component={PricingPage} />
+                <Route path="/portfolio" component={PortfolioPage} />
                 <Route component={NotFoundPage} />
             </Switch>
             <Footer />

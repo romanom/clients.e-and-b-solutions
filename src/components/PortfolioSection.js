@@ -1,6 +1,6 @@
 import React from 'react';
 import PortfolioModal from './PortfolioModal';
-import Modal from 'react-modal';
+import { projects } from '../tools/projects';
 
 export default class PortfolioSection extends React.Component {
     constructor(props) {
@@ -12,22 +12,26 @@ export default class PortfolioSection extends React.Component {
         }
     }
 
-    handleSelectedProject() {
-        this.setState({ selectedProject: 'First Project' });
+    handleSelectedProject(index) {
+        this.setState({
+            selectedProject: projects[index]
+        });
     }
 
     closeSelectedProject() {
-        console.log('I am here');
         this.setState({ selectedProject: undefined });
     }
 
     render() {
         return (
-            <section id="porfolio">
-                <button onClick={this.handleSelectedProject}>Open Project</button>
+            <section id="portfolio">
+                <div className="projects">
+                    {projects.map((project, index) => {
+                        return <img key={index} data_index={index} src={project.clickableImage} onClick={() => { this.handleSelectedProject(index) }} />
+                    })}
+                </div>
                 <PortfolioModal
-                    // selectedProject={this.state.selectedProject}
-                    selectedProject='Taco'
+                    selectedProject={this.state.selectedProject}
                     closeSelectedProject={this.closeSelectedProject}
                 />
             </section>
