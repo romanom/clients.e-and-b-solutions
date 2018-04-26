@@ -2,13 +2,17 @@
 //max-width 640px, small screens
 @media only screen {
     #faq_page>.faq_content .faq_question {
-        background-color: $blue;
+        background-color: $lightBlue;
         color: white;
         display: flex;
         font-family: $mainFont;
         font-size: $large;
         margin: $small $small 0;
         padding: $small;
+    }
+    #faq_page>.faq_content .faq_question:hover {
+        background-color: $blue;
+        transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
     }
     #faq_page>.faq_content .favicon_container {
         margin-left: auto;

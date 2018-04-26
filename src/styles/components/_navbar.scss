@@ -124,6 +124,7 @@
     /* desktop nav */
     #desktop_menu {
         background-color: $darkGrey;
+        box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.25);
         display: flex;
         flex-direction: row;
         justify-content: space-between;

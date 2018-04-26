@@ -5,10 +5,11 @@
 
     @media only screen {
         #team {
-            background-color: $lightGrey;
+            background-color: $midLightGrey;
             padding: $small 0 $large;
         }
         #team>header {
+            color: $fontGrey;
             margin: $large auto;
             text-align: center;
         }
@@ -18,7 +19,6 @@
             margin: 0 $small;
         }
         #team>header>h3 {
-            color: $darkGrey;
             font-family: $secondaryFont;
             font-size: $midlarge;
             font-weight: lighter;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { handlePageView } from '../tools/analytics';
 import FAQWidget from './FAQWidget';
-import faqs from '../tools/faqs';
+import faqs from '../content/faqs';
 
 export default class FAQPage extends React.Component {
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import PortfolioModal from './PortfolioModal';
-import { projects } from '../tools/projects';
+import { projects } from '../content/projects';
 
 export default class PortfolioSection extends React.Component {
     constructor(props) {

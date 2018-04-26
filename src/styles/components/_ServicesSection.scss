@@ -5,6 +5,8 @@
 
     @media only screen {
         #services {
+            background-color: $lightGrey;
+            color: $midGrey;
             padding: $small 0 $large;
         }
         #services>header {
@@ -12,14 +14,14 @@
             text-align: center;
         }
         #services>header>h2 {
+            color: #272727;
             font-family: $mainFont;
-            font-size: $xlarge;
+            font-size: $large;
             margin: 0 $small;
         }
         #services>header>h3 {
-            color: $darkGrey;
             font-family: $secondaryFont;
-            font-size: $midlarge;
+            font-size: $medium;
             font-weight: lighter;
             margin: $xsmall $small;
         }
@@ -40,14 +42,14 @@
         }
         #services>.services_row>.service>h4 {
             font-family: $mainFont;
-            font-size: $large;
+            font-size: $midlarge;
             font-weight: bold;
             margin: $medium 0;
         }
         #services>.services_row>.service>p {
             color: $midGrey;
             font-family: $secondaryFont;
-            font-size: $midlarge;
+            font-size: $medium;
             margin: $medium 0;
         }
     }
