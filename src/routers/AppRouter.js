@@ -8,6 +8,7 @@ import AboutPage from '../components/AboutPage'
 import PricingPage from '../components/PricingPage'
 import PortfolioPage from '../components/PortfolioPage'
 import PrivacyPolicyPage from '../components/PrivacyPolicyPage'
+import FAQPage from '../components/FAQPage'
 import NotFoundPage from '../components/NotFoundPage'
 
 const AppRouter = (props) => (
@@ -21,6 +22,7 @@ const AppRouter = (props) => (
                 <Route path="/pricing" component={PricingPage} />
                 <Route path="/portfolio" component={PortfolioPage} />
                 <Route path="/privacy" component={PrivacyPolicyPage} />
+                <Route path="/faq" component={FAQPage} />
                 <Route component={NotFoundPage} />
             </Switch>
             <Footer />

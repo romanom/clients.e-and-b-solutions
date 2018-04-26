@@ -39,6 +39,7 @@ export default class Navbar extends React.Component {
                     <Link to="/about" className="nav_side_menu_link" onClick={this.closeSideMenu}>About</Link>
                     <Link to="/pricing" className="nav_side_menu_link" onClick={this.closeSideMenu}>Pricing</Link>
                     <Link to="/portfolio" className="nav_side_menu_link" onClick={this.closeSideMenu}>Portfolio</Link>
+                    <Link to="/faq" className="nav_side_menu_link" onClick={this.closeSideMenu}>FAQ</Link>
                     <Link to="/contact" className="nav_side_menu_link nav_menu_contact" onClick={this.closeSideMenu}>Contact</Link>
                 </div>
                 <div id="mobile_nav_toggles">
@@ -67,6 +68,9 @@ export default class Navbar extends React.Component {
                             </li>
                             <li>
                                 <Link to="/portfolio">Portfolio</Link>
+                            </li>
+                            <li>
+                                <Link to="/faq">FAQ</Link>
                             </li>
                             <li>
                                 <Link to="/contact" className="nav_menu_contact">Contact</Link>
