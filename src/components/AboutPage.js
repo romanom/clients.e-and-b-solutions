@@ -1,11 +1,23 @@
 import React from 'react';
+import { handlePageView } from '../tools/analytics';
 import AboutSection from './AboutSection';
-import PortfolioSection from './PortfolioSection';
 
-const AboutPage = () => (
-    <div id='about_page'>
-        <AboutSection />
-    </div>
-);
 
-export default AboutPage;
+export default class AboutPage extends React.Component {
+
+    constructor(props) {
+        super(props);
+    }
+
+    componentDidMount() {
+        handlePageView();
+    }
+
+    render() {
+        return (
+            <div id='about_page'>
+                <AboutSection />
+            </div>
+        );
+    }
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
+
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import LandingPage from '../components/LandingPage'

@@ -2,6 +2,8 @@ import React from 'react';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import { faExclamationCircle } from '@fortawesome/fontawesome-free-solid'
 import { sendEmail, isEmailValid } from '../tools/email';
+import { handleEvent } from '../tools/analytics';
+import { analyticsCategories, analyticsActions, analyticsLabels } from '../tools/constants';
 
 
 export default class ContactForm extends React.Component {
@@ -36,7 +38,13 @@ export default class ContactForm extends React.Component {
             phone: contactInputs.phone,
             comment: contactInputs.message
         }
+        const analyticsEvent = {
+            category: analyticsCategories.contact,
+            action: analyticsActions.sendEmail,
+            label: analyticsLabels.contactForm
+        }
         const done = () => {
+            handleEvent(analyticsEvent);
             this.handleResetForm();
             return this.setState(() => ({
                 emailSent: true
