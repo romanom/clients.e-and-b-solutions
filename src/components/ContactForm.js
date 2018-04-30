@@ -4,7 +4,7 @@ import { faExclamationCircle } from '@fortawesome/fontawesome-free-solid'
 import { sendEmail, isEmailValid } from '../tools/email';
 import { handleEvent } from '../tools/analytics';
 import { analyticsCategories, analyticsActions, analyticsLabels } from '../tools/constants';
-
+import { pointOfContactEmail } from '../config';
 
 export default class ContactForm extends React.Component {
     constructor(props) {
@@ -21,6 +21,7 @@ export default class ContactForm extends React.Component {
         this.handleSubmitContactForm = this.handleSubmitContactForm.bind(this);
         this.handleResetForm = this.handleResetForm.bind(this);
         this.state = {
+            buttonText: "Send It",
             emailSent: false,
             emailError: false,
             contactInfo: {},
@@ -30,13 +31,18 @@ export default class ContactForm extends React.Component {
 
     handleSubmitContactForm(e) {
         e.preventDefault();
+        document.getElementById('contactFormButton').setAttribute("disabled", true);
+        this.setState(() => ({
+            buttonText: "Sending"
+        }));
 
         const contactInputs = this.state.contactInfo;
         const data = {
+            pointOfContactEmail: pointOfContactEmail,
             name: contactInputs.name,
-            email: contactInputs.email,
-            phone: contactInputs.phone,
-            comment: contactInputs.message
+            emailAddress: contactInputs.email,
+            phoneNumber: contactInputs.phone,
+            message: contactInputs.message
         }
         const analyticsEvent = {
             category: analyticsCategories.contact,
@@ -194,12 +200,13 @@ export default class ContactForm extends React.Component {
                         ></textarea>
                         <div>
                             <button
+                                id="contactFormButton"
                                 disabled={Object.keys(this.state.error).length > 0
                                     || !this.state.contactInfo.name
                                     || !this.state.contactInfo.email}
                             >
-                                Send It
-                        </button>
+                                {this.state.buttonText}
+                            </button>
                         </div>
                     </form>
                 }
