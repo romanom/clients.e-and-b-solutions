@@ -1,27 +1,24 @@
 import { validate } from 'email-validator';
 import { apiGatewayEmailURL, apiGatewayToken } from '../config';
 
-export const sendEmail = (data, done, fail) => {
-    $.ajax({
-        type: "POST",
-        url: apiGatewayEmailURL,
-        contentType: "application/json",
-        headers:
-            {
-                "Content-Type": "application/json",
-                "X-Api-Key": apiGatewayToken,
-            },
-        beforeSend: function (xhr) {
-            xhr.setRequestHeader("X-Api-Key", apiGatewayToken);
-            xhr.setRequestHeader("Content-Type", "application/json");
-        },
-        data: JSON.stringify(data),
-        dataType: "json"
-    })
-        .done(done)
-        .fail(fail);
+const createRequest = (data, done, fail) => {
+    var request = new XMLHttpRequest();
+    request.onload = function () {
+        done();
+    }
+    request.onerror = function () {
+        fail();
+    }
+    request.open('POST', apiGatewayEmailURL, true);
+    request.setRequestHeader("X-Api-Key", apiGatewayToken);
+    request.setRequestHeader("Content-Type", "application/json");
+    request.send(JSON.stringify(data));
 }
 
 export const isEmailValid = (emailAddress) => {
     return validate(emailAddress);
+}
+
+export const sendEmail = (data, done, fail) => {
+    createRequest(data, done, fail);
 }
