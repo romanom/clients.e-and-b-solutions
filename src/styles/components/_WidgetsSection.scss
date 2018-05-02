@@ -8,8 +8,7 @@
         margin: $small 0;
     }
     #widgets>.widgets_row>.widget {
-        // background: rgba(31, 130, 227, 0.7);
-        background: $lightBlue;
+        background: $blue;
         color: white;
         font-family: $mainFont;
         font-size: $large;
@@ -18,7 +17,7 @@
         text-align: center;
     }
     #widgets>.widgets_row>.widget:hover {
-        background: $blue;
+        background: darken($blue, 10);
         transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
     }
     #widgets>.widgets_row>.widget img {

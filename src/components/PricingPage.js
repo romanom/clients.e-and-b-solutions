@@ -14,16 +14,13 @@ export default class PricingPage extends React.Component {
     render() {
         return (
             <section id="pricing">
-                <header>
-                    <h2>What's it gonna cost me?</h2>
-                </header>
                 <div className="pricing_row">
                     <div className="pricing_package">
                         <div className="price_header">
                             <h3>Just Curious</h3>
                             <h5>Get To Know Us</h5>
                             <p>
-                                We will give your current site a once over to check for weak spots and show how we might can help
+                                We will give your current site a once over to check for weak spots and show how we can help.
                         </p>
                         </div>
                         <div className="price_cost">

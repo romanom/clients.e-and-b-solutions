@@ -5,8 +5,10 @@
   "author": "Aaron Sisler",
   "license": "MIT",
   "scripts": {
-    "build": "webpack",
-    "devserver": "webpack-dev-server"
+    "build": "webpack -p --env production",
+    "build:dev": "webpack",
+    "devserver": "webpack-dev-server",
+    "start": "node server/server.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.5",
@@ -21,9 +23,12 @@
     "babel-preset-react": "6.24.1",
     "css-loader": "0.28.4",
     "email-validator": "^2.0.3",
+    "express": "4.15.4",
+    "extract-text-webpack-plugin": "3.0.0",
     "file-loader": "^1.1.11",
     "node-sass": "4.5.3",
     "normalize.css": "7.0.0",
+    "prop-types": "^15.6.1",
     "react": "16.0.0",
     "react-collapse": "^4.0.3",
     "react-dom": "16.0.0",
@@ -33,8 +38,9 @@
     "react-router-dom": "4.2.2",
     "sass-loader": "6.0.6",
     "style-loader": "0.18.2",
-    "url-loader": "^1.0.1",
-    "webpack": "3.1.0",
+    "webpack": "3.1.0"
+  },
+  "devDependencies": {
     "webpack-dev-server": "2.5.1"
   }
 }

@@ -44,13 +44,13 @@
             font-family: $mainFont;
             font-size: $midlarge;
             font-weight: bold;
-            margin: $medium 0;
+            margin: $medium 0 $xsmall;
         }
         #services>.services_row>.service>p {
-            color: $midGrey;
+            color: $fontGrey;
             font-family: $secondaryFont;
             font-size: $medium;
-            margin: $medium 0;
+            margin: $small 0;
         }
     }
 

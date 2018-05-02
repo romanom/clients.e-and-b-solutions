@@ -8,7 +8,7 @@ $lightGrey: #f3f3f3;
 $midLightGrey: #e8e8e8;
 $midGrey: #666666;
 $darkGrey: #222222;
-$fontGrey: rgba(0, 0, 0, .5);
+$fontGrey: rgba(0, 0, 0, .7);
 //Spacing
 $xsmall: 0.6rem;
 $small: 1.2rem;
@@ -32,6 +32,7 @@ $coolveticaFont: "Coolvetica";
 $groteskLightFont: "GroteskLight";
 $openSansFont: "OpenSans";
 //Site Fonts
-$mainFont: $openSansFont;
+// $mainFont: $openSansFont;
+$mainFont: $groteskLightFont;
 $secondaryFont: $alteFont;
 $accentFont: $coolveticaFont;
