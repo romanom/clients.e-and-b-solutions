@@ -1,9 +1,6 @@
 // Colors
 $lightBlue: rgba(31, 130, 227, 0.8);
-// $lightBlue: #3399ff;
 $blue: #0066cc;
-// $lightGrey: #eeeeee;
-// $lightGrey: #999999;
 $lightGrey: #f3f3f3;
 $midLightGrey: #e8e8e8;
 $midGrey: #666666;
@@ -25,14 +22,17 @@ $desktopBreakpoint: 45rem;
 @import url('../fonts/Coolvetica.scss');
 @import url('../fonts/GroteskLight.scss');
 @import url('../fonts/OpenSans.scss');
+@import url('../fonts/Ubuntu.scss');
 //Font Variables
 $alteFont: "Alte";
 $atlasFont: "AtlasGrotesk";
 $coolveticaFont: "Coolvetica";
 $groteskLightFont: "GroteskLight";
 $openSansFont: "OpenSans";
+$ubuntuLightFont: "UbuntuLight";
+$ubuntuFont: "Ubuntu";
+$ubuntuMediumFont: "UbuntuMedium";
 //Site Fonts
-// $mainFont: $openSansFont;
-$mainFont: $groteskLightFont;
-$secondaryFont: $alteFont;
+$mainFont: $ubuntuFont;
+$secondaryFont: $ubuntuLightFont;
 $accentFont: $coolveticaFont;
