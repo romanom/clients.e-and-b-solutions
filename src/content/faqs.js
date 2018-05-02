@@ -5,7 +5,7 @@ const faqs = [
     },
     {
         question: 'How long will it take to complete a website?',
-        answer: 'On average, it takes around 2 weeks from our first meeting until the site is up and running.'
+        answer: 'On average, it takes approximately 2 weeks from our first meeting until the site is up and running.'
     }
 ]
 

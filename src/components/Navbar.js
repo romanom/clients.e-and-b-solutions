@@ -10,8 +10,6 @@ export default class Navbar extends React.Component {
         this.closeSideMenu = this.closeSideMenu.bind(this);
         this.state = {
             isNavOpen: false,
-            companyName: "Taco Taco",
-            // companyName: "E&B Solutions",
         }
     }
 
@@ -36,7 +34,6 @@ export default class Navbar extends React.Component {
             <nav>
                 <div id="nav_side_menu">
                     <Link to="/" className="nav_side_menu_link" onClick={this.closeSideMenu}>Home</Link>
-                    <Link to="/about" className="nav_side_menu_link" onClick={this.closeSideMenu}>About</Link>
                     <Link to="/pricing" className="nav_side_menu_link" onClick={this.closeSideMenu}>Pricing</Link>
                     <Link to="/portfolio" className="nav_side_menu_link" onClick={this.closeSideMenu}>Portfolio</Link>
                     <Link to="/faq" className="nav_side_menu_link" onClick={this.closeSideMenu}>FAQ</Link>
@@ -44,7 +41,7 @@ export default class Navbar extends React.Component {
                 </div>
                 <div id="mobile_nav_toggles">
                     <div id="brand">
-                        <Link to="/">{this.state.companyName}</Link>
+                        <Link to="/">{this.props.companyName}</Link>
                     </div>
                     <div id="nav_mobile_toggle">
                         {!this.state.isNavOpen && <FontAwesomeIcon icon={faBars} size='3x' className="favicon" onClick={this.openSideMenu} />}
@@ -53,15 +50,12 @@ export default class Navbar extends React.Component {
                 </div>
                 <div id="desktop_menu">
                     <div id="brand">
-                        <Link to="/">{this.state.companyName}</Link>
+                        <Link to="/">{this.props.companyName}</Link>
                     </div>
                     <div>
                         <ul>
                             <li>
                                 <Link to="/">Home</Link>
-                            </li>
-                            <li>
-                                <Link to="/about">About</Link>
                             </li>
                             <li>
                                 <Link to="/pricing">Pricing</Link>

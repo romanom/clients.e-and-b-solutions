@@ -12,10 +12,14 @@ import PrivacyPolicyPage from '../components/PrivacyPolicyPage'
 import FAQPage from '../components/FAQPage'
 import NotFoundPage from '../components/NotFoundPage'
 
+const state = {
+    companyName: 'E&B Solutions'
+}
+
 const AppRouter = (props) => (
     <BrowserRouter>
         <div>
-            <Navbar />
+            <Navbar companyName={state.companyName} />
             <Switch>
                 <Route path="/" component={LandingPage} exact={true} />
                 <Route path="/contact" component={ContactPage} />

@@ -1,34 +1,13 @@
 @font-face {
     font-family: 'UbuntuLight';
-    src: url('Ubuntu_Light.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'UbuntuMedium';
-    src: url('Ubuntu_Medium.ttf') format('truetype');
+    src: url('Ubuntu_Light.woff') format('woff'), url('Ubuntu_Light.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Ubuntu';
-    src: url('Ubuntu_Regular.ttf') format('truetype');
+    src: url('Ubuntu_Regular.woff') format('woff'), url('Ubuntu_Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
-}
-
-@font-face {
-    font-family: 'UbuntuBold';
-    src: url('Ubuntu_Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'UbuntuItalic';
-    src: url('Ubuntu_Italic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
 }
