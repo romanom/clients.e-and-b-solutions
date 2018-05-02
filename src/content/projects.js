@@ -16,7 +16,7 @@ export const projects = [
         date: 'September 2016',
         images: [
             { src: 'images/project2_img1.jpg', alt: 'Screenshot 1' },
-            { src: 'images/project2_img2.jpg', alt: 'Scrrenshot 2' },
+            { src: 'images/project2_img2.jpg', alt: 'Screenshot 2' },
             { src: 'images/project2_img3.jpg', alt: '2016 Metrics' },
             { src: 'images/project2_img4.jpg', alt: '2017 Metrics' }
         ],
