@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
+import ScrollToTop from '../components/ScrollToTop';
 
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -18,7 +19,7 @@ const state = {
 
 const AppRouter = (props) => (
     <BrowserRouter>
-        <div>
+        <ScrollToTop>
             <Navbar companyName={state.companyName} />
             <Switch>
                 <Route path="/" component={LandingPage} exact={true} />
@@ -31,7 +32,7 @@ const AppRouter = (props) => (
                 <Route component={NotFoundPage} />
             </Switch>
             <Footer />
-        </div>
+        </ScrollToTop>
     </BrowserRouter>
 );
 
