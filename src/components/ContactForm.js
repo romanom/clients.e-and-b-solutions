@@ -11,11 +11,13 @@ export default class ContactForm extends React.Component {
         super(props);
         this.handleInput = this.handleInput.bind(this);
         this.handleAddInput = this.handleAddInput.bind(this);
+        this.handlePhoneChange = this.handlePhoneChange.bind(this);
 
         this.handleContactInfo = this.handleContactInfo.bind(this);
         this.handleError = this.handleError.bind(this);
 
         this.handleEmailValidation = this.handleEmailValidation.bind(this);
+        this.handlePhoneValidation = this.handlePhoneValidation.bind(this);
         this.handleRequiredValidation = this.handleRequiredValidation.bind(this);
 
         this.handleSubmitContactForm = this.handleSubmitContactForm.bind(this);
@@ -24,6 +26,7 @@ export default class ContactForm extends React.Component {
             buttonText: "Send It",
             emailSent: false,
             emailError: false,
+            phoneNumber: "",
             contactInfo: {},
             error: {}
         }
@@ -72,6 +75,9 @@ export default class ContactForm extends React.Component {
             case 'email':
                 this.handleEmailValidation(inputValue);
                 return;
+            case 'phone':
+                this.handlePhoneValidation(inputValue);
+                return;
             case 'name':
                 this.handleRequiredValidation(inputName, inputValue);
                 return;
@@ -119,6 +125,16 @@ export default class ContactForm extends React.Component {
         this.handleContactInfo('email', inputValue);
     }
 
+    handlePhoneValidation(inputValue) {
+        if (inputValue && inputValue.length != 10) {
+            this.handleError('phone', 'Phone number must be 10 digits');
+            this.handleContactInfo('phone');
+            return;
+        }
+        this.handleError('phone');
+        this.handleContactInfo('phone', inputValue);
+    }
+
     handleRequiredValidation(inputName, inputValue) {
         if (!inputValue) {
             this.handleError(inputName, 'This is a required field');
@@ -135,6 +151,14 @@ export default class ContactForm extends React.Component {
             return;
         }
         this.handleContactInfo(inputName, inputValue);
+    }
+
+    handlePhoneChange(e) {
+        const phoneNumber = e.target.value;
+
+        if (!phoneNumber || (phoneNumber.match(/^[0-9]*$/) && phoneNumber.length <= 10)) {
+            return this.setState(() => ({ phoneNumber }));
+        }
     }
 
     handleResetForm(e) {
@@ -184,11 +208,21 @@ export default class ContactForm extends React.Component {
                             placeholder="Email (Required)"
                             onBlur={this.handleInput}
                         />
+                        {
+                            this.state.error.phone
+                            &&
+                            <p className="error">
+                                <FontAwesomeIcon icon={faExclamationCircle} size='lg' color='red' />
+                                {this.state.error.phone}
+                            </p>
+                        }
                         <input
-                            type="number"
+                            type="text"
                             name="phone"
+                            value={this.state.phoneNumber}
                             className='contact_form_input'
                             placeholder="Phone (Digits only, no dashes, etc.)"
+                            onChange={this.handlePhoneChange}
                             onBlur={this.handleInput}
                         />
                         <textarea
