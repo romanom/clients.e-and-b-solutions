@@ -1,14 +1,31 @@
 import React from 'react';
 import { handlePageView } from '../tools/analytics';
+import { analyticsCategories, analyticsActions } from '../tools/constants';
+import ContactModal from './ContactModal';
+
+const toggleModalEvent = {
+    category: analyticsCategories.navigate,
+    action: analyticsActions.navigateByButton
+}
 
 export default class PricingPage extends React.Component {
 
     constructor(props) {
         super(props);
+        this.toggleModal = this.toggleModal.bind(this);
+        this.state = {
+            isModalOpen: false
+        }
     }
 
     componentDidMount() {
         handlePageView();
+    }
+
+    toggleModal() {
+        this.setState(prevState => ({
+            isModalOpen: !prevState.isModalOpen
+        }));
     }
 
     render() {
@@ -30,6 +47,14 @@ export default class PricingPage extends React.Component {
                             <p>List of site issues</p>
                             <p>Report of all findings</p>
                             <p>Recommendations for site fixes</p>
+                        </div>
+                        <div>
+                            <button
+                                className="button"
+                                onClick={this.toggleModal}
+                            >
+                                Get Free Report
+                            </button>
                         </div>
                     </div>
                     <div className="pricing_package">
@@ -54,7 +79,7 @@ export default class PricingPage extends React.Component {
                             <h3>All The Things</h3>
                             <h5>E-Commerce Site</h5>
                             <p>
-                                Let us create a place where your customers can browse and purchase from you all in one place.
+                                Let us create a place where your customers can browse and purchase from you all in one location.
                             </p>
                         </div>
                         <div className="price_cost">
@@ -68,6 +93,10 @@ export default class PricingPage extends React.Component {
                         </div>
                     </div>
                 </div>
+                <ContactModal
+                    isModalOpen={this.state.isModalOpen}
+                    closeModal={this.toggleModal}
+                />
             </section>
         );
     }

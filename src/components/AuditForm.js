@@ -6,35 +6,32 @@ import { handleEvent } from '../tools/analytics';
 import { analyticsCategories, analyticsActions, analyticsLabels } from '../tools/constants';
 import { pointOfContactEmail } from '../config';
 
-export default class ContactForm extends React.Component {
+export default class AuditForm extends React.Component {
     constructor(props) {
         super(props);
         this.handleInput = this.handleInput.bind(this);
         this.handleAddInput = this.handleAddInput.bind(this);
-        this.handlePhoneChange = this.handlePhoneChange.bind(this);
 
         this.handleContactInfo = this.handleContactInfo.bind(this);
         this.handleError = this.handleError.bind(this);
 
         this.handleEmailValidation = this.handleEmailValidation.bind(this);
-        this.handlePhoneValidation = this.handlePhoneValidation.bind(this);
         this.handleRequiredValidation = this.handleRequiredValidation.bind(this);
 
-        this.handleSubmitContactForm = this.handleSubmitContactForm.bind(this);
+        this.handleSubmitAuditForm = this.handleSubmitAuditForm.bind(this);
         this.handleResetForm = this.handleResetForm.bind(this);
         this.state = {
             buttonText: "Send It",
             emailSent: false,
             emailError: false,
-            phoneNumber: "",
             contactInfo: {},
             error: {}
         }
     }
 
-    handleSubmitContactForm(e) {
+    handleSubmitAuditForm(e) {
         e.preventDefault();
-        document.getElementById('contactFormButton').setAttribute("disabled", true);
+        document.getElementById('audit_form_button').setAttribute("disabled", true);
         this.setState(() => ({
             buttonText: "Sending"
         }));
@@ -42,15 +39,14 @@ export default class ContactForm extends React.Component {
         const contactInputs = this.state.contactInfo;
         const data = {
             pointOfContactEmail: pointOfContactEmail,
-            name: contactInputs.name,
+            website: contactInputs.website,
             emailAddress: contactInputs.email,
-            phoneNumber: contactInputs.phone,
             message: contactInputs.message
         }
         const analyticsEvent = {
             category: analyticsCategories.contact,
             action: analyticsActions.sendEmail,
-            label: analyticsLabels.contactForm
+            label: analyticsLabels.auditForm
         }
         const done = () => {
             handleEvent(analyticsEvent);
@@ -75,10 +71,7 @@ export default class ContactForm extends React.Component {
             case 'email':
                 this.handleEmailValidation(inputValue);
                 return;
-            case 'phone':
-                this.handlePhoneValidation(inputValue);
-                return;
-            case 'name':
+            case 'website':
                 this.handleRequiredValidation(inputName, inputValue);
                 return;
             default:
@@ -125,16 +118,6 @@ export default class ContactForm extends React.Component {
         this.handleContactInfo('email', inputValue);
     }
 
-    handlePhoneValidation(inputValue) {
-        if (inputValue && inputValue.length != 10) {
-            this.handleError('phone', 'Phone number must be 10 digits');
-            this.handleContactInfo('phone');
-            return;
-        }
-        this.handleError('phone');
-        this.handleContactInfo('phone', inputValue);
-    }
-
     handleRequiredValidation(inputName, inputValue) {
         if (!inputValue) {
             this.handleError(inputName, 'This is a required field');
@@ -153,16 +136,8 @@ export default class ContactForm extends React.Component {
         this.handleContactInfo(inputName, inputValue);
     }
 
-    handlePhoneChange(e) {
-        const phoneNumber = e.target.value;
-
-        if (!phoneNumber || (phoneNumber.match(/^[0-9]*$/) && phoneNumber.length <= 10)) {
-            return this.setState(() => ({ phoneNumber }));
-        }
-    }
-
     handleResetForm() {
-        const contactInputs = document.forms[0].getElementsByClassName('contact_form_input');
+        const contactInputs = document.forms[0].getElementsByClassName('audit_form_input');
         for (let input of contactInputs) {
             input.value = '';
         };
@@ -171,25 +146,25 @@ export default class ContactForm extends React.Component {
 
     render() {
         return (
-            <div id="contact_form">
+            <div id="audit_form">
                 {
                     (!this.state.emailSent && !this.state.emailError)
                     &&
-                    <form onSubmit={this.handleSubmitContactForm}>
+                    <form onSubmit={this.handleSubmitAuditForm}>
                         {
-                            this.state.error.name
+                            this.state.error.website
                             &&
                             <p className="error">
                                 <FontAwesomeIcon icon={faExclamationCircle} size='lg' color='red' />
-                                {this.state.error.name}
+                                {this.state.error.website}
                             </p>
                         }
                         <input
-                            id="contact_name"
+                            id="contact_website"
                             type="text"
-                            name="name"
-                            className='contact_form_input'
-                            placeholder="Name (Required)"
+                            name="website"
+                            className='audit_form_input'
+                            placeholder="Website URL (Required)"
                             onBlur={this.handleInput}
                         />
                         {
@@ -204,39 +179,22 @@ export default class ContactForm extends React.Component {
                             id="contact_email"
                             type="text"
                             name="email"
-                            className='contact_form_input'
+                            className='audit_form_input'
                             placeholder="Email (Required)"
-                            onBlur={this.handleInput}
-                        />
-                        {
-                            this.state.error.phone
-                            &&
-                            <p className="error">
-                                <FontAwesomeIcon icon={faExclamationCircle} size='lg' color='red' />
-                                {this.state.error.phone}
-                            </p>
-                        }
-                        <input
-                            type="text"
-                            name="phone"
-                            value={this.state.phoneNumber}
-                            className='contact_form_input'
-                            placeholder="Phone (Digits only, no dashes, etc.)"
-                            onChange={this.handlePhoneChange}
                             onBlur={this.handleInput}
                         />
                         <textarea
                             name="message"
                             rows="4"
-                            className='contact_form_input'
+                            className='audit_form_input'
                             placeholder="What's on your mind?"
                             onBlur={this.handleInput}
                         ></textarea>
                         <div>
                             <button
-                                id="contactFormButton"
+                                id="audit_form_button"
                                 disabled={Object.keys(this.state.error).length > 0
-                                    || !this.state.contactInfo.name
+                                    || !this.state.contactInfo.website
                                     || !this.state.contactInfo.email}
                             >
                                 {this.state.buttonText}

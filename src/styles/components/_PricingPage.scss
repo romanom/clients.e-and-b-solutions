@@ -51,6 +51,22 @@
         font-size: $medium;
         margin: $small 0;
     }
+    #pricing .button {
+        background-color: $lightBlue;
+        border: none;
+        border-radius: $xsmall;
+        color: white;
+        font-family: $mainFont;
+        font-size: $medium;
+        margin: $large $small 0;
+        padding: 0.5em 1.5em;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    #pricing .button:hover {
+        background: $blue;
+        transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    }
 }
 
 /* 

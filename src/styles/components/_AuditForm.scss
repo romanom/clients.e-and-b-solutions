@@ -4,7 +4,7 @@
     */
 
     @media only screen {
-        #contact_form form {
+        #audit_form form {
             display: flex;
             font-family: $secondaryFont;
             flex-flow: column;
@@ -12,22 +12,20 @@
             padding: 0 $medium;
             text-align: center;
         }
-        #contact_form input,
-        textarea {
+        #audit_form .audit_form_input {
             font-size: $medium;
             line-height: $large;
             margin: $xsmall 0;
             padding: $xsmall;
         }
-        #contact_form input::placeholder,
-        textarea::placeholder {
+        #audit_form .audit_form_input::placeholder {
             font-weight: bold;
         }
-        #contact_form .error {
+        #audit_form .error {
             font-size: $medium;
             margin: 0;
         }
-        #contact_form button {
+        #audit_form_button {
             background-color: $blue;
             border-radius: $xsmall;
             color: white;
@@ -37,15 +35,15 @@
             text-decoration: none;
             width: 100%;
         }
-        #contact_form button:hover {
+        #audit_form_button:hover {
             background: darken($blue, 15);
             transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
         }
-        #contact_form button:disabled {
+        #audit_form_button:disabled {
             background: darken($blue, 15);
             opacity: .5;
         }
-        #contact_form .email {
+        #audit_form .email {
             font-weight: bold;
             padding: 0 $midlarge;
         }
@@ -64,13 +62,11 @@
     */
 
     @media only screen and (min-width: 64.063em) {
-        #contact_form form {
+        #audit_form {
             margin: 0 auto;
-            max-width: 60rem;
-            max-width: 60%;
+            width: 60rem;
         }
-        #contact_form input,
-        textarea {
+        #audit_form .audit_form_input {
             font-size: $medium;
             line-height: $large;
             padding: $xsmall;

@@ -4,19 +4,14 @@
     */
 
     @media only screen {
-        #portfolio_page .ReactModal__Content {
-            height: 200%;
-        }
         .ReactModalPortal .ReactModal__Overlay {
             display: flex;
-            justify-content: center;
-            overflow: auto;
             transition: opacity 200ms ease-in-out;
         }
         .ReactModalPortal .ReactModal__Overlay--before-close {
             opacity: 0;
         }
-        .project_modal {
+        .contact_modal {
             background: white;
             font-family: $mainFont;
             margin: 0 10%;
@@ -30,20 +25,12 @@
             justify-content: flex-end;
             margin: $xxlarge 0 0;
         }
-        .project_modal_header {
+        .contact_modal_header {
             margin: 0 0 $large;
         }
-        .project_modal h3 {
+        .contact_modal_header h3 {
             font-size: $large;
             margin: 0 0 $medium 0;
-        }
-        .project_modal p {
-            font-size: $medium;
-            margin: 0 0 $small 0;
-        }
-        .project_modal img {
-            margin: 0 auto;
-            width: 90%;
         }
     }
 
@@ -61,23 +48,15 @@
 
     @media only screen and (min-width: 64.063em) {
         .close_modal {
-            display: flex;
-            justify-content: flex-end;
+            display: flex; // justify-content: flex-end;
             margin: $xxlarge 0 0;
         }
-        .project_modal p {
-            font-size: $medium;
-            margin: 0 10% $small;
+        .close_modal .favicon {
+            cursor: pointer;
         }
-        .project_modal_content {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
-        }
-        .project_modal img {
-            height: 100%;
-            margin: 0 auto;
-            width: 40%;
+        .contact_modal_content {
+            display: flex; // flex-flow: row wrap;
+            // justify-content: space-between;
         }
     }
 

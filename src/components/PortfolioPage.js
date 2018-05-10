@@ -15,7 +15,7 @@ export default class PortfolioPage extends React.Component {
 
     render() {
         return (
-            <div>
+            <div id="portfolio_page">
                 <PortfolioSection />
             </div>
         );
