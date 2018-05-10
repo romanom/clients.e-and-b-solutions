@@ -6,7 +6,7 @@
         color: white;
         display: flex;
         font-family: $mainFont;
-        font-size: $large;
+        font-size: $midlarge;
         margin: $small $small 0;
         padding: $small;
     }
@@ -20,13 +20,13 @@
     #faq_page>.faq_content .faq_answer {
         background-color: $lightGrey;
         font-family: $secondaryFont;
-        font-size: $large;
+        font-size: $midlarge;
         margin: 0 $small;
         padding: 0 $small;
     }
     #faq_page>.faq_content .faq_answer>div {
         color: $darkGrey;
-        padding: $large $small;
+        padding: $large 0;
     }
     #faq_page>.faq_content .favicon {
         font-size: $midlarge;

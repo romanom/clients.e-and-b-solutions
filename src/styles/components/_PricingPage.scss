@@ -8,16 +8,6 @@
         background: linear-gradient(45deg, darken($blue, 10) 10%, lighten($lightBlue, 10) 100%);
         padding: $small 0 $large;
     }
-    #pricing>header {
-        color: white;
-        margin: $large auto;
-        text-align: center;
-    }
-    #pricing>header>h2 {
-        font-family: $mainFont;
-        font-size: $xlarge;
-        margin: 0 $small;
-    }
     #pricing .pricing_row {
         display: flex;
         flex-flow: column;
@@ -31,57 +21,35 @@
         border-radius: 1rem;
         display: flex;
         flex-flow: column;
-        margin: $small 0 $midlarge;
+        margin: $small 0 $small;
         padding: $medium $large $large;
         text-align: center;
     }
-    #pricing .pricing_package.most_popular {
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-        box-shadow: 0 0.5rem 3rem 0 white;
-        margin: $xlarge 0 $small;
-        padding: 0 $large $large;
-        position: relative;
-    }
     #pricing .price_header>h3 {
-        font-size: $large;
+        font-size: $midlarge;
         margin: $medium 0 0;
     }
     #pricing .price_header>h5 {
         color: $midGrey;
         font-family: $secondaryFont;
-        font-size: $midlarge;
+        font-size: $medium;
         margin: 0;
     }
     #pricing .price_header>p {
         color: $midGrey;
         font-family: $secondaryFont;
-        font-size: $midlarge;
+        font-size: $medium;
         margin: $large 0 $medium;
     }
     #pricing .price_cost>h2 {
         font-family: $secondaryFont;
-        font-size: $xlarge;
+        font-size: $large;
         margin: 0 0 $medium;
     }
     #pricing .price_content>p {
         font-family: $secondaryFont;
-        font-size: $midlarge;
+        font-size: $medium;
         margin: $small 0;
-    }
-    #pricing .popular {
-        background: $darkGrey;
-        border-top-left-radius: 1rem;
-        border-top-right-radius: 1rem;
-        color: white;
-        font-size: $midlarge;
-        font-weight: bold;
-        left: 0;
-        padding: $small 0;
-        position: absolute;
-        top: -5rem;
-        width: 100%;
-        z-index: 2;
     }
 }
 
@@ -109,11 +77,6 @@
     #pricing .pricing_package {
         margin: $xlarge $small $midlarge;
         padding: $medium $large $large;
-    }
-    #pricing .pricing_package.most_popular {
-        margin: $xlarge 0 $medium;
-        padding: $medium $large 0;
-        position: relative;
     }
 }
 
