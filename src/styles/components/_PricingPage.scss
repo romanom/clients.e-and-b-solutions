@@ -5,7 +5,7 @@
 
 @media only screen {
     #pricing {
-        background: linear-gradient(45deg, darken($blue, 10) 10%, lighten($lightBlue, 10) 100%);
+        background: radial-gradient(circle, $lightBlue 0%, darken($blue, 20) 100%);
         padding: $small 0 $large;
     }
     #pricing .pricing_row {
