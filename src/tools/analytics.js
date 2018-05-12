@@ -21,9 +21,7 @@ export const handleModalView = (modalDetail) => {
 
 export const handleEvent = (event) => {
     ReactGA.event({
-        category: event.category,
-        action: event.action,
-        label: event.label
+        ...event
     });
 }
 

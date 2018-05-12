@@ -1,6 +1,8 @@
 import React from 'react';
 import PortfolioModal from './PortfolioModal';
 import { projects } from '../content/projects';
+import { handleEvent } from '../tools/analytics';
+import { openModalEvent, closeModalEvent } from '../tools/analytics_events';
 
 export default class PortfolioSection extends React.Component {
     constructor(props) {
@@ -13,12 +15,14 @@ export default class PortfolioSection extends React.Component {
     }
 
     handleSelectedProject(index) {
+        handleEvent(openModalEvent);
         this.setState({
             selectedProject: projects[index]
         });
     }
 
     closeSelectedProject() {
+        handleEvent(closeModalEvent);
         this.setState({ selectedProject: undefined });
     }
 

@@ -5,7 +5,9 @@ export const analyticsCategories = {
 
 export const analyticsActions = {
     sendEmail: 'Send Email',
-    navigateByButton: 'Navigate By Button'
+    navigateByButton: 'Navigate By Button',
+    openModal: 'Open Modal',
+    closeModal: 'Close Modal',
 }
 
 export const analyticsLabels = {

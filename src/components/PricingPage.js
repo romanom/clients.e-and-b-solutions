@@ -1,27 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { handlePageView } from '../tools/analytics';
-import { analyticsCategories, analyticsActions } from '../tools/constants';
+import { handlePageView, handleEvent } from '../tools/analytics';
+import { openModalEvent, closeModalEvent, navigateByButtonEvent } from '../tools/analytics_events';
 import ContactModal from './ContactModal';
-
-// const openModalEvent = {
-//     category: analyticsCategories.navigate,
-//     action: analyticsActions.navigateByButton
-// }
-
-// const goToContactEvent = {
-//     category: analyticsCategories.navigate,
-//     action: analyticsActions.navigateByButton
-// }
 
 export default class PricingPage extends React.Component {
 
     constructor(props) {
         super(props);
         this.toggleModal = this.toggleModal.bind(this);
+        this.handleAnalyticsEvent = this.handleAnalyticsEvent.bind(this);
         this.state = {
             isModalOpen: false
         }
+    }
+
+    handleAnalyticsEvent() {
+        handleEvent(navigateByButtonEvent)
     }
 
     componentDidMount() {
@@ -29,7 +24,13 @@ export default class PricingPage extends React.Component {
     }
 
     toggleModal() {
-        //handleEvent(openModalEvent);
+        if (this.state.isModalOpen) {
+            handleEvent(closeModalEvent);
+        }
+        else {
+            handleEvent(openModalEvent);
+        }
+
         this.setState(prevState => ({
             isModalOpen: !prevState.isModalOpen
         }));
@@ -78,7 +79,7 @@ export default class PricingPage extends React.Component {
                             <p>Hosting for the first year <strong>FREE</strong></p>
                         </div>
                         <div className="contact">
-                            <Link to='/contact' className='link'>Start Your New Site</Link>
+                            <Link to='/contact' onClick={this.handleAnalyticsEvent} className='link'>Start Your New Site</Link>
                         </div>
                     </div>
                     <div className="pricing_package">
@@ -98,7 +99,7 @@ export default class PricingPage extends React.Component {
                             <p>Hosting for the first year <strong>FREE</strong></p>
                         </div>
                         <div className="contact">
-                            <Link to='/contact' className='link'>Build your app today</Link>
+                            <Link to='/contact' onClick={this.handleAnalyticsEvent} className='link'>Build your app today</Link>
                         </div>
                     </div>
                 </div>

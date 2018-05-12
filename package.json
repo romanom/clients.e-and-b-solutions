@@ -5,7 +5,7 @@
   "author": "Aaron Sisler",
   "license": "MIT",
   "scripts": {
-    "build": "webpack -p --env production",
+    "build": "rm -rf ./public/dist && webpack -p --env production",
     "build:dev": "webpack",
     "dev": "webpack-dev-server",
     "start": "node server/server.js"
