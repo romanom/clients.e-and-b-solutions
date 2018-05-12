@@ -4,6 +4,10 @@
 */
 
 @media only screen {
+    * {
+        box-sizing: border-box;
+        font-family: $secondaryFont;
+    }
     html {
         font-size: 62.5%;
     }
@@ -23,6 +27,13 @@
     }
     button {
         cursor: pointer;
+    }
+    .close_modal_span {
+        color: $closeIconGrey;
+        cursor: pointer;
+        font-family: $secondaryFont;
+        font-size: $xxlarge;
+        font-weight: 300;
     }
 }
 

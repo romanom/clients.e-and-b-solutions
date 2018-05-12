@@ -4,7 +4,7 @@
     */
 
     @media only screen {
-        #contact_form form {
+        .contact_form {
             display: flex;
             font-family: $secondaryFont;
             flex-flow: column;
@@ -12,22 +12,20 @@
             padding: 0 $medium;
             text-align: center;
         }
-        #contact_form input,
-        textarea {
+        .contact_form_input {
             font-size: $medium;
             line-height: $large;
             margin: $xsmall 0;
             padding: $xsmall;
         }
-        #contact_form input::placeholder,
-        textarea::placeholder {
+        .contact_form_input::placeholder {
             font-weight: bold;
         }
-        #contact_form .error {
+        .contact_form_error {
             font-size: $medium;
             margin: 0;
         }
-        #contact_form button {
+        .contact_form_button {
             background-color: $blue;
             border-radius: $xsmall;
             color: white;
@@ -37,15 +35,16 @@
             text-decoration: none;
             width: 100%;
         }
-        #contact_form button:hover {
+        .contact_form_button:hover {
             background: darken($blue, 15);
             transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
         }
-        #contact_form button:disabled {
+        .contact_form_button:disabled {
             background: darken($blue, 15);
             opacity: .5;
         }
-        #contact_form .email {
+        .contact_form_email {
+            font-size: $midlarge;
             font-weight: bold;
             padding: 0 $midlarge;
         }
@@ -64,13 +63,12 @@
     */
 
     @media only screen and (min-width: 64.063em) {
-        #contact_form form {
+        .contact_form {
             margin: 0 auto;
             max-width: 60rem;
             max-width: 60%;
         }
-        #contact_form input,
-        textarea {
+        .contact_form_input {
             font-size: $medium;
             line-height: $large;
             padding: $xsmall;

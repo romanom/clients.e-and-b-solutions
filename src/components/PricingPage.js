@@ -1,12 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { handlePageView } from '../tools/analytics';
 import { analyticsCategories, analyticsActions } from '../tools/constants';
 import ContactModal from './ContactModal';
 
-const toggleModalEvent = {
-    category: analyticsCategories.navigate,
-    action: analyticsActions.navigateByButton
-}
+// const openModalEvent = {
+//     category: analyticsCategories.navigate,
+//     action: analyticsActions.navigateByButton
+// }
+
+// const goToContactEvent = {
+//     category: analyticsCategories.navigate,
+//     action: analyticsActions.navigateByButton
+// }
 
 export default class PricingPage extends React.Component {
 
@@ -23,6 +29,7 @@ export default class PricingPage extends React.Component {
     }
 
     toggleModal() {
+        //handleEvent(openModalEvent);
         this.setState(prevState => ({
             isModalOpen: !prevState.isModalOpen
         }));
@@ -37,7 +44,7 @@ export default class PricingPage extends React.Component {
                             <h3>Just Curious</h3>
                             <h5>Get To Know Us</h5>
                             <p>
-                                We will inspect your current site to check for weak spots and show how we can help.
+                                We will inspect your current site to check for weak spots and show how we can help at no cost to you.
                             </p>
                         </div>
                         <div className="price_cost">
@@ -48,12 +55,9 @@ export default class PricingPage extends React.Component {
                             <p>Report of all findings</p>
                             <p>Recommendations for site fixes</p>
                         </div>
-                        <div>
-                            <button
-                                className="button"
-                                onClick={this.toggleModal}
-                            >
-                                Get Free Report
+                        <div className="contact">
+                            <button className="button" onClick={this.toggleModal}>
+                                Get Your Free Report
                             </button>
                         </div>
                     </div>
@@ -66,12 +70,15 @@ export default class PricingPage extends React.Component {
                             </p>
                         </div>
                         <div className="price_cost">
-                            <h2>$150</h2>
+                            <h2>$250</h2>
                         </div>
                         <div className="price_content">
                             <p>Up to 5 pages</p>
                             <p>Support and maintenance costs included</p>
                             <p>Hosting for the first year <strong>FREE</strong></p>
+                        </div>
+                        <div className="contact">
+                            <Link to='/contact' className='link'>Start Your New Site</Link>
                         </div>
                     </div>
                     <div className="pricing_package">
@@ -83,13 +90,15 @@ export default class PricingPage extends React.Component {
                             </p>
                         </div>
                         <div className="price_cost">
-                            <h2>$250</h2>
+                            <h2>$350</h2>
                         </div>
                         <div className="price_content">
-                            <p>Add or update products in one place</p>
                             <p>Shopping Cart and Payments</p>
                             <p>Support and maintenance costs included</p>
                             <p>Hosting for the first year <strong>FREE</strong></p>
+                        </div>
+                        <div className="contact">
+                            <Link to='/contact' className='link'>Build your app today</Link>
                         </div>
                     </div>
                 </div>

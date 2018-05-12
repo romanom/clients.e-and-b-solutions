@@ -18,7 +18,7 @@
     #pricing .pricing_package {
         background: white;
         border: 1px solid #bbbbbb;
-        border-radius: 1rem;
+        border-radius: $xxsmall;
         display: flex;
         flex-flow: column;
         margin: $small 0 $small;
@@ -49,22 +49,31 @@
     #pricing .price_content>p {
         font-family: $secondaryFont;
         font-size: $medium;
-        margin: $small 0;
+        margin: $small 0 0;
     }
-    #pricing .button {
-        background-color: $lightBlue;
-        border: none;
-        border-radius: $xsmall;
-        color: white;
+    #pricing .contact {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin: $large $small 0;
+    }
+    #pricing .button,
+    #pricing .link {
+        background-color: white;
+        border: 1px solid $blue;
+        border-radius: $xxsmall;
+        color: $blue;
         font-family: $mainFont;
         font-size: $medium;
-        margin: $large $small 0;
-        padding: 0.5em 1.5em;
+        margin: 0;
+        padding: $medium $midlarge;
         text-decoration: none;
         text-transform: uppercase;
     }
-    #pricing .button:hover {
+    #pricing .button:hover,
+    #pricing .link:hover {
         background: $blue;
+        color: white;
         transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
     }
 }
@@ -88,11 +97,13 @@
 @media only screen and (min-width: 64.063em) {
     #pricing .pricing_row {
         flex-flow: row;
+        justify-content: space-evenly;
         margin: 0 auto;
     }
     #pricing .pricing_package {
         margin: $xlarge $small $midlarge;
         padding: $medium $large $large;
+        width: 50rem;
     }
 }
 

@@ -4,7 +4,6 @@ import { faExclamationCircle } from '@fortawesome/fontawesome-free-solid'
 import { sendEmail, isEmailValid } from '../tools/email';
 import { handleEvent } from '../tools/analytics';
 import { analyticsCategories, analyticsActions, analyticsLabels } from '../tools/constants';
-import { pointOfContactEmail } from '../config';
 
 export default class AuditForm extends React.Component {
     constructor(props) {
@@ -38,7 +37,6 @@ export default class AuditForm extends React.Component {
 
         const contactInputs = this.state.contactInfo;
         const data = {
-            pointOfContactEmail: pointOfContactEmail,
             website: contactInputs.website,
             emailAddress: contactInputs.email,
             message: contactInputs.message
@@ -137,7 +135,7 @@ export default class AuditForm extends React.Component {
     }
 
     handleResetForm() {
-        const contactInputs = document.forms[0].getElementsByClassName('audit_form_input');
+        const contactInputs = document.forms[0].getElementsByClassName('contact_form_input');
         for (let input of contactInputs) {
             input.value = '';
         };
@@ -150,11 +148,11 @@ export default class AuditForm extends React.Component {
                 {
                     (!this.state.emailSent && !this.state.emailError)
                     &&
-                    <form onSubmit={this.handleSubmitAuditForm}>
+                    <form className="contact_form" onSubmit={this.handleSubmitAuditForm}>
                         {
                             this.state.error.website
                             &&
-                            <p className="error">
+                            <p className="contact_form_error">
                                 <FontAwesomeIcon icon={faExclamationCircle} size='lg' color='red' />
                                 {this.state.error.website}
                             </p>
@@ -163,14 +161,14 @@ export default class AuditForm extends React.Component {
                             id="contact_website"
                             type="text"
                             name="website"
-                            className='audit_form_input'
+                            className='contact_form_input'
                             placeholder="Website URL (Required)"
                             onBlur={this.handleInput}
                         />
                         {
                             this.state.error.email
                             &&
-                            <p className="error">
+                            <p className="contact_form_error">
                                 <FontAwesomeIcon icon={faExclamationCircle} size='lg' color='red' />
                                 {this.state.error.email}
                             </p>
@@ -179,20 +177,21 @@ export default class AuditForm extends React.Component {
                             id="contact_email"
                             type="text"
                             name="email"
-                            className='audit_form_input'
+                            className='contact_form_input'
                             placeholder="Email (Required)"
                             onBlur={this.handleInput}
                         />
                         <textarea
                             name="message"
                             rows="4"
-                            className='audit_form_input'
+                            className='contact_form_input'
                             placeholder="What's on your mind?"
                             onBlur={this.handleInput}
                         ></textarea>
                         <div>
                             <button
                                 id="audit_form_button"
+                                className="contact_form_button"
                                 disabled={Object.keys(this.state.error).length > 0
                                     || !this.state.contactInfo.website
                                     || !this.state.contactInfo.email}
@@ -204,13 +203,13 @@ export default class AuditForm extends React.Component {
                 }
                 {
                     this.state.emailSent &&
-                    <div className="email">
+                    <div className="contact_form_email">
                         <p>Thank you for reaching out! We are excited to get back in touch with you.</p>
                     </div>
                 }
                 {
                     this.state.emailError &&
-                    <div className="email">
+                    <div className="contact_form_email">
                         <p>Something went wrong unfortunately. Please try reloading the page.</p>
                     </div>
                 }

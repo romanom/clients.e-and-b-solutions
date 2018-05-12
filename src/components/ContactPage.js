@@ -25,7 +25,7 @@ export default class ContactPage extends React.Component {
                         We are more than happy to answer any questions you may have.
                     </p>
                 </header>
-                <div className='contact_form'>
+                <div className='contact_form_container'>
                     <ContactForm />
                 </div>
             </div>

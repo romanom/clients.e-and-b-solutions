@@ -4,9 +4,11 @@
     footer {
         background-color: $darkGrey;
         color: white;
-        font-family: $mainFont;
+        display: flex;
+        font-family: $secondaryFont;
         font-size: $medium;
-        padding: $xsmall;
+        justify-content: space-evenly;
+        padding: $medium;
         text-align: center;
     }
     footer a {

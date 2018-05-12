@@ -1,7 +1,5 @@
 import React from 'react';
 import Modal from 'react-modal';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faTimes } from '@fortawesome/fontawesome-free-solid';
 import AuditForm from './AuditForm';
 
 const ContactModal = (props) => (
@@ -15,7 +13,7 @@ const ContactModal = (props) => (
         {props.isModalOpen && (
             <section>
                 <div className="close_modal">
-                    <FontAwesomeIcon icon={faTimes} size='5x' className="favicon" onClick={props.closeModal} />
+                    <span className="close_modal_span" onClick={props.closeModal}>&times;</span>
                 </div>
                 <div className="contact_modal_header">
                     <h3>Let us take a look at your site</h3>

@@ -5,8 +5,7 @@
 
     @media only screen {
         #services {
-            background-color: $lightGrey;
-            color: $midGrey;
+            color: $fontGrey;
             padding: $small 0 $large;
         }
         #services>header {
@@ -14,7 +13,7 @@
             text-align: center;
         }
         #services>header>h2 {
-            color: #272727;
+            color: $darkGrey;
             font-family: $mainFont;
             font-size: $large;
             margin: 0 $small;
@@ -36,6 +35,10 @@
             margin: $small 0;
             padding: 0 $xlarge;
             text-align: center;
+        }
+        #services>.services_row>.service>.service_image {
+            margin: 0 auto;
+            height: 10rem;
         }
         #services>.services_row>.service>.icon {
             margin: 0 auto;

@@ -6,7 +6,7 @@
 @media only screen {
     /* nav */
     nav {
-        font-family: $mainFont;
+        font-family: $secondaryFont;
         left: 0;
         position: sticky;
         top: 0;
@@ -60,7 +60,6 @@
         color: white;
         display: block;
         font-size: $medium;
-        font-weight: bold;
         margin: $xsmall $xlarge;
         padding: $medium;
         text-align: center;
@@ -69,8 +68,8 @@
     }
     #nav_side_menu .nav_menu_contact {
         margin: $xsmall $xlarge;
-        border-radius: $large;
-        border: 3px solid white;
+        border-radius: $xxsmall;
+        border: 1px solid white;
         padding: $small $medium;
     }
     #nav_side_menu.nav_side_menu_open {
@@ -136,14 +135,13 @@
     }
     #desktop_menu li {
         display: inline;
-        margin: $xsmall 0 $xsmall $medium;
+        margin: $xsmall 0 $xsmall $large;
         text-transform: uppercase;
     }
     #desktop_menu li a {
         color: white;
         letter-spacing: 0.1em;
-        font-size: $small;
-        font-weight: bold;
+        font-size: $medium;
     }
     #desktop_menu li a:link {
         text-decoration: none;
@@ -154,8 +152,8 @@
     }
     #desktop_menu .nav_menu_contact {
         margin-right: $medium;
-        border-radius: $medium;
-        border: 3px solid white;
+        border-radius: $xxsmall;
+        border: 1px solid white;
         padding: 0.5em 1.5em;
     }
     #desktop_menu .nav_menu_contact:hover {

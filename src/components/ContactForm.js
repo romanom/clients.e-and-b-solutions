@@ -4,7 +4,6 @@ import { faExclamationCircle } from '@fortawesome/fontawesome-free-solid'
 import { sendEmail, isEmailValid } from '../tools/email';
 import { handleEvent } from '../tools/analytics';
 import { analyticsCategories, analyticsActions, analyticsLabels } from '../tools/constants';
-import { pointOfContactEmail } from '../config';
 
 export default class ContactForm extends React.Component {
     constructor(props) {
@@ -41,7 +40,6 @@ export default class ContactForm extends React.Component {
 
         const contactInputs = this.state.contactInfo;
         const data = {
-            pointOfContactEmail: pointOfContactEmail,
             name: contactInputs.name,
             emailAddress: contactInputs.email,
             phoneNumber: contactInputs.phone,
@@ -175,11 +173,11 @@ export default class ContactForm extends React.Component {
                 {
                     (!this.state.emailSent && !this.state.emailError)
                     &&
-                    <form onSubmit={this.handleSubmitContactForm}>
+                    <form className="contact_form" onSubmit={this.handleSubmitContactForm}>
                         {
                             this.state.error.name
                             &&
-                            <p className="error">
+                            <p className="contact_form_error">
                                 <FontAwesomeIcon icon={faExclamationCircle} size='lg' color='red' />
                                 {this.state.error.name}
                             </p>
@@ -195,7 +193,7 @@ export default class ContactForm extends React.Component {
                         {
                             this.state.error.email
                             &&
-                            <p className="error">
+                            <p className="contact_form_error">
                                 <FontAwesomeIcon icon={faExclamationCircle} size='lg' color='red' />
                                 {this.state.error.email}
                             </p>
@@ -211,7 +209,7 @@ export default class ContactForm extends React.Component {
                         {
                             this.state.error.phone
                             &&
-                            <p className="error">
+                            <p className="contact_form_error">
                                 <FontAwesomeIcon icon={faExclamationCircle} size='lg' color='red' />
                                 {this.state.error.phone}
                             </p>
@@ -235,6 +233,7 @@ export default class ContactForm extends React.Component {
                         <div>
                             <button
                                 id="contactFormButton"
+                                className="contact_form_button"
                                 disabled={Object.keys(this.state.error).length > 0
                                     || !this.state.contactInfo.name
                                     || !this.state.contactInfo.email}
@@ -246,13 +245,13 @@ export default class ContactForm extends React.Component {
                 }
                 {
                     this.state.emailSent &&
-                    <div className="email">
+                    <div className="contact_form_email">
                         <p>Thank you for reaching out! We are excited to get back in touch with you.</p>
                     </div>
                 }
                 {
                     this.state.emailError &&
-                    <div className="email">
+                    <div className="contact_form_email">
                         <p>Something went wrong unfortunately. Please try reloading the page.</p>
                     </div>
                 }

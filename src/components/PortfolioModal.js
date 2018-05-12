@@ -1,7 +1,5 @@
 import React from 'react';
 import Modal from 'react-modal';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import { faTimes } from '@fortawesome/fontawesome-free-solid'
 
 const PortfolioModal = (props) => (
     <Modal
@@ -14,7 +12,7 @@ const PortfolioModal = (props) => (
         {props.selectedProject && (
             <section>
                 <div className="close_modal">
-                    <FontAwesomeIcon icon={faTimes} size='5x' className="favicon" onClick={props.closeSelectedProject} />
+                    <span className="close_modal_span" onClick={props.closeSelectedProject}>&times;</span>
                 </div>
                 <div className="project_modal_header">
                     <h3>{props.selectedProject.name}</h3>

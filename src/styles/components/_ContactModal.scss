@@ -48,15 +48,14 @@
 
     @media only screen and (min-width: 64.063em) {
         .close_modal {
-            display: flex; // justify-content: flex-end;
+            display: flex;
             margin: $xxlarge 0 0;
         }
         .close_modal .favicon {
             cursor: pointer;
         }
         .contact_modal_content {
-            display: flex; // flex-flow: row wrap;
-            // justify-content: space-between;
+            margin: $large 0;
         }
     }
 
