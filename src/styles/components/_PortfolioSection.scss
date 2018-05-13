@@ -16,7 +16,7 @@
             flex-flow: column;
             justify-content: space-evenly;
             list-style: none;
-            margin: 0 5%;
+            margin: 0 5% $small;
         }
         #portfolio .projects img {
             cursor: pointer;
@@ -46,7 +46,7 @@
         }
         #portfolio .projects {
             flex-flow: row wrap;
-            margin: 0 10%;
+            margin: 0 10% $large;
         }
         #portfolio .projects img {
             height: 100%;
