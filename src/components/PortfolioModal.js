@@ -31,7 +31,7 @@ const PortfolioModal = (props) => (
 );
 
 PortfolioModal.propTypes = {
-    selectedProject: PropTypes.any.isRequired,
+    selectedProject: PropTypes.any,
     closeSelectedProject: PropTypes.func.isRequired,
 };
 
