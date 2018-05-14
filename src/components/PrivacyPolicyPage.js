@@ -4,7 +4,6 @@ import { privacyPolicy } from '../content/privacyPolicy';
 
 
 export default class PrivacyPolicyPage extends React.Component {
-
     constructor(props) {
         super(props);
     }

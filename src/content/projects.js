@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 export const projects = [
     {
         clickableImage: '/images/project4_mini.jpg',
@@ -33,8 +34,8 @@ export const projects = [
             { src: 'images/project2_img3.jpg', alt: '2016 Metrics' },
             { src: 'images/project2_img4.jpg', alt: '2017 Metrics' }
         ],
-        information: `Using GoDaddy\'s WebSite builder, updated the existing site to use a newer and responsive theme.`,
-        informationCont: `Added new pages for new services offered by client. Client\'s site traffic increased significantly once they could promote their redesigned site.`,
+        information: `Using GoDaddy's WebSite builder, updated the existing site to use a newer and responsive theme.`,
+        informationCont: `Added new pages for new services offered by client. Client's site traffic increased significantly once they could promote their redesigned site.`,
         name: 'Website Modification'
     },
     {

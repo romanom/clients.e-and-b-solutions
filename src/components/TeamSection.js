@@ -1,13 +1,13 @@
 import React from 'react';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import { faLinkedin, faLinkedinIn } from '@fortawesome/fontawesome-free-brands'
+import { faLinkedinIn } from '@fortawesome/fontawesome-free-brands'
 
 const team_member_1 = { imageLocation: '/images/team_member1.jpg', alt: 'Aaron Sisler' };
 
 
 const linkedInUrl = "https://www.linkedin.com/in/aaron-sisler-capm-24686b58";
 
-const TeamSection = (props) => (
+const TeamSection = () => (
     <section id="team">
         <header>
             <h2>Our Amazing Team</h2>

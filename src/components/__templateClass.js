@@ -2,7 +2,6 @@ import React from 'react';
 import { handlePageView } from '../tools/analytics';
 
 export default class TemplatePage extends React.Component {
-
     constructor(props) {
         super(props);
     }

@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import PropTypes from 'prop-types';
 
 const PortfolioModal = (props) => (
     <Modal
@@ -22,13 +23,16 @@ const PortfolioModal = (props) => (
                     {props.selectedProject.informationCont && <p>{props.selectedProject.informationCont}</p>}
                 </div>
                 <div className="project_modal_content">
-                    {props.selectedProject.images.map((image, index) => {
-                        return <img key={index} src={image.src} alt={image.alt} />;
-                    })}
+                    {props.selectedProject.images.map((image, index) => <img key={index} src={image.src} alt={image.alt} />)}
                 </div>
             </section>
         )}
     </Modal>
 );
+
+PortfolioModal.propTypes = {
+    selectedProject: PropTypes.any.isRequired,
+    closeSelectedProject: PropTypes.func.isRequired,
+};
 
 export default PortfolioModal;

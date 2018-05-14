@@ -5,7 +5,6 @@ import { openModalEvent, closeModalEvent, navigateByButtonEvent } from '../tools
 import ContactModal from './ContactModal';
 
 export default class PricingPage extends React.Component {
-
     constructor(props) {
         super(props);
         this.toggleModal = this.toggleModal.bind(this);
