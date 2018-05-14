@@ -53,13 +53,11 @@ export default class AuditForm extends React.Component {
                 emailSent: true
             }));
         };
-        const fail = () => {
-            return this.setState(() => ({
+        const fail = () => this.setState(() => ({
                 emailError: true
-            }));
-        }
+            }))
         sendEmail(data, done, fail);
-    };
+    }
 
     handleInput(e) {
         const inputName = e.target.name;
@@ -81,7 +79,7 @@ export default class AuditForm extends React.Component {
     handleContactInfo(inputName, inputValue = undefined) {
         //Remove from Contact Info
         if (!inputValue) {
-            const { [inputName]: undefined, ...contactInfo } = this.state.contactInfo;
+            const { [inputName]: undefined, ...contactInfo } = this.state.contactInfo; // eslint-disable-line no-unused-vars
             return this.setState(() => ({
                 contactInfo
             }));
@@ -95,7 +93,7 @@ export default class AuditForm extends React.Component {
     handleError(inputName, inputValue = undefined) {
         //Remove from Error
         if (!inputValue) {
-            const { [inputName]: undefined, ...error } = this.state.error;
+            const {  [inputName]: undefined, ...error } = this.state.error; // eslint-disable-line no-unused-vars
             return this.setState(() => ({
                 error
             }));
@@ -136,9 +134,9 @@ export default class AuditForm extends React.Component {
 
     handleResetForm() {
         const contactInputs = document.forms[0].getElementsByClassName('contact_form_input');
-        for (let input of contactInputs) {
+        for (const input of contactInputs) {
             input.value = '';
-        };
+        }
         return this.setState(() => ({ contactInfo: {}, error: {} }));
     }
 
@@ -215,5 +213,5 @@ export default class AuditForm extends React.Component {
                 }
             </div>
         );
-    };
+    }
 }

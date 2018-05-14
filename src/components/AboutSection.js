@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AboutSection = (props) => (
+const AboutSection = () => (
     <section id="about">
         <header>
             <h2>About Us</h2>

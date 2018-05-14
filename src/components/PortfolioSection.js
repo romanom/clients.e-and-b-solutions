@@ -33,9 +33,9 @@ export default class PortfolioSection extends React.Component {
                     <h3>Click on a project below to see more information</h3>
                 </header>
                 <div className="projects">
-                    {projects.map((project, index) => {
-                        return <img key={index} data_index={index} src={project.clickableImage} onClick={() => { this.handleSelectedProject(index) }} />
-                    })}
+                    {projects.map((project, index) => (
+                         <img key={index} data_index={index} src={project.clickableImage} onClick={() => { this.handleSelectedProject(index) }} />
+                    ))}
                 </div>
                 <PortfolioModal
                     selectedProject={this.state.selectedProject}

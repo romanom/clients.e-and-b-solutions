@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TemplateSection = (props) => (
+const TemplateSection = () => (
     <div>
         I am a TemplateSection
     </div>

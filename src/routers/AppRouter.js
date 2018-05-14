@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ScrollToTop from '../components/ScrollToTop';
 
 import Navbar from '../components/Navbar'
@@ -17,7 +17,7 @@ const state = {
     companyName: 'E&B Solutions'
 }
 
-const AppRouter = (props) => (
+const AppRouter = () => ( 
     <BrowserRouter>
         <ScrollToTop>
             <Navbar companyName={state.companyName} />

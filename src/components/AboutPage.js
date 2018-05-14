@@ -3,7 +3,6 @@ import { handlePageView } from '../tools/analytics';
 import AboutSection from './AboutSection';
 
 export default class AboutPage extends React.Component {
-
     constructor(props) {
         super(props);
     }

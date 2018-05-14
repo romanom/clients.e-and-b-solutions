@@ -4,7 +4,6 @@ import ContactForm from './ContactForm';
 
 
 export default class ContactPage extends React.Component {
-
     constructor(props) {
         super(props);
     }
@@ -19,7 +18,7 @@ export default class ContactPage extends React.Component {
                 <header>
                     <h3>Contact Us</h3>
                     <p>
-                        We promise that your email won't disappear into the nether.
+                        We promise that your email won&apos;t disappear into the nether.
                     </p>
                     <p>
                         We are more than happy to answer any questions you may have.

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/fontawesome-free-solid'
+import PropTypes from 'prop-types';
 
 export default class Navbar extends React.Component {
     constructor(props) {
@@ -76,3 +77,7 @@ export default class Navbar extends React.Component {
         )
     }
 }
+
+Navbar.propTypes = {
+    companyName: PropTypes.string.isRequired,
+};

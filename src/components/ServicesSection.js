@@ -3,7 +3,7 @@ const service_1 = { imageLocation: '/images/services_1.png', alt: 'Something' };
 const service_2 = { imageLocation: '/images/services_2.png', alt: 'Something' };
 const service_3 = { imageLocation: '/images/services_3.png', alt: 'Something' };
 
-const ServicesSection = (props) => (
+const ServicesSection = () => (
     <section id="services">
         <header>
             <h2>How Can We Help</h2>
@@ -29,7 +29,7 @@ const ServicesSection = (props) => (
                 <img className="service_image" src={service_3.imageLocation} alt={service_3.alt} />
                 <h4>Technical Consulting</h4>
                 <p>
-                    Let's see what we can do together to make things easier for you.
+                    Let&apos;s see what we can do together to make things easier for you.
                 </p>
             </div>
         </div>

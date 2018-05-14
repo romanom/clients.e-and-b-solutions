@@ -2,6 +2,7 @@ import React from 'react';
 import { Collapse } from 'react-collapse';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import { faAngleLeft, faAngleDown } from '@fortawesome/fontawesome-free-solid'
+import PropTypes from 'prop-types';
 
 export default class FAQWidget extends React.Component {
     constructor(props) {
@@ -37,3 +38,8 @@ export default class FAQWidget extends React.Component {
         );
     }
 }
+
+FAQWidget.propTypes = {
+    question: PropTypes.string.isRequired,
+    answer: PropTypes.string.isRequired,
+};

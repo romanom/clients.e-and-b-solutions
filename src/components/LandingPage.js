@@ -6,7 +6,6 @@ import ServicesSection from './ServicesSection';
 import TeamSection from './TeamSection';
 
 export default class LandingPage extends React.Component {
-
     constructor(props) {
         super(props);
         this.handleAnalyticsEvent = this.handleAnalyticsEvent.bind(this);
@@ -24,9 +23,9 @@ export default class LandingPage extends React.Component {
         return (
             <div id="landing_page">
                 <header>
-                    <div className="intro_text">It's nice to meet you</div>
+                    <div className="intro_text">It&apos;s nice to meet you</div>
                     <div>
-                        <Link to='/pricing' onClick={this.handleAnalyticsEvent} className='link'>Let's Get Started</Link>
+                        <Link to='/pricing' onClick={this.handleAnalyticsEvent} className='link'>Let&apos;s Get Started</Link>
                     </div>
                 </header>
                 <ServicesSection />

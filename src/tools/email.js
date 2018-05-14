@@ -2,8 +2,8 @@ import { validate } from 'email-validator';
 import { apiGatewayEmailURL, apiGatewayToken, pointOfContactEmail } from '../config';
 
 const createRequest = (data, done, fail) => {
-    let emailProperties = {
-        pointOfContactEmail: pointOfContactEmail,
+    const emailProperties = {
+        pointOfContactEmail,
         name: "",
         website: "",
         emailAddress: "",
@@ -11,7 +11,7 @@ const createRequest = (data, done, fail) => {
         message: "",
         ...data
     }
-    let request = new XMLHttpRequest();
+    const request = new XMLHttpRequest();
     request.onload = function () {
         done();
     }
@@ -24,9 +24,7 @@ const createRequest = (data, done, fail) => {
     request.send(JSON.stringify(emailProperties));
 }
 
-export const isEmailValid = (emailAddress) => {
-    return validate(emailAddress);
-}
+export const isEmailValid = (emailAddress) => validate(emailAddress);
 
 export const sendEmail = (data, done, fail) => {
     createRequest(data, done, fail);

@@ -4,7 +4,6 @@ import PortfolioSection from './PortfolioSection'
 
 
 export default class PortfolioPage extends React.Component {
-
     constructor(props) {
         super(props);
     }

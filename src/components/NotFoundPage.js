@@ -3,7 +3,6 @@ import { handlePageView } from '../tools/analytics';
 
 
 export default class NotFoundPage extends React.Component {
-
     constructor(props) {
         super(props);
     }

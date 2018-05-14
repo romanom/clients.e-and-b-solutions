@@ -1,4 +1,4 @@
-import { analyticsCategories, analyticsActions, analyticsLabels } from '../tools/constants';
+import { analyticsCategories, analyticsActions } from '../tools/constants';
 
 export const openModalEvent = {
     category: analyticsCategories.navigate,
