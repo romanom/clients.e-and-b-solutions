@@ -1,13 +1,31 @@
 // Colors
-$offBlack: #20222b;
-$offWhite: #a5afd7;
-$darkBlue: #333745;
-$blue: #3c4251;
-$lightBlue: #464b5e;
-$purple: #8357c5;
+$lightBlue: rgba(31, 130, 227, 0.8);
+$blue: #0066cc;
+$lightGrey: #f3f3f3;
+$midLightGrey: #e8e8e8;
+$midGrey: #666666;
+$darkGrey: #222222;
+$fontGrey: rgba(0, 0, 0, .7);
+$closeIconGrey: #aaa;
 //Spacing
-$sSize: 1.2rem;
-$mSize: 1.6rem;
-$lSize: 3.2rem;
-$xlSize: 4.8rem;
+$xxsmall: 0.3rem;
+$xsmall: 0.6rem;
+$small: 1.2rem;
+$medium: 1.6rem;
+$midlarge: 2.4rem;
+$large: 3.2rem;
+$xlarge: 4.8rem;
+$xxlarge: 7.6rem;
+$navMenuWidth: 240px;
 $desktopBreakpoint: 45rem;
+//Font Imports
+@import url('../fonts/Coolvetica.scss');
+@import url('../fonts/Ubuntu.scss');
+//Font Variables
+$coolveticaFont: "Coolvetica";
+$ubuntuLightFont: "UbuntuLight";
+$ubuntuFont: "Ubuntu";
+//Site Fonts
+$mainFont: $ubuntuFont;
+$secondaryFont: $ubuntuLightFont;
+$accentFont: $coolveticaFont;

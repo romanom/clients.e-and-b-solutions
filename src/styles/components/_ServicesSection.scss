@@ -1,0 +1,99 @@
+    /*
+        Small screens - MOBILE
+        max-width 640px, small screens
+    */
+
+    @media only screen {
+        #services {
+            color: $fontGrey;
+            padding: $small 0 $large;
+        }
+        #services>header {
+            margin: $large auto;
+            text-align: center;
+        }
+        #services>header>h2 {
+            color: $darkGrey;
+            font-family: $mainFont;
+            font-size: $large;
+            margin: 0 $small;
+        }
+        #services>header>h3 {
+            font-family: $secondaryFont;
+            font-size: $medium;
+            font-weight: lighter;
+            margin: $xsmall $small;
+        }
+        #services>.services_row {
+            display: flex;
+            justify-content: space-around;
+            flex-flow: column;
+        }
+        #services>.services_row>.service {
+            display: flex;
+            flex-flow: column;
+            margin: $small 0;
+            padding: 0 $xlarge;
+            text-align: center;
+        }
+        #services>.services_row>.service>.service_image {
+            margin: 0 auto;
+            height: 10rem;
+        }
+        #services>.services_row>.service>.icon {
+            margin: 0 auto;
+        }
+        #services>.services_row>.service>h4 {
+            font-family: $mainFont;
+            font-size: $midlarge;
+            font-weight: bold;
+            margin: $medium 0 $xsmall;
+        }
+        #services>.services_row>.service>p {
+            color: $fontGrey;
+            font-family: $secondaryFont;
+            font-size: $medium;
+            margin: $small 0;
+        }
+    }
+
+    /* 
+        Medium screens - TABLET
+        min-width 641px, medium screens
+    */
+
+    @media only screen and (min-width: 40.063em) {
+        #services>.services_row>.service {
+            padding: 0 $xxlarge;
+        }
+    }
+
+    /* 
+        Large screens - DESKTOP
+        min-width 1025px, large screens
+    */
+
+    @media only screen and (min-width: 64.063em) {
+        #services>.services_row {
+            flex-flow: row;
+        }
+        #services>.services_row>.service {
+            width: 100%;
+            margin: $small $medium;
+            padding: 0 $midlarge;
+        }
+    }
+
+    /* 
+        XLarge screens
+        min-width 1441px, xlarge screens
+    */
+
+    @media only screen and (min-width: 90.063em) {}
+
+    /*
+        XXLarge screens
+        min-width 1921px, xlarge screens
+    */
+
+    @media only screen and (min-width: 120.063em) {}

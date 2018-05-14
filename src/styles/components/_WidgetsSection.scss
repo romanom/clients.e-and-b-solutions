@@ -1,0 +1,65 @@
+//Small screens - MOBILE
+//max-width 640px, small screens
+@media only screen {
+    #widgets>.widgets_row {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-evenly;
+        margin: $small 0;
+    }
+    #widgets>.widgets_row>.widget {
+        background: $blue;
+        color: white;
+        font-family: $mainFont;
+        font-size: $large;
+        margin: $small;
+        padding: $medium $large $large;
+        text-align: center;
+    }
+    #widgets>.widgets_row>.widget:hover {
+        background: darken($blue, 10);
+        transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    }
+    #widgets>.widgets_row>.widget img {
+        background-color: white;
+        border: 0.25em solid white;
+        border-radius: 10em;
+    }
+    #widgets>.widgets_row>.widget img:hover {
+        transform: rotateY(360deg);
+        transition: 2.5s all;
+        -webkit-transition: 2.5s all;
+        -moz-transition: 2.5s all;
+        -o-transition: 2.5s all;
+        -ms-transition: 2.5s all;
+    }
+    #widgets>.widgets_row>.widget p {
+        font-family: $secondaryFont;
+    }
+}
+
+//Medium screens - TABLET
+//min-width 641px, medium screens
+@media only screen and (min-width: 40.063em) {}
+
+//Large screens - DESKTOP
+//min-width 1025px, large screens
+@media only screen and (min-width: 64.063em) {
+    #widgets>.widgets_row {
+        flex-flow: row wrap;
+        justify-content: center;
+        margin: $small 10%;
+    }
+    #widgets>.widgets_row>.widget {
+        margin: $small;
+        padding: $medium $large $large;
+    }
+}
+
+//XLarge screens
+//min-width 1441px, xlarge screens
+@media only screen and (min-width: 90.063em) {}
+
+//XXLarge screens
+//min-width 1921px, xlarge screens
+@media only screen and (min-width: 120.063em) {}
