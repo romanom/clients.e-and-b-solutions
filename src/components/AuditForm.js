@@ -54,8 +54,8 @@ export default class AuditForm extends React.Component {
             }));
         };
         const fail = () => this.setState(() => ({
-                emailError: true
-            }))
+            emailError: true
+        }))
         sendEmail(data, done, fail);
     }
 
@@ -93,7 +93,7 @@ export default class AuditForm extends React.Component {
     handleError(inputName, inputValue = undefined) {
         //Remove from Error
         if (!inputValue) {
-            const {  [inputName]: undefined, ...error } = this.state.error; // eslint-disable-line no-unused-vars
+            const { [inputName]: undefined, ...error } = this.state.error; // eslint-disable-line no-unused-vars
             return this.setState(() => ({
                 error
             }));

@@ -17,7 +17,7 @@ const state = {
     companyName: 'E&B Solutions'
 }
 
-const AppRouter = () => ( 
+const AppRouter = () => (
     <BrowserRouter>
         <ScrollToTop>
             <Navbar companyName={state.companyName} />

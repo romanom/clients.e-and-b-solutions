@@ -58,8 +58,8 @@ export default class ContactForm extends React.Component {
             }));
         };
         const fail = () => this.setState(() => ({
-                emailError: true
-            }))
+            emailError: true
+        }))
         sendEmail(data, done, fail);
     }
 
