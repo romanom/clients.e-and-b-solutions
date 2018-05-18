@@ -1,3 +1,4 @@
+/* global require module __dirname */
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -11,7 +12,7 @@ module.exports = (env) => {
             publicPath: '/dist/'
         },
         devtool: isProduction ? 'source-map' : 'inline-source-map',
-        entry: ['babel-polyfill','./src/app.js'],
+        entry: ['babel-polyfill', './src/app.js'],
         module: {
             rules: [{
                 loader: 'babel-loader',

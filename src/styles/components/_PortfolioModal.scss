@@ -1,96 +1,96 @@
-    /*
-        Small screens - MOBILE
-        max-width 640px, small screens
-    */
+/*
+    Small screens - MOBILE
+    max-width 640px, small screens
+*/
 
-    @media only screen {
-        #portfolio_page .ReactModal__Content {
-            height: 200%;
-        }
-        .ReactModalPortal .ReactModal__Overlay {
-            display: flex;
-            justify-content: center;
-            overflow: auto;
-            transition: opacity 200ms ease-in-out;
-        }
-        .ReactModalPortal .ReactModal__Overlay--before-close {
-            opacity: 0;
-        }
-        .project_modal {
-            background: white;
-            font-family: $mainFont;
-            margin: 0 10%;
-            outline: none;
-            padding: 0 $large;
-            text-align: center;
-            width: 100%;
-        }
-        .close_modal {
-            display: flex;
-            justify-content: flex-end;
-            margin: $xxlarge 0 0;
-        }
-        .project_modal_header {
-            margin: 0 0 $large;
-        }
-        .project_modal h3 {
-            font-size: $large;
-            margin: 0 0 $medium 0;
-        }
-        .project_modal p {
-            font-size: $medium;
-            margin: 0 0 $small 0;
-        }
-        .project_modal img {
-            margin: 0 auto;
-            width: 90%;
-        }
+@media only screen {
+    #portfolio_page .ReactModal__Content {
+        height: 200%;
     }
-
-    /* 
-        Medium screens - TABLET
-        min-width 641px, medium screens
-    */
-
-    @media only screen and (min-width: 40.063em) {}
-
-    /* 
-        Large screens - DESKTOP
-        min-width 1025px, large screens
-    */
-
-    @media only screen and (min-width: 64.063em) {
-        .close_modal {
-            display: flex;
-            justify-content: flex-end;
-            margin: $xxlarge 0 0;
-        }
-        .project_modal p {
-            font-size: $medium;
-            margin: 0 10% $small;
-        }
-        .project_modal_content {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
-        }
-        .project_modal img {
-            height: 100%;
-            margin: 0 auto;
-            width: 40%;
-        }
+    .ReactModalPortal .ReactModal__Overlay {
+        display: flex;
+        justify-content: center;
+        overflow: auto;
+        transition: opacity 200ms ease-in-out;
     }
+    .ReactModalPortal .ReactModal__Overlay--before-close {
+        opacity: 0;
+    }
+    .project_modal {
+        background: white;
+        font-family: $mainFont;
+        margin: 0 10%;
+        outline: none;
+        padding: 0 $large;
+        text-align: center;
+        width: 100%;
+    }
+    .close_modal {
+        display: flex;
+        justify-content: flex-end;
+        margin: $xxlarge 0 0;
+    }
+    .project_modal_header {
+        margin: 0 0 $large;
+    }
+    .project_modal h3 {
+        font-size: $large;
+        margin: 0 0 $medium 0;
+    }
+    .project_modal p {
+        font-size: $medium;
+        margin: 0 0 $small 0;
+    }
+    .project_modal img {
+        margin: 0 auto;
+        width: 90%;
+    }
+}
 
-    /* 
-        XLarge screens
-        min-width 1441px, xlarge screens
-    */
+/*
+    Medium screens - TABLET
+    min-width 641px, medium screens
+*/
 
-    @media only screen and (min-width: 90.063em) {}
+@media only screen and (min-width: 40.063em) {}
 
-    /*
-        XXLarge screens
-        min-width 1921px, xlarge screens
-    */
+/*
+    Large screens - DESKTOP
+    min-width 1025px, large screens
+*/
 
-    @media only screen and (min-width: 120.063em) {}
+@media only screen and (min-width: 64.063em) {
+    .close_modal {
+        display: flex;
+        justify-content: flex-end;
+        margin: $xxlarge 0 0;
+    }
+    .project_modal p {
+        font-size: $medium;
+        margin: 0 10% $small;
+    }
+    .project_modal_content {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .project_modal img {
+        height: 100%;
+        margin: 0 auto;
+        width: 40%;
+    }
+}
+
+/*
+    XLarge screens
+    min-width 1441px, xlarge screens
+*/
+
+@media only screen and (min-width: 90.063em) {}
+
+/*
+    XXLarge screens
+    min-width 1921px, xlarge screens
+*/
+
+@media only screen and (min-width: 120.063em) {}
