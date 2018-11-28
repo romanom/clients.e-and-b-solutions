@@ -90,7 +90,7 @@ export default class PricingPage extends React.Component {
                             </p>
                         </div>
                         <div className="price_cost">
-                            <h2>$350</h2>
+                            <h2>$500</h2>
                         </div>
                         <div className="price_content">
                             <p>Shopping Cart and Payments</p>
