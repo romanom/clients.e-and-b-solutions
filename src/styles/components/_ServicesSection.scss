@@ -4,56 +4,51 @@
 */
 
 @media only screen {
-    #services {
+    .services {
         color: $fontGrey;
         padding: $small 0 $large;
-    }
-    #services>header {
-        margin: $large auto;
-        text-align: center;
-    }
-    #services>header>h2 {
-        color: $darkGrey;
-        font-family: $mainFont;
-        font-size: $large;
-        margin: 0 $small;
-    }
-    #services>header>h3 {
-        font-family: $secondaryFont;
-        font-size: $medium;
-        font-weight: lighter;
-        margin: $xsmall $small;
-    }
-    #services>.services_row {
-        display: flex;
-        justify-content: space-around;
-        flex-flow: column;
-    }
-    #services>.services_row>.service {
-        display: flex;
-        flex-flow: column;
-        margin: $small 0;
-        padding: 0 $xlarge;
-        text-align: center;
-    }
-    #services>.services_row>.service>.service_image {
-        margin: 0 auto;
-        height: 10rem;
-    }
-    #services>.services_row>.service>.icon {
-        margin: 0 auto;
-    }
-    #services>.services_row>.service>h4 {
-        font-family: $mainFont;
-        font-size: $midlarge;
-        font-weight: bold;
-        margin: $medium 0 $xsmall;
-    }
-    #services>.services_row>.service>p {
-        color: $fontGrey;
-        font-family: $secondaryFont;
-        font-size: $medium;
-        margin: $small 0;
+        &__header {
+            margin: $large auto;
+            text-align: center;
+        }
+        &__header {
+            &-title {
+                color: $darkGrey;
+                font-family: $mainFont;
+                font-size: $large;
+                font-weight: 700;
+                margin: 0 $small;
+            }
+            &-title-secondary {
+                font-family: $secondaryFont;
+                font-size: $medium;
+                font-weight: lighter;
+                margin: $xsmall $small;
+            }
+        }
+        &__content {
+            display: grid;
+            grid-gap: $large;
+            margin: 0 5%;
+            .service {
+                padding: 0 $medium;
+                text-align: center;
+                &__image {
+                    margin: 0 auto;
+                    height: 20vh;
+                }
+                &__title {
+                    font-family: $mainFont;
+                    font-weight: 700;
+                    font-size: $midlarge;
+                    margin-top: $small;
+                }
+                &__content {
+                    font-size: $medium;
+                    margin-top: $small;
+                }
+            }
+        }
     }
 }
 
@@ -62,11 +57,7 @@
     min-width 641px, medium screens
 */
 
-@media only screen and (min-width: 40.063em) {
-    #services>.services_row>.service {
-        padding: 0 $xxlarge;
-    }
-}
+@media only screen and (min-width: 40.063em) {}
 
 /*
     Large screens - DESKTOP
@@ -74,13 +65,10 @@
 */
 
 @media only screen and (min-width: 64.063em) {
-    #services>.services_row {
-        flex-flow: row;
-    }
-    #services>.services_row>.service {
-        width: 100%;
-        margin: $small $medium;
-        padding: 0 $midlarge;
+    .services {
+        &__content {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
     }
 }
 
