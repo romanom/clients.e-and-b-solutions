@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "react-scripts build",
+    "deploy": "yarn build & yarn firebase deploy",
     "serve": "node server/server.js",
     "start": "react-scripts start",
     "test": "react-scripts test"
