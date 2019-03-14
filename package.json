@@ -4,9 +4,14 @@
     "main": "app.js",
     "author": "Aaron Sisler",
     "license": "MIT",
+    "engines": {
+        "yarn": ">=1.7.0",
+        "node": ">=10.0.0"
+    },
     "scripts": {
         "build": "rm -rf ./public/dist && webpack -p --env production",
         "build:dev": "webpack",
+        "deploy": "yarn build & yarn firebase deploy",
         "dev": "webpack-dev-server",
         "start": "node server/server.js"
     },
@@ -27,7 +32,7 @@
         "express": "4.15.4",
         "extract-text-webpack-plugin": "3.0.0",
         "file-loader": "^1.1.11",
-        "node-sass": "4.5.3",
+        "node-sass": "^4.11.0",
         "normalize.css": "7.0.0",
         "prop-types": "^15.6.1",
         "react": "16.0.0",
@@ -42,6 +47,7 @@
         "webpack": "3.1.0"
     },
     "devDependencies": {
+        "babel-eslint": "^8.2.3",
         "eslint": "^4.19.1",
         "eslint-plugin-react": "^7.8.2",
         "firebase-tools": "^6.1.1",
