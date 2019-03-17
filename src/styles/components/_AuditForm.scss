@@ -3,7 +3,41 @@
     max-width 640px, small screens
 */
 
-@media only screen {}
+@media only screen {
+    .audit_form {
+        font-family: $mainFont;
+        &__form {
+            display: grid;
+            grid-gap: $medium;
+            grid-template-columns: 100%;
+            justify-content: center;
+            margin: 0 auto;
+            padding: $xlarge $xsmall;
+            width: 90%;
+        }
+        &__input {
+            display: grid;
+            font-size: $medium;
+            margin: 0 auto;
+            width: 100%;
+        }
+        &__button {
+            font-size: $medium;
+            padding: $small;
+            &:disabled {
+                background: $mainColor;
+                cursor: not-allowed;
+                color: white;
+                opacity: .5;
+            }
+        }
+        &__email {
+            font-size: $medium;
+            margin: $xlarge;
+            text-align: center;
+        }
+    }
+}
 
 /*
     Medium screens - TABLET

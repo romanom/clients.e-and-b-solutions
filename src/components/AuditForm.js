@@ -117,6 +117,7 @@ export default class AuditForm extends React.Component {
               />
             </div>
             <textarea
+              className="audit_form__input"
               name="message"
               onChange={this.handleInput}
               placeholder="What's on your mind?"
@@ -134,13 +135,13 @@ export default class AuditForm extends React.Component {
         }
         {
           emailSent &&
-          <div className="contact_form__email_sent">
+          <div className="contact_form__email">
             <p>Thank you for reaching out! We are excited to get back in touch with you.</p>
           </div>
         }
         {
           emailError &&
-          <div className="contact_form__email_error">
+          <div className="contact_form__email">
             <p>Something went wrong unfortunately. Please try reloading the page.</p>
           </div>
         }
