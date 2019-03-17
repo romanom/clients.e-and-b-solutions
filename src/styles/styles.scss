@@ -1,16 +1,20 @@
 @import './base/settings';
 @import './base/base';
-@import './base/contact_form';
-@import './components/Navbar';
-@import './components/Footer';
-@import './components/LandingPage';
+//Core
+@import './components/core/Footer';
+@import './components/core/FormError';
+@import './components/core/Modal';
+@import './components/core/Navbar';
+@import './components/core/PrivacyPolicyPage';
+//Components
+@import './components/AuditForm';
+@import './components/ContactModal';
 @import './components/ContactPage';
+@import './components/FAQPage';
+@import './components/FAQWidget';
+@import './components/LandingPage';
+@import './components/PortfolioModal';
+@import './components/PortfolioSection';
 @import './components/PricingPage';
 @import './components/ServicesSection';
 @import './components/TeamSection';
-@import './components/PortfolioModal';
-@import './components/ContactModal';
-@import './components/PortfolioSection';
-@import './components/PrivacyPolicyPage';
-@import './components/FAQPage';
-@import './components/FAQWidget';

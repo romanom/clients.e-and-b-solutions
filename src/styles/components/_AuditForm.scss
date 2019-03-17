@@ -3,16 +3,7 @@
     max-width 640px, small screens
 */
 
-@media only screen {
-
-    .contact_modal {
-        background: white;
-        font-family: $mainFont;
-        padding: $large $xlarge;
-    }
-    .close_modal__header {}
-    .contact_modal__title {}
-}
+@media only screen {}
 
 /*
     Medium screens - TABLET
@@ -26,9 +17,7 @@
     min-width 1025px, large screens
 */
 
-@media only screen and (min-width: 64.063em) {
-    .close_modal {}
-}
+@media only screen and (min-width: 64.063em) {}
 
 /*
     XLarge screens

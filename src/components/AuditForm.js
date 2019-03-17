@@ -1,6 +1,6 @@
 import React from 'react';
 import { sendEmail, isEmailValid } from '../tools/email';
-import FormError from './FormError';
+import FormError from './core/FormError';
 
 export default class AuditForm extends React.Component {
   constructor(props) {

@@ -28,7 +28,14 @@
     button {
         cursor: pointer;
     }
-    .close_modal_span {
+    .ReactModalPortal .ReactModal__Overlay {
+        display: flex;
+        transition: opacity 200ms ease-in-out;
+    }
+    .ReactModalPortal .ReactModal__Overlay--before-close {
+        opacity: 0;
+    }
+    .close_modal__span {
         color: $closeIconGrey;
         cursor: pointer;
         font-family: $secondaryFont;
