@@ -19,9 +19,7 @@ export default class AuditForm extends React.Component {
   }
 
   handleSubmitAuditForm = () => {
-    this.setState(() => ({
-      buttonText: "Sending"
-    }));
+    this.setState(({ buttonText: "Sending" }));
 
     const { email, message, website } = this.state;
 
