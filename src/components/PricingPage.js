@@ -9,7 +9,7 @@ export default class PricingPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isModalOpen: true
+      isModalOpen: false
     }
   }
 
@@ -104,6 +104,7 @@ export default class PricingPage extends React.Component {
         <Modal
           isOpen={this.state.isModalOpen}
           onClose={this.toggleModal}
+          title="Let us take a look at your site"
         >
           <AuditForm />
         </Modal>

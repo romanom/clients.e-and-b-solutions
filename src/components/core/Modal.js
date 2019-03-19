@@ -6,6 +6,7 @@ const Modal = ({
   children,
   isOpen,
   onClose,
+  title
 }) => {
   ReactModal.setAppElement('#root');
 
@@ -17,7 +18,16 @@ const Modal = ({
       className="modal"
       overlayClassName="modal__overlay"
     >
+      {title && <div className="modal__title">{title}</div>}
       {children}
+      <div className="modal__close">
+        <button
+          className="modal__close-button"
+          onClick={onClose}
+        >
+          Close
+        </button>
+      </div>
     </ReactModal>
   );
 }
@@ -28,4 +38,5 @@ Modal.propTypes = {
   children: PropTypes.node.isRequired,
   isOpen: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
+  title: PropTypes.string,
 };

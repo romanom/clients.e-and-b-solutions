@@ -6,6 +6,8 @@
         display: block;
         height: 100%;
         max-height: 100vh;
+        padding: $xsmall $small;
+        text-align: center;
         width: 100%;
         &__overlay {
             background-color: rgba($midGrey, 0.55);
@@ -20,6 +22,16 @@
             width: 100vw;
             z-index: 100;
         }
+        &__title {
+            font-family: $mainFont;
+            font-size: $midlarge;
+            margin: $medium 0;
+        }
+        &__close {
+            border-top: 1px solid $midGrey;
+            margin: $large 5% 0;
+            padding: $medium 0;
+        }
     }
 }
 
@@ -31,10 +43,16 @@
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
     .modal {
-        height: 50%;
-        max-height: 100vh;
-        margin-top: 10%;
-        width: 70%;
+        display: grid;
+        height: auto;
+        margin: 10% 0 auto;
+        max-height: 75vh;
+        padding: $small $medium;
+        overflow-y: auto;
+        width: auto;
+        &__title {
+            margin: $large $medium;
+        }
     }
 }
 
