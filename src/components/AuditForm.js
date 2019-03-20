@@ -19,7 +19,7 @@ export default class AuditForm extends React.Component {
   }
 
   handleSubmitAuditForm = () => {
-    this.setState(({ buttonText: "Sending" }));
+    this.setState(({ buttonText: "Sending", isSendButtonDisabled: true }));
 
     const { email, message, website } = this.state;
 
@@ -28,8 +28,8 @@ export default class AuditForm extends React.Component {
       emailAddress: email,
       message
     }
-    const done = () => this.setState(() => ({ emailSent: true }));
-    const fail = () => this.setState(() => ({ emailError: true }));
+    const done = () => this.setState(({ emailSent: true }));
+    const fail = () => this.setState(({ emailError: true }));
 
     sendEmail(data, done, fail);
   }
