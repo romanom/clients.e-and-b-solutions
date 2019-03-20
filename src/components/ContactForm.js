@@ -20,7 +20,7 @@ export default class ContactForm extends React.Component {
   }
 
   handleSubmitContactForm = () => {
-    this.setState(({ buttonText: "Sending" }));
+    this.setState(({ buttonText: "Sending", isSendButtonDisabled: true }));
 
     const { emailAddress, message, name, phoneNumber } = this.state;
     const data = {
