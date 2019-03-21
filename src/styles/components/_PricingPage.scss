@@ -1,20 +1,44 @@
-/*
-    Small screens - MOBILE
-    max-width 640px, small screens
-*/
+//Small screens - MOBILE
+//max-width 640px, small screens
+@media only screen {
+    .pricing {
+        background: radial-gradient(circle, $lightBlue 0%, darken($blue, 20) 100%);
+        display: grid;
+        grid-template-columns: 100%;
+        grid-gap: $medium;
+        padding: $midlarge $small;
+        &__package {
+            background: white;
+            border: 1px solid #bbbbbb;
+            border-radius: $xxsmall;
+            box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.25);
+            display: grid;
+            font-family: $mainFont;
+            padding: $large;
+            text-align: center;
+            &-header {
+                &-title {
+                    font-size: $midlarge;
+                    font-weight: bold;
+                }
+                &-subtitle {
+                    color: $midGrey;
+                    font-family: $secondaryFont;
+                    font-size: $medium;
+                    font-weight: bold;
+                }
+                &-content {
+                    color: $midGrey;
+                    font-family: $secondaryFont;
+                    font-size: $medium;
+                    margin-top: $large;
+                }
+            }
+        }
+    }
+}
 
 @media only screen {
-    #pricing {
-        background: radial-gradient(circle, $lightBlue 0%, darken($blue, 20) 100%);
-        padding: $small 0 $large;
-    }
-    #pricing .pricing_row {
-        display: flex;
-        flex-flow: column;
-        font-family: $mainFont;
-        justify-content: space-around;
-        padding: 0 $small 0;
-    }
     #pricing .pricing_package {
         background: white;
         border: 1px solid #bbbbbb;
@@ -51,55 +75,11 @@
         font-size: $medium;
         margin: $small 0 0;
     }
-    #pricing .contact {
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        margin: $large $small 0;
-    }
-    #pricing .button,
-    #pricing .link {
-        background-color: white;
-        border: 1px solid $blue;
-        border-radius: $xxsmall;
-        color: $blue;
-        font-family: $mainFont;
-        font-size: $medium;
-        margin: 0;
-        padding: $medium $midlarge;
-        text-decoration: none;
-        text-transform: uppercase;
-    }
-    #pricing .button:hover,
-    #pricing .link:hover {
-        background: $blue;
-        color: white;
-        transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
-    }
 }
 
-/*
-    Medium screens - TABLET
-    min-width 641px, medium screens
-*/
-
-@media only screen and (min-width: 40.063em) {
-    #pricing .pricing_row {
-        margin: 0 10%;
-    }
-}
-
-/*
-    Large screens - DESKTOP
-    min-width 1025px, large screens
-*/
-
+//Large screens - DESKTOP
+//min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
-    #pricing .pricing_row {
-        flex-flow: row;
-        justify-content: space-evenly;
-        margin: 0 auto;
-    }
     #pricing .pricing_package {
         margin: $xlarge $small $midlarge;
         padding: $medium $large $large;
@@ -107,20 +87,18 @@
     }
 }
 
-/*
-    XLarge screens
-    min-width 1441px, xlarge screens
-*/
+//Medium screens - TABLET
+//min-width 641px, medium screens
+@media only screen and (min-width: 40.063em) {}
 
-@media only screen and (min-width: 90.063em) {
-    #pricing .pricing_row {
-        margin: 0 10%;
-    }
-}
+//Large screens - DESKTOP
+//min-width 1025px, large screens
+@media only screen and (min-width: 64.063em) {}
 
-/*
-    XXLarge screens
-    min-width 1921px, xlarge screens
-*/
+//XLarge screens
+//min-width 1441px, xlarge screens
+@media only screen and (min-width: 90.063em) {}
 
+//XXLarge screens
+//min-width 1921px, xlarge screens
 @media only screen and (min-width: 120.063em) {}
