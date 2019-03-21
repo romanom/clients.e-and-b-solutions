@@ -56,7 +56,7 @@ export default class PricingPage extends React.Component {
             <p>Support and maintenance costs included</p>
             <p>Hosting for the first year <strong>FREE</strong></p>
           </div>
-          <Link className='nav_link' to='/contact'>Start Your New Site</Link>
+          <Link className='nav_link pricing__package-link' to='/contact'>Start Your New Site</Link>
         </div>
         <div className="pricing__package">
           <div className="pricing__package-header">
@@ -72,7 +72,7 @@ export default class PricingPage extends React.Component {
             <p>Support and maintenance costs included</p>
             <p>Hosting for the first year <strong>FREE</strong></p>
           </div>
-          <Link className='nav_link' to='/contact'>Build your app today</Link>
+          <Link className='nav_link pricing__package-link' to='/contact'>Build your app today</Link>
         </div>
         <Modal
           isOpen={this.state.isModalOpen}

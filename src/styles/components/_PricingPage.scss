@@ -5,7 +5,7 @@
         background: radial-gradient(circle, $lightBlue 0%, darken($blue, 20) 100%);
         display: grid;
         grid-template-columns: 100%;
-        grid-gap: $medium;
+        grid-gap: $midlarge;
         padding: $midlarge $small;
         &__package {
             background: white;
@@ -31,69 +31,47 @@
                     color: $midGrey;
                     font-family: $secondaryFont;
                     font-size: $medium;
-                    margin-top: $large;
+                    margin-top: $midlarge;
                 }
+            }
+            &-cost {
+                font-size: $large;
+                font-weight: bold;
+                margin: $midlarge 0 $small;
+            }
+            &-content {
+                font-family: $secondaryFont;
+                font-size: $medium;
+            }
+            &-button,
+            &-link {
+                margin: $medium $medium 0;
             }
         }
     }
 }
 
-@media only screen {
-    #pricing .pricing_package {
-        background: white;
-        border: 1px solid #bbbbbb;
-        border-radius: $xxsmall;
-        display: flex;
-        flex-flow: column;
-        margin: $small 0 $small;
-        padding: $medium $large $large;
-        text-align: center;
-    }
-    #pricing .price_header>h3 {
-        font-size: $midlarge;
-        margin: $medium 0 0;
-    }
-    #pricing .price_header>h5 {
-        color: $midGrey;
-        font-family: $secondaryFont;
-        font-size: $medium;
-        margin: 0;
-    }
-    #pricing .price_header>p {
-        color: $midGrey;
-        font-family: $secondaryFont;
-        font-size: $medium;
-        margin: $large 0 $medium;
-    }
-    #pricing .price_cost>h2 {
-        font-family: $secondaryFont;
-        font-size: $large;
-        margin: 0 0 $medium;
-    }
-    #pricing .price_content>p {
-        font-family: $secondaryFont;
-        font-size: $medium;
-        margin: $small 0 0;
+//Medium screens - TABLET
+//min-width 641px, medium screens
+@media only screen and (min-width: 40.063em) {
+    .pricing {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: $midlarge 5%;
     }
 }
 
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
-    #pricing .pricing_package {
-        margin: $xlarge $small $midlarge;
-        padding: $medium $large $large;
-        width: 50rem;
+    .pricing {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: $midlarge;
+        padding: $xlarge 10%;
+        &__package {
+            padding: $large;
+        }
     }
 }
-
-//Medium screens - TABLET
-//min-width 641px, medium screens
-@media only screen and (min-width: 40.063em) {}
-
-//Large screens - DESKTOP
-//min-width 1025px, large screens
-@media only screen and (min-width: 64.063em) {}
 
 //XLarge screens
 //min-width 1441px, xlarge screens
