@@ -3,7 +3,7 @@ const service_1 = { imageLocation: '/images/services_1.png', alt: 'Desktop Compu
 const service_2 = { imageLocation: '/images/services_2.png', alt: 'Cloud hosting' };
 const service_3 = { imageLocation: '/images/services_3.png', alt: 'Consulting' };
 
-const ServicesSection = () => (
+const ServicesContainer = () => (
     <section className="services">
         <div className="services__header">
             <div className="services__header-title">How Can We Help</div>
@@ -48,4 +48,4 @@ const ServicesSection = () => (
     </section>
 );
 
-export default ServicesSection;
+export default ServicesContainer;

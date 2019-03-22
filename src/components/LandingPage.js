@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { handlePageView, handleEvent } from '../tools/analytics';
 import { navigateByButtonEvent } from '../tools/analytics_events';
-import ServicesSection from './ServicesSection';
-import TeamSection from './TeamSection';
+import ServicesContainer from './ServicesContainer';
+import TeamContainer from './TeamContainer';
 
 export default class LandingPage extends React.Component {
     constructor(props) {
@@ -28,8 +28,8 @@ export default class LandingPage extends React.Component {
                         <Link to='/pricing' onClick={this.handleAnalyticsEvent} className='link'>Let&apos;s Get Started</Link>
                     </div>
                 </header>
-                <ServicesSection />
-                <TeamSection />
+                <ServicesContainer />
+                <TeamContainer />
             </div>
         );
     }

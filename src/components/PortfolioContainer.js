@@ -20,11 +20,11 @@ export default class PortfolioSection extends React.Component {
     const { isModalOpen, selectedProject } = this.state;
 
     return (
-      <div className="portfolio_section">
-        <div className="portfolio_section__title">
+      <div className="portfolio">
+        <div className="portfolio__title">
           Click on a project below to see more information
         </div>
-        <div className="portfolio_section__projects">
+        <div className="portfolio__projects">
           {projects.map((project, index) => (
             <img
               key={index}

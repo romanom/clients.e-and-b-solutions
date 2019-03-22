@@ -2,7 +2,6 @@ import React from 'react';
 import { handlePageView } from '../../tools/analytics';
 import { privacyPolicy } from '../../content/privacyPolicy';
 
-
 export default class PrivacyPolicyPage extends React.Component {
   componentDidMount() {
     handlePageView();

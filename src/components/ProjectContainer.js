@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Project = ({ project }) => (
+const ProjectContainer = ({ project }) => (
   <div className="project">
     <div className="project__header">
       <div className="project__header-title">{project.title}</div>
@@ -16,8 +16,8 @@ const Project = ({ project }) => (
   </div>
 );
 
-Project.propTypes = {
+ProjectContainer.propTypes = {
   project: PropTypes.object.isRequired
 };
 
-export default Project;
+export default ProjectContainer;
