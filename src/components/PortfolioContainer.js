@@ -1,24 +1,13 @@
 import React from 'react';
-import Modal from './core/Modal';
-import Project from './Project';
+import { Link } from 'react-router-dom';
 import { projects } from '../content/projects';
 
-export default class PortfolioSection extends React.Component {
+export default class PortfolioContainer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isModalOpen: false,
-      selectedProject: undefined
-    }
   }
 
-  handleSelectedProject = (index) => this.setState({ isModalOpen: true, selectedProject: projects[index] });
-
-  closeSelectedProject = () => this.setState({ isModalOpen: false, selectedProject: undefined });
-
   render() {
-    const { isModalOpen, selectedProject } = this.state;
-
     return (
       <div className="portfolio">
         <div className="portfolio__title">
@@ -26,23 +15,17 @@ export default class PortfolioSection extends React.Component {
         </div>
         <div className="portfolio__projects">
           {projects.map((project, index) => (
-            <img
+            <Link
+              to={`/project/${index}`}
               key={index}
-              data_index={index}
-              src={project.clickableImage}
-              alt=""
-              onClick={() => { this.handleSelectedProject(index) }}
-            />
+            >
+              <img
+                src={project.clickableImage}
+                alt=""
+              />
+            </Link>
           ))}
         </div>
-        {isModalOpen &&
-          <Modal
-            isOpen={isModalOpen}
-            onClose={this.closeSelectedProject}
-          >
-            <Project project={selectedProject} />
-          </Modal>
-        }
       </div>
     );
   }

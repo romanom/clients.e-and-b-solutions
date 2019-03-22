@@ -1,36 +1,28 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-    #faq_page>.faq_content .faq_question {
-        background-color: $lightBlue;
-        color: white;
-        display: flex;
-        font-family: $mainFont;
-        font-size: $midlarge;
-        margin: $small $small 0;
-        padding: $small;
-    }
-    #faq_page>.faq_content .faq_question:hover {
-        background-color: $blue;
-        transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
-    }
-    #faq_page>.faq_content .favicon_container {
-        margin-left: auto;
-    }
-    #faq_page>.faq_content .faq_answer {
-        background-color: $lightGrey;
-        font-family: $secondaryFont;
-        font-size: $midlarge;
-        margin: 0 $small;
-        padding: 0 $small;
-    }
-    #faq_page>.faq_content .faq_answer>div {
-        color: $darkGrey;
-        padding: $large 0;
-    }
-    #faq_page>.faq_content .favicon {
-        font-size: $midlarge;
-        padding: 0 0 0 $xsmall;
+    .faq {
+        &__question {
+            background-color: $secColor;
+            color: white;
+            display: flex;
+            font-family: $mainFont;
+            font-size: $midlarge;
+            margin: $small $small 0;
+            padding: $small;
+            &:hover {
+                background-color: $blue;
+                transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+            }
+        }
+        &__answer {
+            background-color: $lightGrey;
+            color: $darkGrey;
+            font-family: $secFont;
+            font-size: $midlarge;
+            margin: 0 $small;
+            padding: 0 $small;
+        }
     }
 }
 

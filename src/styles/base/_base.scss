@@ -3,7 +3,7 @@
 @media only screen {
     * {
         box-sizing: border-box;
-        font-family: $secondaryFont;
+        font-family: $secFont;
     }
     html {
         font-size: 62.5%;
@@ -48,7 +48,7 @@
     .close_modal__span {
         color: $closeIconGrey;
         cursor: pointer;
-        font-family: $secondaryFont;
+        font-family: $secFont;
         font-size: $xxlarge;
         font-weight: 300;
     }

@@ -10,8 +10,8 @@ export default class FAQPage extends React.Component {
 
   render() {
     return (
-      <div id="faq_page">
-        <div className="faq_content">
+      <div className="faq_page">
+        <div className="faq_page__content">
           {faqs.map((faq, index) => (
             <FAQWidget
               key={index}

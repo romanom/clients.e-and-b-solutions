@@ -1,25 +1,16 @@
 import React from 'react';
 import { handlePageView } from '../tools/analytics';
-import FAQWidget from './FAQWidget';
-import faqs from '../content/faqs';
+import ProjectContainer from './ProjectContainer'
 
 export default class ProjectPage extends React.Component {
   componentDidMount() {
     handlePageView();
   }
 
-  render() {
+  render(props) {
     return (
-      <div id="_page">
-        <div className="faq_content">
-          {faqs.map((faq, index) => (
-            <FAQWidget
-              key={index}
-              question={faq.question}
-              answer={faq.answer}
-            />
-          ))}
-        </div>
+      <div className="project_page">
+        <ProjectContainer {...props} />
       </div>
     );
   }

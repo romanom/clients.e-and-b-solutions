@@ -6,31 +6,28 @@ import ServicesContainer from './ServicesContainer';
 import TeamContainer from './TeamContainer';
 
 export default class LandingPage extends React.Component {
-    constructor(props) {
-        super(props);
-        this.handleAnalyticsEvent = this.handleAnalyticsEvent.bind(this);
-    }
+  constructor(props) {
+    super(props);
+  }
 
-    handleAnalyticsEvent() {
-        handleEvent(navigateByButtonEvent)
-    }
+  componentDidMount() {
+    handlePageView();
+  }
 
-    componentDidMount() {
-        handlePageView();
-    }
+  handleAnalyticsEvent = () => handleEvent(navigateByButtonEvent)
 
-    render() {
-        return (
-            <div id="landing_page">
-                <header>
-                    <div className="intro_text">It&apos;s nice to meet you</div>
-                    <div>
-                        <Link to='/pricing' onClick={this.handleAnalyticsEvent} className='link'>Let&apos;s Get Started</Link>
-                    </div>
-                </header>
-                <ServicesContainer />
-                <TeamContainer />
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div id="landing_page">
+        <header>
+          <div className="intro_text">It&apos;s nice to meet you</div>
+          <div>
+            <Link to='/pricing' onClick={this.handleAnalyticsEvent} className='link'>Let&apos;s Get Started</Link>
+          </div>
+        </header>
+        <ServicesContainer />
+        <TeamContainer />
+      </div>
+    );
+  }
 }
