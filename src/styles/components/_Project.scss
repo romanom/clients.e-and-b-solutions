@@ -1,21 +1,66 @@
+//Small screens - MOBILE
+//max-width 640px, small screens
+@media only screen {
+    .project {
+        display: grid;
+        &__header {
+            &-title {
+                font-family: $mainFont;
+                font-size: $midlarge;
+                margin-top: $medium;
+            }
+            &-client {
+                font-size: $medium;
+                font-family: $secondaryFont;
+                margin-top: $xsmall;
+            }
+            &-date {
+                font-size: $medium;
+                font-family: $secondaryFont;
+                margin-top: $xsmall;
+            }
+            &-info {
+                font-size: $medium;
+                font-family: $secondaryFont;
+                padding: $medium $large 0;
+            }
+        }
+        &__content {
+            display: grid;
+            grid-gap: $small;
+            margin-top: $medium;
+            img {
+                margin: 0 auto;
+                max-width: 90%;
+            }
+        }
+    }
+}
+
+//Medium screens - TABLET
+//min-width 641px, medium screens
+@media only screen and (min-width: 40.063em) {}
+
+//Large screens - DESKTOP
+//min-width 1025px, large screens
+@media only screen and (min-width: 64.063em) {
+    .project {}
+}
+
+//XLarge screens
+//min-width 1441px, xlarge screens
+@media only screen and (min-width: 90.063em) {}
+
+//XXLarge screens
+//min-width 1921px, xlarge screens
+@media only screen and (min-width: 120.063em) {}
+
 /*
     Small screens - MOBILE
     max-width 640px, small screens
 */
 
 @media only screen {
-    #portfolio_page .ReactModal__Content {
-        height: 200%;
-    }
-    .ReactModalPortal .ReactModal__Overlay {
-        display: flex;
-        justify-content: center;
-        overflow: auto;
-        transition: opacity 200ms ease-in-out;
-    }
-    .ReactModalPortal .ReactModal__Overlay--before-close {
-        opacity: 0;
-    }
     .project_modal {
         background: white;
         font-family: $mainFont;
@@ -24,11 +69,6 @@
         padding: 0 $large;
         text-align: center;
         width: 100%;
-    }
-    .close_modal {
-        display: flex;
-        justify-content: flex-end;
-        margin: $xxlarge 0 0;
     }
     .project_modal_header {
         margin: 0 0 $large;

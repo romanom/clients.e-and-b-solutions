@@ -7,16 +7,17 @@ export default class PortfolioSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      isModalOpen: false,
       selectedProject: undefined
     }
   }
 
-  handleSelectedProject = (index) => this.setState({ selectedProject: projects[index] });
+  handleSelectedProject = (index) => this.setState({ isModalOpen: true, selectedProject: projects[index] });
 
-  closeSelectedProject = () => this.setState({ selectedProject: undefined });
+  closeSelectedProject = () => this.setState({ isModalOpen: false, selectedProject: undefined });
 
   render() {
-    const { selectedProject } = this.state;
+    const { isModalOpen, selectedProject } = this.state;
 
     return (
       <div className="portfolio_section">
@@ -34,9 +35,9 @@ export default class PortfolioSection extends React.Component {
             />
           ))}
         </div>
-        {selectedProject &&
+        {isModalOpen &&
           <Modal
-            isOpen={!!selectedProject}
+            isOpen={isModalOpen}
             onClose={this.closeSelectedProject}
           >
             <Project project={selectedProject} />
