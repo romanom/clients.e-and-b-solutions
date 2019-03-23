@@ -16,6 +16,7 @@
     "@fortawesome/react-fontawesome": "^0.0.18",
     "email-validator": "^2.0.3",
     "express": "^4.16.4",
+    "history": "^4.9.0",
     "node-sass": "^4.11.0",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.6.1",

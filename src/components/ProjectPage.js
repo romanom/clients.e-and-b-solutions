@@ -7,10 +7,10 @@ export default class ProjectPage extends React.Component {
     handlePageView();
   }
 
-  render(props) {
+  render() {
     return (
       <div className="project_page">
-        <ProjectContainer {...props} />
+        <ProjectContainer {...this.props} />
       </div>
     );
   }

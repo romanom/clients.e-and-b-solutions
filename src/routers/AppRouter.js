@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Router, Route, Switch } from 'react-router-dom';
+import history from '../tools/history';
 import ScrollToTop from '../components/core/ScrollToTop';
 
 import Navbar from '../components/core/Navbar'
@@ -18,7 +19,7 @@ const state = {
 }
 
 const AppRouter = () => (
-  <BrowserRouter>
+  <Router history={history}>
     <ScrollToTop>
       <Navbar companyName={state.companyName} />
       <Switch>
@@ -26,14 +27,15 @@ const AppRouter = () => (
         <Route path="/contact" component={ContactPage} exact={true} />
         <Route path="/pricing" component={PricingPage} exact={true} />
         <Route path="/portfolio" component={PortfolioPage} exact={true} />
-        <Route path="/project:projectId" component={ProjectPage} exact={true} />
+        <Route path="/project/:projectId" component={ProjectPage} exact={true} />
         <Route path="/privacy" component={PrivacyPolicyPage} exact={true} />
         <Route path="/faq" component={FAQPage} exact={true} />
+        <Route path="/not_found" component={NotFoundPage} exact={true} />
         <Route component={NotFoundPage} />
       </Switch>
       <Footer />
     </ScrollToTop>
-  </BrowserRouter>
+  </Router>
 );
 
 export default AppRouter;

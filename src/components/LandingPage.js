@@ -6,10 +6,6 @@ import ServicesContainer from './ServicesContainer';
 import TeamContainer from './TeamContainer';
 
 export default class LandingPage extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     handlePageView();
   }
