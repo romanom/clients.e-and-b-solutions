@@ -5,18 +5,26 @@ import projects from '../content/projects'
 
 
 export default class ProjectContainer extends React.Component {
-  render() {
+  componentDidMount() {
     const { projectId } = this.props.match.params;
     const project = projects[projectId]
 
     if (!project) {
       history.push('/not_found');
     }
+  }
+
+  render() {
+    const { projectId } = this.props.match.params;
+    const project = projects[projectId];
+
+    if (!project) {
+      return <div />;
+    }
 
     return (
       <div className="project">
         <div className="project__header">
-
           <div className="project__header-title">{project.title}</div>
           <div className="project__header-client">Client:&nbsp;{project.client}</div>
           <div className="project__header-date">Date:&nbsp;{project.date}</div>

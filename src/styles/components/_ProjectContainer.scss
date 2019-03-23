@@ -3,11 +3,12 @@
 @media only screen {
     .project {
         display: grid;
+        text-align: center;
+        padding: $medium;
         &__header {
             &-title {
                 font-family: $mainFont;
                 font-size: $midlarge;
-                margin-top: $medium;
             }
             &-client {
                 font-size: $medium;
@@ -44,7 +45,18 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
-    .project {}
+    .project {
+        &__content {
+            display: grid;
+            grid-gap: $small;
+            grid-template-columns: 1fr 1fr;
+            margin-top: $large;
+            img {
+                margin: 0 auto;
+                max-width: 90%;
+            }
+        }
+    }
 }
 
 //XLarge screens
