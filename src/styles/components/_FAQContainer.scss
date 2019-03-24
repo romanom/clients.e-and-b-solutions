@@ -1,10 +1,10 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-    .faq_page {
-        &__content {
-            margin: 0 $medium $large $medium;
-        }
+    .faq_container {
+        display: grid;
+        grid-gap: $medium;
+        padding: $medium;
     }
 }
 
@@ -15,10 +15,9 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
-    .faq_page {
-        &__content {
-            margin: 0 10% $large $medium;
-        }
+    .faq_container {
+        grid-gap: $large;
+        padding: $large;
     }
 }
 

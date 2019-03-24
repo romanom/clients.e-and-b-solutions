@@ -1,5 +1,4 @@
 import React from 'react';
-import { Collapse } from 'react-collapse';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import { faAngleLeft, faAngleDown } from '@fortawesome/fontawesome-free-solid'
 import PropTypes from 'prop-types';
@@ -16,6 +15,8 @@ export default class FAQWidget extends React.Component {
 
   render() {
     const { isWidgetOpen } = this.state;
+    const isWidgetOpenClass = isWidgetOpen ? "expanded" : "";
+
     return (
       <div className="faq">
         <div className="faq__question" onClick={this.toggleWidget}>
@@ -23,13 +24,15 @@ export default class FAQWidget extends React.Component {
             {this.props.question}
           </div>
           <div className="fav__question-icon">
-            {!isWidgetOpen && <FontAwesomeIcon icon={faAngleLeft} size='1x' className="favicon" />}
-            {isWidgetOpen && <FontAwesomeIcon icon={faAngleDown} size='1x' className="favicon" />}
+            {!isWidgetOpen && <FontAwesomeIcon icon={faAngleLeft} size='1x' />}
+            {isWidgetOpen && <FontAwesomeIcon icon={faAngleDown} size='1x' />}
           </div>
         </div>
-        <Collapse className="faq__answer" isOpened={isWidgetOpen}>
-          {this.props.answer}
-        </Collapse>
+        <div className={`faq__answer ${isWidgetOpenClass}`}>
+          <div className="faq__answer-content" >
+            {this.props.answer}
+          </div>
+        </div>
       </div>
     );
   }

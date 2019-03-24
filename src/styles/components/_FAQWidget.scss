@@ -3,12 +3,14 @@
 @media only screen {
     .faq {
         &__question {
+            align-items: center;
             background-color: $secColor;
             color: white;
-            display: flex;
+            display: grid;
+            justify-content: space-between;
             font-family: $mainFont;
             font-size: $midlarge;
-            margin: $small $small 0;
+            grid-auto-flow: column;
             padding: $small;
             &:hover {
                 background-color: $blue;
@@ -20,8 +22,15 @@
             color: $darkGrey;
             font-family: $secFont;
             font-size: $midlarge;
-            margin: 0 $small;
-            padding: 0 $small;
+            max-height: 0px;
+            overflow: hidden;
+            transition: max-height .5s ease-in-out;
+            &-content {
+                padding: $medium;
+            }
+            &.expanded {
+                max-height: 350px;
+            }
         }
     }
 }
