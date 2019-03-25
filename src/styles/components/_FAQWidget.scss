@@ -9,7 +9,7 @@
             display: grid;
             justify-content: space-between;
             font-family: $mainFont;
-            font-size: $midlarge;
+            font-size: $medium;
             grid-auto-flow: column;
             padding: $small;
             &:hover {
@@ -19,17 +19,17 @@
         }
         &__answer {
             background-color: $lightGrey;
-            color: $darkGrey;
+            color: $midGrey;
             font-family: $secFont;
-            font-size: $midlarge;
+            font-size: $medium;
             max-height: 0px;
             overflow: hidden;
-            transition: max-height .5s ease-in-out;
+            transition: max-height 1s ease-in-out;
             &-content {
                 padding: $medium;
             }
             &.expanded {
-                max-height: 350px;
+                max-height: $xxlarge;
             }
         }
     }

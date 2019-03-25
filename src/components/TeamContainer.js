@@ -13,6 +13,7 @@ const TeamSection = () => (
       <div className="team__header-title-secondary">Hiring Local</div>
     </div>
     <div className="team__members">
+      <div className="team__members-member" />
       <div className="team__members-member">
         <img src={team_member_1.imageLocation} alt={team_member_1.alt} />
         <div className="team__members-member-name">Aaron Sisler</div>
@@ -23,6 +24,7 @@ const TeamSection = () => (
           </a>
         </div>
       </div>
+      <div className="team__members-member" />
     </div>
   </div>
 );

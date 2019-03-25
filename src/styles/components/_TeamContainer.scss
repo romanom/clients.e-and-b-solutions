@@ -25,7 +25,7 @@
             margin-top: $medium;
             &-member {
                 img {
-                    max-height: 25vh;
+                    max-height: 30vh;
                     object-fit: scale-down;
                     width: 100%;
                 }
@@ -59,7 +59,13 @@
 
 //Large screens - DESKTOP
 //min-width 1025px, large screens
-@media only screen and (min-width: 64.063em) {}
+@media only screen and (min-width: 64.063em) {
+    .team {
+        &__members {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}
 
 //XLarge screens
 //min-width 1441px, xlarge screens

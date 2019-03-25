@@ -5,7 +5,7 @@ import faqs from '../content/faqs';
 export default class FAQContainer extends React.Component {
   render() {
     return (
-      <div className="faq_container">
+      <div className="faqs">
         {faqs.map((faq, index) => (
           <FAQWidget
             key={index}
