@@ -1,96 +1,70 @@
-/*
-    Small screens - MOBILE
-    max-width 640px, small screens
-*/
-
+//Small screens - MOBILE
+//max-width 640px, small screens
 @media only screen {
-    #team {
+    .team {
         background-color: $lightGrey;
-        padding: $small 0 $large;
-    }
-    #team>header {
-        color: $fontGrey;
-        margin: $large auto;
+        padding: $large;
         text-align: center;
-    }
-    #team>header>h2 {
-        font-family: $mainFont;
-        font-size: $xlarge;
-        font-weight: 400;
-        margin: 0 $small;
-    }
-    #team>header>h3 {
-        font-family: $secFont;
-        font-size: $midlarge;
-        font-weight: lighter;
-        margin: $xsmall $small;
-    }
-    #team .team_row {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-    #team>.team_row>.team_member {
-        display: flex;
-        flex-flow: column;
-        text-align: center;
-        margin: 0 auto;
-    }
-    #team>.team_row>.team_member>img {
-        border: 7px solid white;
-        border-radius: 100px;
-        margin: 0 auto;
-        width: 80%;
-    }
-    #team>.team_row>.team_member>h4 {
-        font-family: $mainFont;
-        font-size: $midlarge;
-        margin: $small auto;
-    }
-    #team>.team_row>.team_member>p {
-        font-family: $secFont;
-        font-size: $medium;
-        margin: 0 auto;
-    }
-    #team>.team_row>.team_member>a {
-        color: $darkGrey;
-        margin: $small auto;
-        text-decoration: none;
-    }
-    #team>.team_row>.team_member>a:hover {
-        color: darken($blue, 10);
+        &__header {
+            color: $fontGrey;
+            &-title {
+                color: $darkGrey;
+                font-family: $mainFont;
+                font-size: $large;
+                font-weight: 700;
+                &-secondary {
+                    font-family: $secFont;
+                    font-size: $medium;
+                    font-weight: lighter;
+                    margin-top: $xsmall;
+                }
+            }
+        }
+        &__members {
+            display: grid;
+            margin-top: $medium;
+            &-member {
+                img {
+                    max-height: 25vh;
+                    object-fit: scale-down;
+                    width: 100%;
+                }
+                &-name {
+                    font-family: $mainFont;
+                    font-size: $midlarge;
+                    margin-top: $medium;
+                }
+                &-title {
+                    font-family: $secFont;
+                    font-size: $medium;
+                }
+                &-link {
+                    margin-top: $small;
+                    a {
+                        color: $darkGrey;
+                        text-decoration: none;
+                        &:hover {
+                            color: $darkMainColor;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
-/*
-    Medium screens - TABLET
-    min-width 641px, medium screens
-*/
-
+//Medium screens - TABLET
+//min-width 641px, medium screens
 @media only screen and (min-width: 40.063em) {}
 
-/*
-    Large screens - DESKTOP
-    min-width 1025px, large screens
-*/
+//Large screens - DESKTOP
+//min-width 1025px, large screens
+@media only screen and (min-width: 64.063em) {}
 
-@media only screen and (min-width: 64.063em) {
-    #team .team_row {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-}
-
-/*
-    XLarge screens
-    min-width 1441px, xlarge screens
-*/
-
+//XLarge screens
+//min-width 1441px, xlarge screens
 @media only screen and (min-width: 90.063em) {}
 
-/*
-    XXLarge screens
-    min-width 1921px, xlarge screens
-*/
-
+//XXLarge screens
+//min-width 1921px, xlarge screens
 @media only screen and (min-width: 120.063em) {}

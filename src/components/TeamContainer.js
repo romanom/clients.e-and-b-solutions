@@ -8,18 +8,20 @@ const linkedInUrl = "https://www.linkedin.com/in/aaron-sisler-capm-24686b58";
 
 const TeamSection = () => (
   <div className="team">
-    <header>
-      <h2>Our Amazing Team</h2>
-      <h3>Hiring Local</h3>
-    </header>
+    <div className="team__header">
+      <div className="team__header-title">Our Amazing Team</div>
+      <div className="team__header-title-secondary">Hiring Local</div>
+    </div>
     <div className="team__members">
       <div className="team__members-member">
         <img src={team_member_1.imageLocation} alt={team_member_1.alt} />
-        <h4>Aaron Sisler</h4>
-        <p>Lead Developer</p>
-        <a href={linkedInUrl}>
-          <FontAwesomeIcon className="icon" icon={faLinkedinIn} size='4x' />
-        </a>
+        <div className="team__members-member-name">Aaron Sisler</div>
+        <div className="team__members-member-title">Lead Developer</div>
+        <div className="team__members-member-link">
+          <a href={linkedInUrl}>
+            <FontAwesomeIcon icon={faLinkedinIn} size='4x' />
+          </a>
+        </div>
       </div>
     </div>
   </div>

@@ -29,7 +29,7 @@
         text-transform: uppercase;
     }
     #brand a:hover {
-        color: $blue;
+        color: $darkMainColor;
         text-decoration: none;
     }
     /* end brand nav */
@@ -45,7 +45,7 @@
         width: 100%;
     }
     #nav_side_menu {
-        background: $blue;
+        background: $darkMainColor;
         height: 100%;
         position: fixed;
         right: -$navMenuWidth;
@@ -147,7 +147,7 @@
         text-decoration: none;
     }
     #desktop_menu li a:hover {
-        color: $blue;
+        color: $darkMainColor;
         outline: none;
     }
     #desktop_menu .nav_menu_contact {
@@ -158,7 +158,7 @@
     }
     #desktop_menu .nav_menu_contact:hover {
         background: white;
-        color: $blue;
+        color: $darkMainColor;
         font-weight: bolder;
         transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
     }

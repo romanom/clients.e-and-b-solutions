@@ -24,7 +24,7 @@
         text-transform: uppercase;
     }
     #landing_page .link {
-        background-color: $lightBlue;
+        background-color: $secColor;
         border-radius: $xsmall;
         color: white;
         font-size: $midlarge;
@@ -34,7 +34,7 @@
         text-transform: uppercase;
     }
     #landing_page .link:hover {
-        background: $blue;
+        background: $mainColor;
         transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
     }
 }

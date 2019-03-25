@@ -2,7 +2,7 @@
 //max-width 640px, small screens
 @media only screen {
     .pricing {
-        background: radial-gradient(circle, $lightBlue 0%, darken($blue, 20) 100%);
+        background: radial-gradient(circle, $secColor 0%, darken($mainColor, 20) 100%);
         display: grid;
         grid-template-columns: 100%;
         grid-gap: $midlarge;

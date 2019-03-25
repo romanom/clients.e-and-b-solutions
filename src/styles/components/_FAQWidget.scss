@@ -13,7 +13,7 @@
             grid-auto-flow: column;
             padding: $small;
             &:hover {
-                background-color: $blue;
+                background-color: $mainColor;
                 transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
             }
         }
