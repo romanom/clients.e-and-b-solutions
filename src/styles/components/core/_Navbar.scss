@@ -5,7 +5,7 @@
     align-items: center;
     background-color: $darkGrey;
     display: flex;
-    height: 8vh;
+    height: $navMenuHeight;
     justify-content: space-between;
     padding: 0 $small;
     .favicon {
@@ -23,7 +23,7 @@
       }
     }
     &__links {
-      background: $darkMainColor;
+      background-color: $darkMainColor;
       height: 100%;
       position: fixed;
       right: -$navMenuWidth;
@@ -40,94 +40,25 @@
         align-items: center;
         display: flex;
         justify-content: flex-end;
-        height: 8vh;
+        height: $navMenuHeight;
         margin-right: $small;
       }
-
       &-link {
         color: white;
         display: block;
         font-size: $medium;
-        padding: $medium;
+        padding: $small;
         text-align: center;
         text-decoration: none;
         text-transform: uppercase;
-        &-contact {
-          @extend .nav_menu__links-link;
-          border-radius: $xxsmall;
-          border: 1px solid white;
-          margin: $small $large;
-        }
+      }
+      &-contact {
+        border-radius: $xxsmall;
+        border: 1px solid white;
+        margin: $small $large;
       }
     }
   }
-}
-
-@media only screen and (min-width: 64.063em) {
-  /* brand nav */
-  .nav_menu__brand a {
-    font-size: $large;
-    letter-spacing: 0.1rem;
-  }
-
-  /* end brand nav */
-  /* mobile nav */
-  #mobile_nav_toggles {
-    display: none;
-  }
-
-  /* end mobile nav */
-  /* desktop nav */
-  #desktop_menu {
-    background-color: $darkGrey;
-    box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.25);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  #desktop_menu ul {
-    list-style-type: none;
-    margin: $small;
-    padding: $small;
-  }
-
-  #desktop_menu li {
-    display: inline;
-    margin: $xsmall 0 $xsmall $large;
-    text-transform: uppercase;
-  }
-
-  #desktop_menu li a {
-    color: white;
-    letter-spacing: 0.1em;
-    font-size: $medium;
-  }
-
-  #desktop_menu li a:link {
-    text-decoration: none;
-  }
-
-  #desktop_menu li a:hover {
-    color: $darkMainColor;
-    outline: none;
-  }
-
-  #desktop_menu .nav_menu_contact {
-    margin-right: $medium;
-    border-radius: $xxsmall;
-    border: 1px solid white;
-    padding: 0.5em 1.5em;
-  }
-
-  #desktop_menu .nav_menu_contact:hover {
-    background: white;
-    color: $darkMainColor;
-    font-weight: bolder;
-    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
-  }
-
-  /* end desktop nav */
 }
 
 //Medium screens - TABLET
@@ -138,6 +69,40 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
+  .nav_menu {
+    &__toggle {
+      display: none;
+    }
+    &__links {
+      align-items: center;
+      background-color: inherit;
+      display: flex;
+      height: inherit;
+      position: inherit;
+      right: inherit;
+      top: inherit;
+      transition: none;
+      width: inherit;
+      z-index: 1;
+      -webkit-transition: none;
+      -moz-transition: none;
+      &-close {
+        display: none;
+      }
+      &-link {
+        &:hover {
+          background-color: white;
+          color: $mainColor;
+          font-weight: bolder;
+          transition: background-color 0.5s ease-in, color 0.5s ease-in;
+        }
+      }
+      &-contact {
+        margin: 0;
+        margin-left: $small;
+      }
+    }
+  }
 }
 
 //XLarge screens

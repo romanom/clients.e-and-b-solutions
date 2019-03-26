@@ -72,7 +72,7 @@ export default class Navbar extends React.Component {
           </Link>
           <Link
             to="/contact"
-            className="nav_menu__links-link-contact"
+            className="nav_menu__links-link nav_menu__links-contact"
             onClick={this.closeSideMenu}
           >
             Contact
