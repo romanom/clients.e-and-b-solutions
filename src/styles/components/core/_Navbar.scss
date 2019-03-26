@@ -2,28 +2,27 @@
 //max-width 640px, small screens
 @media only screen {
   .nav_menu {
-    &__top {
-      align-items: center;
-      background-color: $darkGrey;
-      display: flex;
-      height: 10vh;
-      justify-content: space-between;
-      padding: 0 $small;
-      &-brand {
-        a {
-          color: white;
-          font-size: $midlarge;
-          font-weight: bold;
-          letter-spacing: 0.1rem;
-          text-decoration: none;
-          text-transform: uppercase;
-        }
-      }
-      &-links {
-        display: none;
+    align-items: center;
+    background-color: $darkGrey;
+    display: flex;
+    height: 8vh;
+    justify-content: space-between;
+    padding: 0 $small;
+    .favicon {
+      color: white;
+      cursor: pointer;
+    }
+    &__brand {
+      a {
+        color: white;
+        font-size: $midlarge;
+        font-weight: bold;
+        letter-spacing: 0.1rem;
+        text-decoration: none;
+        text-transform: uppercase;
       }
     }
-    &__side {
+    &__links {
       background: $darkMainColor;
       height: 100%;
       position: fixed;
@@ -34,82 +33,35 @@
       z-index: 100;
       -webkit-transition: right 0.3s ease;
       -moz-transition: right 0.3s ease;
-      &.nav_menu__side-open {
+      &.nav_menu__links-open {
         right: 0px;
       }
+      &-close {
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+        height: 8vh;
+        margin-right: $small;
+      }
+
       &-link {
         color: white;
         display: block;
         font-size: $medium;
-        // margin: $xsmall $xlarge;
-        // padding: $medium;
-        // text-align: center;
+        padding: $medium;
+        text-align: center;
         text-decoration: none;
         text-transform: uppercase;
         &-contact {
+          @extend .nav_menu__links-link;
           border-radius: $xxsmall;
           border: 1px solid white;
-          padding: $small $medium;
+          margin: $small $large;
         }
       }
     }
   }
-
-  .nav_side_menu .nav_side_menu_link {
-    color: white;
-    display: block;
-    font-size: $medium;
-    margin: $xsmall $xlarge;
-    padding: $medium;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-
-  .nav_side_menu .nav_menu_contact {
-    margin: $xsmall $xlarge;
-    border-radius: $xxsmall;
-    border: 1px solid white;
-    padding: $small $medium;
-  }
-
-  .nav_side_menu.nav_side_menu_open {
-    right: 0px;
-  }
-
-  #nav_mobile_toggle {
-    align-content: center;
-    display: flex;
-    padding: $xsmall $small $xsmall 0;
-  }
-
-  #nav_mobile_toggle .favicon {
-    color: white;
-    font-size: $xlarge;
-    line-height: $small;
-  }
-
-  /* end mobile nav */
-  /* desktop nav */
-  #desktop_menu {
-    display: none;
-  }
-
-  /* end desktop nav */
 }
-
-/*
-    Medium screens - TABLET
-    min-width 641px, medium screens
-*/
-
-@media only screen and (min-width: 40.063em) {
-}
-
-/*
-    Large screens - DESKTOP
-    min-width 1025px, large screens
-*/
 
 @media only screen and (min-width: 64.063em) {
   /* brand nav */
