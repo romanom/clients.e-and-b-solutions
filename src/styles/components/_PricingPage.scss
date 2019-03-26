@@ -7,6 +7,7 @@
         grid-template-columns: 100%;
         grid-gap: $midlarge;
         padding: $midlarge $small;
+
         &__package {
             background: white;
             border: 1px solid #bbbbbb;
@@ -16,17 +17,20 @@
             font-family: $mainFont;
             padding: $large;
             text-align: center;
+
             &-header {
                 &-title {
                     font-size: $midlarge;
                     font-weight: bold;
                 }
+
                 &-subtitle {
                     color: $midGrey;
                     font-family: $secFont;
                     font-size: $medium;
                     font-weight: bold;
                 }
+
                 &-content {
                     color: $midGrey;
                     font-family: $secFont;
@@ -34,15 +38,18 @@
                     margin-top: $midlarge;
                 }
             }
+
             &-cost {
                 font-size: $large;
                 font-weight: bold;
                 margin: $midlarge 0 $small;
             }
+
             &-content {
                 font-family: $secFont;
                 font-size: $medium;
             }
+
             &-button,
             &-link {
                 margin: $medium $medium 0;
@@ -67,6 +74,7 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: $midlarge;
         padding: $xlarge 10%;
+
         &__package {
             padding: $large;
         }

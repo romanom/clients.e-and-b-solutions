@@ -2,18 +2,39 @@
 //max-width 640px, small screens
 @media only screen {
     .contact_page {
-      padding: $large 0;
+        background-image: url('/images/contact_page.jpg');
+        background-size: cover;
+        display: flex;
+        padding: $large;
+
+        &__content {
+            background: white;
+            display: grid;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
         &__header {
             font-family: $mainFont;
             font-size: $medium;
+            margin: 0 auto;
+            padding: $small;
             text-align: center;
+
             &-title {
                 font-size: $large;
                 font-weight: bold;
+                margin: 0 auto;
+                width: 80%;
             }
-            p {
+
+            &-content {
+                display: grid;
                 font-family: $secFont;
-                padding: 0 $medium;
+                margin: 0 auto;
+                padding: $small 0 0;
+                text-align: center;
+                width: 80%;
             }
         }
     }

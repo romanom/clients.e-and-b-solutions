@@ -5,9 +5,11 @@
         box-sizing: border-box;
         font-family: $secFont;
     }
+
     html {
         font-size: 62.5%;
     }
+
     body {
         left: 0;
         overflow-x: hidden;
@@ -16,6 +18,7 @@
         -webkit-transition: all 0.3s ease;
         -moz-transition: all 0.3s ease;
     }
+
     button,
     .nav_link {
         background-color: white;
@@ -30,11 +33,13 @@
         text-align: center;
         text-decoration: none;
         text-transform: uppercase;
+
         &:hover {
             background: $mainColor;
             color: white;
             transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
         }
+
         &:disabled {
             background: $mainColor;
             cursor: not-allowed;
@@ -42,9 +47,17 @@
             opacity: .5;
         }
     }
+
+    input, textarea {
+        border: 0.5px solid $fontGrey;
+        border-radius: 5px;
+        padding: $small $xsmall;
+    }
+
     textarea {
         font-size: $medium;
     }
+
     .close_modal__span {
         color: $closeIconGrey;
         cursor: pointer;
