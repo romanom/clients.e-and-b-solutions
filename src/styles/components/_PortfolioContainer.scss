@@ -1,46 +1,49 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-    .portfolio {
-        padding: $medium $small;
-        &__title {
-            font-family: $mainFont;
-            font-size: $midlarge;
-            text-align: center;
-        }
-        &__projects {
-            display: grid;
-            grid-gap: $medium;
-            grid-template-columns: 100%;
-            margin-top: $small;
-            img {
-                cursor: pointer;
-                width: 100%;
-            }
-        }
+  .portfolio {
+    padding: $medium $small;
+    &__title {
+      font-family: $mainFont;
+      font-size: $midlarge;
+      text-align: center;
     }
+    &__projects {
+      display: grid;
+      grid-gap: $medium;
+      grid-template-columns: 100%;
+      margin-top: $small;
+      img {
+        cursor: pointer;
+        width: 100%;
+      }
+    }
+  }
 }
 
 //Medium screens - TABLET
 //min-width 641px, medium screens
-@media only screen and (min-width: 40.063em) {}
+@media only screen and (min-width: 40.063em) {
+}
 
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
-    .portfolio {
-        &__projects {
-            grid-gap: $large;
-            grid-template-columns: 1fr 1fr;
-            padding: $large 5%;
-        }
+  .portfolio {
+    &__projects {
+      grid-gap: $large;
+      grid-template-columns: 1fr 1fr;
+      padding: $large 5%;
     }
+  }
 }
 
 //XLarge screens
 //min-width 1441px, xlarge screens
-@media only screen and (min-width: 90.063em) {}
+@media only screen and (min-width: 90.063em) {
+}
 
 //XXLarge screens
 //min-width 1921px, xlarge screens
-@media only screen and (min-width: 120.063em) {}
+@media only screen and (min-width: 120.063em) {
+}

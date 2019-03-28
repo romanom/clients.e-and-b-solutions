@@ -1,2 +1,2 @@
 /* global require */
-require('./app');
+require("./app");

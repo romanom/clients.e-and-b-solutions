@@ -1,88 +1,76 @@
-/*
-    Small screens - MOBILE
-    max-width 640px, small screens
-*/
-
+//Small screens - MOBILE
+//max-width 640px, small screens
 @media only screen {
-    .services {
-        color: $fontGrey;
-        padding: $small 0 $large;
-        &__header {
-            margin: $large auto;
-            text-align: center;
+  .services {
+    color: $fontGrey;
+    padding: $small 0 $large;
+    &__header {
+      margin: $large auto;
+      text-align: center;
+    }
+    &__header {
+      &-title {
+        color: $darkGrey;
+        font-family: $mainFont;
+        font-size: $large;
+        font-weight: 700;
+        margin: 0 $small;
+      }
+      &-title-secondary {
+        font-family: $secFont;
+        font-size: $medium;
+        font-weight: lighter;
+        margin-top: $xsmall;
+      }
+    }
+    &__content {
+      display: grid;
+      grid-gap: $large;
+      margin: 0 5%;
+      .service {
+        padding: 0 $medium;
+        text-align: center;
+        &__image {
+          max-height: 20vh;
+          object-fit: scale-down;
+          width: 100%;
         }
-        &__header {
-            &-title {
-                color: $darkGrey;
-                font-family: $mainFont;
-                font-size: $large;
-                font-weight: 700;
-                margin: 0 $small;
-            }
-            &-title-secondary {
-                font-family: $secFont;
-                font-size: $medium;
-                font-weight: lighter;
-                margin-top: $xsmall;
-            }
+        &__title {
+          font-family: $mainFont;
+          font-weight: 700;
+          font-size: $midlarge;
+          margin-top: $small;
         }
         &__content {
-            display: grid;
-            grid-gap: $large;
-            margin: 0 5%;
-            .service {
-                padding: 0 $medium;
-                text-align: center;
-                &__image {
-                  max-height: 20vh;
-                  object-fit: scale-down;
-                  width: 100%;
-                }
-                &__title {
-                    font-family: $mainFont;
-                    font-weight: 700;
-                    font-size: $midlarge;
-                    margin-top: $small;
-                }
-                &__content {
-                    font-size: $medium;
-                    margin-top: $small;
-                }
-            }
+          font-size: $medium;
+          margin-top: $small;
         }
+      }
     }
+  }
 }
 
-/*
-    Medium screens - TABLET
-    min-width 641px, medium screens
-*/
+//Medium screens - TABLET
+//min-width 641px, medium screens
+@media only screen and (min-width: 40.063em) {
+}
 
-@media only screen and (min-width: 40.063em) {}
-
-/*
-    Large screens - DESKTOP
-    min-width 1025px, large screens
-*/
-
+//Large screens - DESKTOP
+//min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
-    .services {
-        &__content {
-            grid-template-columns: 1fr 1fr 1fr;
-        }
+  .services {
+    &__content {
+      grid-template-columns: 1fr 1fr 1fr;
     }
+  }
 }
 
-/*
-    XLarge screens
-    min-width 1441px, xlarge screens
-*/
+//XLarge screens
+//min-width 1441px, xlarge screens
+@media only screen and (min-width: 90.063em) {
+}
 
-@media only screen and (min-width: 90.063em) {}
-
-/*
-    XXLarge screens
-    min-width 1921px, xlarge screens
-*/
-
-@media only screen and (min-width: 120.063em) {}
+//XXLarge screens
+//min-width 1921px, xlarge screens
+@media only screen and (min-width: 120.063em) {
+}
