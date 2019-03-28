@@ -1,19 +1,22 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-  #privacy_policy_page {
+  .privacy_policy_page {
     font-family: $secFont;
-    margin: 0 $medium;
-  }
-  #privacy_policy_page > h3 {
-    font-size: $large;
-  }
-  #privacy_policy_page > h4 {
-    font-size: $medium;
-  }
-  #privacy_policy_page > p {
-    font-size: $medium;
-    text-align: left;
+    padding: $medium;
+    &__title {
+      font-size: $midlarge;
+      font-weight: bold;
+      margin-bottom: $medium;
+    }
+    &__heading {
+      font-weight: bold;
+      font-size: $medium;
+      margin: $medium 0 $xsmall;
+    }
+    &__content {
+      font-size: $medium;
+    }
   }
 }
 
@@ -25,9 +28,6 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
-  #privacy_policy_page {
-    margin: 0 $xxlarge 0 $large;
-  }
 }
 
 //XLarge screens

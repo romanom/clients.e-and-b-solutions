@@ -5,7 +5,7 @@
     align-items: center;
     background-color: $darkGrey;
     display: flex;
-    height: $navMenuHeight;
+    height: $navMenuHeightMobile;
     justify-content: space-between;
     padding: 0 $small;
     .favicon {
@@ -40,7 +40,7 @@
         align-items: center;
         display: flex;
         justify-content: flex-end;
-        height: $navMenuHeight;
+        height: $navMenuHeightMobile;
         margin-right: $small;
       }
       &-link {
@@ -70,6 +70,7 @@
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
   .nav_menu {
+    height: $navMenuHeightDesktop;
     &__toggle {
       display: none;
     }

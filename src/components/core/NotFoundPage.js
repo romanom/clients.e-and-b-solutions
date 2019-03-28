@@ -7,6 +7,10 @@ export default class NotFoundPage extends React.Component {
   }
 
   render() {
-    return <div>404! This is not the page you are looking for!</div>;
+    return (
+      <div className="not_found_page">
+        404! This is not the page you are looking for!
+      </div>
+    );
   }
 }

@@ -1,23 +1,11 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-  footer {
-    align-items: center;
-    background-color: $darkGrey;
-    color: white;
-    font-family: $secFont;
-    font-size: $medium;
-    height: 7vh;
-    display: grid;
-    grid-template-columns: auto auto;
+  .not_found_page {
+    font-family: $mainFont;
+    font-size: $large;
+    padding: $large;
     text-align: center;
-    a {
-      color: white;
-      text-decoration: none;
-      &:hover {
-        color: $darkMainColor;
-      }
-    }
   }
 }
 
@@ -29,9 +17,6 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
-  footer {
-    height: 5vh;
-  }
 }
 
 //XLarge screens

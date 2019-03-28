@@ -9,13 +9,23 @@ export default class PrivacyPolicyPage extends React.Component {
 
   render() {
     return (
-      <div id="privacy_policy_page">
-        <h3>Privacy Policy for {privacyPolicy.companyWebsite}</h3>
+      <div className="privacy_policy_page">
+        <div className="privacy_policy_page__title">
+          Privacy Policy for {privacyPolicy.companyWebsite}
+        </div>
         {privacyPolicy.policy.map((policyLine, index) => {
           if (policyLine.isBold) {
-            return <h4 key={index}>{policyLine.text}</h4>;
+            return (
+              <div className="privacy_policy_page__heading" key={index}>
+                {policyLine.text}
+              </div>
+            );
           }
-          return <p key={index}>{policyLine.text}</p>;
+          return (
+            <div className="privacy_policy_page__content" key={index}>
+              {policyLine.text}
+            </div>
+          );
         })}
       </div>
     );
