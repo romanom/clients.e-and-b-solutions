@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import projects from '../content/projects';
+import React from "react";
+import { Link } from "react-router-dom";
+import projects from "../content/projects";
 
 export default class PortfolioContainer extends React.Component {
   render() {
@@ -11,14 +11,8 @@ export default class PortfolioContainer extends React.Component {
         </div>
         <div className="portfolio__projects">
           {projects.map((project, index) => (
-            <Link
-              to={`/project/${index}`}
-              key={index}
-            >
-              <img
-                src={project.clickableImage}
-                alt=""
-              />
+            <Link to={`/project/${index}`} key={index}>
+              <img src={project.clickableImage} alt="" />
             </Link>
           ))}
         </div>

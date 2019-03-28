@@ -1,6 +1,6 @@
-import React from 'react';
-import { handlePageView } from '../tools/analytics';
-import ProjectContainer from './ProjectContainer'
+import React from "react";
+import { handlePageView } from "../tools/analytics";
+import ProjectContainer from "./ProjectContainer";
 
 export default class ProjectPage extends React.Component {
   componentDidMount() {

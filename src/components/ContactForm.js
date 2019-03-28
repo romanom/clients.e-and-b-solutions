@@ -1,6 +1,6 @@
-import React from 'react';
-import { sendEmail, isEmailValid } from '../tools/email';
-import FormError from './core/FormError';
+import React from "react";
+import { sendEmail, isEmailValid } from "../tools/email";
+import FormError from "./core/FormError";
 
 export default class ContactForm extends React.Component {
   constructor(props) {
@@ -16,11 +16,11 @@ export default class ContactForm extends React.Component {
       name: "",
       phoneNumber: "",
       error: {}
-    }
+    };
   }
 
   handleSubmitContactForm = () => {
-    this.setState(({ buttonText: "Sending", isSendButtonDisabled: true }));
+    this.setState({ buttonText: "Sending", isSendButtonDisabled: true });
 
     const { emailAddress, message, name, phoneNumber } = this.state;
     const data = {
@@ -28,92 +28,119 @@ export default class ContactForm extends React.Component {
       emailAddress,
       phoneNumber,
       message
-    }
-    const done = () => this.setState(({ emailSent: true }));
-    const fail = () => this.setState(({ emailError: true }))
+    };
+    const done = () => this.setState({ emailSent: true });
+    const fail = () => this.setState({ emailError: true });
     sendEmail(data, done, fail);
-  }
+  };
 
-  handleEmailValidation = (e) => {
+  handleEmailValidation = e => {
     const { value: inputValue } = e.target;
 
     if (!isEmailValid(inputValue)) {
-      return this.setState((prevState) => (
-        {
+      return this.setState(
+        prevState => ({
           ...prevState,
-          error: { ...prevState.error, emailAddress: 'Please enter a valid email address' }
-        }), this.validateRequiredFields());
+          error: {
+            ...prevState.error,
+            emailAddress: "Please enter a valid email address"
+          }
+        }),
+        this.validateRequiredFields()
+      );
     }
 
-    return this.setState((prevState) => ({
-      ...prevState,
-      error: { ...prevState.error, emailAddress: undefined }
-    }), this.validateRequiredFields());
-  }
+    return this.setState(
+      prevState => ({
+        ...prevState,
+        error: { ...prevState.error, emailAddress: undefined }
+      }),
+      this.validateRequiredFields()
+    );
+  };
 
-  handleInput = (e) => {
+  handleInput = e => {
     const { name: inputName, value: inputValue } = e.target;
 
-    return this.setState((prevState) => ({ ...prevState, [inputName]: inputValue }));
-  }
+    return this.setState(prevState => ({
+      ...prevState,
+      [inputName]: inputValue
+    }));
+  };
 
   handleNameValidation = () => {
     if (!this.state.name) {
-      return this.setState((prevState) => (
-        {
+      return this.setState(
+        prevState => ({
           ...prevState,
-          error: { ...prevState.error, name: 'Please enter your name' }
-        }), this.validateRequiredFields());
+          error: { ...prevState.error, name: "Please enter your name" }
+        }),
+        this.validateRequiredFields()
+      );
     }
 
-    return this.setState((prevState) => ({
-      ...prevState,
-      error: { ...prevState.error, name: undefined }
-    }), this.validateRequiredFields());
-  }
+    return this.setState(
+      prevState => ({
+        ...prevState,
+        error: { ...prevState.error, name: undefined }
+      }),
+      this.validateRequiredFields()
+    );
+  };
 
-  handlePhoneChange = (e) => {
+  handlePhoneChange = e => {
     const phoneNumber = e.target.value;
 
-    if (!phoneNumber || (phoneNumber.match(/^[0-9]*$/) && phoneNumber.length <= 10)) {
+    if (
+      !phoneNumber ||
+      (phoneNumber.match(/^[0-9]*$/) && phoneNumber.length <= 10)
+    ) {
       return this.setState(() => ({ phoneNumber }));
     }
-  }
+  };
 
   handlePhoneValidation = () => {
     const { phoneNumber } = this.state;
     if (phoneNumber && phoneNumber.length !== 10) {
-      return this.setState((prevState) => (
-        {
-          ...prevState,
-          error: { ...prevState.error, phoneNumber: 'Phone number must be 10 digits' }
-        }));
-    }
-    return this.setState((prevState) => (
-      {
+      return this.setState(prevState => ({
         ...prevState,
-        error: { ...prevState.error, phoneNumber: undefined }
+        error: {
+          ...prevState.error,
+          phoneNumber: "Phone number must be 10 digits"
+        }
       }));
-  }
+    }
+    return this.setState(prevState => ({
+      ...prevState,
+      error: { ...prevState.error, phoneNumber: undefined }
+    }));
+  };
 
   validateRequiredFields = () => {
     const { emailAddress, error, name } = this.state;
     const { emailAddress: emailAddressError, name: nameError } = error;
 
     if (emailAddress && name && !emailAddressError && !nameError) {
-      return this.setState(({ isSendButtonDisabled: false }));
+      return this.setState({ isSendButtonDisabled: false });
     }
 
-    return this.setState(({ isSendButtonDisabled: true }));
-  }
+    return this.setState({ isSendButtonDisabled: true });
+  };
 
   render() {
-    const { emailAddress, emailSent, emailError, error, isSendButtonDisabled, message, name, phoneNumber } = this.state;
+    const {
+      emailAddress,
+      emailSent,
+      emailError,
+      error,
+      isSendButtonDisabled,
+      message,
+      name,
+      phoneNumber
+    } = this.state;
     return (
       <div className="contact_form">
-        {
-          (!emailSent && !emailError)
-          &&
+        {!emailSent && !emailError && (
           <div className="contact_form__form">
             <div className="contact_form__input">
               {error.name && <FormError error={error.name} />}
@@ -154,7 +181,7 @@ export default class ContactForm extends React.Component {
               placeholder="What's on your mind?"
               onChange={this.handleInput}
               value={message}
-            ></textarea>
+            />
             <button
               className="contact_form__button"
               disabled={isSendButtonDisabled}
@@ -163,19 +190,22 @@ export default class ContactForm extends React.Component {
               {this.state.buttonText}
             </button>
           </div>
-        }
-        {
-          emailSent &&
+        )}
+        {emailSent && (
           <div className="audit_form__email">
-            <p>Thank you for reaching out! We are excited to get back in touch with you.</p>
+            <p>
+              Thank you for reaching out! We are excited to get back in touch
+              with you.
+            </p>
           </div>
-        }
-        {
-          emailError &&
+        )}
+        {emailError && (
           <div className="audit_form__email">
-            <p>Something went wrong unfortunately. Please try reloading the page.</p>
+            <p>
+              Something went wrong unfortunately. Please try reloading the page.
+            </p>
           </div>
-        }
+        )}
       </div>
     );
   }

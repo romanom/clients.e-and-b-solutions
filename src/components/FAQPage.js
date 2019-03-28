@@ -1,6 +1,6 @@
-import React from 'react';
-import { handlePageView } from '../tools/analytics';
-import FAQContainer from './FAQContainer';
+import React from "react";
+import { handlePageView } from "../tools/analytics";
+import FAQContainer from "./FAQContainer";
 
 export default class FAQPage extends React.Component {
   componentDidMount() {

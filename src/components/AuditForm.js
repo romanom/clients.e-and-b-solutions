@@ -1,6 +1,6 @@
-import React from 'react';
-import { sendEmail, isEmailValid } from '../tools/email';
-import FormError from './core/FormError';
+import React from "react";
+import { sendEmail, isEmailValid } from "../tools/email";
+import FormError from "./core/FormError";
 
 export default class AuditForm extends React.Component {
   constructor(props) {
@@ -14,12 +14,12 @@ export default class AuditForm extends React.Component {
       error: {},
       isSendButtonDisabled: true,
       message: "",
-      website: "",
-    }
+      website: ""
+    };
   }
 
   handleSubmitAuditForm = () => {
-    this.setState(({ buttonText: "Sending", isSendButtonDisabled: true }));
+    this.setState({ buttonText: "Sending", isSendButtonDisabled: true });
 
     const { email, message, website } = this.state;
 
@@ -27,70 +27,92 @@ export default class AuditForm extends React.Component {
       website,
       emailAddress: email,
       message
-    }
-    const done = () => this.setState(({ emailSent: true }));
-    const fail = () => this.setState(({ emailError: true }));
+    };
+    const done = () => this.setState({ emailSent: true });
+    const fail = () => this.setState({ emailError: true });
 
     sendEmail(data, done, fail);
-  }
+  };
 
-  handleInput = (e) => {
+  handleInput = e => {
     const { name: inputName, value: inputValue } = e.target;
 
-    return this.setState((prevState) => ({ ...prevState, [inputName]: inputValue }));
-  }
+    return this.setState(prevState => ({
+      ...prevState,
+      [inputName]: inputValue
+    }));
+  };
 
-  handleEmailValidation = (e) => {
+  handleEmailValidation = e => {
     const { value: inputValue } = e.target;
 
     if (!isEmailValid(inputValue)) {
-      return this.setState((prevState) => (
-        {
+      return this.setState(
+        prevState => ({
           ...prevState,
-          error: { ...prevState.error, email: 'Please enter a valid email address' }
-        }), this.validateRequiredFields());
+          error: {
+            ...prevState.error,
+            email: "Please enter a valid email address"
+          }
+        }),
+        this.validateRequiredFields()
+      );
     }
 
-    return this.setState((prevState) => ({
-      ...prevState,
-      error: { ...prevState.error, email: undefined }
-    }), this.validateRequiredFields());
-  }
+    return this.setState(
+      prevState => ({
+        ...prevState,
+        error: { ...prevState.error, email: undefined }
+      }),
+      this.validateRequiredFields()
+    );
+  };
 
   handleWebsiteValidation = () => {
     if (!this.state.website) {
-      return this.setState((prevState) => (
-        {
+      return this.setState(
+        prevState => ({
           ...prevState,
-          error: { ...prevState.error, website: 'Please enter a website URL' }
-        }), this.validateRequiredFields());
+          error: { ...prevState.error, website: "Please enter a website URL" }
+        }),
+        this.validateRequiredFields()
+      );
     }
 
-    return this.setState((prevState) => ({
-      ...prevState,
-      error: { ...prevState.error, website: undefined }
-    }), this.validateRequiredFields());
-  }
+    return this.setState(
+      prevState => ({
+        ...prevState,
+        error: { ...prevState.error, website: undefined }
+      }),
+      this.validateRequiredFields()
+    );
+  };
 
   validateRequiredFields = () => {
     const { email, error, website } = this.state;
     const { email: emailError, website: webSiteError } = error;
 
     if (email && website && !emailError && !webSiteError) {
-      return this.setState(({ isSendButtonDisabled: false }));
+      return this.setState({ isSendButtonDisabled: false });
     }
 
-    return this.setState(({ isSendButtonDisabled: true }));
-  }
+    return this.setState({ isSendButtonDisabled: true });
+  };
 
   render() {
-    const { email, emailSent, emailError, error, isSendButtonDisabled, message, website } = this.state;
+    const {
+      email,
+      emailSent,
+      emailError,
+      error,
+      isSendButtonDisabled,
+      message,
+      website
+    } = this.state;
 
     return (
       <div className="audit_form">
-        {
-          (!emailSent && !emailError)
-          &&
+        {!emailSent && !emailError && (
           <div className="audit_form__form">
             <div className="audit_form__input">
               {error.website && <FormError error={error.website} />}
@@ -121,7 +143,7 @@ export default class AuditForm extends React.Component {
               placeholder="What's on your mind?"
               rows="4"
               value={message}
-            ></textarea>
+            />
             <button
               className="audit_form__button"
               disabled={isSendButtonDisabled}
@@ -130,19 +152,22 @@ export default class AuditForm extends React.Component {
               {this.state.buttonText}
             </button>
           </div>
-        }
-        {
-          emailSent &&
+        )}
+        {emailSent && (
           <div className="audit_form__email">
-            <p>Thank you for reaching out! We are excited to get back in touch with you.</p>
+            <p>
+              Thank you for reaching out! We are excited to get back in touch
+              with you.
+            </p>
           </div>
-        }
-        {
-          emailError &&
+        )}
+        {emailError && (
           <div className="audit_form__email">
-            <p>Something went wrong unfortunately. Please try reloading the page.</p>
+            <p>
+              Something went wrong unfortunately. Please try reloading the page.
+            </p>
           </div>
-        }
+        )}
       </div>
     );
   }
