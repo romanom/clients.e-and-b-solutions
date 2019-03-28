@@ -14,10 +14,12 @@ export default class LandingPage extends React.Component {
 
   render() {
     return (
-      <div id="landing_page">
-        <header>
-          <div className="intro_text">It&apos;s nice to meet you</div>
-          <div>
+      <div className="landing_page">
+        <div className="landing_page__splash">
+          <div className="landing_page__splash-text">
+            It&apos;s nice to meet you
+          </div>
+          <div className="landing_page__splash-link">
             <Link
               to="/pricing"
               onClick={this.handleAnalyticsEvent}
@@ -26,7 +28,7 @@ export default class LandingPage extends React.Component {
               Let&apos;s Get Started
             </Link>
           </div>
-        </header>
+        </div>
         <ServicesContainer />
         <TeamContainer />
       </div>
