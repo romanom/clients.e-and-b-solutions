@@ -7,7 +7,7 @@
     color: white;
     font-family: $secFont;
     font-size: $medium;
-    height: 7vh;
+    height: $footerHeightMobile;
     display: grid;
     grid-template-columns: auto auto;
     text-align: center;
@@ -30,7 +30,7 @@
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
   footer {
-    height: 5vh;
+    height: $footerHeightDesktop;
   }
 }
 

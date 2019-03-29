@@ -10,17 +10,13 @@ class ScrollToTop extends React.Component {
   }
 
   render() {
-    return (
-      <div className="scroll_to_top">
-        <div className="scroll_to_top__inner">{this.props.children}</div>
-      </div>
-    );
+    return this.props.children;
   }
 }
 
 ScrollToTop.propTypes = {
-  location: PropTypes.any.isRequired,
-  children: PropTypes.any.isRequired
+  location: PropTypes.object.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 export default withRouter(ScrollToTop);

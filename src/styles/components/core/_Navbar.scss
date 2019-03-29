@@ -7,7 +7,11 @@
     display: flex;
     height: $navMenuHeightMobile;
     justify-content: space-between;
+    left: 0;
     padding: 0 $small;
+    position: sticky;
+    top: 0;
+    z-index: 100;
     .favicon {
       color: white;
       cursor: pointer;
@@ -30,9 +34,6 @@
       top: 0;
       transition: right 0.3s ease;
       width: $navMenuWidth;
-      z-index: 100;
-      -webkit-transition: right 0.3s ease;
-      -moz-transition: right 0.3s ease;
       &.nav_menu__links-open {
         right: 0px;
       }
@@ -84,23 +85,24 @@
       top: inherit;
       transition: none;
       width: inherit;
-      z-index: 1;
-      -webkit-transition: none;
-      -moz-transition: none;
       &-close {
         display: none;
       }
       &-link {
+        &:hover {
+          color: $mainColor;
+          transition: color 0.5s ease-in;
+        }
+      }
+      &-contact {
+        margin: 0;
+        margin-left: $small;
         &:hover {
           background-color: white;
           color: $mainColor;
           font-weight: bolder;
           transition: background-color 0.5s ease-in, color 0.5s ease-in;
         }
-      }
-      &-contact {
-        margin: 0;
-        margin-left: $small;
       }
     }
   }

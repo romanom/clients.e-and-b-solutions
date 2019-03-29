@@ -19,7 +19,7 @@ export default class Navbar extends React.Component {
   render() {
     const isNavOpenClass = this.state.isNavOpen ? "nav_menu__links-open" : "";
     return (
-      <div className="nav_menu">
+      <nav className="nav_menu">
         <div className="nav_menu__brand">
           <Link to="/">{this.props.companyName}</Link>
         </div>
@@ -78,7 +78,7 @@ export default class Navbar extends React.Component {
             Contact
           </Link>
         </div>
-      </div>
+      </nav>
     );
   }
 }
