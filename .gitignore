@@ -1,6 +1,24 @@
+# dependencies
+/node_modules
 .firebase/
-node_modules/
-public/dist/
-yarn-error.log
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 firebase-debug.log
 sh.exe.stackdump

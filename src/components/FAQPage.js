@@ -1,30 +1,17 @@
-import React from 'react';
-import { handlePageView } from '../tools/analytics';
-import FAQWidget from './FAQWidget';
-import faqs from '../content/faqs';
+import React from "react";
+import { handlePageView } from "../tools/analytics";
+import FAQContainer from "./FAQContainer";
 
 export default class FAQPage extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+  componentDidMount() {
+    handlePageView();
+  }
 
-    componentDidMount() {
-        handlePageView();
-    }
-
-    render() {
-        return (
-            <div id="faq_page">
-                <div className="faq_content">
-                    {faqs.map((faq, index) => (
-                        <FAQWidget
-                            key={index}
-                            question={faq.question}
-                            answer={faq.answer}
-                        />
-                    ))}
-                </div>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div className="faq_page">
+        <FAQContainer />
+      </div>
+    );
+  }
 }

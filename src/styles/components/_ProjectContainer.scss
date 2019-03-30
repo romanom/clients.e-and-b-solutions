@@ -1,0 +1,71 @@
+//Small screens - MOBILE
+//max-width 640px, small screens
+@media only screen {
+  .project {
+    display: grid;
+    text-align: center;
+    padding: $medium;
+    &__header {
+      &-title {
+        font-family: $mainFont;
+        font-size: $midlarge;
+      }
+      &-client {
+        font-size: $medium;
+        font-family: $secFont;
+        margin-top: $xsmall;
+      }
+      &-date {
+        font-size: $medium;
+        font-family: $secFont;
+        margin-top: $xsmall;
+      }
+      &-info {
+        font-size: $medium;
+        font-family: $secFont;
+        padding: $medium $large 0;
+      }
+    }
+    &__content {
+      display: grid;
+      grid-gap: $small;
+      margin-top: $medium;
+      img {
+        margin: 0 auto;
+        max-width: 90%;
+      }
+    }
+  }
+}
+
+//Medium screens - TABLET
+//min-width 641px, medium screens
+@media only screen and (min-width: 40.063em) {
+}
+
+//Large screens - DESKTOP
+//min-width 1025px, large screens
+@media only screen and (min-width: 64.063em) {
+  .project {
+    &__content {
+      display: grid;
+      grid-gap: $small;
+      grid-template-columns: 1fr 1fr;
+      margin-top: $large;
+      img {
+        margin: 0 auto;
+        max-width: 90%;
+      }
+    }
+  }
+}
+
+//XLarge screens
+//min-width 1441px, xlarge screens
+@media only screen and (min-width: 90.063em) {
+}
+
+//XXLarge screens
+//min-width 1921px, xlarge screens
+@media only screen and (min-width: 120.063em) {
+}

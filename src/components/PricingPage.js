@@ -1,112 +1,105 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { handlePageView, handleEvent } from '../tools/analytics';
-import { openModalEvent, closeModalEvent, navigateByButtonEvent } from '../tools/analytics_events';
-import ContactModal from './ContactModal';
+import React from "react";
+import { Link } from "react-router-dom";
+import { handlePageView } from "../tools/analytics";
+import AuditForm from "./AuditForm";
+import Modal from "./core/Modal";
 
 export default class PricingPage extends React.Component {
-    constructor(props) {
-        super(props);
-        this.toggleModal = this.toggleModal.bind(this);
-        this.handleAnalyticsEvent = this.handleAnalyticsEvent.bind(this);
-        this.state = {
-            isModalOpen: false
-        }
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      isModalOpen: false
+    };
+  }
 
-    handleAnalyticsEvent() {
-        handleEvent(navigateByButtonEvent)
-    }
+  componentDidMount() {
+    handlePageView();
+  }
 
-    componentDidMount() {
-        handlePageView();
-    }
+  toggleModal = () =>
+    this.setState(prevState => ({ isModalOpen: !prevState.isModalOpen }));
 
-    toggleModal() {
-        if (this.state.isModalOpen) {
-            handleEvent(closeModalEvent);
-        }
-        else {
-            handleEvent(openModalEvent);
-        }
-
-        this.setState(prevState => ({
-            isModalOpen: !prevState.isModalOpen
-        }));
-    }
-
-    render() {
-        return (
-            <section id="pricing">
-                <div className="pricing_row">
-                    <div className="pricing_package">
-                        <div className="price_header">
-                            <h3>Just Curious</h3>
-                            <h5>Get To Know Us</h5>
-                            <p>
-                                We will inspect your current site to check for weak spots and show how we can help at no cost to you.
-                            </p>
-                        </div>
-                        <div className="price_cost">
-                            <h2>Free</h2>
-                        </div>
-                        <div className="price_content">
-                            <p>List of site issues</p>
-                            <p>Report of all findings</p>
-                            <p>Recommendations for site fixes</p>
-                        </div>
-                        <div className="contact">
-                            <button className="button" onClick={this.toggleModal}>
-                                Get Your Free Report
-                            </button>
-                        </div>
-                    </div>
-                    <div className="pricing_package">
-                        <div className="price_header">
-                            <h3>Simple Yet Effective</h3>
-                            <h5>Website</h5>
-                            <p>
-                                We will build you a custom website from scratch and host it ($100 value) for the first year for free.
-                            </p>
-                        </div>
-                        <div className="price_cost">
-                            <h2>$250</h2>
-                        </div>
-                        <div className="price_content">
-                            <p>Up to 5 pages</p>
-                            <p>Support and maintenance costs included</p>
-                            <p>Hosting for the first year <strong>FREE</strong></p>
-                        </div>
-                        <div className="contact">
-                            <Link to='/contact' onClick={this.handleAnalyticsEvent} className='link'>Start Your New Site</Link>
-                        </div>
-                    </div>
-                    <div className="pricing_package">
-                        <div className="price_header">
-                            <h3>All The Things</h3>
-                            <h5>E-Commerce Site</h5>
-                            <p>
-                                Let us create a place where your customers can browse and purchase from you all in one location.
-                            </p>
-                        </div>
-                        <div className="price_cost">
-                            <h2>$500</h2>
-                        </div>
-                        <div className="price_content">
-                            <p>Shopping Cart and Payments</p>
-                            <p>Support and maintenance costs included</p>
-                            <p>Hosting for the first year <strong>FREE</strong></p>
-                        </div>
-                        <div className="contact">
-                            <Link to='/contact' onClick={this.handleAnalyticsEvent} className='link'>Build your app today</Link>
-                        </div>
-                    </div>
-                </div>
-                <ContactModal
-                    isModalOpen={this.state.isModalOpen}
-                    closeModal={this.toggleModal}
-                />
-            </section>
-        );
-    }
+  render() {
+    return (
+      <div className="pricing">
+        <div className="pricing__package">
+          <div className="pricing__package-header">
+            <div className="pricing__package-header-title">Just Curious</div>
+            <div className="pricing__package-header-subtitle">
+              Get To Know Us
+            </div>
+            <div className="pricing__package-header-content">
+              We will inspect your current site to check for weak spots and show
+              how we can help at no cost to you.
+            </div>
+          </div>
+          <div className="pricing__package-cost">Free</div>
+          <div className="pricing__package-content">
+            <p>List of site issues</p>
+            <p>Report of all findings</p>
+            <p>Recommendations for site fixes</p>
+          </div>
+          <button
+            className="pricing__package-button"
+            onClick={this.toggleModal}
+          >
+            Get Your Free Report
+          </button>
+        </div>
+        <div className="pricing__package">
+          <div className="pricing__package-header">
+            <div className="pricing__package-header-title">
+              Simple Yet Effective
+            </div>
+            <div className="pricing__package-header-subtitle">Website</div>
+            <div className="pricing__package-header-content">
+              We will build you a custom website from scratch and host it ($100
+              value) for the first year for free.
+            </div>
+          </div>
+          <div className="pricing__package-cost">$250</div>
+          <div className="pricing__package-content">
+            <p>Up to 5 pages</p>
+            <p>Support and maintenance costs included</p>
+            <p>
+              Hosting for the first year <strong>FREE</strong>
+            </p>
+          </div>
+          <Link className="nav_link pricing__package-link" to="/contact">
+            Start Your New Site
+          </Link>
+        </div>
+        <div className="pricing__package">
+          <div className="pricing__package-header">
+            <div className="pricing__package-header-title">All The Things</div>
+            <div className="pricing__package-header-subtitle">
+              E-Commerce Site
+            </div>
+            <div className="pricing__package-header-content">
+              Let us create a place where your customers can browse and purchase
+              from you all in one location.
+            </div>
+          </div>
+          <div className="pricing__package-cost">$500</div>
+          <div className="pricing__package-content">
+            <p>Shopping Cart and Payments</p>
+            <p>Support and maintenance costs included</p>
+            <p>
+              Hosting for the first year <strong>FREE</strong>
+            </p>
+          </div>
+          <Link className="nav_link pricing__package-link" to="/contact">
+            Build your app today
+          </Link>
+        </div>
+        <Modal
+          isOpen={this.state.isModalOpen}
+          onClose={this.toggleModal}
+          title="Let us take a look at your site"
+        >
+          <AuditForm />
+        </Modal>
+      </div>
+    );
+  }
 }

@@ -1,59 +1,63 @@
-/*
-    Small screens - MOBILE
-    max-width 640px, small screens
-*/
-
+//Small screens - MOBILE
+//max-width 640px, small screens
 @media only screen {
-    .contact_form_container {
-        margin: $large 0;
+  .contact_page {
+    background-image: url("/images/contact_page.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    padding: $large;
+
+    &__content {
+      background: white;
+      display: grid;
+      height: fit-content;
+      margin: 0 auto;
+      opacity: 0.95;
     }
-    #contact_page>header {
-        margin: $medium 0 $large;
-        padding: 0 $medium;
-    }
-    #contact_page>header>h3 {
-        font-family: $mainFont;
+
+    &__header {
+      font-family: $mainFont;
+      font-size: $medium;
+      margin: 0 auto;
+      padding: $small;
+      text-align: center;
+
+      &-title {
         font-size: $large;
-        margin: 0;
+        font-weight: bold;
+        margin: 0 auto;
+        width: 80%;
+      }
+
+      &-content {
+        display: grid;
+        font-family: $secFont;
+        margin: 0 auto;
+        padding: $small 0 0;
         text-align: center;
+        width: 80%;
+      }
     }
-    #contact_page>header>p {
-        font-family: $secondaryFont;
-        font-size: $midlarge;
-    }
+  }
 }
 
-/*
-    Medium screens - TABLET
-    min-width 641px, medium screens
-*/
+//Medium screens - TABLET
+//min-width 641px, medium screens
+@media only screen and (min-width: 40.063em) {
+}
 
-@media only screen and (min-width: 40.063em) {}
-
-/*
-    Large screens - DESKTOP
-    min-width 1025px, large screens
-*/
-
+//Large screens - DESKTOP
+//min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
-    #contact_page>header>header {
-        margin: $large 10%;
-    }
-    #contact_page>header>h3 {
-        font-size: $xlarge;
-    }
 }
 
-/*
-    XLarge screens
-    min-width 1441px, xlarge screens
-*/
+//XLarge screens
+//min-width 1441px, xlarge screens
+@media only screen and (min-width: 90.063em) {
+}
 
-@media only screen and (min-width: 90.063em) {}
-
-/*
-    XXLarge screens
-    min-width 1921px, xlarge screens
-*/
-
-@media only screen and (min-width: 120.063em) {}
+//XXLarge screens
+//min-width 1921px, xlarge screens
+@media only screen and (min-width: 120.063em) {
+}

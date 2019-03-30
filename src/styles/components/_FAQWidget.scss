@@ -1,51 +1,61 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-    #faq_page>.faq_content .faq_question {
-        background-color: $lightBlue;
-        color: white;
-        display: flex;
-        font-family: $mainFont;
-        font-size: $midlarge;
-        margin: $small $small 0;
-        padding: $small;
+  .faq {
+    &__question {
+      align-items: center;
+      background-color: $secColor;
+      color: white;
+      display: grid;
+      justify-content: space-between;
+      font-family: $mainFont;
+      font-size: $medium;
+      grid-auto-flow: column;
+      padding: $small;
+      &:hover {
+        background-color: $mainColor;
+        transition: background-color 0.5s ease-in-out;
+      }
     }
-    #faq_page>.faq_content .faq_question:hover {
-        background-color: $blue;
-        transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    &__answer {
+      background-color: $lightGrey;
+      color: $midGrey;
+      font-family: $secFont;
+      font-size: $medium;
+      max-height: 0px;
+      overflow: hidden;
+      &-content {
+        padding: $medium;
+      }
+      &.expanded {
+        max-height: 100vh;
+        overflow: auto;
+        transition: overflow 1s ease-in-out, max-height 1s ease-in-out;
+      }
     }
-    #faq_page>.faq_content .favicon_container {
-        margin-left: auto;
-    }
-    #faq_page>.faq_content .faq_answer {
-        background-color: $lightGrey;
-        font-family: $secondaryFont;
-        font-size: $midlarge;
-        margin: 0 $small;
-        padding: 0 $small;
-    }
-    #faq_page>.faq_content .faq_answer>div {
-        color: $darkGrey;
-        padding: $large 0;
-    }
-    #faq_page>.faq_content .favicon {
-        font-size: $midlarge;
-        padding: 0 0 0 $xsmall;
-    }
+  }
 }
 
 //Medium screens - TABLET
 //min-width 641px, medium screens
-@media only screen and (min-width: 40.063em) {}
+@media only screen and (min-width: 40.063em) {
+}
 
 //Large screens - DESKTOP
 //min-width 1025px, large screens
-@media only screen and (min-width: 64.063em) {}
+@media only screen and (min-width: 64.063em) {
+  .faq {
+    margin: 0 auto;
+    width: 50%;
+  }
+}
 
 //XLarge screens
 //min-width 1441px, xlarge screens
-@media only screen and (min-width: 90.063em) {}
+@media only screen and (min-width: 90.063em) {
+}
 
 //XXLarge screens
 //min-width 1921px, xlarge screens
-@media only screen and (min-width: 120.063em) {}
+@media only screen and (min-width: 120.063em) {
+}

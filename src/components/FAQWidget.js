@@ -1,45 +1,41 @@
-import React from 'react';
-import { Collapse } from 'react-collapse';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import { faAngleLeft, faAngleDown } from '@fortawesome/fontawesome-free-solid'
-import PropTypes from 'prop-types';
+import React from "react";
+import FontAwesomeIcon from "@fortawesome/react-fontawesome";
+import { faAngleLeft, faAngleDown } from "@fortawesome/fontawesome-free-solid";
+import PropTypes from "prop-types";
 
 export default class FAQWidget extends React.Component {
-    constructor(props) {
-        super(props);
-        this.toggleWidget = this.toggleWidget.bind(this);
-        this.state = {
-            isWidgetOpen: false,
-        }
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      isWidgetOpen: false
+    };
+  }
 
-    toggleWidget() {
-        this.setState((prevState) => ({
-            isWidgetOpen: !prevState.isWidgetOpen
-        }));
-    }
+  toggleWidget = () =>
+    this.setState(prevState => ({ isWidgetOpen: !prevState.isWidgetOpen }));
 
-    render() {
-        return (
-            <div className="faq_container">
-                <div className="faq_question" onClick={this.toggleWidget}>
-                    <div>
-                        {this.props.question}
-                    </div>
-                    <div className="favicon_container">
-                        {!this.state.isWidgetOpen && <FontAwesomeIcon icon={faAngleLeft} size='1x' className="favicon" onClick={this.openSideMenu} />}
-                        {this.state.isWidgetOpen && <FontAwesomeIcon icon={faAngleDown} size='1x' className="favicon" onClick={this.closeSideMenu} />}
-                    </div>
-                </div>
-                <Collapse className="faq_answer" isOpened={this.state.isWidgetOpen}>
-                    <div>{this.props.answer}</div>
-                </Collapse>
-            </div>
-        );
-    }
+  render() {
+    const { isWidgetOpen } = this.state;
+    const isWidgetOpenClass = isWidgetOpen ? "expanded" : "";
+
+    return (
+      <div className="faq">
+        <div className="faq__question" onClick={this.toggleWidget}>
+          <div className="faq__question-text">{this.props.question}</div>
+          <div className="fav__question-icon">
+            {!isWidgetOpen && <FontAwesomeIcon icon={faAngleLeft} size="1x" />}
+            {isWidgetOpen && <FontAwesomeIcon icon={faAngleDown} size="1x" />}
+          </div>
+        </div>
+        <div className={`faq__answer ${isWidgetOpenClass}`}>
+          <div className="faq__answer-content">{this.props.answer}</div>
+        </div>
+      </div>
+    );
+  }
 }
 
 FAQWidget.propTypes = {
-    question: PropTypes.string.isRequired,
-    answer: PropTypes.string.isRequired,
+  answer: PropTypes.string.isRequired,
+  question: PropTypes.string.isRequired
 };

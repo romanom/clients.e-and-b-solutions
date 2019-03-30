@@ -1,35 +1,35 @@
-import React from 'react';
-import Modal from 'react-modal';
-import PropTypes from 'prop-types';
-import AuditForm from './AuditForm';
+import React from "react";
+import Modal from "react-modal";
+import PropTypes from "prop-types";
 
-const ContactModal = (props) => (
-    <Modal
-        isOpen={!!props.isModalOpen}
-        onRequestClose={props.closeModal}
-        closeTimeoutMS={200}
-        className="contact_modal"
-        appElement={document.getElementById('app')}
-    >
-        {props.isModalOpen && (
-            <section>
-                <div className="close_modal">
-                    <span className="close_modal_span" onClick={props.closeModal}>&times;</span>
-                </div>
-                <div className="contact_modal_header">
-                    <h3>Let us take a look at your site</h3>
-                </div>
-                <div className="contact_modal_content">
-                    <AuditForm />
-                </div>
-            </section>
-        )}
-    </Modal>
+Modal.setAppElement("body");
+
+const ContactModal = props => (
+  <Modal
+    isOpen={!!props.isModalOpen}
+    onRequestClose={props.closeModal}
+    closeTimeoutMS={200}
+  >
+    {props.isModalOpen && (
+      <section className="contact_modal">
+        <div className="contact_modal__header">
+          <div className="contact_modal__close" onClick={props.closeModal}>
+            &times;
+          </div>
+        </div>
+        <div className="contact_modal__title">
+          <h3>Let us take a look at your site</h3>
+        </div>
+        <div className="contact_modal__content">{props.children}</div>
+      </section>
+    )}
+  </Modal>
 );
 
 ContactModal.propTypes = {
-    isModalOpen: PropTypes.bool.isRequired,
-    closeModal: PropTypes.any.isRequired,
+  children: PropTypes.node.isRequired,
+  closeModal: PropTypes.any.isRequired,
+  isModalOpen: PropTypes.bool.isRequired
 };
 
 export default ContactModal;
