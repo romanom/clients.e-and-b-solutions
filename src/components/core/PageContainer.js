@@ -5,7 +5,7 @@ const pageContainer = Component => {
     render() {
       return (
         <div className="page_container">
-          <Component />
+          <Component {...this.props} />
         </div>
       );
     }

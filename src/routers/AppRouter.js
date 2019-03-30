@@ -44,7 +44,7 @@ const AppRouter = () => (
         />
         <Route
           path="/project/:projectId"
-          component={ProjectPage}
+          component={PageContainer(ProjectPage)}
           exact={true}
         />
         <Route
