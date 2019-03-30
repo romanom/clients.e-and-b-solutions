@@ -11,7 +11,6 @@
     grid-template-columns: 100%;
     grid-gap: $midlarge;
     padding: $midlarge $small;
-
     &__package {
       background: white;
       border: 1px solid #bbbbbb;
@@ -19,6 +18,7 @@
       box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.25);
       display: grid;
       font-family: $mainFont;
+      height: fit-content;
       padding: $large;
       text-align: center;
 

@@ -14,7 +14,7 @@
       padding: $small;
       &:hover {
         background-color: $mainColor;
-        transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+        transition: background-color 0.5s ease-in-out;
       }
     }
     &__answer {
@@ -24,12 +24,13 @@
       font-size: $medium;
       max-height: 0px;
       overflow: hidden;
-      transition: max-height 1s ease-in-out;
       &-content {
         padding: $medium;
       }
       &.expanded {
-        max-height: $xxlarge;
+        max-height: 100vh;
+        overflow: auto;
+        transition: overflow 1s ease-in-out, max-height 1s ease-in-out;
       }
     }
   }
@@ -43,6 +44,10 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
+  .faq {
+    margin: 0 auto;
+    width: 50%;
+  }
 }
 
 //XLarge screens

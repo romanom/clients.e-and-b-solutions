@@ -4,12 +4,14 @@
   .contact_page {
     background-image: url("/images/contact_page.jpg");
     background-size: cover;
+    background-position: center;
     display: flex;
     padding: $large;
 
     &__content {
       background: white;
       display: grid;
+      height: fit-content;
       margin: 0 auto;
       opacity: 0.95;
     }
