@@ -13,6 +13,19 @@ export default class ContactPage extends React.Component {
         <div className="contact_page__content">
           <div className="contact_page__header">
             <div className="contact_page__header-title">Contact Us</div>
+          </div>
+          <ContactForm />
+        </div>
+      </div>
+    );
+  }
+
+  render1() {
+    return (
+      <div className="contact_page">
+        <div className="contact_page__content">
+          <div className="contact_page__header">
+            <div className="contact_page__header-title">Contact Us</div>
             <div className="contact_page__header-content">
               We promise that your email won&apos;t disappear into the nether.
             </div>

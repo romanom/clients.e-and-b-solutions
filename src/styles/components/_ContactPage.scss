@@ -6,6 +6,7 @@
     background-size: cover;
     background-position: center;
     display: flex;
+    min-height: $pageContainerHeightMobile;
     padding: $large;
 
     &__content {
@@ -27,16 +28,6 @@
         font-size: $large;
         font-weight: bold;
         margin: 0 auto;
-        width: 80%;
-      }
-
-      &-content {
-        display: grid;
-        font-family: $secFont;
-        margin: 0 auto;
-        padding: $small 0 0;
-        text-align: center;
-        width: 80%;
       }
     }
   }

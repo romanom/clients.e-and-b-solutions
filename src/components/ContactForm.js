@@ -9,13 +9,13 @@ export default class ContactForm extends React.Component {
     this.state = {
       buttonText: "Send It",
       emailAddress: "",
-      emailSent: false,
       emailError: false,
+      emailSent: false,
+      error: {},
       isSendButtonDisabled: true,
       message: "",
       name: "",
-      phoneNumber: "",
-      error: {}
+      phoneNumber: ""
     };
   }
 
@@ -141,69 +141,75 @@ export default class ContactForm extends React.Component {
     return (
       <div className="contact_form">
         {!emailSent && !emailError && (
-          <div className="contact_form__form">
-            <div className="contact_form__input">
-              {error.name && <FormError error={error.name} />}
-              <input
-                name="name"
-                onBlur={this.handleNameValidation}
+          <React.Fragment>
+            <div className="contact_form__header">
+              <div className="contact_form__header-content">
+                We promise that your email won&apos;t disappear into the nether.
+              </div>
+              <div className="contact_form__header-content">
+                We are more than happy to answer any questions you may have.
+              </div>
+            </div>
+            <div className="contact_form__form">
+              <div className="contact_form__input">
+                {error.name && <FormError error={error.name} />}
+                <input
+                  name="name"
+                  onBlur={this.handleNameValidation}
+                  onChange={this.handleInput}
+                  placeholder="Name (Required)"
+                  type="text"
+                  value={name}
+                />
+              </div>
+              <div className="contact_form__input">
+                {error.emailAddress && <FormError error={error.emailAddress} />}
+                <input
+                  name="emailAddress"
+                  onBlur={this.handleEmailValidation}
+                  onChange={this.handleInput}
+                  placeholder="Email (Required)"
+                  type="text"
+                  value={emailAddress}
+                />
+              </div>
+              <div className="contact_form__input">
+                {error.phoneNumber && <FormError error={error.phoneNumber} />}
+                <input
+                  name="phone"
+                  onBlur={this.handlePhoneValidation}
+                  onChange={this.handlePhoneChange}
+                  placeholder="Phone (Digits only, no dashes, etc.)"
+                  type="text"
+                  value={phoneNumber}
+                />
+              </div>
+              <textarea
+                name="message"
+                rows="4"
+                placeholder="What's on your mind?"
                 onChange={this.handleInput}
-                placeholder="Name (Required)"
-                type="text"
-                value={name}
+                value={message}
               />
+              <button
+                className="contact_form__button"
+                disabled={isSendButtonDisabled}
+                onClick={this.handleSubmitContactForm}
+              >
+                {this.state.buttonText}
+              </button>
             </div>
-            <div className="contact_form__input">
-              {error.emailAddress && <FormError error={error.emailAddress} />}
-              <input
-                name="emailAddress"
-                onBlur={this.handleEmailValidation}
-                onChange={this.handleInput}
-                placeholder="Email (Required)"
-                type="text"
-                value={emailAddress}
-              />
-            </div>
-            <div className="contact_form__input">
-              {error.phoneNumber && <FormError error={error.phoneNumber} />}
-              <input
-                name="phone"
-                onBlur={this.handlePhoneValidation}
-                onChange={this.handlePhoneChange}
-                placeholder="Phone (Digits only, no dashes, etc.)"
-                type="text"
-                value={phoneNumber}
-              />
-            </div>
-            <textarea
-              name="message"
-              rows="4"
-              placeholder="What's on your mind?"
-              onChange={this.handleInput}
-              value={message}
-            />
-            <button
-              className="contact_form__button"
-              disabled={isSendButtonDisabled}
-              onClick={this.handleSubmitContactForm}
-            >
-              {this.state.buttonText}
-            </button>
-          </div>
+          </React.Fragment>
         )}
         {emailSent && (
-          <div className="audit_form__email">
-            <p>
-              Thank you for reaching out! We are excited to get back in touch
-              with you.
-            </p>
+          <div className="contact_form__email">
+            Thank you for reaching out! We are excited to get back in touch with
+            you.
           </div>
         )}
         {emailError && (
-          <div className="audit_form__email">
-            <p>
-              Something went wrong unfortunately. Please try reloading the page.
-            </p>
+          <div className="contact_form__email">
+            Something went wrong unfortunately. Please try reloading the page.
           </div>
         )}
       </div>
