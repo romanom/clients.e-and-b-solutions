@@ -7,6 +7,21 @@
     padding: 0 $small;
     width: 100%;
 
+    &__header {
+      font-family: $mainFont;
+      font-size: $medium;
+      margin: 0 auto;
+      text-align: center;
+
+      &-content {
+        display: grid;
+        font-family: $secFont;
+        margin: 0 auto;
+        padding-bottom: $small;
+        text-align: center;
+      }
+    }
+
     &__form {
       display: grid;
       grid-gap: $medium;
@@ -30,6 +45,7 @@
 
     &__email {
       font-size: $medium;
+      padding: $small 0 $medium;
       text-align: center;
     }
   }
@@ -48,6 +64,11 @@
     margin: 0 auto;
     max-width: 30vw;
     padding: 0 $medium;
+    &__email {
+      font-size: $medium;
+      padding: $medium 0 $large;
+      text-align: center;
+    }
   }
 }
 
