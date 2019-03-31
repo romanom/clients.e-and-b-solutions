@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import history from "../tools/history";
+// import history from "../tools/history";
 import projects from "../content/projects";
 
 export default class ProjectContainer extends React.Component {
@@ -9,7 +9,7 @@ export default class ProjectContainer extends React.Component {
     const project = projects[projectId];
 
     if (!project) {
-      history.push("/not_found");
+      // history.push("/not_found");
     }
   }
 

@@ -1,5 +1,11 @@
-import { createBrowserHistory } from "history";
+// import { createBrowserHistory, createMemoryHistory } from "history";
+// import { isServer } from "../../server/utilities";
 
-const history = createBrowserHistory();
+// const history = (url = "/") =>
+//   isServer
+//     ? createMemoryHistory({
+//         initialEntries: [url]
+//       })
+//     : createBrowserHistory();
 
-export default history;
+// export default history;
