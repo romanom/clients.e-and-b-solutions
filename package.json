@@ -9,6 +9,10 @@
     "start": "react-scripts start",
     "test": "react-scripts test"
   },
+  "engines": {
+    "yarn": ">=1.7.0",
+    "node": ">=10.0.0"
+  },
   "dependencies": {
     "@babel/core": "^7.4.0",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
@@ -51,7 +55,8 @@
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
-    "firebase-tools": "^6.1.1"
+    "firebase-tools": "^6.1.1",
+    "heroku": "^7.22.7"
   },
   "eslintConfig": {
     "extends": "react-app"
