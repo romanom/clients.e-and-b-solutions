@@ -1,6 +1,6 @@
 import React from "react";
-import FontAwesomeIcon from "@fortawesome/react-fontawesome";
-import { faAngleLeft, faAngleDown } from "@fortawesome/fontawesome-free-solid";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import PropTypes from "prop-types";
 
 export default class FAQWidget extends React.Component {

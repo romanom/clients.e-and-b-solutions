@@ -920,38 +920,39 @@
   resolved "https://registry.npmjs.org/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@fortawesome/fontawesome-common-types@^0.1.7":
-  version "0.1.7"
-  resolved "https://registry.npmjs.org/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.1.7.tgz#4336c4b06d0b5608ff1215464b66fcf9f4795284"
-  integrity sha512-ego8jRVSHfq/iq4KRZJKQeUAdi3ZjGNrqw4oPN3fNdvTBnLCSntwVCnc37bsAJP9UB8MhrTfPnZYxkv2vpS4pg==
+"@fortawesome/fontawesome-common-types@^0.2.17":
+  version "0.2.17"
+  resolved "https://registry.npmjs.org/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.17.tgz#d8c36e6f6f3b3415fa1f83eaffe4f41bd313715c"
+  integrity sha512-DEYsEb/iiGVoMPQGjhG2uOylLVuMzTxOxysClkabZ5n80Q3oFDWGnshCLKvOvKoeClsgmKhWVrnnqvsMI1cAbw==
 
-"@fortawesome/fontawesome-free-brands@^5.0.10":
-  version "5.0.13"
-  resolved "https://registry.npmjs.org/@fortawesome/fontawesome-free-brands/-/fontawesome-free-brands-5.0.13.tgz#4d15ff4e1e862d5e4a4df3654f8e8acbd47e9c09"
-  integrity sha512-xC/sEPpfcJPvUbud2GyscLCLQlE2DVBYaTHVwuyVGliYBdYejSEYMINU8FN5A0xhO68yCbpCfMlBv6Gqby+jww==
+"@fortawesome/fontawesome-svg-core@^1.2.17":
+  version "1.2.17"
+  resolved "https://registry.npmjs.org/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.17.tgz#8fce4402e824ebe99a04b1949d56d696eeae2e6d"
+  integrity sha512-TORMW/wIX2QyyGBd4XwHGPir4/0U18Wxf+iDBAUW3EIJ0/VC/ZMpJOiyiCe1f8g9h0PPzA7sqVtl8JtTUtm4uA==
   dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.1.7"
+    "@fortawesome/fontawesome-common-types" "^0.2.17"
 
-"@fortawesome/fontawesome-free-solid@^5.0.10":
-  version "5.0.13"
-  resolved "https://registry.npmjs.org/@fortawesome/fontawesome-free-solid/-/fontawesome-free-solid-5.0.13.tgz#24b61aaf471a9d34a5364b052d64a516285ba894"
-  integrity sha512-b+krVnqkdDt52Yfev0x0ZZgtxBQsLw00Zfa3uaVWIDzpNZVtrEXuxldUSUaN/ihgGhSNi8VpvDAdNPVgCKOSxw==
+"@fortawesome/free-brands-svg-icons@^5.8.1":
+  version "5.8.1"
+  resolved "https://registry.npmjs.org/@fortawesome/free-brands-svg-icons/-/free-brands-svg-icons-5.8.1.tgz#8f188a4699adb31e505abca64740d7046222b9a1"
+  integrity sha512-NN5Nap2D5e7Lusa5uarAUkcaO7PMbme5wmUF8kofZzPUZR753zDg/UFffi+LLE2Mi9zRXCJEYmIRfMON9SxLPg==
   dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.1.7"
+    "@fortawesome/fontawesome-common-types" "^0.2.17"
 
-"@fortawesome/fontawesome@^1.1.5":
-  version "1.1.8"
-  resolved "https://registry.npmjs.org/@fortawesome/fontawesome/-/fontawesome-1.1.8.tgz#75fe66a60f95508160bb16bd781ad7d89b280f5b"
-  integrity sha512-c0/MtkPVT0fmiFcCyYoPjkG9PkMOvfrZw2+0BaJ+Rh6UEcK1AR/LaRgrHHjUkbAbs9LXxQJhFS8CJ4uSnK2+JA==
+"@fortawesome/free-solid-svg-icons@^5.8.1":
+  version "5.8.1"
+  resolved "https://registry.npmjs.org/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-5.8.1.tgz#086c70f95b34a4bcf6f50ff1078d46e53486eb52"
+  integrity sha512-FUcxR75PtMOo3ihRHJOZz64IsWIVdWgB2vCMLJjquTv487wVVCMH5H5gWa72et2oI9lKKD2jvjQ+y+7mxhscVQ==
   dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.1.7"
+    "@fortawesome/fontawesome-common-types" "^0.2.17"
 
-"@fortawesome/react-fontawesome@^0.0.18":
-  version "0.0.18"
-  resolved "https://registry.npmjs.org/@fortawesome/react-fontawesome/-/react-fontawesome-0.0.18.tgz#4e0eb1cf9797715a67bb7705ae084fa0a410f185"
-  integrity sha512-ZSO55oWtGSZFvoJW0gvhlYndKvHqmMj/27qTrJOT4DaxQ4Fcc90h/BVEED6IktzBqEunUF8aP+bwU5Og1I0fnQ==
+"@fortawesome/react-fontawesome@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.npmjs.org/@fortawesome/react-fontawesome/-/react-fontawesome-0.1.4.tgz#18d61d9b583ca289a61aa7dccc05bd164d6bc9ad"
+  integrity sha512-GwmxQ+TK7PEdfSwvxtGnMCqrfEm0/HbRHArbUudsYiy9KzVCwndxa2KMcfyTQ8El0vROrq8gOOff09RF1oQe8g==
   dependencies:
     humps "^2.0.1"
+    prop-types "^15.5.10"
 
 "@google-cloud/common@^0.17.0":
   version "0.17.0"
@@ -1171,14 +1172,14 @@
     "@oclif/config" "^1.12.10"
     tslib "^1.9.3"
 
-"@heroku-cli/plugin-ci-v5@^7.22.7":
-  version "7.22.7"
-  resolved "https://registry.npmjs.org/@heroku-cli/plugin-ci-v5/-/plugin-ci-v5-7.22.7.tgz#829332d1d993c39c8bf145b49dd1fbd5df794e77"
-  integrity sha512-er7IlWWROZAPRAGFZIV2f0q0qjfCYbKbbWjgU6Z08H5NNaqrOTxlsqt2U5hx0mBbkR/Ha71YwRKYNvMoMADfUA==
+"@heroku-cli/plugin-ci-v5@^7.22.8":
+  version "7.22.8"
+  resolved "https://registry.npmjs.org/@heroku-cli/plugin-ci-v5/-/plugin-ci-v5-7.22.8.tgz#8b5e77c30662e3a60412189bbc2d3d66de284f08"
+  integrity sha512-ElLLf7f4H06thq4732/wnfRD7QgsCOL8kZZZBl2m/uAdoUzUbjU4mNKt6I/XI49LYWbxXYzW/EPuK2ufmOw8ZA==
   dependencies:
     "@heroku-cli/command" "^8.2.10"
     "@heroku-cli/plugin-pipelines" "^2.5.8"
-    "@heroku-cli/plugin-run-v5" "^7.22.7"
+    "@heroku-cli/plugin-run-v5" "^7.22.8"
     ansi-escapes "3.2.0"
     bluebird "^3.5.3"
     co "^4.6.0"
@@ -1191,10 +1192,10 @@
     socket.io-client "^2.2.0"
     temp "^0.8.3"
 
-"@heroku-cli/plugin-ci@^7.22.7":
-  version "7.22.7"
-  resolved "https://registry.npmjs.org/@heroku-cli/plugin-ci/-/plugin-ci-7.22.7.tgz#295cc64152edbd86356eadffa2e8c71517a786bf"
-  integrity sha512-SKxE7Y7qSu5qzoad24WycZRPSxYfmwos0I/W1RnH16BmmY/Buh6Rc1lJgBjh4geNCEZkv3ZmSALUPhFzhShxRw==
+"@heroku-cli/plugin-ci@^7.22.8":
+  version "7.22.8"
+  resolved "https://registry.npmjs.org/@heroku-cli/plugin-ci/-/plugin-ci-7.22.8.tgz#688e5fb8a9b6528fac12afddd8a454cda862e8c9"
+  integrity sha512-sQEMz04qdSyPoCbsynkxkLfntWRsEXYdzW6T90ainpN9CDdusMlmDbPBu57cGrv3UaXuHBb06GY0tGcwXyAatg==
   dependencies:
     "@heroku-cli/color" "^1.1.14"
     "@heroku-cli/command" "^8.2.10"
@@ -1354,19 +1355,19 @@
     cli-ux "^4.9.3"
     lodash "^4.17.11"
 
-"@heroku-cli/plugin-redis-v5@^7.22.5":
-  version "7.22.5"
-  resolved "https://registry.npmjs.org/@heroku-cli/plugin-redis-v5/-/plugin-redis-v5-7.22.5.tgz#f193363c498cb365d2a2e78c5e2c109ce6faf612"
-  integrity sha512-be079IPT++ytIlnltAXYoMchKB+Uif0P8+E5XGD2LHIynPp64oTQJN3+Nz+/vN7qK1INd74tjmhCkS9j594K+g==
+"@heroku-cli/plugin-redis-v5@^7.22.8":
+  version "7.22.8"
+  resolved "https://registry.npmjs.org/@heroku-cli/plugin-redis-v5/-/plugin-redis-v5-7.22.8.tgz#539273fc2df402725c5f6a312871e1ba30441347"
+  integrity sha512-eooFNK3TzNIIDhFu9BIdcZ0XFYyHd0Hig/oh4EVPdDu5jsQjsAhcmnHNZpzIleWTwn/tpvsNZIXvRibr/5N0Wg==
   dependencies:
     heroku-cli-util "^8.0.11"
     redis-parser "^3.0.0"
     ssh2 "^0.6.1"
 
-"@heroku-cli/plugin-run-v5@^7.22.7":
-  version "7.22.7"
-  resolved "https://registry.npmjs.org/@heroku-cli/plugin-run-v5/-/plugin-run-v5-7.22.7.tgz#367a33bb9ba8865d1a6a7d7f9c108bc3957b376d"
-  integrity sha512-dsinpjHIFSEckmIX7Ul4oGJR8jmQX9Ulx4OoXxDsUDcTl5bA70DsD8nqpkASIpOVuLFjuR8OuPakqvGswqip4Q==
+"@heroku-cli/plugin-run-v5@^7.22.8":
+  version "7.22.8"
+  resolved "https://registry.npmjs.org/@heroku-cli/plugin-run-v5/-/plugin-run-v5-7.22.8.tgz#a64bbb752752098a42e21297f8eb2af8e4a9c1a7"
+  integrity sha512-JuVkvbzgCLqf3yJ9peza4lCrkfrQ6yutTvfg5ZEfixs0S9iH+PiBY7vIyTbAJ68I0Cby+1Z9u6bUEZSNuAWyzw==
   dependencies:
     "@heroku-cli/color" "^1.1.14"
     "@heroku-cli/command" "^8.2.10"
@@ -5637,9 +5638,9 @@ find-up@^2.0.0, find-up@^2.1.0:
     locate-path "^2.0.0"
 
 firebase-tools@^6.1.1:
-  version "6.5.1"
-  resolved "https://registry.npmjs.org/firebase-tools/-/firebase-tools-6.5.1.tgz#6067154fa37ecdfe462eeecd5081979733e76b08"
-  integrity sha512-U6oXUy02AuydiomZHI9JOVYDMo+gB6cmauPB+X7Om1a5ElVCDhMs9CdKsyIZz0VKhhOJlpqaL1m3MciOzmDaMw==
+  version "6.5.2"
+  resolved "https://registry.npmjs.org/firebase-tools/-/firebase-tools-6.5.2.tgz#4000f73d077334d19b2a6c198a4d913f51857901"
+  integrity sha512-NLfy4Tfymp5kpRa67AIU67/xcQ8XoQuHzzB2Dh4uxT8ICEfpYy8wjSxj+z7eUPZn5tFlU0mDYHxlHRFly+wjzg==
   dependencies:
     JSONStream "^1.2.1"
     archiver "^2.1.1"
@@ -6548,9 +6549,9 @@ heroku-exec-util@0.7.3:
     uuid "3.2.1"
 
 heroku@^7.22.7:
-  version "7.22.7"
-  resolved "https://registry.npmjs.org/heroku/-/heroku-7.22.7.tgz#9382087d7e37e10afca63e98e68685856e2da23c"
-  integrity sha512-0nHW5ce8JDp23RD3zcmK5lD2Obpvtx0HDPRJ1gAovC6+I30HybSZ1tWGlUIQaO4NcVbglrFKBlmwFJLpZSPorg==
+  version "7.22.8"
+  resolved "https://registry.npmjs.org/heroku/-/heroku-7.22.8.tgz#f449f24274183916142bab3b3485f386760ef85f"
+  integrity sha512-V2zpvlikpsd/udShowTRrMelnQmiJLAX/hh2rEiaW788/8WroCzsUk2sxtYkmkDcf6dBraZWga0HeDnEIXHGgw==
   dependencies:
     "@heroku-cli/color" "1.1.14"
     "@heroku-cli/command" "^8.2.10"
@@ -6561,8 +6562,8 @@ heroku@^7.22.7:
     "@heroku-cli/plugin-buildpacks" "^7.22.7"
     "@heroku-cli/plugin-certs" "^7.22.7"
     "@heroku-cli/plugin-certs-v5" "^7.22.5"
-    "@heroku-cli/plugin-ci" "^7.22.7"
-    "@heroku-cli/plugin-ci-v5" "^7.22.7"
+    "@heroku-cli/plugin-ci" "^7.22.8"
+    "@heroku-cli/plugin-ci-v5" "^7.22.8"
     "@heroku-cli/plugin-config" "^7.22.7"
     "@heroku-cli/plugin-container-registry-v5" "^7.22.5"
     "@heroku-cli/plugin-git" "^7.22.7"
@@ -6573,8 +6574,8 @@ heroku@^7.22.7:
     "@heroku-cli/plugin-pipelines-v5" "^7.22.7"
     "@heroku-cli/plugin-ps" "^7.22.7"
     "@heroku-cli/plugin-ps-exec" "2.3.5"
-    "@heroku-cli/plugin-redis-v5" "^7.22.5"
-    "@heroku-cli/plugin-run-v5" "^7.22.7"
+    "@heroku-cli/plugin-redis-v5" "^7.22.8"
+    "@heroku-cli/plugin-run-v5" "^7.22.8"
     "@heroku-cli/plugin-spaces" "^7.22.7"
     "@heroku-cli/plugin-status" "^7.22.7"
     "@heroku-cli/plugin-webhooks-v5" "^7.22.7"
@@ -8970,9 +8971,9 @@ mime@^1.4.1:
   integrity sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==
 
 mime@^2.0.3, mime@^2.2.0, mime@^2.3.1:
-  version "2.4.0"
-  resolved "https://registry.npmjs.org/mime/-/mime-2.4.0.tgz#e051fd881358585f3279df333fe694da0bcffdd6"
-  integrity sha512-ikBcWwyqXQSHKtciCcctu9YfPbFYZ4+gbHEmE0Q8jzcTYQg5dHCr3g2wwAZjPoJfQVXZq6KXAjpXOTf5/cjT7w==
+  version "2.4.1"
+  resolved "https://registry.npmjs.org/mime/-/mime-2.4.1.tgz#19eb7357bebbda37df585b14038347721558c715"
+  integrity sha512-VRUfmQO0rCd3hKwBymAn3kxYzBHr3I/wdVMywgG3HhXOwrCQgN84ZagpdTm2tZ4TNtwsSmyJWYO88mb5XvzGqQ==
 
 mimic-fn@^1.0.0:
   version "1.2.0"
