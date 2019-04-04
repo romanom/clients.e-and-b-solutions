@@ -1,7 +1,10 @@
 import axios from "axios";
 import { validate } from "email-validator";
-import { pointOfContactEmail } from "../config";
-import { apiGatewayEmailURL, apiGatewayToken } from "../config/secrets";
+import {
+  apiEmailGatewayURL,
+  apiEmailGatewayToken,
+  pointOfContactEmail
+} from "../config";
 
 const emailProperties = {
   pointOfContactEmail,
@@ -15,7 +18,7 @@ const emailProperties = {
 const emailHeaders = {
   headers: {
     "Content-Type": "application/json",
-    "X-Api-Key": apiGatewayToken
+    "X-Api-Key": apiEmailGatewayToken
   }
 };
 
@@ -24,7 +27,7 @@ export const isEmailValid = emailAddress => validate(emailAddress);
 export const sendEmail = async (data, done, fail) => {
   const emailData = Object.assign({}, emailProperties, data);
   try {
-    await axios.post(apiGatewayEmailURL, emailData, emailHeaders);
+    await axios.post(apiEmailGatewayURL, emailData, emailHeaders);
     done();
   } catch {
     fail();

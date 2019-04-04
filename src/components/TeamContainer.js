@@ -1,6 +1,6 @@
 import React from "react";
-import FontAwesomeIcon from "@fortawesome/react-fontawesome";
-import { faLinkedinIn } from "@fortawesome/fontawesome-free-brands";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 const team_member_1 = {
   imageLocation: "/images/team_member1.jpg",

@@ -1,2 +1,5 @@
 // Email
 export const pointOfContactEmail = "aaron.sisler@eandbsolutions.com";
+export const apiEmailGatewayURL =
+  "https://wfw3brtgbc.execute-api.us-east-1.amazonaws.com/beta/email";
+export const apiEmailGatewayToken = "gVs4ABqLyE49xdzgqqNataz0BD6wwHVA5c5AWv1R";
