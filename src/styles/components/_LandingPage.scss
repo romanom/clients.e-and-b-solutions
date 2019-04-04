@@ -4,7 +4,8 @@
   .landing_page {
     &__splash {
       align-items: center;
-      background-image: url("/images/header.jpg");
+      background-image: url("/images/landing_page_mobile.jpg");
+      background-position: center;
       background-size: cover;
       display: grid;
       height: 100vh - $navMenuHeightMobile;
@@ -50,6 +51,7 @@
 @media only screen and (min-width: 64.063em) {
   .landing_page {
     &__splash {
+      background-image: url("/images/landing_page_desktop.png");
       display: grid;
       height: 75vh;
       justify-content: center;
