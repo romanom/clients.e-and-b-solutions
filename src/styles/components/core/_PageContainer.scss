@@ -2,8 +2,13 @@
 //max-width 640px, small screens
 @media only screen {
   .page_container {
+    display: flex;
     min-height: $pageContainerHeightMobile;
     width: 100%;
+    > div {
+      min-height: 100%;
+      width: 100%;
+    }
   }
 }
 
@@ -16,13 +21,7 @@
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
   .page_container {
-    display: flex;
     min-height: $pageContainerHeightDesktop;
-    width: 100%;
-    > div {
-      min-height: 100%;
-      width: 100%;
-    }
   }
 }
 
