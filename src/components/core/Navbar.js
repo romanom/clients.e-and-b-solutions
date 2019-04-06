@@ -27,7 +27,7 @@ export default class Navbar extends React.Component {
           {!this.state.isNavOpen && (
             <FontAwesomeIcon
               icon={faBars}
-              size="4x"
+              size="3x"
               className="favicon"
               onClick={this.openSideMenu}
             />
@@ -37,7 +37,7 @@ export default class Navbar extends React.Component {
           <div className="nav_menu__links-close">
             <FontAwesomeIcon
               icon={faTimes}
-              size="4x"
+              size="3x"
               className="favicon"
               onClick={this.closeSideMenu}
             />

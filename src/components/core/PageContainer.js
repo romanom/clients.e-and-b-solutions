@@ -4,9 +4,9 @@ const pageContainer = Component => {
   class PageContainer extends React.Component {
     render() {
       return (
-        <div className="page_container">
+        <main className="page_container">
           <Component {...this.props} />
-        </div>
+        </main>
       );
     }
   }

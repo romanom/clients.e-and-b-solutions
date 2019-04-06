@@ -1,13 +1,16 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-  .page_container {
+  #root {
+    background-color: rebeccapurple;
+    min-height: 100vh;
     display: flex;
-    min-height: $pageContainerHeightMobile;
-    width: 100%;
-    > div {
-      min-height: 100%;
-      width: 100%;
+    flex-flow: column;
+    main {
+      background-color: greenyellow;
+      display: flex;
+      flex: 1 1 auto;
+      flex-flow: column;
     }
   }
 }
@@ -20,9 +23,6 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
-  .page_container {
-    min-height: $pageContainerHeightDesktop;
-  }
 }
 
 //XLarge screens

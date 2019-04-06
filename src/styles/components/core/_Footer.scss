@@ -7,9 +7,9 @@
     color: white;
     font-family: $secFont;
     font-size: $medium;
-    height: $footerHeightMobile;
     display: grid;
     grid-template-columns: auto auto;
+    padding: $small;
     text-align: center;
     a {
       color: white;
@@ -29,9 +29,6 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
-  footer {
-    height: $footerHeightDesktop;
-  }
 }
 
 //XLarge screens

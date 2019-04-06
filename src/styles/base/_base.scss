@@ -8,15 +8,11 @@
 
   html {
     font-size: 62.5%;
+    height: 100%;
   }
 
   body {
-    left: 0;
-    overflow-x: hidden;
-    position: relative;
-    transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
+    height: 100%;
   }
 
   button,
@@ -58,14 +54,6 @@
 
   textarea {
     font-size: $medium;
-  }
-
-  .close_modal__span {
-    color: $closeIconGrey;
-    cursor: pointer;
-    font-family: $secFont;
-    font-size: $xxlarge;
-    font-weight: 300;
   }
 }
 

@@ -1,12 +1,12 @@
 @import "./base/settings";
 @import "./base/base";
 //Core
+@import "./components/core/AppContainer";
 @import "./components/core/Footer";
 @import "./components/core/FormError";
 @import "./components/core/Modal";
 @import "./components/core/Navbar";
 @import "./components/core/NotFoundPage";
-@import "./components/core/PageContainer";
 @import "./components/core/PrivacyPolicyPage";
 //Components
 @import "./components/AuditForm";
