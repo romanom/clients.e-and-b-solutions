@@ -21,7 +21,7 @@ export default class PricingPage extends React.Component {
 
   render() {
     return (
-      <div className="pricing">
+      <main className="pricing">
         <div className="pricing__package">
           <div className="pricing__package-header">
             <div className="pricing__package-header-title">Just Curious</div>
@@ -99,7 +99,7 @@ export default class PricingPage extends React.Component {
         >
           <AuditForm />
         </Modal>
-      </div>
+      </main>
     );
   }
 }

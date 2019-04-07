@@ -8,6 +8,7 @@
       darken($mainColor, 20) 100%
     );
     display: grid;
+    flex: 1 1 auto;
     grid-template-columns: 100%;
     grid-gap: $midlarge;
     padding: $midlarge $small;

@@ -15,9 +15,7 @@ class AppContainer extends React.Component {
       <React.Fragment>
         <ScrollToTop>
           <Navbar companyName={state.companyName} />
-          <main>
-            <AppRouter />
-          </main>
+          <AppRouter />
           <Footer />
         </ScrollToTop>
       </React.Fragment>

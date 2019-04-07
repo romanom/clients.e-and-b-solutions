@@ -9,9 +9,9 @@ export default class FAQPage extends React.Component {
 
   render() {
     return (
-      <div className="faq_page">
+      <main className="faq_page">
         <FAQContainer />
-      </div>
+      </main>
     );
   }
 }
