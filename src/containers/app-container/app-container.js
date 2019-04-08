@@ -1,8 +1,8 @@
 import React from "react";
-import ScrollToTop from "./ScrollToTop";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import AppRouter from "../../routers/AppRouter";
+import ScrollToTop from "../scroll-to-top-container";
+import Navbar from "../../components/navbar";
+import AppRouter from "../../routers/app-router";
+import Footer from "../../components/footer";
 import "./app-container.scss";
 
 const state = {

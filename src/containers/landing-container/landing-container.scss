@@ -1,10 +1,10 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-  .landing_page {
+  .landing_container {
     &__splash {
       align-items: center;
-      background-image: url("/images/landing_page_mobile.jpg");
+      background-image: url("/images/landing_container_mobile.jpg");
       background-position: center;
       background-size: cover;
       display: grid;
@@ -49,9 +49,9 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
-  .landing_page {
+  .landing_container {
     &__splash {
-      background-image: url("/images/landing_page_desktop.png");
+      background-image: url("/images/landing_container_desktop.png");
       display: grid;
       height: 75vh;
       justify-content: center;

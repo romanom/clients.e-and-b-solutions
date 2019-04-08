@@ -1,8 +1,8 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-  .contact_page {
-    background-image: url("/images/contact_page_mobile.jpg");
+  .contact_container {
+    background-image: url("/images/contact_container_mobile.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -40,8 +40,8 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
-  .contact_page {
-    background-image: url("/images/contact_page_desktop.png");
+  .contact_container {
+    background-image: url("/images/contact_container_desktop.png");
   }
 }
 

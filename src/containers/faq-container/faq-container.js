@@ -1,5 +1,5 @@
 import React from "react";
-import FAQWidget from "./FAQWidget";
+import FAQWidget from "../..components/faq-widget";
 import faqs from "../content/faqs";
 
 export default class FAQContainer extends React.Component {
