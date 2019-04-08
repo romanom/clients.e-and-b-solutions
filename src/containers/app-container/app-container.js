@@ -3,6 +3,7 @@ import ScrollToTop from "./ScrollToTop";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import AppRouter from "../../routers/AppRouter";
+import "./app-container.scss";
 
 const state = {
   // companyName: "E&B Solutions"
