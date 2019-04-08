@@ -1,24 +1,29 @@
 import React from "react";
 import services from "../../content/services";
+import "./services-container.scss";
 
 const ServicesContainer = () => (
-  <div className="services">
-    <div className="services__header">
-      <div className="services__header-title">How Can We Help</div>
-      <div className="services__header-title-secondary">
+  <div className="services_container">
+    <div className="services_container__header">
+      <div className="services_container__header-title">How Can We Help</div>
+      <div className="services_container__header-title-secondary">
         Making Technology Easy
       </div>
     </div>
-    <div className="services__content">
+    <div className="services_container__content">
       {services.map((service, index) => (
-        <div key={index} className="service">
+        <div key={index} className="services_container__content-service">
           <img
-            className="service__image"
+            className="services_container__content-service-image"
             src={service.image.imageLocation}
             alt={service.image.alt}
           />
-          <div className="service__title">{service.title}.</div>
-          <div className="service__content">{service.content}</div>
+          <div className="services_container__content-service-title">
+            {service.title}.
+          </div>
+          <div className="services_container__content-service-content">
+            {service.content}
+          </div>
         </div>
       ))}
     </div>

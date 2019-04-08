@@ -1,7 +1,9 @@
+@import "../../styles/variables.scss";
+
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-  .services {
+  .services_container {
     color: $fontGrey;
     padding: $small 0 $large;
     &__header {
@@ -27,21 +29,21 @@
       display: grid;
       grid-gap: $large;
       margin: 0 5%;
-      .service {
+      &-service {
         padding: 0 $medium;
         text-align: center;
-        &__image {
+        &-image {
           max-height: 20vh;
           object-fit: scale-down;
           width: 100%;
         }
-        &__title {
+        &-title {
           font-family: $mainFont;
           font-weight: 700;
           font-size: $midlarge;
           margin-top: $small;
         }
-        &__content {
+        &-content {
           font-size: $medium;
           margin-top: $small;
         }
@@ -58,7 +60,7 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
-  .services {
+  .services_container {
     &__content {
       grid-template-columns: 1fr 1fr 1fr;
     }

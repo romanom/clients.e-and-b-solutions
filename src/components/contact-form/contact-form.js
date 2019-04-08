@@ -1,6 +1,6 @@
 import React from "react";
-import { sendEmail, isEmailValid } from "../tools/email";
-import FormError from "./core/FormError";
+import { sendEmail, isEmailValid } from "../../tools/email";
+import FormError from "../form-error";
 
 export default class ContactForm extends React.Component {
   constructor(props) {

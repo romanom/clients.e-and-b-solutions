@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import projects from "../content/projects";
+import projects from "../../content/projects";
 
 export default class PortfolioContainer extends React.Component {
   render() {

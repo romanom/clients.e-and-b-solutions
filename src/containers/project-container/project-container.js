@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 // import history from "../tools/history";
-import projects from "../content/projects";
+import projects from "../../content/projects";
 
 export default class ProjectContainer extends React.Component {
   componentDidMount() {

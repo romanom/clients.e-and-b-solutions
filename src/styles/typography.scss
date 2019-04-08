@@ -1,0 +1,14 @@
+@import "../fonts/Ubuntu.scss";
+@import "./variables.scss";
+
+@mixin font-type($fontFamily: $mainFont, $weight: 400, $font-style: false) {
+  font-family: $fontFamily;
+
+  @if $weight {
+    font-weight: $weight;
+  }
+
+  @if $font-style {
+    font-style: $font-style;
+  }
+}

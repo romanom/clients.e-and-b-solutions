@@ -1,6 +1,6 @@
 import React from "react";
 import { handlePageView } from "../tools/analytics";
-import PortfolioContainer from "./PortfolioContainer";
+import PortfolioContainer from "../containers/portfolio-container";
 
 export default class PortfolioPage extends React.Component {
   componentDidMount() {

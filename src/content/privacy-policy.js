@@ -1,6 +1,6 @@
 import React from "react";
 /* eslint-disable max-len */
-export const privacyPolicy = {
+export default {
   companyWebsite: "eandbsolutions.com",
   policy: [
     {

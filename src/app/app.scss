@@ -1,9 +1,12 @@
+@import "../styles/variables.scss";
+@import "../styles/typography.scss";
+
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
   * {
+    @include font-type();
     box-sizing: border-box;
-    font-family: $secFont;
   }
 
   html {
@@ -23,7 +26,6 @@
     border-radius: $xxsmall;
     color: $mainColor;
     cursor: pointer;
-    font-family: $mainFont;
     font-size: $medium;
     margin: 0;
     padding: $medium $midlarge;

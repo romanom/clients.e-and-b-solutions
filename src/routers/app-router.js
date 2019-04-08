@@ -1,14 +1,16 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 
-import LandingPage from "../components/LandingPage";
-import ContactPage from "../components/ContactPage";
-import PricingPage from "../components/PricingPage";
-import ProjectPage from "../components/ProjectPage";
-import PortfolioPage from "../components/PortfolioPage";
-import PrivacyPolicyPage from "../components/core/PrivacyPolicyPage";
-import FAQPage from "../components/FAQPage";
-import NotFoundPage from "../components/core/NotFoundPage";
+import {
+  ContactPage,
+  FAQPage,
+  LandingPage,
+  NotFoundPage,
+  PortfolioPage,
+  PricingPage,
+  PrivacyPolicyPage,
+  ProjectPage
+} from "../pages";
 
 const AppRouter = () => (
   <Switch>
