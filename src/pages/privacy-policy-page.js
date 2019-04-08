@@ -1,6 +1,6 @@
 import React from "react";
 import { handlePageView } from "../../tools/analytics";
-import { privacyPolicy } from "../../content/privacyPolicy";
+import PrivacyPolicyContainer from "../containers/privacy-policy-container";
 
 export default class PrivacyPolicyPage extends React.Component {
   componentDidMount() {
@@ -10,23 +10,7 @@ export default class PrivacyPolicyPage extends React.Component {
   render() {
     return (
       <div className="privacy_policy_page">
-        <div className="privacy_policy_page__title">
-          Privacy Policy for {privacyPolicy.companyWebsite}
-        </div>
-        {privacyPolicy.policy.map((policyLine, index) => {
-          if (policyLine.isBold) {
-            return (
-              <div className="privacy_policy_page__heading" key={index}>
-                {policyLine.text}
-              </div>
-            );
-          }
-          return (
-            <div className="privacy_policy_page__content" key={index}>
-              {policyLine.text}
-            </div>
-          );
-        })}
+        <PrivacyPolicyContainer />
       </div>
     );
   }

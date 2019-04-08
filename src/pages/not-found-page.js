@@ -1,5 +1,6 @@
 import React from "react";
 import { handlePageView } from "../../tools/analytics";
+import NotFoundContainer from "../containers/not-found-container/not-found-container";
 
 export default class NotFoundPage extends React.Component {
   componentDidMount() {
@@ -9,7 +10,7 @@ export default class NotFoundPage extends React.Component {
   render() {
     return (
       <div className="not_found_page">
-        404! This is not the page you are looking for!
+        <NotFoundContainer />
       </div>
     );
   }

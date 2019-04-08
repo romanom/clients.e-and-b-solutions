@@ -1,6 +1,6 @@
 import React from "react";
 import { handlePageView } from "../tools/analytics";
-import ContactForm from "./ContactForm";
+import ContactContainer from "../containers/contact-container";
 
 export default class ContactPage extends React.Component {
   componentDidMount() {
@@ -10,31 +10,7 @@ export default class ContactPage extends React.Component {
   render() {
     return (
       <div className="contact_page">
-        <div className="contact_page__content">
-          <div className="contact_page__header">
-            <div className="contact_page__header-title">Contact Us</div>
-          </div>
-          <ContactForm />
-        </div>
-      </div>
-    );
-  }
-
-  render1() {
-    return (
-      <div className="contact_page">
-        <div className="contact_page__content">
-          <div className="contact_page__header">
-            <div className="contact_page__header-title">Contact Us</div>
-            <div className="contact_page__header-content">
-              We promise that your email won&apos;t disappear into the nether.
-            </div>
-            <div className="contact_page__header-content">
-              We are more than happy to answer any questions you may have.
-            </div>
-          </div>
-          <ContactForm />
-        </div>
+        <ContactContainer />
       </div>
     );
   }
