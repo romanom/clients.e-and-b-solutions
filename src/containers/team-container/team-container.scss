@@ -1,7 +1,10 @@
+@import "../../styles/variables.scss";
+@import "../../styles/typography.scss";
+
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-  .team {
+  .team_container {
     background-color: $lightGrey;
     padding: $large;
     text-align: center;
@@ -9,19 +12,18 @@
       color: $fontGrey;
       &-title {
         color: $darkGrey;
-        font-family: $mainFont;
         font-size: $large;
         font-weight: 700;
         &-secondary {
-          font-family: $secFont;
+          @include font-type($secFont, lighter);
           font-size: $medium;
-          font-weight: lighter;
           margin-top: $xsmall;
         }
       }
     }
     &__members {
-      display: grid;
+      display: flex;
+      justify-content: center;
       margin-top: $medium;
       &-member {
         img {
@@ -30,7 +32,6 @@
           width: 100%;
         }
         &-name {
-          font-family: $mainFont;
           font-size: $midlarge;
           margin-top: $medium;
         }
@@ -61,11 +62,6 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
-  .team {
-    &__members {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-  }
 }
 
 //XLarge screens

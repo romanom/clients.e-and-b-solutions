@@ -17,7 +17,7 @@ export default class PricingContainer extends React.Component {
 
   render() {
     return (
-      <main className="pricing_container">
+      <div className="pricing_container">
         <div className="pricing_container__package">
           <div className="pricing_container__package-header">
             <div className="pricing_container__package-header-title">
@@ -107,7 +107,7 @@ export default class PricingContainer extends React.Component {
         >
           <AuditForm />
         </Modal>
-      </main>
+      </div>
     );
   }
 }

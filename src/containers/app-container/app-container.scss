@@ -2,12 +2,12 @@
 //max-width 640px, small screens
 @media only screen {
   #root {
-    background-color: rebeccapurple;
+    // background-color: rebeccapurple;
     min-height: 100vh;
     display: flex;
     flex-flow: column;
     main {
-      background-color: greenyellow;
+      // background-color: greenyellow;
       display: flex;
       flex: 1 1 auto;
       flex-flow: column;

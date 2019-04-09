@@ -1,9 +1,10 @@
 @import "../../styles/variables.scss";
+@import "../../styles/typography.scss";
 
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-  .pricing {
+  .pricing_container {
     background: radial-gradient(
       circle,
       $secColor 0%,
@@ -20,7 +21,6 @@
       border-radius: $xxsmall;
       box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.25);
       display: grid;
-      font-family: $mainFont;
       height: fit-content;
       padding: $large;
       text-align: center;
@@ -32,15 +32,16 @@
         }
 
         &-subtitle {
+          @include font-type($secFont, bold);
+
           color: $midGrey;
-          font-family: $secFont;
           font-size: $medium;
-          font-weight: bold;
         }
 
         &-content {
+          @include font-type($secFont);
+
           color: $midGrey;
-          font-family: $secFont;
           font-size: $medium;
           margin-top: $midlarge;
         }
@@ -53,13 +54,9 @@
       }
 
       &-content {
-        font-family: $secFont;
-        font-size: $medium;
-      }
+        @include font-type($secFont);
 
-      &-button,
-      &-link {
-        margin: $medium $medium 0;
+        font-size: $medium;
       }
     }
   }
@@ -68,7 +65,7 @@
 //Medium screens - TABLET
 //min-width 641px, medium screens
 @media only screen and (min-width: 40.063em) {
-  .pricing {
+  .pricing_container {
     grid-template-columns: 1fr 1fr 1fr;
     padding: $midlarge 5%;
   }
@@ -77,13 +74,9 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
-  .pricing {
+  .pricing_container {
     grid-template-columns: 1fr 1fr 1fr;
     padding: $xlarge 10%;
-
-    &__package {
-      padding: $large;
-    }
   }
 }
 

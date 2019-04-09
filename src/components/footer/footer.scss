@@ -1,14 +1,18 @@
+@import "../../styles/variables.scss";
+@import "../../styles/typography.scss";
+
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
   footer {
+    @include font-type($secFont);
+
     align-items: center;
     background-color: $darkGrey;
     color: white;
-    font-family: $secFont;
     font-size: $medium;
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
+    justify-content: space-evenly;
     padding: $small;
     text-align: center;
     a {
@@ -16,6 +20,7 @@
       text-decoration: none;
       &:hover {
         color: $darkMainColor;
+        transition: color 0.5s ease-in;
       }
     }
   }
