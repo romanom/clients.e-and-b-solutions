@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+@import "../../styles/typography.scss";
 
 //Small screens - MOBILE
 //max-width 640px, small screens
@@ -8,6 +9,7 @@
     background-size: cover;
     background-position: center;
     display: flex;
+    flex: 1 1 auto;
     padding: $large;
 
     &__content {
@@ -16,19 +18,12 @@
       height: fit-content;
       margin: 0 auto;
       opacity: 0.95;
-    }
-
-    &__header {
-      font-family: $mainFont;
-      font-size: $medium;
-      margin: 0 auto;
-      padding: $small;
-      text-align: center;
+      padding: $medium $small;
 
       &-title {
         font-size: $large;
         font-weight: bold;
-        margin: 0 auto;
+        margin: 0 auto $medium;
       }
     }
   }
@@ -44,6 +39,9 @@
 @media only screen and (min-width: 64.063em) {
   .contact_container {
     background-image: url("/images/contact_container_desktop.png");
+    &__content {
+      padding: $large $medium;
+    }
   }
 }
 
