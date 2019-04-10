@@ -9,9 +9,9 @@ export default class ContactPage extends React.Component {
 
   render() {
     return (
-      <div className="contact_page">
+      <main className="contact_page">
         <ContactContainer />
-      </div>
+      </main>
     );
   }
 }

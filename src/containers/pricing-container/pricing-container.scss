@@ -32,17 +32,15 @@
         }
 
         &-subtitle {
-          @include font-type($secFont, bold);
+          @include font-type($secFont, $medium, bold);
 
           color: $midGrey;
-          font-size: $medium;
         }
 
         &-content {
           @include font-type($secFont);
 
           color: $midGrey;
-          font-size: $medium;
           margin-top: $midlarge;
         }
       }
@@ -55,8 +53,6 @@
 
       &-content {
         @include font-type($secFont);
-
-        font-size: $medium;
       }
     }
   }

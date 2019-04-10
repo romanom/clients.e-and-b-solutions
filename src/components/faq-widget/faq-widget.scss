@@ -1,15 +1,18 @@
+@import "../../styles/variables.scss";
+@import "../../styles/typography.scss";
+
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
   .faq {
     &__question {
+      @include font-type();
+
       align-items: center;
       background-color: $secColor;
       color: white;
       display: grid;
       justify-content: space-between;
-      font-family: $mainFont;
-      font-size: $medium;
       grid-auto-flow: column;
       padding: $small;
       &:hover {
@@ -18,10 +21,10 @@
       }
     }
     &__answer {
+      @include font-type($secFont);
+
       background-color: $lightGrey;
       color: $midGrey;
-      font-family: $secFont;
-      font-size: $medium;
       max-height: 0px;
       overflow: hidden;
       &-content {

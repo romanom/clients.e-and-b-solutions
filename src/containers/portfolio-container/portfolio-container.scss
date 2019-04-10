@@ -1,10 +1,11 @@
+@import "../../styles/variables.scss";
+
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-  .portfolio {
+  .portfolio_container {
     padding: $medium $small;
     &__title {
-      font-family: $mainFont;
       font-size: $midlarge;
       text-align: center;
     }
@@ -29,7 +30,7 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
-  .portfolio {
+  .portfolio_container {
     &__projects {
       grid-gap: $large;
       grid-template-columns: 1fr 1fr;

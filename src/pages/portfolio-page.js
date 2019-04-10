@@ -9,9 +9,9 @@ export default class PortfolioPage extends React.Component {
 
   render() {
     return (
-      <div className="portfolio_page">
+      <main className="portfolio_page">
         <PortfolioContainer />
-      </div>
+      </main>
     );
   }
 }

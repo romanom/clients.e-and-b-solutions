@@ -1,28 +1,30 @@
+@import "../../styles/variables.scss";
+@import "../../styles/typography.scss";
+
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-  .project {
+  .project_container {
     display: grid;
     text-align: center;
     padding: $medium;
     &__header {
       &-title {
-        font-family: $mainFont;
-        font-size: $midlarge;
+        @include font-type($mainFont, $midlarge);
       }
       &-client {
-        font-size: $medium;
-        font-family: $secFont;
+        @include font-type($secFont);
+
         margin-top: $xsmall;
       }
       &-date {
-        font-size: $medium;
-        font-family: $secFont;
+        @include font-type($secFont);
+
         margin-top: $xsmall;
       }
       &-info {
-        font-size: $medium;
-        font-family: $secFont;
+        @include font-type($secFont);
+
         padding: $medium $large 0;
       }
     }
@@ -46,7 +48,7 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
-  .project {
+  .project_container {
     &__content {
       display: grid;
       grid-gap: $small;

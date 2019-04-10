@@ -15,8 +15,7 @@
         font-size: $large;
         font-weight: 700;
         &-secondary {
-          @include font-type($secFont, lighter);
-          font-size: $medium;
+          @include font-type($secFont, $medium, lighter);
           margin-top: $xsmall;
         }
       }

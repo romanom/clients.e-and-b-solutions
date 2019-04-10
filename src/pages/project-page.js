@@ -9,9 +9,9 @@ export default class ProjectPage extends React.Component {
 
   render() {
     return (
-      <div className="project_page">
+      <main className="project_page">
         <ProjectContainer {...this.props} />
-      </div>
+      </main>
     );
   }
 }

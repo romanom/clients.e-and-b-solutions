@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import history from "../tools/history";
 import projects from "../../content/projects";
+import "./project-container.scss";
 
 export default class ProjectContainer extends React.Component {
   componentDidMount() {
@@ -9,7 +9,7 @@ export default class ProjectContainer extends React.Component {
     const project = projects[projectId];
 
     if (!project) {
-      // history.push("/not_found");
+      this.props.history.push("/not_found");
     }
   }
 
@@ -22,21 +22,25 @@ export default class ProjectContainer extends React.Component {
     }
 
     return (
-      <div className="project">
-        <div className="project__header">
-          <div className="project__header-title">{project.title}</div>
-          <div className="project__header-client">
+      <div className="project_container">
+        <div className="project_container__header">
+          <div className="project_container__header-title">{project.title}</div>
+          <div className="project_container__header-client">
             Client:&nbsp;{project.client}
           </div>
-          <div className="project__header-date">Date:&nbsp;{project.date}</div>
-          <div className="project__header-info">{project.information}</div>
+          <div className="project_container__header-date">
+            Date:&nbsp;{project.date}
+          </div>
+          <div className="project_container__header-info">
+            {project.information}
+          </div>
           {project.informationCont && (
-            <div className="project__header-info">
+            <div className="project_container__header-info">
               {project.informationCont}
             </div>
           )}
         </div>
-        <div className="project__content">
+        <div className="project_container__content">
           {project.images.map((image, index) => (
             <img key={index} src={image.src} alt={image.alt} />
           ))}
@@ -47,5 +51,6 @@ export default class ProjectContainer extends React.Component {
 }
 
 ProjectContainer.propTypes = {
+  history: PropTypes.object.isRequired,
   match: PropTypes.object.isRequired
 };

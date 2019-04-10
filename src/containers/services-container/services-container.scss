@@ -19,8 +19,7 @@
         margin: 0 $small;
       }
       &-title-secondary {
-        @include font-type($secFont, lighter);
-        font-size: $medium;
+        @include font-type($secFont, $medium, lighter);
         margin-top: $xsmall;
       }
     }
