@@ -1,14 +1,10 @@
-import React from 'react';
+import React from "react";
 import ReactModal from "react-modal";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
+import "./modal.scss";
 
-const Modal = ({
-  children,
-  isOpen,
-  onClose,
-  title
-}) => {
-  ReactModal.setAppElement('#root');
+const Modal = ({ children, isOpen, onClose, title }) => {
+  ReactModal.setAppElement("#root");
 
   return (
     <ReactModal
@@ -21,22 +17,19 @@ const Modal = ({
       {title && <div className="modal__title">{title}</div>}
       {children}
       <div className="modal__close">
-        <button
-          className="modal__close-button"
-          onClick={onClose}
-        >
+        <button className="modal__close-button" onClick={onClose}>
           Close
         </button>
       </div>
     </ReactModal>
   );
-}
+};
 
 Modal.propTypes = {
   children: PropTypes.node.isRequired,
   isOpen: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
-  title: PropTypes.string,
+  title: PropTypes.string
 };
 
 export default Modal;

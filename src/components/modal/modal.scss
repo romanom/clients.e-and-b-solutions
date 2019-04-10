@@ -1,3 +1,6 @@
+@import "../../styles/variables.scss";
+@import "../../styles/typography.scss";
+
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
@@ -26,8 +29,7 @@
     }
 
     &__title {
-      font-family: $mainFont;
-      font-size: $midlarge;
+      @include font-type($mainFont, $midlarge);
       margin: $medium 0;
     }
 
