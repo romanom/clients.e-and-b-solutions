@@ -1,11 +1,12 @@
 @import "../../styles/variables.scss";
+@import "../../styles/typography.scss";
 
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
   .not_found_container {
-    font-family: $mainFont;
-    font-size: $large;
+    @include font-type($mainFont, $large);
+
     padding: $large;
     text-align: center;
   }
