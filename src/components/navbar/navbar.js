@@ -33,16 +33,16 @@ export default class Navbar extends React.Component {
               onClick={this.openSideMenu}
             />
           )}
-        </div>
-        <div className={`nav_menu__links ${isNavOpenClass}`}>
-          <div className="nav_menu__links-close">
+          {this.state.isNavOpen && (
             <FontAwesomeIcon
               icon={faTimes}
               size="3x"
               className="favicon"
               onClick={this.closeSideMenu}
             />
-          </div>
+          )}
+        </div>
+        <div className={`nav_menu__links ${isNavOpenClass}`}>
           <Link
             to="/"
             className="nav_menu__links-link"

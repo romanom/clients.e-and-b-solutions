@@ -30,9 +30,10 @@
     &__links {
       background-color: $darkMainColor;
       height: 100%;
+      padding-top: $large;
       position: fixed;
       right: -$navMenuWidth;
-      top: 0;
+      top: 72px;
       transition: right 0.3s ease;
       width: $navMenuWidth;
       &.nav_menu__links-open {
@@ -87,6 +88,7 @@
       background-color: inherit;
       display: flex;
       height: inherit;
+      padding: 0;
       position: inherit;
       right: inherit;
       top: inherit;
