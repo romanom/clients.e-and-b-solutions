@@ -6,8 +6,7 @@ import Footer from "../../components/footer";
 import "./app-container.scss";
 
 const state = {
-  // companyName: "E&B Solutions"
-  companyName: "Taco Mans"
+  companyName: "E&B Solutions"
 };
 
 class AppContainer extends React.Component {
