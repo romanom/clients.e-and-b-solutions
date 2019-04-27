@@ -1,0 +1,63 @@
+@import "../../styles/variables.scss";
+@import "../../styles/typography.scss";
+
+//Small screens - MOBILE
+//max-width 640px, small screens
+@media only screen {
+  .faq {
+    &__question {
+      @include font-type();
+
+      align-items: center;
+      background-color: $secColor;
+      color: white;
+      display: grid;
+      justify-content: space-between;
+      grid-auto-flow: column;
+      padding: $small;
+      &:hover {
+        background-color: $mainColor;
+        transition: background-color 0.5s ease-in-out;
+      }
+    }
+    &__answer {
+      @include font-type($secFont);
+
+      background-color: $lightGrey;
+      color: $midGrey;
+      max-height: 0px;
+      overflow: hidden;
+      &-content {
+        padding: $medium;
+      }
+      &.expanded {
+        max-height: 100vh;
+        transition: max-height 1s ease-in-out;
+      }
+    }
+  }
+}
+
+//Medium screens - TABLET
+//min-width 641px, medium screens
+@media only screen and (min-width: 40.063em) {
+}
+
+//Large screens - DESKTOP
+//min-width 1025px, large screens
+@media only screen and (min-width: 64.063em) {
+  .faq {
+    margin: 0 auto;
+    width: 50%;
+  }
+}
+
+//XLarge screens
+//min-width 1441px, xlarge screens
+@media only screen and (min-width: 90.063em) {
+}
+
+//XXLarge screens
+//min-width 1921px, xlarge screens
+@media only screen and (min-width: 120.063em) {
+}
