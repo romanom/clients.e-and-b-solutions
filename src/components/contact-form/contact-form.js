@@ -1,5 +1,5 @@
 import React from "react";
-import { sendEmail, isEmailValid } from "../../tools/email";
+import { sendEmail, sendCalc, isEmailValid } from "../../tools/email";
 import FormError from "../form-error";
 import "./contact-form.scss";
 
@@ -19,6 +19,12 @@ export default class ContactForm extends React.Component {
       phoneNumber: ""
     };
   }
+
+  handleSubmitCalc = () => {
+    const done = () => console.log("Done");
+    const fail = () => console.log("Failed");
+    sendCalc({}, done, fail);
+  };
 
   handleSubmitContactForm = () => {
     this.setState({ buttonText: "Sending", isSendButtonDisabled: true });
@@ -198,6 +204,12 @@ export default class ContactForm extends React.Component {
                 onClick={this.handleSubmitContactForm}
               >
                 {this.state.buttonText}
+              </button>
+              <button
+                className="contact_form__button"
+                onClick={this.handleSubmitCalc}
+              >
+                Send the calc!
               </button>
             </div>
           </React.Fragment>

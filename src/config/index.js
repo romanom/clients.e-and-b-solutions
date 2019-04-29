@@ -1,7 +1,15 @@
 import {
   apiEmailGatewayURL,
   apiEmailGatewayToken,
-  pointOfContactEmail
+  pointOfContactEmail,
+  calcGatewayURL,
+  calcGatewayToken
 } from "./config";
 
-export { apiEmailGatewayURL, apiEmailGatewayToken, pointOfContactEmail };
+export {
+  apiEmailGatewayURL,
+  apiEmailGatewayToken,
+  pointOfContactEmail,
+  calcGatewayURL,
+  calcGatewayToken
+};
