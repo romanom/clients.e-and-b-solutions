@@ -35,6 +35,13 @@ export default class ContactForm extends React.Component {
     sendEmail(data, done, fail);
   };
 
+  handleSubmit = () => {
+    console.log("Working magic");
+    const done = () => console.log("Done");
+    const fail = () => console.log("Done");
+    sendEmail({}, done, fail);
+  };
+
   handleEmailValidation = e => {
     const { value: inputValue } = e.target;
 
@@ -196,6 +203,12 @@ export default class ContactForm extends React.Component {
                 className="contact_form__button"
                 disabled={isSendButtonDisabled}
                 onClick={this.handleSubmitContactForm}
+              >
+                {this.state.buttonText}
+              </button>
+              <button
+                className="contact_form__button"
+                onClick={this.handleSubmit}
               >
                 {this.state.buttonText}
               </button>
