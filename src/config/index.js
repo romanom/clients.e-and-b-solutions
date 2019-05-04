@@ -1,7 +1,7 @@
 import {
-  apiEmailGatewayURL,
-  apiEmailGatewayToken,
-  pointOfContactEmail
+  pointOfContactEmail,
+  servicesApiGatewayURL,
+  servicesApiGatewayToken
 } from "./config";
 
-export { apiEmailGatewayURL, apiEmailGatewayToken, pointOfContactEmail };
+export { pointOfContactEmail, servicesApiGatewayURL, servicesApiGatewayToken };

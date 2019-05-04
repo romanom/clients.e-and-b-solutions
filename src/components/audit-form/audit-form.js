@@ -26,8 +26,8 @@ export default class AuditForm extends React.Component {
 
     const data = {
       website,
-      emailAddress: email,
-      message
+      message,
+      emailAddress: email
     };
     const done = () => this.setState({ emailSent: true });
     const fail = () => this.setState({ emailError: true });
