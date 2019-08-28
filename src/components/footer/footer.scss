@@ -4,7 +4,7 @@
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-  footer {
+  .footer {
     @include font-type();
 
     align-items: center;
@@ -14,7 +14,7 @@
     justify-content: space-evenly;
     padding: $small;
     text-align: center;
-    a {
+    &__link {
       color: white;
       text-decoration: none;
       &:hover {

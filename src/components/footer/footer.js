@@ -4,11 +4,13 @@ import Link from "next/link";
 import "./footer.scss";
 
 const Footer = () => (
-  <footer>
-    <div>Copyright &copy; {new Date().getFullYear()}</div>
-    <div>
+  <footer className="footer">
+    <div className="footer__copyright">
+      Copyright &copy; {new Date().getFullYear()}
+    </div>
+    <div className="footer__links">
       <Link href="/privacy-policy">
-        <div className="navbar__link">Privacy Policy</div>
+        <a className="footer__link">Privacy Policy</a>
       </Link>
     </div>
   </footer>

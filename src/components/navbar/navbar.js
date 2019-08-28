@@ -23,7 +23,10 @@ class Navbar extends React.Component {
     return (
       <nav className="navbar">
         <div className="navbar__brand">
-          <Link href="/">E&amp;B Solutions</Link>
+          {/* <Link href="/">E&amp;B Solutions</Link> */}
+          <Link href="/">
+            <a>Taco Stand</a>
+          </Link>
         </div>
         <div className="navbar__toggle">
           {!this.state.isNavOpen && (
@@ -44,45 +47,35 @@ class Navbar extends React.Component {
           )}
         </div>
         <div className={`navbar__links ${isNavOpenClass}`}>
-          <Link href="/" className="navbar_link" onClick={this.closeSideMenu}>
-            Home
+          <Link href="/">
+            <a className="navbar_link" onClick={this.closeSideMenu}>
+              Home
+            </a>
           </Link>
-          <Link
-            href="/pricing"
-            className="navbar_link"
-            onClick={this.closeSideMenu}
-          >
-            Pricing
+          <Link href="/pricing">
+            <a className="navbar_link" onClick={this.closeSideMenu}>
+              Pricing
+            </a>
           </Link>
-          <Link
-            href="/portfolio"
-            className="navbar_link"
-            onClick={this.closeSideMenu}
-          >
-            Portfolio
+          <Link href="/portfolio">
+            <a className="navbar_link" onClick={this.closeSideMenu}>
+              Portfolio
+            </a>
           </Link>
-          <Link
-            href="/faq"
-            className="navbar_link"
-            onClick={this.closeSideMenu}
-          >
-            FAQ
+          <Link href="/faq">
+            <a className="navbar_link" onClick={this.closeSideMenu}>
+              FAQ
+            </a>
           </Link>
-          <Link
-            href="/contact"
-            className="navbar_link"
-            onClick={this.closeSideMenu}
-          >
-            Contact
+          <Link href="/contact">
+            <a className="navbar_link" onClick={this.closeSideMenu}>
+              Contact
+            </a>
           </Link>
         </div>
       </nav>
     );
   }
 }
-
-Navbar.propTypes = {
-  companyName: PropTypes.string.isRequired
-};
 
 export default Navbar;
