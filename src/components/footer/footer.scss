@@ -5,7 +5,7 @@
 //max-width 640px, small screens
 @media only screen {
   footer {
-    @include font-type($secFont);
+    @include font-type();
 
     align-items: center;
     background-color: $darkGrey;

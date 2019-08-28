@@ -38,19 +38,18 @@
       transition: right 0.3s ease;
       width: $navMenuWidth;
       &.nav_menu__links-open {
-        right: 0px;
+        right: 0;
       }
     }
-      &__link {
-        color: white;
-        display: block;
-        font-size: $medium;
-        padding: $small;
-        text-align: center;
-        text-decoration: none;
-        text-transform: uppercase;
-      }
-      
+    &__link {
+      color: white;
+      display: block;
+      font-size: $medium;
+      padding: $small;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
   }
 }
 
@@ -88,7 +87,6 @@
       &-close {
         display: none;
       }
-      
     }
     &__link {
       &:hover {
