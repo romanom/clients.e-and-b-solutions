@@ -1,8 +1,9 @@
 import React from "react";
+import PrivacyPolicy from "../components/privacy-policy";
 
 const PrivacyPolicyPage = () => (
   <main>
-    <h2>This is the Privacy Policy Page</h2>
+    <PrivacyPolicy />
   </main>
 );
 

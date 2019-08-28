@@ -29,7 +29,7 @@
       }
     }
     &__links {
-      background-color: $darkMainColor;
+      background-color: $mainColor;
       height: 100%;
       padding-top: $large;
       position: fixed;
@@ -37,7 +37,7 @@
       top: 72px;
       transition: right 0.3s ease;
       width: $navMenuWidth;
-      &.nav_menu__links-open {
+      &.navbar__links--open {
         right: 0;
       }
     }
@@ -65,8 +65,8 @@
     &__brand {
       a {
         &:hover {
-          color: $mainColor;
-          transition: color 0.5s ease-in;
+          color: $lightenMainColor;
+          transition: color 0.25s ease-in;
         }
       }
     }
@@ -90,8 +90,8 @@
     }
     &__link {
       &:hover {
-        color: $mainColor;
-        transition: color 0.5s ease-in;
+        color: $lightenMainColor;
+        transition: color 0.25s ease-in;
       }
     }
   }

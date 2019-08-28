@@ -1,6 +1,7 @@
 // Colors
-$mainColor: #06c;
-$darkMainColor: darken($mainColor, 10);
+$mainColor: #004d99;
+$darkenMainColor: darken($mainColor, 10);
+$lightenMainColor: lighten($mainColor, 10);
 $secColor: rgba(31, 130, 227, 0.8);
 $superLightGrey: #f8f8f8;
 $lightGrey: #f3f3f3;

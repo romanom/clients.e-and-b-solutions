@@ -19,14 +19,16 @@ class Navbar extends React.Component {
   closeSideMenu = () => this.setState({ isNavOpen: false });
 
   render() {
-    const isNavOpenClass = this.state.isNavOpen ? "navbar__links-open" : "";
+    const isNavOpenClass = this.state.isNavOpen ? "navbar__links--open" : "";
     return (
       <nav className="navbar">
         <div className="navbar__brand">
-          {/* <Link href="/">E&amp;B Solutions</Link> */}
           <Link href="/">
-            <a>Taco Stand</a>
+            <a>E&amp;B Solutions</a>
           </Link>
+          {/* <Link href="/">
+            <a>Taco Stand</a>
+          </Link> */}
         </div>
         <div className="navbar__toggle">
           {!this.state.isNavOpen && (
@@ -48,27 +50,27 @@ class Navbar extends React.Component {
         </div>
         <div className={`navbar__links ${isNavOpenClass}`}>
           <Link href="/">
-            <a className="navbar_link" onClick={this.closeSideMenu}>
+            <a className="navbar__link" onClick={this.closeSideMenu}>
               Home
             </a>
           </Link>
           <Link href="/pricing">
-            <a className="navbar_link" onClick={this.closeSideMenu}>
+            <a className="navbar__link" onClick={this.closeSideMenu}>
               Pricing
             </a>
           </Link>
           <Link href="/portfolio">
-            <a className="navbar_link" onClick={this.closeSideMenu}>
+            <a className="navbar__link" onClick={this.closeSideMenu}>
               Portfolio
             </a>
           </Link>
           <Link href="/faq">
-            <a className="navbar_link" onClick={this.closeSideMenu}>
+            <a className="navbar__link" onClick={this.closeSideMenu}>
               FAQ
             </a>
           </Link>
           <Link href="/contact">
-            <a className="navbar_link" onClick={this.closeSideMenu}>
+            <a className="navbar__link" onClick={this.closeSideMenu}>
               Contact
             </a>
           </Link>

@@ -18,7 +18,7 @@ const sassConfig = {
 };
 
 const imagesConfig = {
-  test: /\.(ico)$/,
+  test: /\.(ico|jpg|png|svg)$/,
   use: {
     loader: "file-loader",
     options: {
