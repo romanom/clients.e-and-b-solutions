@@ -1,10 +1,9 @@
 @import "../../styles/variables.scss";
-@import "../../styles/typography.scss";
 
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-  .navbar {
+  .nav_menu {
     align-items: center;
     background-color: $darkGrey;
     display: flex;
@@ -40,8 +39,13 @@
       &.nav_menu__links-open {
         right: 0px;
       }
-    }
-      &__link {
+      &-close {
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: $small;
+      }
+      &-link {
         color: white;
         display: block;
         font-size: $medium;
@@ -50,19 +54,24 @@
         text-decoration: none;
         text-transform: uppercase;
       }
-      
+      &-contact {
+        border-radius: $xxsmall;
+        border: 1px solid white;
+        margin: $small $large;
+      }
+    }
   }
 }
 
 //Medium screens - TABLET
 //min-width 641px, medium screens
-@media only screen and (min-width: $mediumScreen) {
+@media only screen and (min-width: 40.063em) {
 }
 
 //Large screens - DESKTOP
 //min-width 1025px, large screens
-@media only screen and (min-width: $largeScreen) {
-  .navbar {
+@media only screen and (min-width: 64.063em) {
+  .nav_menu {
     &__brand {
       a {
         &:hover {
@@ -88,12 +97,21 @@
       &-close {
         display: none;
       }
-      
-    }
-    &__link {
-      &:hover {
-        color: $mainColor;
-        transition: color 0.5s ease-in;
+      &-link {
+        &:hover {
+          color: $mainColor;
+          transition: color 0.5s ease-in;
+        }
+      }
+      &-contact {
+        margin: 0;
+        margin-left: $small;
+        &:hover {
+          background-color: white;
+          color: $mainColor;
+          font-weight: bolder;
+          transition: background-color 0.5s ease-in, color 0.5s ease-in;
+        }
       }
     }
   }
@@ -101,10 +119,10 @@
 
 //XLarge screens
 //min-width 1441px, xlarge screens
-@media only screen and (min-width: $xLargeScreen) {
+@media only screen and (min-width: 90.063em) {
 }
 
 //XXLarge screens
 //min-width 1921px, xlarge screens
-@media only screen and (min-width: $xxLargeScreen) {
+@media only screen and (min-width: 120.063em) {
 }

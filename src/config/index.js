@@ -1,7 +1,5 @@
-import {
-  pointOfContactEmail,
-  servicesApiGatewayURL,
-  servicesApiGatewayToken
-} from "./config";
+import { pointOfContactEmail, servicesApiGatewayURL } from "./config";
+
+import { servicesApiGatewayToken } from "./secrets";
 
 export { pointOfContactEmail, servicesApiGatewayURL, servicesApiGatewayToken };

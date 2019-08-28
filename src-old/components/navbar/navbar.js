@@ -1,12 +1,11 @@
 import React from "react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-
 import "./navbar.scss";
 
-class Navbar extends React.Component {
+export default class Navbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,13 +18,13 @@ class Navbar extends React.Component {
   closeSideMenu = () => this.setState({ isNavOpen: false });
 
   render() {
-    const isNavOpenClass = this.state.isNavOpen ? "navbar__links-open" : "";
+    const isNavOpenClass = this.state.isNavOpen ? "nav_menu__links-open" : "";
     return (
-      <nav className="navbar">
-        <div className="navbar__brand">
+      <nav className="nav_menu">
+        <div className="nav_menu__brand">
           <Link to="/">{this.props.companyName}</Link>
         </div>
-        <div className="navbar__toggle">
+        <div className="nav_menu__toggle">
           {!this.state.isNavOpen && (
             <FontAwesomeIcon
               icon={faBars}
@@ -43,30 +42,38 @@ class Navbar extends React.Component {
             />
           )}
         </div>
-        <div className={`navbar__links ${isNavOpenClass}`}>
-          <Link to="/" className="navbar_link" onClick={this.closeSideMenu}>
+        <div className={`nav_menu__links ${isNavOpenClass}`}>
+          <Link
+            to="/"
+            className="nav_menu__links-link"
+            onClick={this.closeSideMenu}
+          >
             Home
           </Link>
           <Link
             to="/pricing"
-            className="navbar_link"
+            className="nav_menu__links-link"
             onClick={this.closeSideMenu}
           >
             Pricing
           </Link>
           <Link
             to="/portfolio"
-            className="navbar_link"
+            className="nav_menu__links-link"
             onClick={this.closeSideMenu}
           >
             Portfolio
           </Link>
-          <Link to="/faq" className="navbar_link" onClick={this.closeSideMenu}>
+          <Link
+            to="/faq"
+            className="nav_menu__links-link"
+            onClick={this.closeSideMenu}
+          >
             FAQ
           </Link>
           <Link
             to="/contact"
-            className="navbar_link"
+            className="nav_menu__links-link nav_menu__links-contact"
             onClick={this.closeSideMenu}
           >
             Contact
@@ -80,5 +87,3 @@ class Navbar extends React.Component {
 Navbar.propTypes = {
   companyName: PropTypes.string.isRequired
 };
-
-export default Navbar;

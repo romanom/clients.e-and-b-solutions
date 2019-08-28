@@ -1,0 +1,50 @@
+@import-normalize;
+
+@import "./variables.scss";
+@import "./fonts.scss";
+@import "./typography.scss";
+
+//Small screens - MOBILE
+//max-width 640px, small screens
+@media only screen {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    font-size: 62.5%;
+    height: 100%;
+  }
+  body {
+    @include font-type();
+
+    height: 100%;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    font-weight: 400;
+    padding: 0;
+  }
+}
+
+//Medium screens - TABLET
+@media only screen and (min-width: $mediumScreen) {
+}
+
+//Large screens - DESKTOP
+@media only screen and (min-width: $largeScreen) {
+}
+
+//XLarge screens
+@media only screen and (min-width: $xLargeScreen) {
+}
+
+//XXLarge screens
+@media only screen and (min-width: $xxLargeScreen) {
+}
