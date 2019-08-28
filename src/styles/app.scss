@@ -17,19 +17,19 @@
     height: 100%;
   }
   body {
-    @include font-type();
+    #__next {
+      @include font-type();
 
-    height: 100%;
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 0;
-    font-weight: 400;
-    padding: 0;
+      display: flex;
+      flex-flow: column;
+      min-height: 100vh;
+      main {
+        display: flex;
+        flex-flow: column;
+        flex: 1 1 auto;
+        min-height: 200px;
+      }
+    }
   }
 }
 
