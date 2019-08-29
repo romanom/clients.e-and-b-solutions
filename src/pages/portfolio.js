@@ -1,8 +1,9 @@
 import React from "react";
+import Portfolio from "../components/portfolio";
 
 const PortfolioPage = () => (
   <main>
-    <h1>Portfolio Page</h1>
+    <Portfolio />
   </main>
 );
 

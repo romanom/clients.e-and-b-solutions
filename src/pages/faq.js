@@ -1,8 +1,9 @@
 import React from "react";
+import FAQContainer from "../containers/faq-container";
 
 const FAQPage = () => (
   <main>
-    <h1>FAQ Page</h1>
+    <FAQContainer />
   </main>
 );
 

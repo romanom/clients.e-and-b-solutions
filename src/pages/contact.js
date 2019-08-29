@@ -1,8 +1,9 @@
 import React from "react";
+import ContactContainer from "../containers/contact-container";
 
 const ContactPage = () => (
   <main>
-    <h1>Contact Page</h1>
+    <ContactContainer />
   </main>
 );
 

@@ -1,16 +1,20 @@
 import React from "react";
+import ProjectContainer from "../containers/project-container";
 
 class ProjectPage extends React.Component {
   static getInitialProps({ query }) {
-    return { query };
+    const { projectId } = query;
+
+    return { projectId };
   }
 
   render() {
-    const { query } = this.props;
+    const { projectId } = this.props;
+
     return (
       <main>
-        <h2>This is the Project Page</h2>
-        <h5>Query: {query.projectId}</h5>
+        <h5>ProjectId: {projectId}</h5>
+        <ProjectContainer />
       </main>
     );
   }

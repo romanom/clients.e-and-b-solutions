@@ -1,10 +1,10 @@
 import React from "react";
+import Error from "../components/error";
 
 const Error = () => {
   return (
     <main>
-      <h2>This is the Error/Not Found Page</h2>
-      <h5>Rut roh....</h5>
+      <Error />
     </main>
   );
 };

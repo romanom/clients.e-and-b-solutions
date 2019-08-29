@@ -1,8 +1,9 @@
 import React from "react";
+import Pricing from "../components/pricing";
 
 const PricingPage = () => (
   <main>
-    <h1>Pricing Page</h1>
+    <Pricing />
   </main>
 );
 
