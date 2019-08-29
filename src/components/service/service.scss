@@ -3,23 +3,23 @@
 
 //Small screens - MOBILE
 @media only screen {
-  .services {
-    color: $fontGrey;
-    padding: $small 0 $large;
-    &__header {
-      margin: $large auto;
-      text-align: center;
-      &-title {
-        @include font-type($mainFont, $large, bold);
+  .service {
+    padding: 0 $medium;
+    text-align: center;
+    &__image {
+      max-height: 20vh;
+      object-fit: scale-down;
+      width: 100%;
+    }
+    &__title {
+      @include font-type($mainFont, $midlarge, bold);
 
-        color: $darkGrey;
-        margin: 0 $small;
-      }
+      font-size: $midlarge;
+      margin-top: $small;
     }
     &__content {
-      display: grid;
-      grid-gap: $large;
-      margin: 0 5%;
+      font-size: $medium;
+      margin-top: $small;
     }
   }
 }
@@ -30,11 +30,6 @@
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
-  .services {
-    &__content {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-  }
 }
 
 //XLarge screens
