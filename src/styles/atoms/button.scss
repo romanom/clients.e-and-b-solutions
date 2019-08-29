@@ -1,0 +1,41 @@
+@import "../variables.scss";
+@import "../typography.scss";
+
+//Small screens - MOBILE
+@media only screen {
+  button {
+    @include font-type($mainFont, $medium);
+
+    background-color: $mainColor;
+    border-radius: $xsmall;
+    color: white;
+    cursor: pointer;
+    padding: $small $midlarge;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+      background-color: $darkenMainColor;
+      background-color: $lightenMainColor;
+      transition: background-color 0.5s ease-in-out;
+    }
+  }
+}
+
+//Medium screens - TABLET
+@media only screen and (min-width: $mediumScreen) {
+}
+
+//Large screens - DESKTOP
+@media only screen and (min-width: $largeScreen) {
+  button {
+    @include font-type($mainFont, $midlarge);
+  }
+}
+
+//XLarge screens
+@media only screen and (min-width: $xLargeScreen) {
+}
+
+//XXLarge screens
+@media only screen and (min-width: $xxLargeScreen) {
+}

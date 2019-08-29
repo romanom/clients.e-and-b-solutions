@@ -3,11 +3,10 @@
 
 //Small screens - MOBILE
 @media only screen {
-  textarea {
-    border: $border;
-    border-radius: 5px;
-    font-size: $medium;
-    padding: $small $xsmall;
+  .form-error {
+    @include font-type($mainFont, $medium);
+
+    color: lighten(darkred, 15);
   }
 }
 

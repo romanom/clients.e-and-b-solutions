@@ -63,13 +63,10 @@
         font-size: $xxlarge;
         padding-top: 35vh;
       }
-      &-link {
-        a {
-          border-radius: $xsmall;
-          font-size: $large;
-          padding: $medium $large;
-        }
-      }
+    }
+    &__link {
+      font-size: $large;
+      padding: $medium $large;
     }
   }
 }
