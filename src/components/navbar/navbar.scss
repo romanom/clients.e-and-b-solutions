@@ -8,6 +8,7 @@
     align-items: center;
     background-color: $darkGrey;
     display: flex;
+    height: $navMenuHeight;
     justify-content: space-between;
     left: 0;
     padding: $small;
@@ -34,7 +35,7 @@
       padding-top: $large;
       position: fixed;
       right: -$navMenuWidth;
-      top: 72px;
+      top: $navMenuHeight;
       transition: right 0.3s ease;
       width: $navMenuWidth;
       &.navbar__links--open {
