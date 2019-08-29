@@ -3,22 +3,29 @@
 
 //Small screens - MOBILE
 @media only screen {
-  .team {
-    background-color: $lightGrey;
-    padding: $large;
-    text-align: center;
-    &__header {
-      color: $fontGrey;
-      &-title {
-        @include font-type($mainFont, $large, bold);
-
-        color: $darkGrey;
-      }
+  .team-member {
+    &__image {
+      max-height: 30vh;
+      object-fit: scale-down;
+      width: 100%;
     }
-    &__members {
-      display: flex;
-      justify-content: center;
-      margin-top: $medium;
+    &__name {
+      @include font-type($mainFont, $midlarge);
+
+      margin-top: $small;
+    }
+    &__title {
+      @include font-type($secFont, $medium);
+
+      margin-bottom: $xsmall;
+    }
+    &__link {
+      cursor: pointer;
+      color: $darkGrey;
+      text-decoration: none;
+      &:hover {
+        color: $mainColor;
+      }
     }
   }
 }
