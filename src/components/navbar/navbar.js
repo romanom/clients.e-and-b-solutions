@@ -23,12 +23,12 @@ class Navbar extends React.Component {
     return (
       <nav className="navbar">
         <div className="navbar__brand">
-          <Link href="/">
-            <a>E&amp;B Solutions</a>
-          </Link>
           {/* <Link href="/">
-            <a>Taco Stand</a>
+            <a>E&amp;B Solutions</a>
           </Link> */}
+          <Link href="/">
+            <a>Taco Stand</a>
+          </Link>
         </div>
         <div className="navbar__toggle">
           {!this.state.isNavOpen && (
