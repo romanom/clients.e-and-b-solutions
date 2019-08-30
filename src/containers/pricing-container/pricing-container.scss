@@ -1,0 +1,73 @@
+@import "../../styles/variables.scss";
+@import "../../styles/typography.scss";
+
+//Small screens - MOBILE
+@media only screen {
+  .pricing-container {
+    background:
+      radial-gradient(
+        circle,
+        $secColor 0%,
+        darken($mainColor, 20) 100%
+      );
+    display: grid;
+    flex: 1 1 auto;
+    grid-template-columns: 100%;
+    grid-gap: $midlarge;
+    padding: $midlarge $small;
+    &__package {
+      background: white;
+      border: 1px solid #bbb;
+      border-radius: $xxsmall;
+      display: grid;
+      filter: $dropShadow;
+      height: fit-content;
+      padding: $large;
+      text-align: center;
+      &-header {
+        &-title {
+          @include font-type($mainFont, $midlarge, bold);
+        }
+        &-subtitle {
+          @include font-type($secFont, $medium, bold);
+
+          color: $midGrey;
+        }
+        &-content {
+          @include font-type($secFont);
+
+          color: $midGrey;
+          margin-top: $midlarge;
+        }
+      }
+      &-cost {
+        @include font-type($mainFont, $large, bold);
+
+        margin: $midlarge 0 $small;
+      }
+      &-content {
+        @include font-type($secFont);
+      }
+    }
+  }
+}
+
+//Medium screens - TABLET
+@media only screen and (min-width: $mediumScreen) {
+}
+
+//Large screens - DESKTOP
+@media only screen and (min-width: $largeScreen) {
+  .pricing-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: $midlarge 5%;
+  }
+}
+
+//XLarge screens
+@media only screen and (min-width: $xLargeScreen) {
+}
+
+//XXLarge screens
+@media only screen and (min-width: $xxLargeScreen) {
+}

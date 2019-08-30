@@ -1,9 +1,9 @@
 import React from "react";
-import Pricing from "../components/pricing";
+import PricingContainer from "../containers/pricing-container";
 
 const PricingPage = () => (
   <main>
-    <Pricing />
+    <PricingContainer />
   </main>
 );
 
