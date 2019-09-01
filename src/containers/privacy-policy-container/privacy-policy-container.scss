@@ -2,42 +2,37 @@
 @import "../../styles/typography.scss";
 
 //Small screens - MOBILE
-//max-width 640px, small screens
 @media only screen {
-  .privacy-policy {
+  .privacy-policy-container {
     padding: $medium;
     &__title {
       @include font-type($mainFont, $midlarge, bold);
 
       margin-bottom: $medium;
     }
-    &__heading {
+    &__policy-heading {
       @include font-type($secFont, $medium);
 
       margin: $medium 0 $xsmall;
     }
-    &__text {
+    &__policy-text {
       line-height: $lineHeight;
     }
   }
 }
 
 //Medium screens - TABLET
-//min-width 641px, medium screens
-@media only screen and (min-width: 40.063em) {
+@media only screen and (min-width: $mediumScreen) {
 }
 
 //Large screens - DESKTOP
-//min-width 1025px, large screens
-@media only screen and (min-width: 64.063em) {
+@media only screen and (min-width: $largeScreen) {
 }
 
 //XLarge screens
-//min-width 1441px, xlarge screens
-@media only screen and (min-width: 90.063em) {
+@media only screen and (min-width: $xLargeScreen) {
 }
 
 //XXLarge screens
-//min-width 1921px, xlarge screens
-@media only screen and (min-width: 120.063em) {
+@media only screen and (min-width: $xxLargeScreen) {
 }

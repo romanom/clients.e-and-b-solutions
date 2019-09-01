@@ -1,9 +1,9 @@
 import React from "react";
-import Portfolio from "../components/portfolio";
+import PortfolioContainer from "../coontainers/portfolio";
 
 const PortfolioPage = () => (
   <main>
-    <Portfolio />
+    <PortfolioContainer />
   </main>
 );
 
