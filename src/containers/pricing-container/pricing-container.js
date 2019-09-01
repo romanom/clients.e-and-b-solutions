@@ -22,14 +22,11 @@ class PricingContainer extends React.Component {
         <div className="pricing-container__package">
           <div className="pricing-container__package-header">
             <div className="pricing-container__package-header-title">
-              Just Curious
-            </div>
-            <div className="pricing-container__package-header-subtitle">
               Get To Know Us
             </div>
             <div className="pricing-container__package-header-content">
-              We will inspect your current site to check for weak spots and show
-              how we can help at no cost to you.
+              We will review your current site to show how we can help at no
+              cost to you.
             </div>
           </div>
           <div className="pricing-container__package-cost">Free</div>
@@ -50,9 +47,6 @@ class PricingContainer extends React.Component {
             <div className="pricing-container__package-header-title">
               Simple Yet Effective
             </div>
-            <div className="pricing-container__package-header-subtitle">
-              Website
-            </div>
             <div className="pricing-container__package-header-content">
               We will build you a custom website from scratch and host it ($100
               value) for the first year for free.
@@ -67,7 +61,7 @@ class PricingContainer extends React.Component {
             </p>
           </div>
           <Link href="/contact">
-            <a className="pricing-container__package-link">
+            <a className="pricing-container__package-link link">
               Start Your New Site
             </a>
           </Link>
@@ -75,14 +69,11 @@ class PricingContainer extends React.Component {
         <div className="pricing-container__package">
           <div className="pricing-container__package-header">
             <div className="pricing-container__package-header-title">
-              All The Things
-            </div>
-            <div className="pricing-container__package-header-subtitle">
               E-Commerce Site
             </div>
             <div className="pricing-container__package-header-content">
               Let us create a place where your customers can browse and purchase
-              from you all in one location.
+              from you in one location.
             </div>
           </div>
           <div className="pricing-container__package-cost">$500</div>
@@ -94,7 +85,7 @@ class PricingContainer extends React.Component {
             </p>
           </div>
           <Link href="/contact">
-            <a className="pricing-container__package-link">
+            <a className="pricing-container__package-link link">
               Build your app today
             </a>
           </Link>

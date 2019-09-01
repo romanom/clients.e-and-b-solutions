@@ -6,7 +6,7 @@ import "./contact-container.scss";
 const ContactContainer = () => (
   <div className="contact-container">
     <div className="contact-container__form">
-      <div className="contact-container__title">Send us a message</div>
+      <div className="contact-container__title">Have some questions?</div>
       <ContactForm />
     </div>
   </div>

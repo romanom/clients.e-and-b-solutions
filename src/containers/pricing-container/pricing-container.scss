@@ -17,36 +17,32 @@
     padding: $midlarge $small;
     &__package {
       background: white;
-      border: 1px solid #bbb;
       border-radius: $xxsmall;
       display: grid;
-      filter: $dropShadow;
       height: fit-content;
       padding: $large;
       text-align: center;
       &-header {
         &-title {
           @include font-type($mainFont, $midlarge, bold);
-        }
-        &-subtitle {
-          @include font-type($secFont, $medium, bold);
 
-          color: $midGrey;
+          margin-bottom: $midlarge;
         }
         &-content {
-          @include font-type($secFont);
+          @include font-type($mainFont);
 
           color: $midGrey;
-          margin-top: $midlarge;
         }
       }
       &-cost {
         @include font-type($mainFont, $large, bold);
 
-        margin: $midlarge 0 $small;
+        margin: $midlarge 0;
       }
       &-content {
-        @include font-type($secFont);
+        @include font-type($mainFont);
+
+        margin-bottom: $midlarge;
       }
     }
   }
@@ -54,13 +50,17 @@
 
 //Medium screens - TABLET
 @media only screen and (min-width: $mediumScreen) {
+  .pricing-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: $midlarge 5%;
+  }
 }
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
   .pricing-container {
     grid-template-columns: 1fr 1fr 1fr;
-    padding: $midlarge 5%;
+    padding: $xlarge 10%;
   }
 }
 
