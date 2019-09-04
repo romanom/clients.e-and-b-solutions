@@ -19,7 +19,6 @@
       background: white;
       border-radius: $xxsmall;
       display: grid;
-      height: fit-content;
       padding: $large;
       text-align: center;
       &-header {
@@ -51,8 +50,7 @@
 //Medium screens - TABLET
 @media only screen and (min-width: $mediumScreen) {
   .pricing-container {
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: $midlarge 5%;
+    padding: $midlarge 20%;
   }
 }
 

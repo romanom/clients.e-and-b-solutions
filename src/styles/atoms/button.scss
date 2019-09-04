@@ -6,11 +6,15 @@
   button {
     @include font-type($mainFont, $medium);
 
+    align-items: center;
     background-color: $mainColor;
     border-radius: $xsmall;
     color: white;
     cursor: pointer;
+    display: grid;
+    min-height: $xlarge;
     padding: $small $midlarge;
+    text-align: center;
     text-decoration: none;
     text-transform: uppercase;
     &:hover {
@@ -33,9 +37,6 @@
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
-  button {
-    @include font-type($mainFont, $midlarge);
-  }
 }
 
 //XLarge screens

@@ -1,9 +1,12 @@
 @import "../../styles/variables.scss";
+@import "../../styles/typography.scss";
 
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-  .audit_form {
+  .audit-form {
+    @include font-type();
+
     padding: 0 $small;
     width: 100%;
     &__form {
@@ -11,22 +14,23 @@
       grid-gap: $medium;
       grid-template-columns: 100%;
       justify-content: center;
-      margin: 0 auto;
       width: 100%;
-    }
-    &__input {
-      display: grid;
-      font-size: $medium;
-      margin: 0 auto;
-      width: 100%;
-    }
-    &__button {
-      font-size: $medium;
-      padding: $small;
+      &-input {
+        display: grid;
+        font-size: $medium;
+        margin: 0 auto;
+        width: 100%;
+      }
     }
     &__email {
-      font-size: $medium;
+      @include font-type($mainFont, $medium);
+
+      padding-bottom: $small;
       text-align: center;
+      &--error {
+        border-bottom: $border;
+        margin-bottom: $small;
+      }
     }
   }
 }
@@ -39,9 +43,9 @@
 //Large screens - DESKTOP
 //min-width 1025px, large screens
 @media only screen and (min-width: 64.063em) {
-  .audit_form {
+  .audit-form {
     display: grid;
-    max-width: 25vw;
+    width: 30vw;
     padding: 0 $medium;
   }
 }

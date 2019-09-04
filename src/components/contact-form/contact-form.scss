@@ -32,9 +32,6 @@
         width: 100%;
       }
     }
-    &__button {
-      padding: $small;
-    }
     &__email {
       @include font-type($mainFont, $midlarge);
 

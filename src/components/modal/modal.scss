@@ -6,11 +6,11 @@
 @media only screen {
   .modal {
     background-color: white;
-    display: block;
+    display: grid;
     margin: $small;
+    justify-items: center;
     max-height: 100vh;
     overflow-y: auto;
-    text-align: center;
     width: 100%;
     &__overlay {
       align-items: center;
@@ -30,11 +30,15 @@
       @include font-type($mainFont, $midlarge);
 
       margin: $medium 0;
+      text-align: center;
     }
     &__close {
       border-top: 1px solid $midGrey;
-      margin: $large 5% 0;
+      display: grid;
+      justify-content: center;
+      margin-top: $small;
       padding: $medium 0;
+      width: 90%;
     }
   }
 }
@@ -52,7 +56,7 @@
     margin: $medium;
     width: auto;
     &__title {
-      margin: $large $medium;
+      margin: $large $medium $small;
     }
   }
 }

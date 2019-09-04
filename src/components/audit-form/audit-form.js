@@ -1,6 +1,7 @@
 import React from "react";
 import { sendEmail, isEmailValid } from "../../utils/email";
 import FormError from "../../atoms/form-error";
+import Input from "../../atoms/input";
 
 import "./audit-form.scss";
 
@@ -10,13 +11,13 @@ class AuditForm extends React.Component {
 
     this.state = {
       buttonText: "Send It",
-      email: "",
+      email: "a@s.com",
       emailSent: false,
       emailError: false,
       error: {},
-      isSendButtonDisabled: true,
+      isSendButtonDisabled: false,
       message: "",
-      website: ""
+      website: "a"
     };
   }
 
@@ -31,7 +32,12 @@ class AuditForm extends React.Component {
       emailAddress: email
     };
     const done = () => this.setState({ emailSent: true });
-    const fail = () => this.setState({ emailError: true });
+    const fail = () =>
+      this.setState({
+        emailError: true,
+        isSendButtonDisabled: false,
+        buttonText: "Send It"
+      });
 
     sendEmail(data, done, fail);
   };
@@ -114,32 +120,40 @@ class AuditForm extends React.Component {
 
     return (
       <div className="audit-form">
-        {!emailSent && !emailError && (
+        {emailSent && (
+          <div className="audit-form__email">
+            Thank you for reaching out! We are excited to get back in touch with
+            you.
+          </div>
+        )}
+        {emailError && (
+          <div className="audit-form__email  audit-form__email--error">
+            Something went wrong unfortunately. Please try again.
+          </div>
+        )}
+        {!emailSent && (
           <div className="audit-form__form">
-            <div className="audit-form__input">
+            <div className="audit-form__form-input">
               {error.website && <FormError error={error.website} />}
-              <input
+              <Input
+                label="Website (Required)"
                 name="website"
                 onBlur={this.handleWebsiteValidation}
                 onChange={this.handleInput}
-                placeholder="Website URL (Required)"
-                type="text"
                 value={website}
               />
             </div>
-            <div className="audit-form__input">
+            <div className="audit-form__form-input">
               {error.email && <FormError error={error.email} />}
-              <input
+              <Input
+                label="Email (Required)"
                 name="email"
                 onBlur={this.handleEmailValidation}
                 onChange={this.handleInput}
-                placeholder="Email (Required)"
-                type="text"
                 value={email}
               />
             </div>
             <textarea
-              className="audit-form__input"
               name="message"
               onChange={this.handleInput}
               placeholder="What's on your mind?"
@@ -153,21 +167,6 @@ class AuditForm extends React.Component {
             >
               {this.state.buttonText}
             </button>
-          </div>
-        )}
-        {emailSent && (
-          <div className="audit-form__email">
-            <p>
-              Thank you for reaching out! We are excited to get back in touch
-              with you.
-            </p>
-          </div>
-        )}
-        {emailError && (
-          <div className="audit-form__email">
-            <p>
-              Something went wrong unfortunately. Please try reloading the page.
-            </p>
           </div>
         )}
       </div>

@@ -9,7 +9,7 @@ class PricingContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isModalOpen: false
+      isModalOpen: true
     };
   }
 
@@ -31,7 +31,7 @@ class PricingContainer extends React.Component {
           </div>
           <div className="pricing-container__package-cost">Free</div>
           <div className="pricing-container__package-content">
-            <p>List of site issues</p>
+            <p>List of site concerns</p>
             <p>Report of all findings</p>
             <p>Recommendations for site fixes</p>
           </div>
@@ -48,14 +48,14 @@ class PricingContainer extends React.Component {
               Simple Yet Effective
             </div>
             <div className="pricing-container__package-header-content">
-              We will build you a custom website from scratch and host it ($100
-              value) for the first year for free.
+              We will build you a custom website and host it ($100 value) for
+              the first year for free.
             </div>
           </div>
           <div className="pricing-container__package-cost">$250</div>
           <div className="pricing-container__package-content">
             <p>Up to 5 pages</p>
-            <p>Support and maintenance costs included</p>
+            <p>Support and maintenance costs</p>
             <p>
               Hosting for the first year <strong>FREE</strong>
             </p>
@@ -73,13 +73,13 @@ class PricingContainer extends React.Component {
             </div>
             <div className="pricing-container__package-header-content">
               Let us create a place where your customers can browse and purchase
-              from you in one location.
+              from you with ease.
             </div>
           </div>
           <div className="pricing-container__package-cost">$500</div>
           <div className="pricing-container__package-content">
             <p>Shopping Cart and Payments</p>
-            <p>Support and maintenance costs included</p>
+            <p>Support and maintenance costs</p>
             <p>
               Hosting for the first year <strong>FREE</strong>
             </p>
