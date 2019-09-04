@@ -11,13 +11,13 @@ class AuditForm extends React.Component {
 
     this.state = {
       buttonText: "Send It",
-      email: "a@s.com",
+      email: "",
       emailSent: false,
       emailError: false,
       error: {},
       isSendButtonDisabled: false,
       message: "",
-      website: "a"
+      website: ""
     };
   }
 
