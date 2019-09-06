@@ -3,6 +3,23 @@
 
 //Small screens - MOBILE
 @media only screen {
+  .portfolio-container {
+    display: grid;
+    grid-gap: $small;
+    padding: $small;
+    &__project {
+      align-self: center;
+      cursor: pointer;
+      display: flex;
+      filter: $dropShadow;
+      justify-content: center;
+      &-thumbnail {
+        height: 100%;
+        object-fit: scale-down;
+        width: 100%;
+      }
+    }
+  }
 }
 
 //Medium screens - TABLET
@@ -11,6 +28,23 @@
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
+  .portfolio-container {
+    column-count: 2;
+    display: inline-block;
+    grid-gap: $large;
+    line-height: 0;
+    padding: $large;
+    &__project {
+      break-inside: avoid;
+      display: block;
+      margin-bottom: $large;
+      &-thumbail {
+        height: auto;
+        object-fit: fill;
+        width: 100%;
+      }
+    }
+  }
 }
 
 //XLarge screens
