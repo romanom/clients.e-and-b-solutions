@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import { imagesFolderPath } from "../config";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -17,7 +18,7 @@ class MyDocument extends Document {
           <link
             rel="icon"
             type="image/x-icon"
-            href="/_next/static/images/favicon.ico"
+            href={`${imagesFolderPath}/favicon.ico`}
           />
         </Head>
         <body>

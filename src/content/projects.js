@@ -1,7 +1,9 @@
+import { imagesFolderPath } from "../config";
+
 /* eslint-disable max-len */
 const projects = [
   {
-    clickableImage: "/images/project4_mini.jpg",
+    clickableImage: `${imagesFolderPath}/project4_mini.jpg`,
     client: "E&B Solutions",
     date: "May 2018",
     images: [

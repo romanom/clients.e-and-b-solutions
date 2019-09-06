@@ -1,5 +1,14 @@
-import { pointOfContactEmail, servicesApiGatewayURL } from "./config";
+import {
+  imagesFolderPath,
+  pointOfContactEmail,
+  servicesApiGatewayURL
+} from "./config";
 
 import { servicesApiGatewayToken } from "./secrets";
 
-export { pointOfContactEmail, servicesApiGatewayURL, servicesApiGatewayToken };
+export {
+  imagesFolderPath,
+  pointOfContactEmail,
+  servicesApiGatewayURL,
+  servicesApiGatewayToken
+};

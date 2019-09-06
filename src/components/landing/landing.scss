@@ -7,7 +7,7 @@
   .landing {
     &__splash {
       align-items: center;
-      background-image: url("/_next/static/images/landing_mobile.jpg");
+      background-image: url($imagesFolderPath+"/landing_mobile.jpg");
       background-position: center;
       background-size: cover;
       display: grid;
@@ -54,7 +54,7 @@
 @media only screen and (min-width: $largeScreen) {
   .landing {
     &__splash {
-      background-image: url("/_next/static/images/landing_desktop.jpg");
+      background-image: url($imagesFolderPath+"/landing_desktop.jpg");
       display: grid;
       height: 75vh;
       justify-content: center;
