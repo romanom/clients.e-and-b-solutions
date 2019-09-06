@@ -27,21 +27,6 @@
         margin: 0 auto;
       }
     }
-    &__link {
-      background-color: $mainColor;
-      border-radius: $xsmall;
-      color: white;
-      font-size: $midlarge;
-      font-weight: bolder;
-      padding: $small $midlarge;
-      text-decoration: none;
-      text-transform: uppercase;
-      &:hover {
-        background-color: $darkenMainColor;
-        background-color: $lightenMainColor;
-        transition: background-color 0.5s ease-in-out;
-      }
-    }
   }
 }
 
@@ -63,10 +48,12 @@
         font-size: $xxlarge;
         padding-top: 35vh;
       }
-    }
-    &__link {
-      font-size: $large;
-      padding: $medium $large;
+      &-link {
+        a {
+          font-size: $large;
+          padding: $medium $large;
+        }
+      }
     }
   }
 }

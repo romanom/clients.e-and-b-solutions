@@ -20,7 +20,7 @@
       cursor: pointer;
     }
     &__brand {
-      a {
+      &-link {
         color: white;
         font-size: $midlarge;
         font-weight: bold;
@@ -64,7 +64,7 @@
 @media only screen and (min-width: $largeScreen) {
   .navbar {
     &__brand {
-      a {
+      &-link {
         &:hover {
           color: $lightenMainColor;
           transition: color 0.25s ease-in;

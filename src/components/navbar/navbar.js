@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import Link from "../../atoms/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
@@ -22,12 +22,12 @@ class Navbar extends React.Component {
     return (
       <nav className="navbar">
         <div className="navbar__brand">
-          {/* <Link href="/">
-            <a>E&amp;B Solutions</a>
-          </Link> */}
-          <Link href="/">
-            <a>Taco Stand</a>
-          </Link>
+          {/* <Link
+            className="navbar__brand-link"
+            href="/"
+            children="E&amp;B Solutions"
+          /> */}
+          <Link className="navbar__brand-link" href="/" children="Taco Stand" />
         </div>
         <div className="navbar__toggle">
           {!this.state.isNavOpen && (
@@ -48,31 +48,36 @@ class Navbar extends React.Component {
           )}
         </div>
         <div className={`navbar__links ${isNavOpenClass}`}>
-          <Link href="/">
-            <a className="navbar__link" onClick={this.closeSideMenu}>
-              Home
-            </a>
-          </Link>
-          <Link href="/pricing">
-            <a className="navbar__link" onClick={this.closeSideMenu}>
-              Pricing
-            </a>
-          </Link>
-          <Link href="/portfolio">
-            <a className="navbar__link" onClick={this.closeSideMenu}>
-              Portfolio
-            </a>
-          </Link>
-          <Link href="/faq">
-            <a className="navbar__link" onClick={this.closeSideMenu}>
-              FAQ
-            </a>
-          </Link>
-          <Link href="/contact">
-            <a className="navbar__link" onClick={this.closeSideMenu}>
-              Contact
-            </a>
-          </Link>
+          <Link
+            className="navbar__link"
+            href="/"
+            onClick={this.closeSideMenu}
+            children="Home"
+          />
+          <Link
+            className="navbar__link"
+            href="/pricing"
+            onClick={this.closeSideMenu}
+            children="Pricing"
+          />
+          <Link
+            className="navbar__link"
+            href="/portfolio"
+            onClick={this.closeSideMenu}
+            children="Portfolio"
+          />
+          <Link
+            className="navbar__link"
+            href="/faq"
+            onClick={this.closeSideMenu}
+            children="FAQ"
+          />
+          <Link
+            className="navbar__link"
+            href="/contact"
+            onClick={this.closeSideMenu}
+            children="Contact"
+          />
         </div>
       </nav>
     );

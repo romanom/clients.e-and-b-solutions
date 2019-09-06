@@ -24,20 +24,19 @@
 
 //Medium screens - TABLET
 @media only screen and (min-width: $mediumScreen) {
+  .portfolio-container {
+    grid-gap: $medium;
+    padding: $small 10%;
+  }
 }
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
   .portfolio-container {
-    column-count: 2;
-    display: inline-block;
-    grid-gap: $large;
-    line-height: 0;
-    padding: $large;
+    grid-template-columns: 1fr 1fr;
+    padding: $medium;
     &__project {
-      break-inside: avoid;
-      display: block;
-      margin-bottom: $large;
+      background-color: greenyellow;
       &-thumbail {
         height: auto;
         object-fit: fill;
