@@ -17,7 +17,7 @@ exports.replaceNamesInFiles = (nameDirectory, lowerName, upperName) => {
   try {
     replace.sync(upperOptions);
     replace.sync(lowerOptions);
-    console.log("Files have been replaced");
+    console.log("File variables have been replaced");
   } catch (error) {
     console.error("Error occurred:", error);
   }
