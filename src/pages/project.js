@@ -13,8 +13,7 @@ class ProjectPage extends React.Component {
 
     return (
       <main>
-        <h5>ProjectId: {projectId}</h5>
-        <ProjectContainer />
+        <ProjectContainer projectId={projectId} />
       </main>
     );
   }

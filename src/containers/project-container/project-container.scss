@@ -3,6 +3,10 @@
 
 //Small screens - MOBILE
 @media only screen {
+  .project-container {
+    display: grid;
+    grid-template-areas: "project-images" "project-details";
+  }
 }
 
 //Medium screens - TABLET
@@ -11,6 +15,11 @@
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
+  .project-container {
+    grid-template-areas: "project-details project-images";
+    grid-template-columns: 1fr 1fr;
+    padding: 0 10%;
+  }
 }
 
 //XLarge screens

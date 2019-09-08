@@ -36,7 +36,7 @@ module.exports = withSass({
     config.module.rules.push(sassConfig);
     config.module.rules.push(imagesConfig);
     config.plugins.push(
-      new CopyWebpackPlugin([{ from: "static/images/**.*" }])
+      new CopyWebpackPlugin([{ from: "static/images/**/*" }])
     );
 
     return config;
