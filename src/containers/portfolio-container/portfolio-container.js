@@ -9,8 +9,8 @@ const PortfolioContainer = () => (
     {projects.map(project => (
       <Link
         className="portfolio-container__project"
-        key={project.key}
-        href={`/project?projectId=${project.key}`}
+        key={project.projectId}
+        href={`/project?projectId=${project.projectId}`}
       >
         <img
           alt={project.thumbnail.alt}

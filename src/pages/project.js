@@ -12,9 +12,7 @@ class ProjectPage extends React.Component {
     const { projectId } = this.props;
 
     return (
-      <main>
-        <ProjectContainer projectId={projectId} />
-      </main>
+      <main>{projectId && <ProjectContainer projectId={projectId} />}</main>
     );
   }
 }
