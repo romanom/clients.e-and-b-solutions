@@ -36,8 +36,17 @@
     grid-template-columns: 1fr 1fr;
     padding: $medium;
     &__project {
-      background-color: greenyellow;
-      &-thumbail {
+      overflow: hidden;
+      transition: transform 0.4s ease;
+      &:hover {
+        &:nth-child(odd) {
+          transform: scale(0.9) rotate(-5deg);
+        }
+        &:nth-child(even) {
+          transform: scale(0.9) rotate(5deg);
+        }
+      }
+      &-thumbnail {
         height: auto;
         object-fit: fill;
         width: 100%;
