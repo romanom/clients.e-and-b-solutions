@@ -4,6 +4,7 @@ import {
   CarouselProvider,
   Slider,
   Slide,
+  DotGroup,
   Image,
   ButtonBack,
   ButtonNext
@@ -28,14 +29,14 @@ class Carousel extends React.Component {
     const { images } = this.props;
     return (
       <CarouselProvider
-        naturalSlideWidth={100}
-        naturalSlideHeight={125}
-        totalSlides={images.length}
-        isPlaying={isPlaying}
-        interval={4000}
         className="carousel"
+        interval={4000}
+        isPlaying={isPlaying}
+        naturalSlideHeight={50}
+        naturalSlideWidth={100}
+        totalSlides={images.length}
       >
-        <Slider>
+        <Slider className="carousel__slider">
           {images.map(({ alt, key, src }) => (
             <Slide key={key} index={key} className="carousel__slide">
               <Image
@@ -47,6 +48,9 @@ class Carousel extends React.Component {
             </Slide>
           ))}
         </Slider>
+        <div className="carousel__dots">
+          <DotGroup />
+        </div>
         <div className="carousel__buttons">
           <ButtonBack
             className="carousel__button"
