@@ -3,10 +3,14 @@ import { imagesFolderPath } from "../config";
 const projects = [
   {
     projectId: "4",
-    client: "E&B Solutions",
-    date: "May 2018",
-    details: "Deeets",
-    features: "Features",
+    details: {
+      client: "E&B Solutions",
+      date: "May 2018",
+      design: "Design",
+      features: ["Feature 1", "Feature 2"],
+      overview: "overview",
+      type: "Website Innovation"
+    },
     images: [
       {
         key: "img1",
@@ -19,7 +23,6 @@ const projects = [
         alt: "Screenshot 2"
       }
     ],
-    projectType: "Website Innovation",
     thumbnail: {
       alt: "E&B Solutions",
       src: `${imagesFolderPath}/projects/project4/thumbnail.jpg`
@@ -27,10 +30,14 @@ const projects = [
   },
   {
     projectId: "3",
-    client: "Valley Love Farm",
-    date: "March 2018",
-    details: "Deeets",
-    features: "Features",
+    details: {
+      client: "Valley Love Farm",
+      date: "March 2018",
+      design: "Design",
+      features: ["Feature 1", "Feature 2"],
+      overview: "overview",
+      type: "Website Implementation"
+    },
     images: [
       {
         key: "img1",
@@ -43,7 +50,6 @@ const projects = [
         alt: "Screenshot 2"
       }
     ],
-    projectType: "Website Implementation",
     thumbnail: {
       alt: "Valley Love Farm",
       src: `${imagesFolderPath}/projects/project3/thumbnail.jpg`
@@ -51,10 +57,14 @@ const projects = [
   },
   {
     projectId: "2",
-    client: "Valley Love Organic",
-    date: "September 2016",
-    details: "Deeets",
-    features: "Features",
+    details: {
+      client: "Valley Love Organic",
+      date: "September 2016",
+      design: "Design",
+      features: ["Feature 1", "Feature 2"],
+      overview: "overview",
+      type: "Website Enhancement"
+    },
     images: [
       {
         key: "img1",
@@ -77,7 +87,6 @@ const projects = [
         alt: "Screenshot 4"
       }
     ],
-    projectType: "Website Enhancement",
     thumbnail: {
       alt: "Valley Love Organic",
       src: `${imagesFolderPath}/projects/project2/thumbnail.jpg`
@@ -85,10 +94,14 @@ const projects = [
   },
   {
     projectId: "1",
-    client: "E&B Solutions",
-    date: "July 2016",
-    details: "Deeets",
-    features: "Features",
+    details: {
+      client: "E&B Solutions",
+      date: "July 2016",
+      design: "Design",
+      features: ["Feature 1", "Feature 2"],
+      overview: "overview",
+      type: "Website Implementation"
+    },
     images: [
       {
         key: "img1",
@@ -101,7 +114,6 @@ const projects = [
         alt: "Screenshot 2"
       }
     ],
-    projectType: "Website Implementation",
     thumbnail: {
       alt: "E&B Solutions",
       src: `${imagesFolderPath}/projects/project1/thumbnail.jpg`

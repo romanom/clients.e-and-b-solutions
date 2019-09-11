@@ -5,7 +5,9 @@
 @media only screen {
   .project-container {
     display: grid;
+    grid-gap: $small;
     grid-template-areas: "project-images" "project-details";
+    padding: $small;
   }
 }
 
@@ -16,6 +18,8 @@
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
   .project-container {
+    align-content: center;
+    flex: 1 1 auto;
     grid-template-areas: "project-details project-images";
     grid-template-columns: 1fr 1fr;
     padding: 0 10%;

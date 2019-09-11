@@ -11,18 +11,12 @@ const ProjectContainer = ({ projectId }) => {
 
   if (!project) return <div />;
 
-  const { client, date, details, features, images, projectType } = project;
+  const { details, images } = project;
 
   return (
     <div className="project-container">
-      <h1>{client}</h1>
       <ProjectImages images={images} />
-      <ProjectDetails
-        date={date}
-        details={details}
-        features={features}
-        projectType={projectType}
-      />
+      <ProjectDetails {...details} />
     </div>
   );
 };
