@@ -7,6 +7,50 @@
     display: grid;
     grid-area: project-details;
     width: 100%;
+    &__header {
+      margin-bottom: $medium;
+    }
+    &__client {
+      // @include font-type($mainFont, $midlarge, bold);
+      @include font-type($mainFont, $large, bold);
+
+      line-height: 1.25;
+    }
+    &__date {
+      @include font-type($mainFont, $medium);
+    }
+    &__overview {
+      margin-bottom: $small;
+      &-title {
+        @include font-type($secFont, $medium);
+      }
+      &-content {
+        @include font-type($mainFont, $medium);
+      }
+    }
+    &__design {
+      margin-bottom: $small;
+      &-title {
+        @include font-type($secFont, $medium);
+      }
+      &-content {
+        @include font-type($mainFont, $medium);
+      }
+    }
+    &__features {
+      margin-bottom: $xsmall;
+      &-title {
+        @include font-type($secFont, $medium);
+
+        margin-bottom: $xxsmall;
+      }
+      &-list {
+        @include font-type($mainFont, $medium);
+        &-item {
+          margin-left: 5%;
+        }
+      }
+    }
   }
 }
 
