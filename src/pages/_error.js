@@ -1,10 +1,10 @@
 import React from "react";
-import Error from "../components/error";
+import ErrorContainer from "../containers/error-container";
 
 const ErrorPage = () => {
   return (
     <main>
-      <Error />
+      <ErrorContainer />
     </main>
   );
 };

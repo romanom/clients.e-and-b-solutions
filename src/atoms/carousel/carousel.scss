@@ -1,19 +1,16 @@
 @import "../../styles/variables.scss";
-@import "../../styles/typography.scss";
+@import "../../styles/mixins.scss";
 
 //Small screens - MOBILE
 @media only screen {
   .carousel {
-    // height: 50vh;
     background-color: greenyellow;
     &__slider {
-      margin-bottom: $small;
       background-color: blue;
     }
     &__slide {
       &-image {
-        // height: 35vh;
-        height: auto;
+        height: 100%;
         object-fit: scale-down;
         width: 100%;
         background-color: red;
@@ -23,16 +20,22 @@
       }
     }
     &__dots {
+      display: flex;
+      justify-content: center;
       button {
         display: inline-block;
       }
-
-      display: flex;
-      justify-content: space-around;
     }
     &__buttons {
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
+    }
+    &__button {
+      background-color: aqua;
+      &:hover {
+      }
+      &:disabled {
+      }
     }
   }
 }

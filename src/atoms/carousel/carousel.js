@@ -32,7 +32,7 @@ class Carousel extends React.Component {
         className="carousel"
         interval={4000}
         isPlaying={isPlaying}
-        naturalSlideHeight={50}
+        naturalSlideHeight={75}
         naturalSlideWidth={100}
         totalSlides={images.length}
       >
@@ -48,9 +48,7 @@ class Carousel extends React.Component {
             </Slide>
           ))}
         </Slider>
-        <div className="carousel__dots">
-          <DotGroup />
-        </div>
+        <DotGroup className="carousel__dots" />
         <div className="carousel__buttons">
           <ButtonBack
             className="carousel__button"
