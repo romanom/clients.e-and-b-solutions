@@ -13,21 +13,28 @@
 
 //Medium screens - TABLET
 @media only screen and (min-width: $mediumScreen) {
+  .project-container {
+    align-content: center;
+    flex: 1 1 auto;
+    grid-gap: $medium;
+    grid-template-areas: "project-details project-images";
+    grid-template-columns: 1fr 1fr;
+    padding: 0 5%;
+  }
 }
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
   .project-container {
-    align-content: center;
-    flex: 1 1 auto;
-    grid-template-areas: "project-details project-images";
-    grid-template-columns: 1fr 1fr;
-    padding: 0 10%;
+    grid-gap: $xxlarge;
   }
 }
 
 //XLarge screens
 @media only screen and (min-width: $xLargeScreen) {
+  .project-container {
+    padding: 0 10%;
+  }
 }
 
 //XXLarge screens
