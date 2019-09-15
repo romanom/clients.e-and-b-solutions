@@ -205,6 +205,7 @@ class ContactForm extends React.Component {
                 />
               </div>
               <textarea
+                className="contact-form__form-message"
                 name="message"
                 onChange={this.handleInput}
                 placeholder="What's on your mind?"
@@ -212,7 +213,7 @@ class ContactForm extends React.Component {
                 value={message}
               />
               <button
-                className="contact-form__button"
+                className="contact-form__form-button"
                 disabled={isSendButtonDisabled}
                 onClick={this.handleSubmitContactForm}
               >

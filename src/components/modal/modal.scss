@@ -39,6 +39,9 @@
       margin-top: $small;
       padding: $medium 0;
       width: 90%;
+      &-button {
+        @include button();
+      }
     }
   }
 }

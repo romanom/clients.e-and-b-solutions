@@ -31,6 +31,12 @@
         margin: 0 auto;
         width: 100%;
       }
+      &-message {
+        @include textarea();
+      }
+      &-button {
+        @include button();
+      }
     }
     &__email {
       @include font-type($mainFont, $midlarge);

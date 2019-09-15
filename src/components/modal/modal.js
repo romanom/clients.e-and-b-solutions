@@ -19,7 +19,9 @@ const Modal = ({ appElement, children, isOpen, onClose, title }) => {
       {title && <div className="modal__title">{title}</div>}
       {children}
       <div className="modal__close">
-        <button onClick={onClose}>Close</button>
+        <button className="modal__close-button" onClick={onClose}>
+          Close
+        </button>
       </div>
     </ReactModal>
   );

@@ -154,6 +154,7 @@ class AuditForm extends React.Component {
               />
             </div>
             <textarea
+              className="audit-form__form-message"
               name="message"
               onChange={this.handleInput}
               placeholder="What's on your mind?"
@@ -161,7 +162,7 @@ class AuditForm extends React.Component {
               value={message}
             />
             <button
-              className="audit-form__button"
+              className="audit-form__form-button"
               disabled={isSendButtonDisabled}
               onClick={this.handleSubmitAuditForm}
             >

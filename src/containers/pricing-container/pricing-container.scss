@@ -43,6 +43,9 @@
 
         margin-bottom: $midlarge;
       }
+      &-button {
+        @include button();
+      }
     }
   }
 }
