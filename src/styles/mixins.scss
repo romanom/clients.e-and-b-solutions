@@ -6,5 +6,36 @@
   font-weight: $fontWeight;
 }
 
-@mixin override-button() {
+@mixin button() {
+  @include font-type($mainFont, $medium);
+
+  align-items: center;
+  background-color: $mainColor;
+  border-radius: $xsmall;
+  color: white;
+  cursor: pointer;
+  display: grid;
+  min-height: $xlarge;
+  padding: $small $midlarge;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  &:hover {
+    background-color: $darkenMainColor;
+    background-color: $lightenMainColor;
+    transition: background-color 0.5s ease-in-out;
+  }
+  &:disabled {
+    background: $mainColor;
+    cursor: not-allowed;
+    color: white;
+    opacity: 0.5;
+  }
+}
+
+@mixin textarea() {
+  border: $border;
+  border-radius: 5px;
+  font-size: $medium;
+  padding: $small $xsmall;
 }
