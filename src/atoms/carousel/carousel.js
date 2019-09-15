@@ -48,21 +48,19 @@ class Carousel extends React.Component {
             </Slide>
           ))}
         </Slider>
-        <DotGroup className="carousel__dots" />
-        <div className="carousel__buttons">
-          <ButtonBack
-            className="carousel__button"
-            onClick={this.handleButtonClick}
-          >
-            Back
-          </ButtonBack>
-          <ButtonNext
-            className="carousel__button"
-            onClick={this.handleButtonClick}
-          >
-            Next
-          </ButtonNext>
-        </div>
+        <ButtonBack
+          className="carousel__button"
+          onClick={this.handleButtonClick}
+        >
+          <span className="carousel__button-chevron back" />
+        </ButtonBack>
+        <ButtonNext
+          className="carousel__button"
+          onClick={this.handleButtonClick}
+        >
+          <span className="carousel__button-chevron next" />
+        </ButtonNext>
+        {/* </Slider> */}
       </CarouselProvider>
     );
   }

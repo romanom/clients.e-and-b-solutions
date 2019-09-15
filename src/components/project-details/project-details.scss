@@ -6,12 +6,12 @@
   .project-details {
     display: grid;
     grid-area: project-details;
+    margin: auto 0;
     width: 100%;
     &__header {
       margin-bottom: $medium;
     }
     &__client {
-      // @include font-type($mainFont, $midlarge, bold);
       @include font-type($mainFont, $large, bold);
 
       line-height: 1.25;

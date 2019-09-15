@@ -5,36 +5,50 @@
 @media only screen {
   .carousel {
     background-color: greenyellow;
+    position: relative;
     &__slider {
-      background-color: blue;
+      // background-color: blue;
     }
     &__slide {
       &-image {
         height: 100%;
         object-fit: scale-down;
         width: 100%;
-        background-color: red;
+        // background-color: red;
       }
       &-dot {
         background-color: rebeccapurple;
       }
     }
-    &__dots {
-      display: flex;
-      justify-content: center;
-      button {
-        display: inline-block;
-      }
-    }
-    &__buttons {
-      display: flex;
-      justify-content: center;
-    }
     &__button {
-      background-color: aqua;
-      &:hover {
-      }
-      &:disabled {
+      border: none;
+      height: 0;
+      width: 0;
+      &-chevron {
+        position: absolute;
+        &::before {
+          border-style: solid;
+          border-width: $xsmall $xsmall 0 0;
+          content: "";
+          cursor: pointer;
+          display: inline-block;
+          height: $midlarge;
+          left: 0;
+          // position: relative;
+          top: 0;
+          transform: rotate(-45deg);
+          vertical-align: top;
+          width: $midlarge;
+          z-index: 3;
+        }
+        &.back::before {
+          left: -500;
+          transform: rotate(-135deg);
+        }
+        &.next::before {
+          right: 0;
+          transform: rotate(45deg);
+        }
       }
     }
   }
