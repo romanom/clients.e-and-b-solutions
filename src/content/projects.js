@@ -103,11 +103,6 @@ const projects = [
         key: "img3",
         src: `${imagesFolderPath}/projects/project1/img3.jpg`,
         alt: "Screenshot 3"
-      },
-      {
-        key: "img4",
-        src: `${imagesFolderPath}/projects/project1/img4.jpg`,
-        alt: "Screenshot 4"
       }
     ],
     thumbnail: {

@@ -4,7 +4,6 @@ import {
   CarouselProvider,
   Slider,
   Slide,
-  DotGroup,
   Image,
   ButtonBack,
   ButtonNext
@@ -49,13 +48,13 @@ class Carousel extends React.Component {
           ))}
         </Slider>
         <ButtonBack
-          className="carousel__button"
+          className="carousel__button carousel__button-back"
           onClick={this.handleButtonClick}
         >
           <span className="carousel__button-chevron back" />
         </ButtonBack>
         <ButtonNext
-          className="carousel__button"
+          className="carousel__button carousel__button-next"
           onClick={this.handleButtonClick}
         >
           <span className="carousel__button-chevron next" />

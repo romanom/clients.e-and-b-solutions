@@ -4,52 +4,16 @@
 //Small screens - MOBILE
 @media only screen {
   .carousel {
-    background-color: greenyellow;
     position: relative;
-    &__slider {
-      // background-color: blue;
-    }
     &__slide {
       &-image {
         height: 100%;
         object-fit: scale-down;
         width: 100%;
-        // background-color: red;
-      }
-      &-dot {
-        background-color: rebeccapurple;
       }
     }
     &__button {
-      border: none;
-      height: 0;
-      width: 0;
-      &-chevron {
-        position: absolute;
-        &::before {
-          border-style: solid;
-          border-width: $xsmall $xsmall 0 0;
-          content: "";
-          cursor: pointer;
-          display: inline-block;
-          height: $midlarge;
-          left: 0;
-          // position: relative;
-          top: 0;
-          transform: rotate(-45deg);
-          vertical-align: top;
-          width: $midlarge;
-          z-index: 3;
-        }
-        &.back::before {
-          left: -500;
-          transform: rotate(-135deg);
-        }
-        &.next::before {
-          right: 0;
-          transform: rotate(45deg);
-        }
-      }
+      display: none;
     }
   }
 }
@@ -60,6 +24,44 @@
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $largeScreen) {
+  .carousel {
+    &__button {
+      display: block;
+      border: none;
+      height: 0;
+      position: absolute;
+      top: 50%;
+      width: 0;
+      &-chevron {
+        &::before {
+          border-style: solid;
+          border-width: $xsmall $xsmall 0 0;
+          content: "";
+          cursor: pointer;
+          display: inline-block;
+          height: $midlarge;
+          left: 0;
+          top: 0;
+          transform: rotate(-45deg);
+          vertical-align: top;
+          width: $midlarge;
+          z-index: 3;
+        }
+        &.back::before {
+          transform: rotate(-135deg);
+        }
+        &.next::before {
+          transform: rotate(45deg);
+        }
+      }
+      &-back {
+        left: -25px;
+      }
+      &-next {
+        right: 5px;
+      }
+    }
+  }
 }
 
 //XLarge screens
