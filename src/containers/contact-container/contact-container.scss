@@ -1,56 +1,49 @@
 @import "../../styles/variables.scss";
-@import "../../styles/typography.scss";
+@import "../../styles/mixins.scss";
 
 //Small screens - MOBILE
-//max-width 640px, small screens
 @media only screen {
-  .contact_container {
-    background-image: url("/images/contact_container_mobile.jpg");
+  .contact-container {
+    background-image: url($imagesFolderPath+"/contact_container_mobile.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
     flex: 1 1 auto;
-    padding: $large;
-
-    &__content {
+    flex-direction: column;
+    padding: $large $small;
+    &__form {
       background: white;
       display: grid;
       height: fit-content;
-      margin: 0 auto;
+      margin: 0 auto $large;
       opacity: 0.95;
-      padding: $medium $small;
+      padding: $medium;
+      width: fit-content;
+    }
+    &__title {
+      @include font-type($mainFont, $large);
 
-      &-title {
-        font-size: $large;
-        font-weight: bold;
-        margin: 0 auto $medium;
-      }
+      margin-bottom: $small;
+      text-align: center;
     }
   }
 }
 
 //Medium screens - TABLET
-//min-width 641px, medium screens
-@media only screen and (min-width: 40.063em) {
+@media only screen and (min-width: $mediumScreen) {
 }
 
 //Large screens - DESKTOP
-//min-width 1025px, large screens
-@media only screen and (min-width: 64.063em) {
-  .contact_container {
-    background-image: url("/images/contact_container_desktop.png");
-    &__content {
-      padding: $large $medium;
-    }
+@media only screen and (min-width: $largeScreen) {
+  .contact-container {
+    background-image: url($imagesFolderPath+"/contact_container_desktop.jpg");
   }
 }
 
 //XLarge screens
-//min-width 1441px, xlarge screens
-@media only screen and (min-width: 90.063em) {
+@media only screen and (min-width: $xLargeScreen) {
 }
 
 //XXLarge screens
-//min-width 1921px, xlarge screens
-@media only screen and (min-width: 120.063em) {
+@media only screen and (min-width: $xxLargeScreen) {
 }

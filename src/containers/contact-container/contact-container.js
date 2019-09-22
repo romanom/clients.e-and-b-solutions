@@ -1,18 +1,15 @@
 import React from "react";
 import ContactForm from "../../components/contact-form";
+
 import "./contact-container.scss";
 
-class ContactContainer extends React.Component {
-  render() {
-    return (
-      <div className="contact_container">
-        <div className="contact_container__content">
-          <div className="contact_container__content-title">Contact Us</div>
-          <ContactForm />
-        </div>
-      </div>
-    );
-  }
-}
+const ContactContainer = () => (
+  <div className="contact-container">
+    <div className="contact-container__form">
+      <div className="contact-container__title">Have some questions?</div>
+      <ContactForm />
+    </div>
+  </div>
+);
 
 export default ContactContainer;

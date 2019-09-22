@@ -3,8 +3,10 @@ import ReactModal from "react-modal";
 import PropTypes from "prop-types";
 import "./modal.scss";
 
-const Modal = ({ children, isOpen, onClose, title }) => {
-  ReactModal.setAppElement("#root");
+const Modal = ({ appElement, children, isOpen, onClose, title }) => {
+  const root = appElement ? appElement : "#root";
+
+  ReactModal.setAppElement(root);
 
   return (
     <ReactModal

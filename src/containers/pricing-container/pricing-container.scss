@@ -1,15 +1,15 @@
 @import "../../styles/variables.scss";
-@import "../../styles/typography.scss";
+@import "../../styles/mixins.scss";
 
 //Small screens - MOBILE
-//max-width 640px, small screens
 @media only screen {
-  .pricing_container {
-    background: radial-gradient(
-      circle,
-      $secColor 0%,
-      darken($mainColor, 20) 100%
-    );
+  .pricing-container {
+    background:
+      radial-gradient(
+        circle,
+        $secColor 0%,
+        darken($mainColor, 20) 100%
+      );
     display: grid;
     flex: 1 1 auto;
     grid-template-columns: 100%;
@@ -17,71 +17,58 @@
     padding: $midlarge $small;
     &__package {
       background: white;
-      border: 1px solid #bbbbbb;
       border-radius: $xxsmall;
-      box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.25);
       display: grid;
-      height: fit-content;
       padding: $large;
       text-align: center;
-
       &-header {
         &-title {
-          font-size: $midlarge;
-          font-weight: bold;
+          @include font-type($mainFont, $midlarge, bold);
+
+          margin-bottom: $midlarge;
         }
-
-        &-subtitle {
-          @include font-type($secFont, $medium, bold);
-
-          color: $midGrey;
-        }
-
         &-content {
-          @include font-type($secFont);
+          @include font-type($mainFont);
 
           color: $midGrey;
-          margin-top: $midlarge;
         }
       }
-
       &-cost {
-        font-size: $large;
-        font-weight: bold;
-        margin: $midlarge 0 $small;
-      }
+        @include font-type($mainFont, $large, bold);
 
+        margin: $midlarge 0;
+      }
       &-content {
-        @include font-type($secFont);
+        @include font-type($mainFont);
+
+        margin-bottom: $midlarge;
+      }
+      &-button {
+        @include button();
       }
     }
   }
 }
 
 //Medium screens - TABLET
-//min-width 641px, medium screens
-@media only screen and (min-width: 40.063em) {
-  .pricing_container {
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: $midlarge 5%;
+@media only screen and (min-width: $mediumScreen) {
+  .pricing-container {
+    padding: $midlarge 20%;
   }
 }
 
 //Large screens - DESKTOP
-//min-width 1025px, large screens
-@media only screen and (min-width: 64.063em) {
-  .pricing_container {
+@media only screen and (min-width: $largeScreen) {
+  .pricing-container {
     grid-template-columns: 1fr 1fr 1fr;
     padding: $xlarge 10%;
   }
 }
 
 //XLarge screens
-//min-width 1441px, xlarge screens
-@media only screen and (min-width: 90.063em) {
+@media only screen and (min-width: $xLargeScreen) {
 }
 
 //XXLarge screens
-//min-width 1921px, xlarge screens
-@media only screen and (min-width: 120.063em) {
+@media only screen and (min-width: $xxLargeScreen) {
 }

@@ -1,0 +1,40 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+//Small screens - MOBILE
+@media only screen {
+  .team {
+    background-color: $lightGrey;
+    padding: $large;
+    text-align: center;
+    &__header {
+      color: $fontGrey;
+      &-title {
+        @include font-type($mainFont, $large, bold);
+
+        color: $darkGrey;
+      }
+    }
+    &__members {
+      display: flex;
+      justify-content: center;
+      margin-top: $medium;
+    }
+  }
+}
+
+//Medium screens - TABLET
+@media only screen and (min-width: $mediumScreen) {
+}
+
+//Large screens - DESKTOP
+@media only screen and (min-width: $largeScreen) {
+}
+
+//XLarge screens
+@media only screen and (min-width: $xLargeScreen) {
+}
+
+//XXLarge screens
+@media only screen and (min-width: $xxLargeScreen) {
+}

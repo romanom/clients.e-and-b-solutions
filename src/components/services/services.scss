@@ -1,0 +1,46 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+//Small screens - MOBILE
+@media only screen {
+  .services {
+    color: $fontGrey;
+    padding: $small 0 $large;
+    &__header {
+      margin: $large auto;
+      text-align: center;
+      &-title {
+        @include font-type($mainFont, $large, bold);
+
+        color: $darkGrey;
+        margin: 0 $small;
+      }
+    }
+    &__content {
+      display: grid;
+      grid-gap: $large;
+      margin: 0 5%;
+    }
+  }
+}
+
+//Medium screens - TABLET
+@media only screen and (min-width: $mediumScreen) {
+}
+
+//Large screens - DESKTOP
+@media only screen and (min-width: $largeScreen) {
+  .services {
+    &__content {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+
+//XLarge screens
+@media only screen and (min-width: $xLargeScreen) {
+}
+
+//XXLarge screens
+@media only screen and (min-width: $xxLargeScreen) {
+}

@@ -1,11 +1,11 @@
 @import "../../styles/variables.scss";
-@import "../../styles/typography.scss";
+@import "../../styles/mixins.scss";
 
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-  footer {
-    @include font-type($secFont);
+  .footer {
+    @include font-type();
 
     align-items: center;
     background-color: $darkGrey;
@@ -14,11 +14,11 @@
     justify-content: space-evenly;
     padding: $small;
     text-align: center;
-    a {
+    &__link {
       color: white;
       text-decoration: none;
       &:hover {
-        color: $darkMainColor;
+        color: $lightenMainColor;
         transition: color 0.5s ease-in;
       }
     }
@@ -27,20 +27,20 @@
 
 //Medium screens - TABLET
 //min-width 641px, medium screens
-@media only screen and (min-width: 40.063em) {
+@media only screen and (min-width: $mediumScreen) {
 }
 
 //Large screens - DESKTOP
 //min-width 1025px, large screens
-@media only screen and (min-width: 64.063em) {
+@media only screen and (min-width: $largeScreen) {
 }
 
 //XLarge screens
 //min-width 1441px, xlarge screens
-@media only screen and (min-width: 90.063em) {
+@media only screen and (min-width: $xLargeScreen) {
 }
 
 //XXLarge screens
 //min-width 1921px, xlarge screens
-@media only screen and (min-width: 120.063em) {
+@media only screen and (min-width: $xxLargeScreen) {
 }

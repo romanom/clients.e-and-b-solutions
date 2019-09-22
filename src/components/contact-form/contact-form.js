@@ -1,39 +1,26 @@
 import React from "react";
-import { sendEmail, isEmailValid } from "../../tools/email";
-import FormError from "../form-error";
+import { sendEmail, isEmailValid } from "../../utils/email";
+import FormError from "../../atoms/form-error";
+import Input from "../../atoms/input";
+
 import "./contact-form.scss";
 
-export default class ContactForm extends React.Component {
+class ContactForm extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
       buttonText: "Send It",
-      emailAddress: "",
+      emailAddress: "aaron@gmail.com",
       emailError: false,
       emailSent: false,
       error: {},
       isSendButtonDisabled: true,
       message: "",
-      name: "",
+      name: "aa",
       phoneNumber: ""
     };
   }
-
-  handleSubmitContactForm = () => {
-    this.setState({ buttonText: "Sending", isSendButtonDisabled: true });
-
-    const { emailAddress, message, name, phoneNumber } = this.state;
-    const data = {
-      name,
-      emailAddress,
-      phoneNumber,
-      message
-    };
-    const done = () => this.setState({ emailSent: true });
-    const fail = () => this.setState({ emailError: true });
-    sendEmail(data, done, fail);
-  };
 
   handleEmailValidation = e => {
     const { value: inputValue } = e.target;
@@ -89,7 +76,7 @@ export default class ContactForm extends React.Component {
     );
   };
 
-  handlePhoneChange = e => {
+  handlePhoneInput = e => {
     const phoneNumber = e.target.value;
 
     if (
@@ -128,6 +115,31 @@ export default class ContactForm extends React.Component {
     return this.setState({ isSendButtonDisabled: true });
   };
 
+  handleSubmitContactForm = () => {
+    this.setState({ buttonText: "Sending", isSendButtonDisabled: true });
+
+    const { emailAddress, message, name, phoneNumber } = this.state;
+    const { galleryPieceId, galleryPieceName } = this.props;
+    const data = {
+      emailAddress,
+      galleryPieceId,
+      galleryPieceName,
+      message,
+      name,
+      phoneNumber
+    };
+
+    const done = () => this.setState({ emailError: false, emailSent: true });
+    const fail = () =>
+      this.setState({
+        emailError: true,
+        isSendButtonDisabled: false,
+        buttonText: "Send It"
+      });
+
+    sendEmail(data, done, fail);
+  };
+
   render() {
     const {
       emailAddress,
@@ -139,61 +151,69 @@ export default class ContactForm extends React.Component {
       name,
       phoneNumber
     } = this.state;
+
     return (
-      <div className="contact_form">
-        {!emailSent && !emailError && (
+      <div className="contact-form">
+        {emailSent && (
+          <div className="contact-form__email">
+            Thank you for reaching out! We are excited to get back in touch with
+            you.
+          </div>
+        )}
+        {emailError && (
+          <div className="contact-form__email contact-form__email--error">
+            Something went wrong unfortunately. Please try sending again.
+          </div>
+        )}
+        {!emailSent && (
           <React.Fragment>
-            <div className="contact_form__header">
-              <div className="contact_form__header-content">
-                We promise that your email won&apos;t disappear into the nether.
-              </div>
-              <div className="contact_form__header-content">
-                We are more than happy to answer any questions you may have.
+            <div className="contact-form__header">
+              <div className="contact-form__header-content">
+                We are more than happy to answer any questions you may have. We
+                promise that your email won&apos;t disappear into the nether.
               </div>
             </div>
-            <div className="contact_form__form">
-              <div className="contact_form__input">
+            <div className="contact-form__form">
+              <div className="contact-form__form-input">
                 {error.name && <FormError error={error.name} />}
-                <input
+                <Input
+                  label="Name"
                   name="name"
                   onBlur={this.handleNameValidation}
                   onChange={this.handleInput}
-                  placeholder="Name (Required)"
-                  type="text"
                   value={name}
                 />
               </div>
-              <div className="contact_form__input">
+              <div className="contact-form__form-input">
                 {error.emailAddress && <FormError error={error.emailAddress} />}
-                <input
+                <Input
+                  label="Email"
                   name="emailAddress"
                   onBlur={this.handleEmailValidation}
                   onChange={this.handleInput}
-                  placeholder="Email (Required)"
-                  type="text"
                   value={emailAddress}
                 />
               </div>
-              <div className="contact_form__input">
+              <div className="contact-form__form-input">
                 {error.phoneNumber && <FormError error={error.phoneNumber} />}
-                <input
+                <Input
+                  label="Phone (Digits only, no dashes, etc.)"
                   name="phone"
                   onBlur={this.handlePhoneValidation}
-                  onChange={this.handlePhoneChange}
-                  placeholder="Phone (Digits only, no dashes, etc.)"
-                  type="text"
+                  onChange={this.handlePhoneInput}
                   value={phoneNumber}
                 />
               </div>
               <textarea
+                className="contact-form__form-message"
                 name="message"
-                rows="4"
-                placeholder="What's on your mind?"
                 onChange={this.handleInput}
+                placeholder="What's on your mind?"
+                rows="4"
                 value={message}
               />
               <button
-                className="contact_form__button"
+                className="contact-form__form-button"
                 disabled={isSendButtonDisabled}
                 onClick={this.handleSubmitContactForm}
               >
@@ -202,18 +222,9 @@ export default class ContactForm extends React.Component {
             </div>
           </React.Fragment>
         )}
-        {emailSent && (
-          <div className="contact_form__email">
-            Thank you for reaching out! We are excited to get back in touch with
-            you.
-          </div>
-        )}
-        {emailError && (
-          <div className="contact_form__email">
-            Something went wrong unfortunately. Please try reloading the page.
-          </div>
-        )}
       </div>
     );
   }
 }
+
+export default ContactForm;

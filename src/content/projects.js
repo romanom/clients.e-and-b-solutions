@@ -1,54 +1,71 @@
-/* eslint-disable max-len */
+import { imagesFolderPath } from "../config";
+
 const projects = [
   {
-    clickableImage: "/images/project4_mini.jpg",
-    client: "E&B Solutions",
-    date: "May 2018",
+    projectId: "2",
+    details: {
+      client: "Valley Love Farm",
+      date: "March 2018",
+      design:
+        "Using earth tones, created a customized design to have a simple yet modern look including animations.",
+      features: [
+        "Contact form",
+        "Works on any device",
+        "Search Engine Optimization",
+        "Quick mobile load times"
+      ],
+      overview:
+        "Valley Love Farm was rebranded in 2018 from the previous Valley Love Organic. They began to increase their community presence at the local farmer's market as well as expanding their lawn care services."
+    },
     images: [
-      { src: "/images/project4_img1.jpg", alt: "Screenshot 1" },
-      { src: "/images/project4_img2.jpg", alt: "Screenshot 2" }
+      {
+        key: "img1",
+        src: `${imagesFolderPath}/projects/project2/img1.jpg`,
+        alt: "Screenshot 1"
+      },
+      {
+        key: "img2",
+        src: `${imagesFolderPath}/projects/project2/img2.jpg`,
+        alt: "Screenshot 2"
+      }
     ],
-    information: `Using React, a JavaScript library for building user interfaces, and Amazon Web Services, the E&B Solutions' site was completely rebuilt.`,
-    informationCont: `This allowed for faster page load times, theme consistency, and a strong improvement in the user's overall experience.`,
-    title: "Website Innovation"
+    thumbnail: {
+      alt: "Valley Love Farm",
+      src: `${imagesFolderPath}/projects/project2/thumbnail.jpg`
+    }
   },
   {
-    clickableImage: "/images/project3_mini.jpg",
-    client: "Valley Love Farm",
-    date: "March 2018",
+    projectId: "1",
+    details: {
+      client: "Valley Love Organic",
+      date: "September 2016",
+      design:
+        "Utilized GoDaddy's Website builder template to bring new life to the previous site's design.",
+      features: ["Contact form", "Works on any device"],
+      overview:
+        "Valley Love Organic was started to bring high quality produce to local customers. Community Supported Agriculture (CSA) is the perfect way for a customer, who cares about local food, to ally with a farmer and get the best they have to offer."
+    },
     images: [
-      { src: "/images/project3_img1.jpg", alt: "Screenshot 1" },
-      { src: "/images/project3_img2.jpg", alt: "Screenshot 2" }
+      {
+        key: "img1",
+        src: `${imagesFolderPath}/projects/project1/img1.jpg`,
+        alt: "Screenshot 1"
+      },
+      {
+        key: "img2",
+        src: `${imagesFolderPath}/projects/project1/img2.jpg`,
+        alt: "Screenshot 2"
+      },
+      {
+        key: "img3",
+        src: `${imagesFolderPath}/projects/project1/img3.jpg`,
+        alt: "Screenshot 3"
+      }
     ],
-    information: `After proven success with the first implementation through GoDaddy's Website Builder, Valley Love Farm (formerly Valley Love Organic) decided to further trust E&B Solutions with a full website implementation.`,
-    informationCont: `This required building their new website from the ground up and choosing a new theme that matched their services offered.  This also meant making sure to maintain their current site functionality and provide new features the client was excited to receive.`,
-    title: "Website Implementation"
-  },
-  {
-    clickableImage: "/images/project2_mini.jpg",
-    client: "Valley Love Organic",
-    date: "September 2016",
-    images: [
-      { src: "/images/project2_img1.jpg", alt: "Screenshot 1" },
-      { src: "/images/project2_img2.jpg", alt: "Screenshot 2" },
-      { src: "/images/project2_img3.jpg", alt: "2016 Metrics" },
-      { src: "/images/project2_img4.jpg", alt: "2017 Metrics" }
-    ],
-    information: `Using GoDaddy's WebSite builder, updated the existing site to use a newer and responsive theme.`,
-    informationCont: `Added new pages for new services offered by client. Client's site traffic increased significantly once they could promote their redesigned site.`,
-    title: "Website Modification"
-  },
-  {
-    clickableImage: "/images/project1_mini.jpg",
-    client: "E&B Solutions",
-    date: "July 2016",
-    images: [
-      { src: "/images/project1_img1.jpg", alt: "Screenshot 1" },
-      { src: "/images/project1_img2.jpg", alt: "Screenshot 2" }
-    ],
-    information:
-      "Created a responsive website from scratch and hosted in the cloud.",
-    title: "Website Design"
+    thumbnail: {
+      alt: "Valley Love Organic",
+      src: `${imagesFolderPath}/projects/project1/thumbnail.jpg`
+    }
   }
 ];
 

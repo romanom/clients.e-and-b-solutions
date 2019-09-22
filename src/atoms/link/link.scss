@@ -1,0 +1,48 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+//Small screens - MOBILE
+@media only screen {
+  .link {
+    @include font-type($mainFont, $medium);
+
+    align-items: center;
+    background-color: $mainColor;
+    border-radius: $xsmall;
+    color: white;
+    cursor: pointer;
+    display: grid;
+    min-height: $xlarge;
+    padding: $small $midlarge;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+      background-color: $darkenMainColor;
+      background-color: $lightenMainColor;
+      transition: background-color 0.5s ease-in-out;
+    }
+    &:disabled {
+      background: $mainColor;
+      cursor: not-allowed;
+      color: white;
+      opacity: 0.5;
+    }
+  }
+}
+
+//Medium screens - TABLET
+@media only screen and (min-width: $mediumScreen) {
+}
+
+//Large screens - DESKTOP
+@media only screen and (min-width: $largeScreen) {
+}
+
+//XLarge screens
+@media only screen and (min-width: $xLargeScreen) {
+}
+
+//XXLarge screens
+@media only screen and (min-width: $xxLargeScreen) {
+}

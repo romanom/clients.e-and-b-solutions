@@ -1,0 +1,47 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+//Small screens - MOBILE
+@media only screen {
+  .team-member {
+    &__image {
+      max-height: 30vh;
+      object-fit: scale-down;
+      width: 100%;
+    }
+    &__name {
+      @include font-type($mainFont, $midlarge);
+
+      margin-top: $small;
+    }
+    &__title {
+      @include font-type($secFont, $medium);
+
+      margin-bottom: $xsmall;
+    }
+    &__link {
+      cursor: pointer;
+      color: $darkGrey;
+      text-decoration: none;
+      &:hover {
+        color: $mainColor;
+      }
+    }
+  }
+}
+
+//Medium screens - TABLET
+@media only screen and (min-width: $mediumScreen) {
+}
+
+//Large screens - DESKTOP
+@media only screen and (min-width: $largeScreen) {
+}
+
+//XLarge screens
+@media only screen and (min-width: $xLargeScreen) {
+}
+
+//XXLarge screens
+@media only screen and (min-width: $xxLargeScreen) {
+}

@@ -1,24 +1,49 @@
 // Colors
-$mainColor: #0066cc;
-$darkMainColor: darken($mainColor, 10);
+$mainColor: #004d99;
+$darkenMainColor: darken($mainColor, 10);
+$lightenMainColor: lighten($mainColor, 10);
 $secColor: rgba(31, 130, 227, 0.8);
+$superLightGrey: #f8f8f8;
 $lightGrey: #f3f3f3;
 $midLightGrey: #e8e8e8;
-$midGrey: #666666;
-$darkGrey: #222222;
+$midGrey: #666;
+$darkGrey: #222;
+
+// Feature Specific Colors
 $fontGrey: rgba(0, 0, 0, 0.7);
 $closeIconGrey: #aaa;
-//Spacing
+$borderGrey: rgba(0, 0, 0, 0.5);
+$border: 1px solid $borderGrey;
+$boxShadowGrey: rgba(189, 195, 199, 0.6);
+$dropShadow: drop-shadow(3px 3px 6px $boxShadowGrey);
+$containerBackgroundColor: $superLightGrey;
+
+// Spacing
 $xxsmall: 0.3rem;
 $xsmall: 0.6rem;
 $small: 1.2rem;
-$medium: 1.6rem;
+$medium: 1.8rem;
 $midlarge: 2.4rem;
 $large: 3.2rem;
 $xlarge: 4.8rem;
 $xxlarge: 7.6rem;
+
+//Component Heights
+$navMenuHeight: 60px;
 $navMenuWidth: 240px;
-$desktopBreakpoint: 45rem;
-//Site Fonts
-$mainFont: "Ubuntu Regular", sans-serif;
-$secFont: "Ubuntu Light", sans-serif;
+$footerHeight: 50px;
+$inboxHeight: 85vh;
+$lineHeight: 1.5;
+
+// Screen Breakpoints
+$mediumScreen: 641px;
+$largeScreen: 1025px;
+$xLargeScreen: 1441px;
+$xxLargeScreen: 1921px;
+
+// Site Fonts
+$mainFont: "Ubuntu Light", sans-serif;
+$secFont: "Ubuntu", sans-serif;
+
+// Images path
+$imagesFolderPath: "/_next/static/images";

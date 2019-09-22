@@ -1,12 +1,14 @@
 @import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
 
 //Small screens - MOBILE
 //max-width 640px, small screens
 @media only screen {
-  .nav_menu {
+  .navbar {
     align-items: center;
     background-color: $darkGrey;
     display: flex;
+    height: $navMenuHeight;
     justify-content: space-between;
     left: 0;
     padding: $small;
@@ -18,7 +20,7 @@
       cursor: pointer;
     }
     &__brand {
-      a {
+      &-link {
         color: white;
         font-size: $midlarge;
         font-weight: bold;
@@ -28,55 +30,44 @@
       }
     }
     &__links {
-      background-color: $darkMainColor;
+      background-color: $mainColor;
       height: 100%;
       padding-top: $large;
       position: fixed;
       right: -$navMenuWidth;
-      top: 72px;
+      top: $navMenuHeight;
       transition: right 0.3s ease;
       width: $navMenuWidth;
-      &.nav_menu__links-open {
-        right: 0px;
+      &.navbar__links--open {
+        right: 0;
       }
-      &-close {
-        align-items: center;
-        display: flex;
-        justify-content: flex-end;
-        margin-right: $small;
-      }
-      &-link {
-        color: white;
-        display: block;
-        font-size: $medium;
-        padding: $small;
-        text-align: center;
-        text-decoration: none;
-        text-transform: uppercase;
-      }
-      &-contact {
-        border-radius: $xxsmall;
-        border: 1px solid white;
-        margin: $small $large;
-      }
+    }
+    &__link {
+      color: white;
+      display: block;
+      font-size: $medium;
+      padding: $small;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
     }
   }
 }
 
 //Medium screens - TABLET
 //min-width 641px, medium screens
-@media only screen and (min-width: 40.063em) {
+@media only screen and (min-width: $mediumScreen) {
 }
 
 //Large screens - DESKTOP
 //min-width 1025px, large screens
-@media only screen and (min-width: 64.063em) {
-  .nav_menu {
+@media only screen and (min-width: $largeScreen) {
+  .navbar {
     &__brand {
-      a {
+      &-link {
         &:hover {
-          color: $mainColor;
-          transition: color 0.5s ease-in;
+          color: $lightenMainColor;
+          transition: color 0.25s ease-in;
         }
       }
     }
@@ -97,21 +88,11 @@
       &-close {
         display: none;
       }
-      &-link {
-        &:hover {
-          color: $mainColor;
-          transition: color 0.5s ease-in;
-        }
-      }
-      &-contact {
-        margin: 0;
-        margin-left: $small;
-        &:hover {
-          background-color: white;
-          color: $mainColor;
-          font-weight: bolder;
-          transition: background-color 0.5s ease-in, color 0.5s ease-in;
-        }
+    }
+    &__link {
+      &:hover {
+        color: $lightenMainColor;
+        transition: color 0.25s ease-in;
       }
     }
   }
@@ -119,10 +100,10 @@
 
 //XLarge screens
 //min-width 1441px, xlarge screens
-@media only screen and (min-width: 90.063em) {
+@media only screen and (min-width: $xLargeScreen) {
 }
 
 //XXLarge screens
 //min-width 1921px, xlarge screens
-@media only screen and (min-width: 120.063em) {
+@media only screen and (min-width: $xxLargeScreen) {
 }

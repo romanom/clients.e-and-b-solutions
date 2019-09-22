@@ -1,29 +1,31 @@
+import { imagesFolderPath } from "../config";
+
 const services = [
   {
-    title: "Web Apps and Websites",
     content:
       "Creating easy to use web apps or sites, designed to work on any screen, that give the user a wonderful experience.",
     image: {
-      imageLocation: "/images/services_1.png",
-      alt: "Desktop Computer"
-    }
+      alt: "Desktop Computer",
+      src: `${imagesFolderPath}/services_1.png`
+    },
+    title: "Web Apps and Websites"
   },
   {
-    title: "Hosting and Support",
     content:
       "Providing cloud hosting and support for your site so you can worry about other things.",
     image: {
-      imageLocation: "/images/services_2.png",
-      alt: "Cloud hosting"
-    }
+      alt: "Cloud hosting",
+      src: `${imagesFolderPath}/services_2.png`
+    },
+    title: "Hosting and Support"
   },
   {
-    title: "Technical Consulting",
     content: "Let's see what we can do together to make things easier for you.",
     image: {
-      imageLocation: "/images/services_3.png",
-      alt: "Consulting"
-    }
+      alt: "Consulting",
+      src: `${imagesFolderPath}/services_3.png`
+    },
+    title: "Technical Consulting"
   }
 ];
 

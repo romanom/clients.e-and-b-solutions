@@ -1,9 +1,11 @@
 import React from "react";
-import { sendEmail, isEmailValid } from "../../tools/email";
-import FormError from "../form-error";
+import { sendEmail, isEmailValid } from "../../utils/email";
+import FormError from "../../atoms/form-error";
+import Input from "../../atoms/input";
+
 import "./audit-form.scss";
 
-export default class AuditForm extends React.Component {
+class AuditForm extends React.Component {
   constructor(props) {
     super(props);
 
@@ -13,7 +15,7 @@ export default class AuditForm extends React.Component {
       emailSent: false,
       emailError: false,
       error: {},
-      isSendButtonDisabled: true,
+      isSendButtonDisabled: false,
       message: "",
       website: ""
     };
@@ -30,7 +32,12 @@ export default class AuditForm extends React.Component {
       emailAddress: email
     };
     const done = () => this.setState({ emailSent: true });
-    const fail = () => this.setState({ emailError: true });
+    const fail = () =>
+      this.setState({
+        emailError: true,
+        isSendButtonDisabled: false,
+        buttonText: "Send It"
+      });
 
     sendEmail(data, done, fail);
   };
@@ -112,33 +119,42 @@ export default class AuditForm extends React.Component {
     } = this.state;
 
     return (
-      <div className="audit_form">
-        {!emailSent && !emailError && (
-          <div className="audit_form__form">
-            <div className="audit_form__input">
+      <div className="audit-form">
+        {emailSent && (
+          <div className="audit-form__email">
+            Thank you for reaching out! We are excited to get back in touch with
+            you.
+          </div>
+        )}
+        {emailError && (
+          <div className="audit-form__email  audit-form__email--error">
+            Something went wrong unfortunately. Please try again.
+          </div>
+        )}
+        {!emailSent && (
+          <div className="audit-form__form">
+            <div className="audit-form__form-input">
               {error.website && <FormError error={error.website} />}
-              <input
+              <Input
+                label="Website (Required)"
                 name="website"
                 onBlur={this.handleWebsiteValidation}
                 onChange={this.handleInput}
-                placeholder="Website URL (Required)"
-                type="text"
                 value={website}
               />
             </div>
-            <div className="audit_form__input">
+            <div className="audit-form__form-input">
               {error.email && <FormError error={error.email} />}
-              <input
+              <Input
+                label="Email (Required)"
                 name="email"
                 onBlur={this.handleEmailValidation}
                 onChange={this.handleInput}
-                placeholder="Email (Required)"
-                type="text"
                 value={email}
               />
             </div>
             <textarea
-              className="audit_form__input"
+              className="audit-form__form-message"
               name="message"
               onChange={this.handleInput}
               placeholder="What's on your mind?"
@@ -146,7 +162,7 @@ export default class AuditForm extends React.Component {
               value={message}
             />
             <button
-              className="audit_form__button"
+              className="audit-form__form-button"
               disabled={isSendButtonDisabled}
               onClick={this.handleSubmitAuditForm}
             >
@@ -154,22 +170,9 @@ export default class AuditForm extends React.Component {
             </button>
           </div>
         )}
-        {emailSent && (
-          <div className="audit_form__email">
-            <p>
-              Thank you for reaching out! We are excited to get back in touch
-              with you.
-            </p>
-          </div>
-        )}
-        {emailError && (
-          <div className="audit_form__email">
-            <p>
-              Something went wrong unfortunately. Please try reloading the page.
-            </p>
-          </div>
-        )}
       </div>
     );
   }
 }
+
+export default AuditForm;

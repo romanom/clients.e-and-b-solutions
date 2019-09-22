@@ -1,21 +1,21 @@
 @import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
 
 //Small screens - MOBILE
-//max-width 640px, small screens
 @media only screen {
-  .portfolio_container {
-    padding: $medium $small;
-    &__title {
-      font-size: $midlarge;
-      text-align: center;
-    }
-    &__projects {
-      display: grid;
-      grid-gap: $medium;
-      grid-template-columns: 100%;
-      margin-top: $small;
-      img {
-        cursor: pointer;
+  .portfolio-container {
+    display: grid;
+    grid-gap: $small;
+    padding: $small;
+    &__project {
+      align-self: center;
+      cursor: pointer;
+      display: flex;
+      filter: $dropShadow;
+      justify-content: center;
+      &-thumbnail {
+        height: 100%;
+        object-fit: scale-down;
         width: 100%;
       }
     }
@@ -23,28 +23,42 @@
 }
 
 //Medium screens - TABLET
-//min-width 641px, medium screens
-@media only screen and (min-width: 40.063em) {
+@media only screen and (min-width: $mediumScreen) {
+  .portfolio-container {
+    grid-gap: $medium;
+    padding: $small 10%;
+  }
 }
 
 //Large screens - DESKTOP
-//min-width 1025px, large screens
-@media only screen and (min-width: 64.063em) {
-  .portfolio_container {
-    &__projects {
-      grid-gap: $large;
-      grid-template-columns: 1fr 1fr;
-      padding: $large 5%;
+@media only screen and (min-width: $largeScreen) {
+  .portfolio-container {
+    grid-template-columns: 1fr 1fr;
+    padding: $medium;
+    &__project {
+      overflow: hidden;
+      transition: transform 0.4s ease;
+      &:hover {
+        &:nth-child(odd) {
+          transform: scale(0.9) rotate(-5deg);
+        }
+        &:nth-child(even) {
+          transform: scale(0.9) rotate(5deg);
+        }
+      }
+      &-thumbnail {
+        height: auto;
+        object-fit: fill;
+        width: 100%;
+      }
     }
   }
 }
 
 //XLarge screens
-//min-width 1441px, xlarge screens
-@media only screen and (min-width: 90.063em) {
+@media only screen and (min-width: $xLargeScreen) {
 }
 
 //XXLarge screens
-//min-width 1921px, xlarge screens
-@media only screen and (min-width: 120.063em) {
+@media only screen and (min-width: $xxLargeScreen) {
 }
