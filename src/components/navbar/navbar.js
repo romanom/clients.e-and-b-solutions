@@ -22,12 +22,11 @@ class Navbar extends React.Component {
     return (
       <nav className="navbar">
         <div className="navbar__brand">
-          {/* <Link
+          <Link
             className="navbar__brand-link"
             href="/"
             children="E&amp;B Solutions"
-          /> */}
-          <Link className="navbar__brand-link" href="/" children="Taco Stand" />
+          />
         </div>
         <div className="navbar__toggle">
           {!this.state.isNavOpen && (
@@ -65,12 +64,6 @@ class Navbar extends React.Component {
             href="/portfolio"
             onClick={this.closeSideMenu}
             children="Portfolio"
-          />
-          <Link
-            className="navbar__link"
-            href="/faq"
-            onClick={this.closeSideMenu}
-            children="FAQ"
           />
           <Link
             className="navbar__link"
