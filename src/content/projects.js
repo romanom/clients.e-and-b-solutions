@@ -2,49 +2,6 @@ import { imagesFolderPath } from "../config";
 
 const projects = [
   {
-    projectId: "3",
-    details: {
-      client: "JD Wireart Studio",
-      date: "January 2019",
-      design:
-        "Embraces the creative spirit by showcasing images of artwork in a lively fashion.  Management of the inventory is achieved through a simple yet modern inbox layout.",
-      features: [
-        "Accepts PayPal payments",
-        "Inventory management",
-        "Contact form",
-        "Works on any device"
-      ],
-      overview:
-        "JD Wireart Studio is artwork created by Holly Springs local Jonathan Daniels, originally from Zimbabwe. He visits local schools to inspire children to be creative using only what is around them."
-    },
-    images: [
-      {
-        key: "img1",
-        src: `${imagesFolderPath}/projects/project3/img1.jpg`,
-        alt: "Gallery"
-      },
-      {
-        key: "img2",
-        src: `${imagesFolderPath}/projects/project3/img1.jpg`,
-        alt: "Details"
-      },
-      {
-        key: "img3",
-        src: `${imagesFolderPath}/projects/project3/img2.jpg`,
-        alt: "Inbox Layout 1"
-      },
-      {
-        key: "img4",
-        src: `${imagesFolderPath}/projects/project3/img2.jpg`,
-        alt: "Inbox Layout 2"
-      }
-    ],
-    thumbnail: {
-      alt: "JD Wireart Studio",
-      src: `${imagesFolderPath}/projects/project3/thumbnail.jpg`
-    }
-  },
-  {
     projectId: "2",
     details: {
       client: "Valley Love Farm",
