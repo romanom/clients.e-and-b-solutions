@@ -4,10 +4,10 @@ provider:
   name: aws
   runtime: nodejs8.10
   profile: serverless
-  stage: prod
+  stage: beta
   region: us-east-1
   environment:
-    NODE_ENV: prod
+    NODE_ENV: beta
 
 functions:
   server:
@@ -26,7 +26,7 @@ custom:
     types:
       - "*/*"
   customDomain:
-    domainName: ${self:custom.secrets.prod.DOMAIN}
+    domainName: ${self:custom.secrets.beta.DOMAIN}
     basePath: ""
-    stage: prod
+    stage: beta
     createRoute53Record: true
