@@ -1,0 +1,32 @@
+service: e-and-b-solutions
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  profile: serverless
+  stage: beta
+  region: us-east-1
+  environment:
+    NODE_ENV: beta
+
+functions:
+  server:
+    handler: index.server
+    events:
+      - http: ANY /
+      - http: ANY /{proxy+}
+
+plugins:
+  - serverless-apigw-binary
+  - serverless-domain-manager
+
+custom:
+  secrets: ${file(secrets.json)}
+  apigwBinary:
+    types:
+      - "*/*"
+  customDomain:
+    domainName: ${self:custom.secrets.beta.DOMAIN}
+    basePath: ""
+    stage: beta
+    createRoute53Record: true
