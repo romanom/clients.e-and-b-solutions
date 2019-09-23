@@ -4,10 +4,10 @@ provider:
   name: aws
   runtime: nodejs8.10
   profile: serverless
-  stage: ${self:custom.secrets.NODE_ENV}
+  stage: prod
   region: us-east-1
   environment:
-    NODE_ENV: ${self:custom.secrets.NODE_ENV}
+    NODE_ENV: prod
 
 functions:
   server:
@@ -26,7 +26,7 @@ custom:
     types:
       - "*/*"
   customDomain:
-    domainName: ${self:custom.secrets.DOMAIN}
+    domainName: ${self:custom.secrets.prod.DOMAIN}
     basePath: ""
-    stage: ${self:custom.secrets.NODE_ENV}
+    stage: prod
     createRoute53Record: true
