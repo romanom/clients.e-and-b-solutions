@@ -11,13 +11,13 @@ class ContactForm extends React.Component {
 
     this.state = {
       buttonText: "Send It",
-      emailAddress: "aaron@gmail.com",
+      emailAddress: "",
       emailError: false,
       emailSent: false,
       error: {},
       isSendButtonDisabled: true,
       message: "",
-      name: "aa",
+      name: "",
       phoneNumber: ""
     };
   }
