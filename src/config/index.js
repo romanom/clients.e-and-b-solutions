@@ -4,11 +4,11 @@ import {
   servicesApiGatewayURL
 } from "./config";
 
-import { servicesApiGatewayToken } from "./secrets";
+import { SERVICES_API_KEY } from "./secrets";
 
 export {
   imagesFolderPath,
   pointOfContactEmail,
   servicesApiGatewayURL,
-  servicesApiGatewayToken
+  SERVICES_API_KEY
 };
