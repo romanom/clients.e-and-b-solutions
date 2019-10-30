@@ -1,14 +1,14 @@
 import {
-  imagesFolderPath,
-  pointOfContactEmail,
-  servicesApiGatewayURL
+  IMAGES_FOLDER_PATH,
+  CONTACT_EMAIL,
+  SERVICES_GATEWAY_URL
 } from "./config";
 
 import { SERVICES_API_KEY } from "./secrets";
 
 export {
-  imagesFolderPath,
-  pointOfContactEmail,
-  servicesApiGatewayURL,
+  IMAGES_FOLDER_PATH,
+  CONTACT_EMAIL,
+  SERVICES_GATEWAY_URL,
   SERVICES_API_KEY
 };

@@ -1,4 +1,4 @@
-import { imagesFolderPath } from "../config";
+import { IMAGES_FOLDER_PATH } from "../config";
 
 const projects = [
   {
@@ -21,43 +21,43 @@ const projects = [
     images: [
       {
         key: "img1",
-        src: `${imagesFolderPath}/projects/project3/img1.jpg`,
+        src: `${IMAGES_FOLDER_PATH}/projects/project3/img1.jpg`,
         alt: "Gallery"
       },
       {
         key: "img2",
-        src: `${imagesFolderPath}/projects/project3/img2.jpg`,
+        src: `${IMAGES_FOLDER_PATH}/projects/project3/img2.jpg`,
         alt: "Gallery Mobile"
       },
       {
         key: "img3",
-        src: `${imagesFolderPath}/projects/project3/img3.jpg`,
+        src: `${IMAGES_FOLDER_PATH}/projects/project3/img3.jpg`,
         alt: "Details"
       },
       {
         key: "img4",
-        src: `${imagesFolderPath}/projects/project3/img4.jpg`,
+        src: `${IMAGES_FOLDER_PATH}/projects/project3/img4.jpg`,
         alt: "Inbox Layout 1"
       },
       {
         key: "img5",
-        src: `${imagesFolderPath}/projects/project3/img5.jpg`,
+        src: `${IMAGES_FOLDER_PATH}/projects/project3/img5.jpg`,
         alt: "Inbox Layout 2"
       },
       {
         key: "img6",
-        src: `${imagesFolderPath}/projects/project3/img6.jpg`,
+        src: `${IMAGES_FOLDER_PATH}/projects/project3/img6.jpg`,
         alt: "Contact form"
       },
       {
         key: "img7",
-        src: `${imagesFolderPath}/projects/project3/img7.jpg`,
+        src: `${IMAGES_FOLDER_PATH}/projects/project3/img7.jpg`,
         alt: "About me mobile"
       }
     ],
     thumbnail: {
       alt: "JD Wireart Studio",
-      src: `${imagesFolderPath}/projects/project3/thumbnail.jpg`
+      src: `${IMAGES_FOLDER_PATH}/projects/project3/thumbnail.jpg`
     }
   },
   {
@@ -79,18 +79,18 @@ const projects = [
     images: [
       {
         key: "img1",
-        src: `${imagesFolderPath}/projects/project2/img1.jpg`,
+        src: `${IMAGES_FOLDER_PATH}/projects/project2/img1.jpg`,
         alt: "Screenshot 1"
       },
       {
         key: "img2",
-        src: `${imagesFolderPath}/projects/project2/img2.jpg`,
+        src: `${IMAGES_FOLDER_PATH}/projects/project2/img2.jpg`,
         alt: "Screenshot 2"
       }
     ],
     thumbnail: {
       alt: "Valley Love Farm",
-      src: `${imagesFolderPath}/projects/project2/thumbnail.jpg`
+      src: `${IMAGES_FOLDER_PATH}/projects/project2/thumbnail.jpg`
     }
   },
   {
@@ -107,23 +107,23 @@ const projects = [
     images: [
       {
         key: "img1",
-        src: `${imagesFolderPath}/projects/project1/img1.jpg`,
+        src: `${IMAGES_FOLDER_PATH}/projects/project1/img1.jpg`,
         alt: "Screenshot 1"
       },
       {
         key: "img2",
-        src: `${imagesFolderPath}/projects/project1/img2.jpg`,
+        src: `${IMAGES_FOLDER_PATH}/projects/project1/img2.jpg`,
         alt: "Screenshot 2"
       },
       {
         key: "img3",
-        src: `${imagesFolderPath}/projects/project1/img3.jpg`,
+        src: `${IMAGES_FOLDER_PATH}/projects/project1/img3.jpg`,
         alt: "Screenshot 3"
       }
     ],
     thumbnail: {
       alt: "Valley Love Organic",
-      src: `${imagesFolderPath}/projects/project1/thumbnail.jpg`
+      src: `${IMAGES_FOLDER_PATH}/projects/project1/thumbnail.jpg`
     }
   }
 ];

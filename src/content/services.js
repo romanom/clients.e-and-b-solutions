@@ -1,4 +1,4 @@
-import { imagesFolderPath } from "../config";
+import { IMAGES_FOLDER_PATH } from "../config";
 
 const services = [
   {
@@ -6,7 +6,7 @@ const services = [
       "Creating easy to use web apps or sites, designed to work on any screen, that give the user a wonderful experience.",
     image: {
       alt: "Desktop Computer",
-      src: `${imagesFolderPath}/services_1.png`
+      src: `${IMAGES_FOLDER_PATH}/services_1.png`
     },
     title: "Web Apps and Websites"
   },
@@ -15,7 +15,7 @@ const services = [
       "Providing cloud hosting and support for your site so you can worry about other things.",
     image: {
       alt: "Cloud hosting",
-      src: `${imagesFolderPath}/services_2.png`
+      src: `${IMAGES_FOLDER_PATH}/services_2.png`
     },
     title: "Hosting and Support"
   },
@@ -23,7 +23,7 @@ const services = [
     content: "Let's see what we can do together to make things easier for you.",
     image: {
       alt: "Consulting",
-      src: `${imagesFolderPath}/services_3.png`
+      src: `${IMAGES_FOLDER_PATH}/services_3.png`
     },
     title: "Technical Consulting"
   }

@@ -1,9 +1,9 @@
 import axios from "axios";
 import { validate } from "email-validator";
 import {
-  pointOfContactEmail,
+  CONTACT_EMAIL,
   SERVICES_API_KEY,
-  servicesApiGatewayURL
+  SERVICES_GATEWAY_URL
 } from "../config";
 
 const headers = {
@@ -16,10 +16,10 @@ const emailOptions = { headers };
 export const isEmailValid = emailAddress => validate(emailAddress);
 
 export const sendEmail = async (data, done, fail) => {
-  const emailData = { pointOfContactEmail, ...data };
+  const emailData = { CONTACT_EMAIL, ...data };
 
   try {
-    await axios.post(servicesApiGatewayURL, emailData, emailOptions);
+    await axios.post(`${SERVICES_GATEWAY_URL}/email`, emailData, emailOptions);
     done();
   } catch (e) {
     fail();
