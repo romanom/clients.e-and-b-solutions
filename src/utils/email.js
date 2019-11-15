@@ -16,7 +16,7 @@ const emailOptions = { headers };
 export const isEmailValid = emailAddress => validate(emailAddress);
 
 export const sendEmail = async (data, done, fail) => {
-  const emailData = { CONTACT_EMAIL, ...data };
+  const emailData = { pointOfContactEmail: CONTACT_EMAIL, ...data };
 
   try {
     await axios.post(`${SERVICES_GATEWAY_URL}/email`, emailData, emailOptions);
